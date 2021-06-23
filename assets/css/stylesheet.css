@@ -1,7 +1,7 @@
 /* Text Import from Google Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap');​
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap');
+​
 /* Default styling */
 
 html {
@@ -38,7 +38,7 @@ a {
   color: black;
 }
 
-  
+
 .general-setup {
   width: 100%;
   height: 180px;
@@ -66,7 +66,7 @@ a {
 /* Shadow code from W3 school tutorials */
 
 .submit-button:hover {
-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Header */
@@ -92,53 +92,104 @@ box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19)
 }
 
 #magic-wand {
-    width: 80px;
-    height: 95px;
-  }
+  width: 80px;
+  height: 95px;
+}
+
+#character-generator-area {
+  height: 250px;
+}
 
 /* Footer */
 #footer {
-background-color: #12194A;
-width: 100%;
-height: 100px;
-left: 0;
-right: 0;
-top: 0;
-color: white;
-font-size: 0.8rem;
-display: flex;
-justify-content: center;
-align-items: center;
+  background-color: #12194A;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  right: 0;
+  top: 0;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Home Page */
 
-  .giphy-embed {
-    width: 225px;
-    height:150px;
-    border: 0px;
-    margin: 0 auto;
-  }
+.giphy-embed {
+  width: 225px;
+  height: 150px;
+  border: 0px;
+  margin: 0 auto;
+}
 
-  #character-generator {
-    width: 100%;
-    height: 30px;
-    margin: 20px;
-    text-align: center;
-    vertical-align: middle;
-    padding: 20px;
-    border: solid black 1px;
-    border-radius: 5px;
-  }
+#character-generator {
+  width: 100%;
+  height: 30px;
+  margin: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+  border: solid black 1px;
+  border-radius: 5px;
+}
 
-  #image-area {
-  background-image: src="";
+#image-area {
   width: 120px;
-  height:120px;
+  height: 120px;
   border: solid black 1px;
   margin: 0 auto;
   padding: 20px;
-  background-repeat: no-repeat;
- background-size: cover;
 }
 
+/* Question Page */
+
+#question-number {
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+#written-question {
+  width: 100%;
+  height: 80px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#picture-question {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 300px;
+  height: 280px;
+  margin: 0 auto;
+  padding: 10px;
+
+}
+
+.picture-image {
+  display: inline-grid;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  border: solid black 1px;
+}
+
+.picture-image:hover {
+  border: solid #B12228 3px;
+}
+
+
+#audio-question {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  
+}
