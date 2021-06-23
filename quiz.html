@@ -24,18 +24,21 @@
             Disney Star
         </h1>
     </header>
-    <!--Description of quiz and next steps. Character generator to select which character to play as-->
+    <!--Question Area-->
     <section>
-        <div>
-            <p> The ultimate Disney Quiz. Find out which character you are to continue.</p>
-            <iframe src="https://giphy.com/embed/NQm6UKVrSxj68" width="480" height="320" frameBorder="0"
-                class="giphy-embed" allowFullScreen></iframe>​
+        <div id="question-number">
+            <h2> Question ## </h2>​
         </div>
-        <div id="character-generator-area"></div>
-        <!--Submit button to continue. Link to the quiz page.-->
-        <div class="submit-button"><a href="./quiz.html">Submit</a></div>
+        <div id= "question-area">
+            <div id="written-question"></div>
+            <div id="picture-question"></div>
+            <div id="audio-question"></div>
+        </div>
+        <div id="answer-area"></div>
+        <!--Submit button to submit answer.-->
+        <button type ="submit" class="submit-button">Submit</button>
+        <div id="score-tracker"> x / 25 </div>
     </section>
-    <!--Home Page-->
     <!--Link to Javascript script-->
     <script src="assets/javascript/script.js"></script>
 </body>
