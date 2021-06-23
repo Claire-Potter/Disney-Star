@@ -20,20 +20,29 @@
 <body>
     <!--Header-->
     <header id="header">
-        <h1 id="logo"> <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars">
-            Disney Star
-        </h1>
+        <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars" id="magic-wand">
+        <h1 id="logo"> Disney Star</h1>
     </header>
     <!--Description of quiz and next steps. Character generator to select which character to play as-->
     <section>
-        <div>
+        <div class="general-setup">
             <p> The ultimate Disney Quiz. Find out which character you are to continue.</p>
-            <iframe src="https://giphy.com/embed/NQm6UKVrSxj68" width="480" height="320" frameBorder="0"
-                class="giphy-embed" allowFullScreen></iframe>​
+            <br>
+            <iframe src="https://giphy.com/embed/NQm6UKVrSxj68" class="giphy-embed" allowFullScreen></iframe>​
         </div>
-        <div id="character-generator-area"></div>
+        <div id="character-generator-area" class="general-setup">
+
+            <label for =result>Character: </label><output name="result" for="character-generator" id="character-generator"> XXXXX XXXX </output>
+            <br>
+            <div id="image-area"></div>
+        </div>
         <!--Submit button to continue. Link to the quiz page.-->
-        <div class="submit-button"><a href="./quiz.html">Submit</a></div> <div class="submit-button"><a href="./results.html">Temp Results</a></div>
+        <div class="general-setup"><a class="submit-button" href="./quiz.html">Submit</a>
+            <br>
+            <br>
+            <a class="submit-button" href="./results.html">Temp Results</a>
+        </div>
+
     </section>
     <!--Home Page-->
     <!--Link to Javascript script-->
