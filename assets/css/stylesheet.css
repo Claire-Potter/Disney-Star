@@ -244,3 +244,63 @@ margin: 20px;
   color: #12194A;
 
 }
+
+/* Results Page */
+
+#result-message {
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px; 
+}
+
+#certificate {
+width: 400px;
+height: 252px;
+border: solid black 3px;
+background-image: url("../images/site-images/congratulations-champion.jpg");
+background-repeat: no-repeat;
+background-position: center;
+margin: 0 auto;
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#certificate p {
+  background-color: white;
+  opacity: .8;
+  font-weight: 900;
+  padding: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+  
+}
+
+#next-step-figures-area {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+.next-step-figures {
+  margin: 20px;
+}
+
+.next-step-figures:hover {
+  color: #B12228;
+  font-weight: 800;
+}
+
+.next-step-images {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: solid black 1px;
+}
+
+.next-step-images:hover {
+  border: solid #B12228 3px;
+}
