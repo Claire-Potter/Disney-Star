@@ -20,7 +20,7 @@
 <body>
     <!--Header-->
     <header id="header">
-        <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars" id="magic-wand"> 
+        <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars" id="magic-wand">
         <h1 id="logo"> Disney Star</h1>
     </header>
     <!--Question Area-->
@@ -28,8 +28,8 @@
         <div id="question-number">
             <h2> Question ## </h2>​
         </div>
-        <div id= "question-area">
-            <div id="written-question" >xxxxxxx?</div>
+        <div id="question-area">
+            <div id="written-question">xxxxxxx?</div>
             <div id="picture-question">
                 <div class="picture-image" id="picture-one"><img src=""></div>
                 <div class="picture-image" id="picture-two"><img src=""></div>
@@ -39,19 +39,41 @@
             <div id="audio-question">
                 <audio controls>
                     <source src="" type="audio/mpeg">
-                  Your browser does not support the audio element.
-                  </audio>
+                    Your browser does not support the audio element.
+                </audio>
             </div>
         </div>
-        <div id="answer-area"></div>
-        <!--Submit button to submit answer.-->
-        <div class="general-setup">
-            <button type ="submit" class="submit-button">Submit</button>
+        <!--Answer Area-->
+        <div id="answer-area">
+            <form>
+                <ol>
+                    <li><label for="answer-choice-one" class="radio-answer-choice">xxxxxxx
+                        </label><input type="radio" name="answer-choice" id="answer-choice-one" value=""
+                            class="radio-answer-choice" required></li>
+                    <li><label for="answer-choice-two" class="radio-answer-choice">xxxxxxx
+                        </label><input type="radio" name="answer-choice" id="answer-choice-two" value=""
+                            class="radio-answer-choice"></li>
+                    <li><label for="answer-choice-three" class="radio-answer-choice">xxxxxxx
+                        </label><input type="radio" name="answer-choice" id="answer-choice-three" value=""
+                            class="radio-answer-choice"></li>
+                    <li><label for="answer-choice-four" class="radio-answer-choice">xxxxxxx
+                        </label><input type="radio" name="answer-choice" id="answer-choice-four" value=""
+                            class="radio-answer-choice"></li>
+                </ol>
+                <!--Submit button to submit answer.-->
+                <br>
+                <br>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
         </div>
+        <div id="score-area">
         <div id="score-tracker"> x / 25 </div>
+    </div>
     </section>
-        <!--Footer-->
-        <footer id="footer"><p>Copyright@ClairePotter2021</p></footer>
+    <!--Footer-->
+    <footer id="footer">
+        <p>Copyright@ClairePotter2021</p>
+    </footer>
     <!--Link to Javascript script-->
     <script src="assets/javascript/script.js"></script>
 </body>
