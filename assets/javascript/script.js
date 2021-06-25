@@ -3,6 +3,7 @@ const generateButton = document.getElementById('generateCharacter');
 const nextButton = document.getElementById('nextButton');
 const prevButton = document.getElementById('prevButton');
 const generateArea = document.getElementById('characterGenerate');
+const submitButton = document.getElementById('submitButton');
 // Create constants for disneyCharacters images files, the area for the character value to return to and the area for the character image to return to
 const characterImages = 'assets/images/disneyCharacters/';
 const characterArea = document.getElementById('character');
