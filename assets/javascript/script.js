@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded");
 const generateButton = document.getElementById('generateCharacter');
 const nextButton = document.getElementById('nextButton');
 const prevButton = document.getElementById('prevButton');
+// Create constants for disneyCharacters images files, the area for the character value to return to and the area for the character image to return to
+const characterImages = 'assets/images/disneyCharacters/';
+const characterArea = document.getElementById('character');
+const imageCharacter = document.getElementById('characterImageArea');
 
 let selectedCharacter = 0;
 const characters = [{
@@ -389,6 +393,12 @@ const characters = [{
 },
 
 ];
+
+//Event Listener added to Generate button that first generates the character for the user, it will call the generateCharacter function
+
+generateButton.addEventListener('click', generateCharacter);
+
+
 
 function generateCharacter() {
 
