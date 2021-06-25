@@ -26,36 +26,60 @@
     <!--Description of quiz and next steps. Character generator to select which character to play as-->
     <section>
         <div class="general-setup">
-            <p> The ultimate Disney Quiz. Find out which character you are to continue.</p>
+            <p> The ultimate Disney Quiz!</p>
             <br>
-            <iframe src="https://giphy.com/embed/NQm6UKVrSxj68" class="giphy-embed" allowFullScreen></iframe>​
+            <iframe src="https://giphy.com/embed/NQm6UKVrSxj68" class="giphy-embed" allowFullScreen></iframe>
+            <br>
+            <br>
+            <p> Find out which character you are by clicking Generate
+                <br>
+                <br>
+                <i class="fas fa-arrow-down"></i>
+            </p>​
         </div>
         <br>
         <br>
-        <div id="character-generator-area" class="general-setup">
+        <br>
+        <br>
+        <div id="characterGenerate">
+            <h2>Character:</h2>
+            <div id="character"></div>
+            <br>
+            <div id="generateCharacter" class="submit-button">Generate</div>
+        </div>
+        <br>
+        <br>
+        <div id="character-image-container">
+            <!--Tooltip code from W3 school tutorial and adapted for site 
+                    https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom  -->
 
-            <label for =result>Character: </label>
-            <output name="result" for="character-generator" id="character-generator"> XXXXX XXXX </output>
-            <button type ="submit" id="generate-character" class="submit-button">Generate</button>
-            
-            <br>
-            <br>
-            <br>
-            <br>
-            <div id="image-area"></div>
+            <div id="prevButton" class="character-arrows tooltip"><i class="fas fa-chevron-left"></i><span
+                    class="tooltiptext">Previous Character</span></div>
+            <div id="characterImageArea"></div>
+            <div id="nextButton" class="character-arrows tooltip"> <i class="fas fa-chevron-right"></i><span
+                    class="tooltiptext">Next Character</span></div>
         </div>
-        <br>
-        <br>
         <br>
         <br>
         <!--Submit button to continue. Link to the quiz page.-->
-        <div class="general-setup"><a class="submit-button" href="./quiz.html">Submit</a>
-            <a class="submit-button" href="./results.html">Temp Results</a>
+        <div id="submit-section">
+            <p> Once you are happy with your Character click Submit to continue to the quiz.</p>
+            <br>
+            <br>
+            <a class="submit-button" href="./quiz.html">Submit</a>
+            <a class="submit-button hide" href="./results.html">Temp Results</a>
+            <a class="submit-button hide" href="./test.html">Test</a>
         </div>
-
+        <br>
+        <br>
+        <br>
     </section>
     <!--Footer-->
-    <footer id="footer"><p>Copyright@ClairePotter2021</p></footer>
+    <footer id="footer">
+        <p>Copyright@ClairePotter2021</p>
+    </footer>
+    <!-- Font awesome script-->
+    <script src="https://kit.fontawesome.com/bd9c348b33.js" crossorigin="anonymous"></script>
     <!--Link to Javascript script-->
     <script src="assets/javascript/script.js"></script>
 </body>
