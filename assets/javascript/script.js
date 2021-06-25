@@ -1,10 +1,8 @@
-// Wait for the DOM to finish loading before running any of the functions on the page
-document.addEventListener("DOMContentLoaded");
-
-// Create constants for button event listeners
+// Create constants for button event listeners and the character area in the html
 const generateButton = document.getElementById('generateCharacter');
 const nextButton = document.getElementById('nextButton');
 const prevButton = document.getElementById('prevButton');
+const generateArea = document.getElementById('characterGenerate');
 // Create constants for disneyCharacters images files, the area for the character value to return to and the area for the character image to return to
 const characterImages = 'assets/images/disneyCharacters/';
 const characterArea = document.getElementById('character');
@@ -395,17 +393,22 @@ const characters = [{
 ];
 
 //Event Listener added to Generate button that first generates the character for the user, it will call the generateCharacter function
-
 generateButton.addEventListener('click', generateCharacter);
 
-
-
+/**
+ * @function generateCharacter - returns the character to the constants characterArea and to the imageCharacter Area. 
+ * Uses a 'for' loop to iterate through the characters array. 
+ * Populates the html layout for the character and the image by selecting the correct objects in the characters array.
+ */
 function generateCharacter() {
+    for (let i = 0; i < characters.length; i++) {
 
+        let x = characters[selectedCharacter];  
+        characterArea.innerHTML = `<h3> ${x.character} </h3>`;
+        imageCharacter.innerHTML = `<img src= ${characterImages}${x.characterImageArea} alt = ${x.character} >`;
+    }
 }
 
-function prevItem() {
-}
+function prevItem() {}
 
-function nextItem() {
-}
+function nextItem() {}
