@@ -1,11 +1,11 @@
+// https://www.sitepoint.com/simple-javascript-quiz/ referenced and edited for const declarations, cons characters array structure and how to return characters to innner html
+
+
 // Create constants for button event listeners and the character area in the html
 const generateButton = document.getElementById('generateCharacter');
 const nextButton = document.getElementById('nextButton');
 const prevButton = document.getElementById('prevButton');
-const generateArea = document.getElementById('characterGenerate');
-const homeGenerate = document.getElementById('homeGenerateArea');
-const quizArea = document.getElementById('quizArea');
-const confirmButton = document.getElementById('confirm-button');
+const confirmButton = document.getElementById('confirmButton');
 // Create constants for disneyCharacters images files, the area for the character value to return to and the area for the character image to return to
 const characterImages = 'assets/images/disneyCharacters/';
 const defaultCharacterFolder = 'assets/images/site-images/';
@@ -14,7 +14,9 @@ const characterArea = document.getElementById('character');
 const imageCharacter = document.getElementById('characterImageArea');
 
 let selectedCharacter = 0;
-// Characters array with objects to populate html with when functions are called
+/**Characters array with objects to populate html with when functions are called
+ */
+
 const characters = [{
         character: 'Aladdin',
         characterImageArea: 'aladdin.PNG',
@@ -440,7 +442,7 @@ nextButton.addEventListener('click', nextItem);
  * Continue through the generateCharacter iteration of objects.
  */
 function nextItem() {
-    if (selectedCharacter == characters.length) {
+    if (selectedCharacter == characters.length - 1) {
 
     } else {
         generateCharacter(characters[selectedCharacter++]);
@@ -454,7 +456,7 @@ confirmButton.addEventListener('click', getCharacter);
 /** 
  * @function getCharacter - stores character and character image input values in localStorage
  * @function loadCharacter - fetches stored values -will populate the characterName and the characterLogo areas in the quiz section
- * Code for using local storage found on W3Schools and edited
+ * Code for using local storage found on https://www.w3schools.com/html/html5_webstorage.asp and edited for purpose
  */
 
 function getCharacter() {
