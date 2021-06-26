@@ -12,70 +12,76 @@
     <!--Keywords-->
     <meta name="keywords"
         content="disney, quiz, fun-quiz, disney-knowledge, disney-movies, avengers, star-wars, disney-fans">
+    <!--Link to FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!--Link to CSS stylesheet-->
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <title>Disney-Star</title>
 </head>
-
-<body>
-    <!--Header-->
-    <header id="header">
-        <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars" id="magic-wand">
-        <h1 id="logo"> Disney Star</h1>
-    </header>
-    <!--Question Area-->
-    <section>
-        <div id="question-number">
-            <h2> Question ## </h2>​
-        </div>
-        <div id="question-area">
-            <div id="written-question">xxxxxxx?</div>
-            <div id="picture-question">
-                <div class="picture-image" id="picture-one"><img src=""></div>
-                <div class="picture-image" id="picture-two"><img src=""></div>
-                <div class="picture-image" id="picture-three"><img src=""></div>
-                <div class="picture-image" id="picture-four"><img src=""></div>
-            </div>
-            <div id="audio-question">
-                <audio controls>
-                    <source src="" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        </div>
-        <!--Answer Area-->
-        <div id="answer-area">
-            <form>
-                <ol>
-                    <li><label for="answer-choice-one" class="radio-answer-choice">xxxxxxx
-                        </label><input type="radio" name="answer-choice" id="answer-choice-one" value=""
-                            class="radio-answer-choice" required></li>
-                    <li><label for="answer-choice-two" class="radio-answer-choice">xxxxxxx
-                        </label><input type="radio" name="answer-choice" id="answer-choice-two" value=""
-                            class="radio-answer-choice"></li>
-                    <li><label for="answer-choice-three" class="radio-answer-choice">xxxxxxx
-                        </label><input type="radio" name="answer-choice" id="answer-choice-three" value=""
-                            class="radio-answer-choice"></li>
-                    <li><label for="answer-choice-four" class="radio-answer-choice">xxxxxxx
-                        </label><input type="radio" name="answer-choice" id="answer-choice-four" value=""
-                            class="radio-answer-choice"></li>
-                </ol>
-                <!--Submit button to submit answer.-->
-                <br>
-                <br>
-                <button type="submit" class="submit-button">Submit</button>
-            </form>
-        </div>
-        <div id="score-area">
-        <div id="score-tracker"> x / 25 </div>
+  <!--Header-->
+  <header id="header">
+    <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars" id="magic-wand">
+    <h1 id="logo"> Disney Star</h1>
+</header>
+<!--Question Area-->
+<section id="quizArea">
+    <div id="character-name-area">
+        <div id="character-logo"></div>
+        <div id="character-name"></div>
     </div>
-    </section>
-    <!--Footer-->
-    <footer id="footer">
-        <p>Copyright@ClairePotter2021</p>
-    </footer>
-    <!--Link to Javascript script-->
-    <script src=""></script>
+    <div id="question-number">
+        <h2>Question 01 </h2>​
+    </div>
+    <div id="question-area">
+        <div id="written-question"></div>
+        <div id="picture-question">
+            <div class="picture-image" id="picture-one"><img src=""></div>
+            <div class="picture-image" id="picture-two"><img src=""></div>
+            <div class="picture-image" id="picture-three"><img src=""></div>
+            <div class="picture-image" id="picture-four"><img src=""></div>
+        </div>
+        <div id="audio-question">
+            <audio controls>
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+    <!--Answer Area-->
+    <div id="answer-area">
+        <form>
+            <ol>
+                <li><label for="answer-choice-one" class="radio-answer-choice">
+                    </label><input type="radio" name="answer-choice" id="answer-choice-one" value=""
+                        class="radio-answer-choice" required></li>
+                <li><label for="answer-choice-two" class="radio-answer-choice">
+                    </label><input type="radio" name="answer-choice" id="answer-choice-two" value=""
+                        class="radio-answer-choice"></li>
+                <li><label for="answer-choice-three" class="radio-answer-choice">
+                    </label><input type="radio" name="answer-choice" id="answer-choice-three" value=""
+                        class="radio-answer-choice"></li>
+                <li><label for="answer-choice-four" class="radio-answer-choice">
+                    </label><input type="radio" name="answer-choice" id="answer-choice-four" value=""
+                        class="radio-answer-choice"></li>
+            </ol>
+            <!--Submit button to submit answer.-->
+            <br>
+            <br>
+            <button type="submit" class="submit-button" data-type="submit-answer">Submit</button>
+        </form>
+    </div>
+    <div id="score-area">
+        <div id="score-tracker"> / 25 </div>
+    </div>
+</section>
+<!--Footer-->
+<footer id="footer">
+    <p>Copyright@ClairePotter2021</p>
+</footer>
+<!--Link to Javascript script-->
+<script src="assets/javascript/characterscript.js"></script>
+</body>
 </body>
 
 </html>
