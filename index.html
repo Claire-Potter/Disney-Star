@@ -12,6 +12,9 @@
     <!--Keywords-->
     <meta name="keywords"
         content="disney, quiz, fun-quiz, disney-knowledge, disney-movies, avengers, star-wars, disney-fans">
+    <!--Link to FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!--Link to CSS stylesheet-->
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <title>Disney-Star</title>
@@ -24,9 +27,9 @@
         <h1 id="logo"> Disney Star</h1>
     </header>
     <!--Description of quiz and next steps. Character generator to select which character to play as-->
-    <section>
+    <section id="homeGenerateArea">
         <div class="general-setup">
-            <p> The ultimate Disney Quiz!</p>
+            <h2> The ultimate Disney Quiz!</h2>
             <br>
             <iframe src="https://giphy.com/embed/NQm6UKVrSxj68" class="giphy-embed" allowFullScreen></iframe>
             <br>
@@ -34,8 +37,7 @@
             <p> Find out which character you are by clicking Generate
                 <br>
                 <br>
-                <i class="fas fa-arrow-down"></i>
-            </p>​
+                <i class="fas fa-arrow-down"></i> </p>​
         </div>
         <br>
         <br>
@@ -51,7 +53,7 @@
         <br>
         <div id="character-image-container">
             <!--Tooltip code from W3 school tutorial and adapted for site 
-                    https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom  -->
+                        https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom  -->
 
             <div id="prevButton" class="character-arrows tooltip"><i class="fas fa-chevron-left"></i><span
                     class="tooltiptext">Previous Character</span></div>
@@ -61,13 +63,19 @@
         </div>
         <br>
         <br>
-        <!--Submit button to continue. Link to the quiz page.-->
+        
+        <!--Confirm button to confirm character Submit button to continue to the quiz.-->
         <div id="submit-section">
-            <p> Once you are happy with your Character click Submit to continue to the quiz.</p>
+            <p> Once you are happy with your Character, select Confirm.</p>
             <br>
             <br>
-            <a class="submit-button" href="./quiz.html" id="submitButton">Submit</a>
-            <a class="submit-button hide" href="./results.html">Temp Results</a>
+            <div class="submit-button" id="confirm-button">Confirm</div>
+            <br>
+            <br>
+            <p> To continue to the quiz select Submit.</p>
+            <br>
+            <br>
+            <a class="submit-button" href='./quiz.html'>Submit</a>
         </div>
         <br>
         <br>
@@ -77,8 +85,6 @@
     <footer id="footer">
         <p>Copyright@ClairePotter2021</p>
     </footer>
-    <!-- Font awesome script-->
-    <script src="https://kit.fontawesome.com/bd9c348b33.js" crossorigin="anonymous"></script>
     <!--Link to Javascript script-->
     <script src="assets/javascript/script.js"></script>
 </body>
