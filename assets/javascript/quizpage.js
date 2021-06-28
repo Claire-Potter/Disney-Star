@@ -22,9 +22,13 @@ if (localStorage.getItem('character') && (localStorage.getItem('characterImageAr
 
 const questionNumbers = document.getElementById('questionNumber');
 const writtenQuestions = document.getElementById('writtenQuestion');
-const pictureQuestions = document.getElementById('pictureQuestion');
+const pictureOne = document.getElementById('picture-one');
+const pictureTwo = document.getElementById('picture-two');
+const pictureThree = document.getElementById('picture-three');
+const pictureFour = document.getElementById('picture-four');
 const audioQuestions = document.getElementById('audioQuestion');
 const answerOptions = document.getElementById('answerArea');
+const pictureQuestionsFile = 'assets/images/pictureQuestions/';
 
 /**Questions and Answers array with objects to populate html with when function is called
  */
@@ -87,14 +91,14 @@ const quiz = [{
         qType: 'picture',
         q: 'Which of these frisky felines is the beloved companion of Alice in Wonderland?',
         options: ['Tibs', 'Dinah', 'Marie', 'Toulouse', ],
-        optionsImages: ['tibs.gif', 'dinah.gif', 'marie.gif', 'toulouse.gif', ],
+        optionsImages: ['tibs.jpg', 'dinah.jpg', 'marie.jpg', 'toulouse.png', ],
         answer: '1',
     },
     {
         qType: 'picture',
         q: 'Disney has recently made many live action versions of our favourite Disney Movies. Which of these couples do not feature in a live action film?',
         options: ['Cinderella and Prince Charming', 'Belle and Beast', 'Princess Anna and Prince Hans', 'Aladdin and Princess Jasmine', ],
-        optionsImages: ['cinderellaPrinceDancing.gif', 'belleAndBeast.png', 'annaHansDance.png', 'aladdinAndJasmine.png', ],
+        optionsImages: ['cinderellaAndPrinceDancing.jpg', 'belleAndBeast.png', 'annaHansDance.png', 'aladdinAndJasmine.png', ],
         answer: '2',
     },
     {
@@ -108,7 +112,7 @@ const quiz = [{
         qType: 'picture',
         q: 'The late Robin Williams voiced this beloved character who brought much comic relief to the film:',
         options: ['Baymax', 'Lightning McQueen', 'Genie', 'Mad Hatter', ],
-        optionsImages: ['baymax.gif', 'lightningMcqueen.gif', 'genie.png', 'madHatter.gif', ],
+        optionsImages: ['baymax.jpg', 'lightningMcqueen.jpg', 'genie.png', 'madHatter.jpg', ],
         answer: '0',
     },
     {
@@ -122,7 +126,7 @@ const quiz = [{
         qType: 'picture',
         q: 'Which of these characters made quite a spectacle when he thought the sky was falling?',
         options: ['Dormouse', 'Hulk', 'Flik', 'Chicken Little', ],
-        optionsImages: ['dormouse.png', 'hulk.png', 'flikFlying.gif', 'chickenLittle.gif', ],
+        optionsImages: ['dormouse.png', 'hulk.png', 'flikFlying.jpg', 'chickenLittle.jpg', ],
         answer: '3',
     },
     {
@@ -135,8 +139,8 @@ const quiz = [{
     {
         qType: 'picture',
         q: 'This friendly canine is the father of not 1 but 101 puppies:',
-        options: ['Colonel', 'Perdita', 'Clip or Napoleon', 'Pongo', ],
-        optionsImages: ['colonel.gif', 'perdita.gif', 'clipnapoleon.gif', 'pongo.gif', ],
+        options: ['Colonel', 'Perdita', 'Clip', 'Pongo', ],
+        optionsImages: ['colonel.jpg', 'perdita.jpg', 'clip.jpg', 'pongo.jpg', ],
         answer: '3',
     },
     {
@@ -196,6 +200,9 @@ const quiz = [{
         answer: '1',
     },
 ]
+
+//Set values and  constants for generating questions
+
 let questionTracker = 0;
 let currentQuestion;
 let availableQuestions = [];
@@ -206,10 +213,37 @@ const totalQuestions = quiz.length;
  */
 function setAvailableQuestions() {
     for (let i = 0; i < totalQuestions; i++) {
-        console.log(i);
+        availableQuestions.push(quiz[i]);
     }
 }
 
+/**
+ * @function getNewQuestion will set the question number, the question and the answer options
+ */
+
+function getNewQuestion() {
+    //set Question Number
+    questionNumbers.innerHTML = 'Question number ' + (questionTracker + 1) + ' of ' + quiz.length;
+
+    //set Question
+    //set a random question
+    const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+    currentQuestion = questionIndex;
+    let c = currentQuestion;
+
+    writtenQuestions.innerHTML = c.q;
+    pictureOne.innerHTML = `<img src= ${pictureQuestionsFile}${c.optionsImages['0']} alt = ${c.options['0']}>`;
+    pictureTwo.innerHTML = `<img src= ${pictureQuestionsFile}${c.optionsImages['1']} alt = ${c.options['1']}>`;
+    pictureThree.innerHTML = `<img src= ${pictureQuestionsFile}${c.optionsImages['2']} alt = ${c.options['2']}>`;
+    pictureFour.innerHTML = `<img src= ${pictureQuestionsFile}${c.optionsImages['3']} alt = ${c.options['3']}>`;
+    audioQuestions.innerHTML = currentQuestion.qSound;
+    //console.log(questionIndex);
+
+}
+
+// First the available questions are sett in the availableQuestions array and then the getNewQuestion function is called
+
 window.onload = function () {
     setAvailableQuestions();
-};
+    getNewQuestion();
+}
