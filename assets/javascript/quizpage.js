@@ -91,14 +91,14 @@ const quiz = [{
         qType: 'picture',
         q: 'Which of these frisky felines is the beloved companion of Alice in Wonderland?',
         options: ['Tibs', 'Dinah', 'Marie', 'Toulouse', ],
-        optionsImages: ['tibs.jpg', 'dinah.jpg', 'marie.jpg', 'toulouse.png', ],
+        optionsImages: ['tibbs.png', 'dinah.png', 'marie.png', 'toulouse.png', ],
         answer: '1',
     },
     {
         qType: 'picture',
         q: 'Disney has recently made many live action versions of our favourite Disney Movies. Which of these couples do not feature in a live action film?',
         options: ['Cinderella and Prince Charming', 'Belle and Beast', 'Princess Anna and Prince Hans', 'Aladdin and Princess Jasmine', ],
-        optionsImages: ['cinderellaAndPrinceDancing.jpg', 'belleAndBeast.png', 'annaHansDance.png', 'aladdinAndJasmine.png', ],
+        optionsImages: ['cinderellaAndPrinceDancing.png', 'belleAndBeast.png', 'annaHansDance.png', 'aladdinAndJasmine.png', ],
         answer: '2',
     },
     {
@@ -112,7 +112,7 @@ const quiz = [{
         qType: 'picture',
         q: 'The late Robin Williams voiced this beloved character who brought much comic relief to the film:',
         options: ['Baymax', 'Lightning McQueen', 'Genie', 'Mad Hatter', ],
-        optionsImages: ['baymax.jpg', 'lightningMcqueen.jpg', 'genie.png', 'madHatter.jpg', ],
+        optionsImages: ['baymax.png', 'lightningMcqueen.png', 'genie.png', 'madHatter.png', ],
         answer: '0',
     },
     {
@@ -126,7 +126,7 @@ const quiz = [{
         qType: 'picture',
         q: 'Which of these characters made quite a spectacle when he thought the sky was falling?',
         options: ['Dormouse', 'Hulk', 'Flik', 'Chicken Little', ],
-        optionsImages: ['dormouse.png', 'hulk.png', 'flikFlying.jpg', 'chickenLittle.jpg', ],
+        optionsImages: ['dormouse.png', 'hulk.png', 'flik.png', 'chickenLittle.jpg', ],
         answer: '3',
     },
     {
@@ -140,7 +140,7 @@ const quiz = [{
         qType: 'picture',
         q: 'This friendly canine is the father of not 1 but 101 puppies:',
         options: ['Colonel', 'Perdita', 'Clip', 'Pongo', ],
-        optionsImages: ['colonel.jpg', 'perdita.jpg', 'clip.jpg', 'pongo.jpg', ],
+        optionsImages: ['colonel.png', 'perdita.png', 'dodger.png', 'pongo..png', ],
         answer: '3',
     },
     {
