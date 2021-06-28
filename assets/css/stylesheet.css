@@ -283,14 +283,14 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 /* Question Area */
 
-#question-number {
+#questionNumber {
   margin: 0 auto;
   text-align: center;
   vertical-align: middle;
   padding: 20px;
 }
 
-#written-question {
+#writtenQuestion {
   width: 100%;
   height: 80px;
   font-size: 1.2rem;
@@ -299,7 +299,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   align-items: center;
 }
 
-#picture-question {
+#pictureQuestion {
   display: grid;
   grid-template-columns: auto auto;
   width: 300px;
@@ -309,7 +309,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 }
 
-.picture-image {
+.pictureQuestion img {
   display: inline-grid;
   margin: 0 auto;
   width: 120px;
@@ -317,12 +317,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   border: solid black 1px;
 }
 
-.picture-image:hover {
+.pictureQuestion img:hover {
   border: solid #B12228 3px;
 }
 
 
-#audio-question {
+#audioQuestion {
   display: flex;
   width: 100%;
   height: 80px;
@@ -334,7 +334,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 /* Answer Area */
 
-#answer-area {
+#answerArea {
   width: 110px;
   height: 180px;
   margin: 0 auto;

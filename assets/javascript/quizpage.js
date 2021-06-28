@@ -1,3 +1,5 @@
+// Generate Character Name
+
 /** Fetches character and character image chosen by the user and stored in local storage
  * Populates the Character Name and Character logo areas with this information.
  * Default name and image set incase user does not select a character or if there is an error storing or retrieving the data.
@@ -14,6 +16,16 @@
     document.getElementById('character-logo').value = defaultVal;
     document.getElementById('character-name').value = defaultImage;
 }
+
+// Quiz Section //
+
+// Create constants for html input within the quiz
+
+const questionNumbers=document.getElementById('questionNumber');
+const writtenQuestions=document.getElementById('writtenQuestion');
+const pictureQuestions=document.getElementById('pictureQuestion');
+const audioQuestions=document.getElementById('audioQuestion');
+const answerOptions=document.getElementById('answerArea');
 
 /**Questions and Answers array with objects to populate html with when function is called
  */
@@ -161,3 +173,19 @@ const quiz = [
     answer: '1',
     },
 ]
+let questionTracker = 0;
+let currentQuestion;
+let availableQuestions = [];
+const totalQuestions = quiz.length;
+
+/**  
+* @function setAvailableQuestions - push the questions into availableQuestions array
+*/
+function setAvailableQuestions() {
+    for(let i=0; i<totalQuestions; i++){
+        console.log(i);}
+}
+
+window.onload = function(){
+    setAvailableQuestions();
+};
