@@ -14,7 +14,7 @@ const characterArea = document.getElementById('character');
 const imageCharacter = document.getElementById('characterImageArea');
 
 let selectedCharacter = 0;
-/**Characters array with objects to populate html with when functions are called
+/**Characters array with objects to populate html with when function is called
  */
 
 const characters = [{
