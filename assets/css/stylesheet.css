@@ -282,6 +282,18 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   border-radius: 50%;
 }
 
+/* Start Quiz Section */
+
+#ready-to-start {
+  height: 500px;
+}
+
+#mickey-mouse-image {
+  width: 500px;
+  height: 315px;
+  margin: 0 auto;
+}
+
 /* Question Area */
 
 #questionNumber {

@@ -30,6 +30,9 @@ const pictureQuestions = document.getElementById('picture-questions');
 const audioQuestions = document.getElementById('audio-question');
 const answerOptions = document.getElementById('answerArea');
 const pictureQuestionsFile = 'assets/images/pictureQuestions/';
+const submitButton = document.getElementById('submit-question');
+const startQuiz = document.getElementById('start-quiz');
+
 
 /**Questions and Answers array with objects to populate html with when function is called
  */
@@ -238,19 +241,22 @@ const quiz = [{
 
 //Set values and  constants for generating questions
 
-let questionTracker = 0;
+let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
-const totalQuestions = quiz.length;
+
 
 /**  
  * @function setAvailableQuestions - push the questions into availableQuestions array
  */
 function setAvailableQuestions() {
+    const totalQuestions = quiz.length;
+
     for (let i = 0; i < totalQuestions; i++) {
         availableQuestions.push(quiz[i]);
+
     }
-}
+};
 
 /**
  * @function getNewQuestion will set the question number, the question and the answer options
@@ -258,28 +264,42 @@ function setAvailableQuestions() {
 
 function getNewQuestion() {
     //set Question Number
-    questionNumbers.innerHTML = 'Question number ' + (questionTracker + 1) + ' of ' + quiz.length;
+
+    questionNumbers.innerHTML = 'Question number ' + (questionCounter + 1) + ' of ' + quiz.length;
 
     //set Question
     //set a random question
     const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
     currentQuestion = questionIndex;
-    let c = currentQuestion;
+    writtenQuestions.innerHTML = currentQuestion.q;
+    pictureOne.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['0']} alt = ${currentQuestion.imageTitles['0']}>`;
+    pictureTwo.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['1']} alt = ${currentQuestion.imageTitles['1']}>`;
+    pictureThree.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['2']} alt = ${currentQuestion.imageTitles['2']}>`;
+    pictureFour.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['3']} alt = ${currentQuestion.imageTitles['3']}>`;
+    audioQuestions.innerHTML = `<audio src= ${currentQuestion.audio} id='audio' alt='an audio clip related to the written question'></audio>`;
 
-    writtenQuestions.innerHTML = c.q;
-    pictureOne.innerHTML = `<img src= ${pictureQuestionsFile}${c.optionsImages['0']} alt = ${c.imageTitles['0']}>`;
-    pictureTwo.innerHTML = `<img src= ${pictureQuestionsFile}${c.optionsImages['1']} alt = ${c.imageTitles['1']}>`;
-    pictureThree.innerHTML = `<img src= ${pictureQuestionsFile}${c.optionsImages['2']} alt = ${c.imageTitles['2']}>`;
-    pictureFour.innerHTML = `<img src= ${pictureQuestionsFile}${c.optionsImages['3']} alt = ${c.imageTitles['3']}>`;
-    audioQuestions.innerHTML = `<audio src= ${c.audio} id='audio'></audio>`;
-}
+    //get the position of questionIndex from the available question array
+    const index1 = availableQuestions.indexOf(questionIndex);
+    //remove the questionIndex from the array so that the question does not reappear again
+    availableQuestions.splice(index1, 1);
+    console.log(availableQuestions);
+    questionCounter++;
+};
+
+
 /**
  * @function setup first the available questions are set in the availableQuestions array and then the getNewQuestion function is called
-*/
-window.onload = function setup() {
+ */
+
+startQuiz.addEventListener('click', setup);
+
+function setup() {
+    document.getElementById('ready-to-start').classList.add('hide');
+    document.getElementById('quiz').classList.remove('hide');
     setAvailableQuestions();
     getNewQuestion();
-}
+
+};
 
 //add event listener to button to call function play() to trigger audio
 
@@ -292,4 +312,22 @@ audioQuestions.addEventListener('click', play);
 function play() {
     var audio = document.getElementById("audio");
     audio.play();
-  };
+};
+
+//add event listener to submit button to trigger next question
+
+submitButton.addEventListener('click', nextQuestion);
+
+/**
+ * @function next Question calls the next logical question number and thenext random question to be displayed.
+ * It also ends the question if the final question has been reached and calls the results page.
+ */
+
+function nextQuestion() {
+    if (questionCounter === quiz.length) {
+        console.log('quiz over');
+    } else {
+        getNewQuestion();
+        console.log('this is the next question');
+    }
+};
