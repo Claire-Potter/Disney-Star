@@ -32,7 +32,19 @@ const answerOptions = document.getElementById('answerArea');
 const pictureQuestionsFile = 'assets/images/pictureQuestions/';
 const submitButton = document.getElementById('submit-question');
 const startQuiz = document.getElementById('start-quiz');
+const optionContainer = document.querySelector(".option-container");
+const answersIndicatorContainer = document.querySelector(".answers-indicator");
+const homeBox = document.querySelector(".home-box");
+const quizBox = document.querySelector(".quiz-box");
+const resultBox = document.querySelector(".result-box");
+const questionLimit = 5; // if you want all questions "quiz.length"
 
+let questionCounter = 0;
+let currentQuestion;
+let availableQuestions = [];
+let availableOptions = [];
+let correctAnswers = 0;
+let attempt = 0;
 
 /**Questions and Answers array with objects to populate html with when function is called
  */
@@ -239,24 +251,15 @@ const quiz = [{
     },
 ]
 
-//Set values and  constants for generating questions
-
-let questionCounter = 0;
-let currentQuestion;
-let availableQuestions = [];
-
-
 /**  
  * @function setAvailableQuestions - push the questions into availableQuestions array
  */
-function setAvailableQuestions() {
-    const totalQuestions = quiz.length;
-
-    for (let i = 0; i < totalQuestions; i++) {
-        availableQuestions.push(quiz[i]);
-
+ function setAvailableQuestions(){
+    const totalQuestion = quiz.length;
+    for(let i=0; i<totalQuestion; i++){
+    	availableQuestions.push(quiz[i]);
     }
-};
+ }
 
 /**
  * @function getNewQuestion will set the question number, the question and the answer options
@@ -265,7 +268,7 @@ function setAvailableQuestions() {
 function getNewQuestion() {
     //set Question Number
 
-    questionNumbers.innerHTML = 'Question number ' + (questionCounter + 1) + ' of ' + quiz.length;
+    questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + questionLimit;
 
     //set Question
     //set a random question
@@ -282,11 +285,34 @@ function getNewQuestion() {
     const index1 = availableQuestions.indexOf(questionIndex);
     //remove the questionIndex from the array so that the question does not reappear again
     availableQuestions.splice(index1, 1);
-    console.log(availableQuestions);
+    // set options
+    // get the length of options
+    const optionLen = currentQuestion.options.length;
+    // push options into availableOptions Array
+    for(let i=0; i<optionLen; i++){
+       availableOptions.push(i)
+    }
+    optionContainer.innerHTML = '';
+    let animationDelay = 0.15;
+    // create options in html
+    for(let i=0; i<optionLen; i++){
+       // random option
+       const optonIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
+       // get the position of 'optonIndex' from the availableOptions Array
+       const index2 =  availableOptions.indexOf(optonIndex);
+       // remove the  'optonIndex' from the availableOptions Array , so that the option does not repeat
+       availableOptions.splice(index2,1);
+       const option = document.createElement("div");
+       option.innerHTML = currentQuestion.options[optonIndex];
+       option.id = optonIndex;
+       option.className = "option";
+       optionContainer.appendChild(option);
+       option.setAttribute("onclick","getResult(this)");
+    }
+   console.log(availableQuestions)
+   console.log(availableOptions)
     questionCounter++;
-};
-
-
+ }
 /**
  * @function setup first the available questions are set in the availableQuestions array and then the getNewQuestion function is called
  */
@@ -330,4 +356,6 @@ function nextQuestion() {
         getNewQuestion()
     }
 };
+
+
 
