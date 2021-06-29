@@ -310,7 +310,7 @@ audioQuestions.addEventListener('click', play);
  */
 
 function play() {
-    var audio = document.getElementById("audio");
+    let audio = document.getElementById("audio");
     audio.play();
 };
 
@@ -327,7 +327,7 @@ function nextQuestion() {
     if (questionCounter === quiz.length) {
         console.log('quiz over');
     } else {
-        getNewQuestion();
-        console.log('this is the next question');
+        getNewQuestion()
     }
 };
+

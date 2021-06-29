@@ -336,12 +336,14 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   display: inline-grid;
   width: 200px;
   height: 200px;
-  border: solid black 1px;
+  border:#12194A solid 3px;
+  border-radius: 5%;
 }
 
 .picture-image img {
   width: 200px;
   height: 200px;
+  border-radius: 5%;
 }
 
 .picture-image:hover {
