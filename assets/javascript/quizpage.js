@@ -198,23 +198,23 @@ const quiz = [{
         q: 'Name the film and the character heard in the following sound clip:',
         audio: 'assets/audio/findingNemoMerlin.mp3',
         options: ['Finding Dory - Merlin', 'Finding Nemo - Merlin', 'Shark Tale - Oscar', 'Shark Bait - Pisces', ],
-        optionsImages: ['', '', '', '', ],
+        optionsImages: ['merlinDory.png', 'merlin.png', 'sharkTaleOscar.png', 'sharkBaitPi.png', ],
         imageTitles: ['Finding Dory - Merlin', 'Finding Nemo - Merlin', 'Shark Tale - Oscar', 'Shark Bait - Pisces', ],
         answer: '1',
     },
     {
         q: 'Name the film and the character heard in the following sound clip:',
         audio: 'assets/audio/frozenElsa.mp3',
-        options: ['Rapunzel - Rapunzel', 'The Little Mermaid - Ariel', 'Beauty and the Beast - Belle', 'Frozen- Elsa', ],
-        optionsImages: ['', '', 'belle.png', 'elsa.png', ],
-        imageTitles: ['Rapunzel - Rapunzel', 'The Little Mermaid - Ariel', 'Beauty and the Beast - Belle', 'Frozen- Elsa', ],
+        options: ['Tangled - Rapunzel', 'The Little Mermaid - Ariel', 'Beauty and the Beast - Belle', 'Frozen- Elsa', ],
+        optionsImages: ['rapunzel.png', 'ariel.png', 'belle.png', 'elsa.png', ],
+        imageTitles: ['Tangled - Rapunzel', 'The Little Mermaid - Ariel', 'Beauty and the Beast - Belle', 'Frozen- Elsa', ],
         answer: '3',
     },
     {
         q: 'Name the character heard in the following sound clip:',
         audio: 'assets/audio/ironManTonyStark.mp3',
         options: ['Hawkeye aka Clint Barton', 'The Hulk aka Bruce Banner', 'Black Panther aka King TChalla', 'Iron Man aka Tony Stark', ],
-        optionsImages: ['', 'hulk.png', '', 'ironMan.png', ],
+        optionsImages: ['hawkeye.png', 'hulk.png', 'blackPanther.png', 'ironMan.png', ],
         imageTitles: ['Hawkeye aka Clint Barton', 'The Hulk aka Bruce Banner', 'Black Panther aka King TChalla', 'Iron Man aka Tony Stark', ],
         answer: '3',
     },
@@ -222,16 +222,16 @@ const quiz = [{
         q: 'Name the character heard in the following sound clip:',
         audio: 'assets/audio/maryPoppins.mp3',
         options: ['Mary Poppins', 'Nanny McPhee', 'Maria', 'Mother Carey', ],
-        optionsImages: ['maryPoppins.jpg', '', '', '', ],
+        optionsImages: ['maryPoppins.jpg', 'nannyMcphee.png', 'maria.png', 'motherCarey.png', ],
         imageTitles: ['Mary Poppins', 'Nanny McPhee', 'Maria', 'Mother Carey', ],
         answer: '0',
     },
     {
         q: 'Name the film and the character heard in the following sound clip:',
         audio: 'assets/audio/starWarsDarthVader.mp3',
-        options: ['Star Wars: Attack of the Clones - Darth Vader', 'Star Wars: The Empire Strikes Back - Darth Vader', 'Star Wars: The Force Awakens - Darth Vader', 'Star Wars: A New Hope - Darth Vader', ],
-        optionsImages: ['darthVader.png', '', '', '', ],
-        imageTitles: ['Star Wars: Attack of the Clones - Darth Vader', 'Star Wars: The Empire Strikes Back - Darth Vader', 'Star Wars: The Force Awakens - Darth Vader', 'Star Wars: A New Hope - Darth Vader', ],
+        options: ['Star Wars: Attack of the Clones - Anakin Skywalker', 'Star Wars: The Empire Strikes Back - Darth Vader', 'Star Wars: Revenge of the Sith - Anakin Skywalker', 'Star Wars: A New Hope - Darth Vader', ],
+        optionsImages: ['anakin.png', 'darthVader.png', 'anakin2.png', 'darthVader2.png', ],
+        imageTitles: ['Star Wars: Attack of the Clones - Anakin Skywalker', 'Star Wars: The Empire Strikes Back - Darth Vader', 'Star Wars: Revenge of the Sith - Anakin Skywalker', 'Star Wars: A New Hope - Darth Vader', ],
         answer: '1',
     },
 ]
@@ -273,13 +273,21 @@ function getNewQuestion() {
     pictureFour.innerHTML = `<img src= ${pictureQuestionsFile}${c.optionsImages['3']} alt = ${c.imageTitles['3']}>`;
     audioQuestions.innerHTML = `<audio src= ${c.audio} id='audio'></audio>`;
 }
-//First the available questions are sett in the availableQuestions array and then the getNewQuestion function is called
-
-window.onload = function () {
+/**
+ * @function setup first the available questions are set in the availableQuestions array and then the getNewQuestion function is called
+*/
+window.onload = function setup() {
     setAvailableQuestions();
     getNewQuestion();
 }
 
+//add event listener to button to call function play() to trigger audio
+
+audioQuestions.addEventListener('click', play);
+
+/**
+ * @function calls the play function to play the audio clip assigned to the current object in the array
+ */
 
 function play() {
     var audio = document.getElementById("audio");

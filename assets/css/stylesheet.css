@@ -51,9 +51,9 @@ a {
 
 .submit-button {
   width: 70px;
-  height: 30px;
+  height: 40px;
   border: solid black 1px;
-  padding: 10px 5px 5px 5px;
+  padding: 10px 5px 10px 5px;
   margin: 3px;
   background-color: #f3cc64;
   text-align: center;
