@@ -346,9 +346,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   border-radius: 5%;
 }
 
-.picture-image:hover {
-  border: solid #B12228 3px;
-}
 
 /* Answer Area */
 
@@ -367,11 +364,54 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   color: #fff;
   padding: 20px;
   margin: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
 }
 
-.option:hover {
+
+ .option-container .option.correct::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #459d43;
+  z-index: -1;
+  animation: slideinLeft .5s ease forwards;
+}
+.option-container .option.already-answered {
+  pointer-events: none;
+}
+@keyframes slideinLeft {
+  0%{
+    transform:translateX(-100%);
+  }
+  100%{
+    transform:translateX(0%);
+  }
+  
+}
+
+.option-container .option.correct {
+  color:#fff;
+}
+
+.option-container .option.wrong::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
   background-color: #B12228;
-  color: #12194A;
+  z-index: -1;
+  animation: slideinLeft .5s ease forwards;
+}
+
+.option-container .option.wrong {
+  color:#fff;
 }
 
 /* Score Tracker */
