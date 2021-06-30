@@ -37,7 +37,8 @@ const homeBox = document.getElementById("ready-to-start");
 const quizBox = document.getElementById("quiz-box");
 const resultBox = document.getElementById("result-box");
 const certificateBox = document.querySelector(".certificate");
-const questionLimit = 4; // if you want all questions "quiz.length"
+const resultDescriptor = document.querySelector('.result-description');
+const questionLimit = 25; // if you want all questions "quiz.length"
 
 let questionCounter = 0;
 let currentQuestion;
@@ -319,6 +320,13 @@ function getNewQuestion() {
  * @function setup first the available questions are set in the availableQuestions array and then the getNewQuestion function is called
  */
 
+ startQuiz.addEventListener("keydown", function(event) {
+     if (event.key === "Enter") {
+         setup();
+     }
+ });
+
+
 startQuiz.addEventListener('click', setup);
 
 function setup() {
@@ -332,7 +340,6 @@ function setup() {
 };
 
 //add event listener to button to call function play() to trigger audio
-
 audioQuestions.addEventListener('click', play);
 
 /**
@@ -394,10 +401,13 @@ function updateAnswerIndicator(markType) {
     answersIndicatorContainer.children[questionCounter - 1].classList.add(markType);
 }
 
-
-
+//add event listener to enter key to trigger next question
+submitButton.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        setup();
+    }
+});
 //add event listener to submit button to trigger next question
-
 submitButton.addEventListener('click', nextQuestion);
 
 /**
@@ -439,20 +449,26 @@ function resultTypeCalculation() {
     if (percentage <= 100 && percentage >= 80) {
         resultBox.querySelector(".result-type").innerHTML = "Disney Star";
         certificateBox.classList.add("top");
+        resultDescriptor.innerHTML = '<p>Mickey Mouse would be proud of you! You truly are a Disney genius.<br>Not only do you know your Disney characters, but you know The Avengers and Star Wars characters too.</p>';
     } else if (percentage <= 79 && percentage >= 60) {
         resultBox.querySelector(".result-type").innerHTML = "Disney Wizz";
         certificateBox.classList.add("second");
+        resultDescriptor.innerHTML = '<p> Well done, you did great! You certainly are knowledgeable about all things Disney..<br>Why not take another try? I bet that you will ace it.</p>';
     } else if (percentage <= 59 && percentage >= 40) {
         resultBox.querySelector(".result-type").innerHTML = "Disney Average Joe";
         certificateBox.classList.add("third");
+        resultDescriptor.innerHTML = '<p>Not too bad! You are half way there to becoming a true Disney champion.<br>I am sure that you learnt a thing or two whilst completing the quiz too.</p>';
     } else if (percentage <= 39 && percentage >= 20) {
         resultBox.querySelector(".result-type").innerHTML = "Disney Novice";
         certificateBox.classList.add("fourth");
+        resultDescriptor.innerHTML = '<p>We all have to begin somewhere<br>I am glad to see that you do know certain fun facts about your favourite Disney characters <br> Brush up on your knowledge and try again..</p>';
     } else if (percentage <= 19 && percentage >= 0) {
         resultBox.querySelector(".result-type").innerHTML = "Disney Wannabe";
         certificateBox.classList.add("last");
+        resultDescriptor.innerHTML = '<p>Well done for trying but I am affraid that you have a long way to go.<br>This time it was a bit of a flop. Come back when you are ready to try again.</p>';
     } else {
-        resultBox.querySelector(".result-type").innerHTML = "Disney Hopeful ";
+        resultBox.querySelector(".result-type").innerHTML = "Disney Darling";
         certificateBox.classList.add("hopeful");
+        resultDescriptor.innerHTML = '<p>Well done, you completed the quiz.</p>';
     }
 }

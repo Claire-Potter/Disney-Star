@@ -292,6 +292,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   width: 500px;
   height: 315px;
   margin: 0 auto;
+  padding: 7px;
 }
 
 /* Question Area */
@@ -361,6 +362,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   font-size: 1rem;
   font-weight: 800;
   background-color: #12194A;
+  border: #12194A solid 3px;
+  border-radius: 5%;
   color: #fff;
   padding: 20px;
   margin: 10px;
@@ -456,29 +459,42 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   margin: 0 auto;
   text-align: center;
   vertical-align: middle;
-  padding: 20px;
+  padding: 20px 20px 5px 20px;
+}
+
+.result-description {
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 20px 0px 20px;
 }
 
 .certificate {
-  width: 400px;
-  height: 252px;
+  width: 500px;
+  height: 315px;
   border: solid black 3px;
+  border-radius: 5%;
+  background-color: #393e8f;
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0px 5px 10px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .certificate p {
-  background-color: white;
+  background-color: #ffffff;
   opacity: .8;
   font-weight: 900;
-  padding: 5px;
+  padding: 5px 5px 0px 5px;
   font-size: 1.2rem;
   text-align: center;
+  border: white solid 3px;
+  border-radius: 5%;
 
 }
 
@@ -494,16 +510,16 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   background-image: url('../images/site-images/well-done-flying-high.jpg');
 }
 
-.certificate.fourth {
+.certificate.fourth  {
+  background-image: url('../images/site-images/congratulations-ok.jpg');
+}
+
+.certificate.hopeful {
   background-image: url('../images/site-images/congratulations-ok.jpg');
 }
 
 .certificate.last {
   background-image: url('../images/site-images/what-a-flop.jpg');
-}
-
-.certificate.hopeful {
-  background-image: url('../images/site-images/congratulations-ok.jpg');
 }
 
 
