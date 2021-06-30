@@ -28,12 +28,11 @@ const pictureThree = document.getElementById('picture-three');
 const pictureFour = document.getElementById('picture-four');
 const pictureQuestions = document.getElementById('picture-questions');
 const audioQuestions = document.getElementById('audio-question');
-const answerOptions = document.getElementById('answerArea');
+const answersIndicatorContainer = document.getElementById('answers-indicator');
 const pictureQuestionsFile = 'assets/images/pictureQuestions/';
 const submitButton = document.getElementById('submit-question');
 const startQuiz = document.getElementById('start-quiz');
 const optionContainer = document.querySelector(".option-container");
-const answersIndicatorContainer = document.querySelector(".answers-indicator");
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
@@ -254,12 +253,12 @@ const quiz = [{
 /**  
  * @function setAvailableQuestions - push the questions into availableQuestions array
  */
- function setAvailableQuestions(){
+function setAvailableQuestions() {
     const totalQuestion = quiz.length;
-    for(let i=0; i<totalQuestion; i++){
-    	availableQuestions.push(quiz[i]);
+    for (let i = 0; i < totalQuestion; i++) {
+        availableQuestions.push(quiz[i]);
     }
- }
+}
 
 /**
  * @function getNewQuestion will set the question number, the question and the answer options
@@ -289,29 +288,30 @@ function getNewQuestion() {
     // get the length of options
     const optionLen = currentQuestion.options.length;
     // push options into availableOptions Array
-    for(let i=0; i<optionLen; i++){
-       availableOptions.push(i)
+    for (let i = 0; i < optionLen; i++) {
+        availableOptions.push(i)
     }
     optionContainer.innerHTML = '';
     // create options in html
-    for(let i=0; i<optionLen; i++){
-       // random option
-       const optonIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
-       // get the position of 'optonIndex' from the availableOptions Array
-       const index2 =  availableOptions.indexOf(optonIndex);
-       // remove the  'optonIndex' from the availableOptions Array , so that the option does not repeat
-       availableOptions.splice(index2,1);
-       const option = document.createElement("div");
-       option.innerHTML = currentQuestion.options[optonIndex];
-       option.id = optonIndex;
-       option.className = "option";
-       optionContainer.appendChild(option);
-       option.setAttribute("onclick","getResult(this)");
+    for (let i = 0; i < optionLen; i++) {
+        // random option
+        const optonIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
+        // get the position of 'optonIndex' from the availableOptions Array
+        const index2 = availableOptions.indexOf(optonIndex);
+        // remove the  'optonIndex' from the availableOptions Array , so that the option does not repeat
+        availableOptions.splice(index2, 1);
+        const option = document.createElement("div");
+        option.innerHTML = currentQuestion.options[optonIndex];
+        option.id = optonIndex;
+        option.className = "option";
+        optionContainer.appendChild(option);
+        option.setAttribute("onclick", "getResult(this)");
     }
-   //console.log(availableQuestions)
-  // console.log(availableOptions)
+    //console.log(availableQuestions)
+    // console.log(availableOptions)
     questionCounter++;
- }
+}
+
 /**
  * @function setup first the available questions are set in the availableQuestions array and then the getNewQuestion function is called
  */
@@ -323,6 +323,8 @@ function setup() {
     document.getElementById('quiz').classList.remove('hide');
     setAvailableQuestions();
     getNewQuestion();
+    // to create answers indicator
+    answersIndicator();
 
 };
 
@@ -339,38 +341,58 @@ function play() {
     audio.play();
 };
 
-// get the result of current attempt question
-function getResult(element){
+ // get the result of current attempt question
+ function getResult(element){
     const id = parseInt(element.id);
     // get the answer by comparing the id of clicked option
     if(id === currentQuestion.answer){
         // set the green color to the correct option
         element.classList.add("correct");
-  
+        // add the indicator to correct mark
+        updateAnswerIndicator("correct");
+        correctAnswers++;
     }
     else{
         // set the red color to the incorrect option
         element.classList.add("wrong");
-    };
+        // add the indicator to wrong mark
+        updateAnswerIndicator("wrong");
 
-     // if the answer is incorrect then show the correct option by adding green color the correct option
+       // if the answer is incorrect then show the correct option by adding green color the correct option
        const optionLen = optionContainer.children.length;
        for(let i=0; i<optionLen; i++){
            if(parseInt(optionContainer.children[i].id) === currentQuestion.answer){
              optionContainer.children[i].classList.add("correct");  		
-           } }  
-    unclickableOptions();
+           }
+       }   
+      
+    }
   attempt++;
-        }
+  unclickableOptions();
+}
 
 // make all the options unclickable once the user select a option (RESTRICT THE USER TO CHANGE THE OPTION AGAIN)
-function unclickableOptions(){
+function unclickableOptions() {
     const optionLen = optionContainer.children.length;
-    for(let i=0 ; i<optionLen; i++){
-    	optionContainer.children[i].classList.add("already-answered");
+    for (let i = 0; i < optionLen; i++) {
+        optionContainer.children[i].classList.add("already-answered");
     }
- }
-    
+}
+
+function answersIndicator(){
+    answersIndicatorContainer.innerHTML = '';
+    const totalQuestion = questionLimit;
+    for(let i=0; i<totalQuestion; i++){
+          const indicator = document.createElement("div");
+      answersIndicatorContainer.appendChild(indicator);
+    }
+}
+function updateAnswerIndicator(markType){
+  answersIndicatorContainer.children[questionCounter-1].classList.add(markType);
+}
+
+
+
 //add event listener to submit button to trigger next question
 
 submitButton.addEventListener('click', nextQuestion);
@@ -380,12 +402,10 @@ submitButton.addEventListener('click', nextQuestion);
  * It also ends the question if the final question has been reached and calls the results page.
  */
 
- function nextQuestion(){
-    if(questionCounter === questionLimit){
-          quizOver();
+function nextQuestion() {
+    if (questionCounter === questionLimit) {
+        quizOver();
+    } else {
+        getNewQuestion();
     }
-    else{
-         getNewQuestion();
-    }
-  }
-
+}
