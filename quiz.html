@@ -34,7 +34,8 @@
     <div class="general-setup" id="ready-to-start" class="">
         <h2>Are your ready to start the ultimate Disney Quiz?</h2>
         <br>
-       <div id="mickey-mouse-area"><img src='assets/images/site-images/mickey-quiz.png' alt="Mickey Mouse picture" id="mickey-mouse-image"></div>
+        <div id="mickey-mouse-area"><img src='assets/images/site-images/mickey-quiz.png' alt="Mickey Mouse picture"
+                id="mickey-mouse-image"></div>
         <p>Well then click Yes to start!</p>
         <br>
         <button id="start-quiz" class="submit-button" type="button">Yes!</button>
@@ -45,18 +46,21 @@
 <section id="quiz-box" class="hide">
 
     </div>
-    <div id="question-number">​
+    <div id="questionNumber">​
     </div>
     <div id="question-area">
         <div id="written-question"></div>
         <div id="picture-question">
-            <div class="picture-image" id="picture-one"></div>
-            <div class="picture-image" id="picture-two"></div>
-            <div class="picture-image" id="picture-three"></div>
-            <div class="picture-image" id="picture-four"></div>
+            <!--Tooltip code from W3 school tutorial and adapted for site 
+                        https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom  -->
+
+            <div class="picture-image tooltip-image" id="picture-one"></div>
+            <div class="picture-image tooltip-image" id="picture-two"></div>
+            <div class="picture-image tooltip-image" id="picture-three"></div>
+            <div class="picture-image tooltip-image" id="picture-four"></div>
         </div>
-            <br>
-            <br>
+        <br>
+        <br>
         <input id="audio-question" class="submit-button" type="button" value="Click Me"></input>
     </div>
     <!--Answer Area-->
@@ -70,45 +74,47 @@
         </div>
     </div>
     <div id="score-area">
-        <div id="answers-indicator" class=""></div></div>
+        <div id="answers-indicator" class=""></div>
+    </div>
     </div>
 </section>
-    <!--Results Area-->
-    <section id = "result-box" class = "hide">
-        <div id="result-message">
-            <h2> You scored <span class="total-correct"></span> / <span class="total-question"></span> You are a <span class = "result-type"></span>! </h2>​
-        </div>
-        <div class="result-description">
-        </div>
-        <div class="certificate">
-            <p> <span id="certificate-name"></span> </p>
-        </div>
+<!--Results Area-->
+<section id="result-box" class="hide">
+    <div id="result-message">
+        <h2> You scored <span class="total-correct"></span> / <span class="total-question"></span> You are a <span
+                class="result-type"></span>! </h2>​
+    </div>
+    <div class="result-description">
+    </div>
+    <div class="certificate">
+        <p> <span id="certificate-name"></span> </p>
+    </div>
     <br>
     <br>
     <!--Next Steps Area-->
-        <div class="general-setup">
-            <p>Unhappy with your score? Then why not take the quiz again? <br> Alternatively visit the Disney store to
-                check out
-                their awesome merchandise!</p>
-            <div id="next-step-figures-area">
-                <a href="index.html" target="_blank" aria-label="link to home page to restart the quiz">
-                    <figure class="next-step-figures">
-                        <img src="assets/images/site-images/quiz-icon.jpg"
-                            alt="a quiz icon which shows a questionmark in a circle" class="next-step-images">
-                        <figcaption>Redo Quiz</figcaption>
-                    </figure>
-                </a>
-                <a href="https://www.shopdisney.co.uk/" target="_blank"
-                    aria-label="a link to the online Disney Store site" rel="noreferrer">
-                    <figure class="next-step-figures">
-                        <img src="assets/images/site-images/disney-icon.jpg"
-                            alt="a disney icon which shows a magic castle" class="next-step-images">
-                        <figcaption>Disney Store</figcaption>
-                    </figure>
-                </a>
-            </div>
+    <div class="general-setup">
+        <p>Unhappy with your score? Then why not take the quiz again? <br> Alternatively visit the Disney store to
+            check out
+            their awesome merchandise!</p>
+        <div id="next-step-figures-area">
+            <a href="index.html" target="_blank" aria-label="link to home page to restart the quiz">
+                <figure class="next-step-figures">
+                    <img src="assets/images/site-images/quiz-icon.jpg"
+                        alt="a quiz icon which shows a questionmark in a circle" class="next-step-images">
+                    <figcaption>Redo Quiz</figcaption>
+                </figure>
+            </a>
+            <a href="https://www.shopdisney.co.uk/" target="_blank" aria-label="a link to the online Disney Store site"
+                rel="noreferrer">
+                <figure class="next-step-figures">
+                    <img src="assets/images/site-images/disney-icon.jpg" alt="a disney icon which shows a magic castle"
+                        class="next-step-images">
+                    <figcaption>Disney Store</figcaption>
+                </figure>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 <!--Footer-->
 <footer id="footer">
     <p>Copyright@ClairePotter2021</p>

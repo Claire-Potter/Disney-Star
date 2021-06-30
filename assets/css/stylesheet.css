@@ -303,7 +303,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 /* Question Area */
 
-#question-number {
+#questionNumber {
   margin: 0 auto;
   text-align: center;
   vertical-align: middle;
@@ -351,6 +351,42 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   width: 200px;
   height: 200px;
   border-radius: 5%;
+}
+
+.tooltip-image {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #12194A;
+}
+
+.tooltip-image .tooltiptext-image {
+  visibility: hidden;
+  width: 150px;
+  background-color: #12194A;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -75px;
+}
+
+.tooltip-image .tooltiptext-image::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #12194A transparent transparent transparent;
+}
+
+.tooltip-image:hover .tooltiptext-image {
+  visibility: visible;
 }
 
 

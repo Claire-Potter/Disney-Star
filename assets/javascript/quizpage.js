@@ -12,7 +12,7 @@ if (localStorage.getItem('character') && (localStorage.getItem('characterImageAr
     document.getElementById('character-logo').innerHTML = localStorage.getItem('characterImageArea');
 } else {
 
-    document.getElementByClassId('character-name').innerHTML = 'DisneyStar';
+    document.getElementById('character-name').innerHTML = 'DisneyStar';
     document.getElementById('character-logo').innerHTML = `<img src= 'assets/images/site-images/disney-icon.jpg' alt = 'DisneyStar' >`;
 }
 
@@ -20,7 +20,7 @@ if (localStorage.getItem('character') && (localStorage.getItem('characterImageAr
 
 // Create constants for html input within the quiz
 
-const questionNumbers = document.getElementById('question-number');
+const questionNumbers = document.getElementById('questionNumber');
 const writtenQuestions = document.getElementById('written-question');
 const pictureOne = document.getElementById('picture-one');
 const pictureTwo = document.getElementById('picture-two');
@@ -32,14 +32,13 @@ const answersIndicatorContainer = document.getElementById('answers-indicator');
 const pictureQuestionsFile = 'assets/images/pictureQuestions/';
 const submitButton = document.getElementById('submit-question');
 const startQuiz = document.getElementById('start-quiz');
-const optionContainer = document.querySelector('.option-container');
-const pictureContainer = document.querySelector('.picture-image')
-const homeBox = document.getElementById('ready-to-start');
-const quizBox = document.getElementById('quiz-box');
-const resultBox = document.getElementById('result-box');
-const certificateBox = document.querySelector('.certificate');
+const optionContainer = document.querySelector(".option-container");
+const homeBox = document.getElementById("ready-to-start");
+const quizBox = document.getElementById("quiz-box");
+const resultBox = document.getElementById("result-box");
+const certificateBox = document.querySelector(".certificate");
 const resultDescriptor = document.querySelector('.result-description');
-const questionLimit = 1; // if you want all questions 'quiz.length'
+const questionLimit = 25; // if you want all questions "quiz.length"
 
 let questionCounter = 0;
 let currentQuestion;
@@ -80,7 +79,7 @@ const quiz = [{
         q: 'What was the name of Walt Disney’s first cartoon character?​​',
         audio: 'assets/audio/uhOhICantBelieveIt.mp3',
         options: ['Ralph', 'Donald Duck', 'Oswald the Lucky Rabbit', 'Mickey Mouse', ],
-        optionsImages: ['ralph.png', 'mickeyMouse.png', 'oswaldTheLuckyRabbit.png', 'donaldDuck.png', ],
+        optionsImages: ['ralph.png', 'donaldDuck.png', 'oswaldTheLuckyRabbit.png', 'mickeyMouse.png', ],
         imageTitles: ['Ralph', 'Donald Duck', 'Oswald the Lucky Rabbit', 'Mickey Mouse', ],
         answer: 2,
     },
@@ -119,7 +118,7 @@ const quiz = [{
     {
         q: 'Emperor Kuzco turns into what animal in The Emperor’s New Groove?',
         audio: '/assets/audio/kuzcoEmperorsNewGroove.mp3',
-        options: ['Llama', 'Camel', 'Alpaca', 'Vicuna', ],
+        options: ['Llama', 'Camel', 'Alpaca', 'Vicunas', ],
         optionsImages: ['kuzco1.png', 'kuzco2.png', 'kuzco3.png', 'kuzco4.png', ],
         imageTitles: ['Emperor Kuzco', 'Animal Kuzco', 'Kuzco and friend', 'Animal Kuzco', ],
         answer: 0,
@@ -127,9 +126,9 @@ const quiz = [{
     {
         q: 'Which of these frisky felines is the beloved companion of Alice in Wonderland?',
         audio: '/assets/audio/aliceInWonderland.mp3',
-        options: ['Tibbs', 'Dinah', 'Marie', 'Toulouse', ],
+        options: ['Tibs', 'Dinah', 'Marie', 'Toulouse', ],
         optionsImages: ['tibbs.png', 'dinah.png', 'marie.png', 'toulouse.png', ],
-        imageTitles: ['Tibbs', 'Dinah', 'Marie', 'Toulouse', ],
+        imageTitles: ['Tibs', 'Dinah', 'Marie', 'Toulouse', ],
         answer: 1,
     },
     {
@@ -207,7 +206,7 @@ const quiz = [{
     {
         q: 'Name the character heard in the following sound clip:',
         audio: 'assets/audio/donaldDuck.mp3',
-        options: ['Donald Duck', 'Goofy', 'Mickey Mouse', 'Pete', ],
+        options: ['Donald Duck', 'Goofy', 'Mickey Mouse', 'Scrooge McDuck', ],
         optionsImages: ['donaldDuck.png', 'goofy.png', 'mickeyMouse.png', 'pete.png', ],
         imageTitles: ['Donald Duck', 'Goofy', 'Mickey Mouse', 'Pete', ],
         answer: 0,
@@ -215,9 +214,9 @@ const quiz = [{
     {
         q: 'Name the film and the character heard in the following sound clip:',
         audio: 'assets/audio/findingNemoMerlin.mp3',
-        options: ['Finding Dory - Marlin', 'Finding Nemo - Marlin', 'Shark Tale - Oscar', 'Shark Bait - Pisces', ],
+        options: ['Finding Dory - Merlin', 'Finding Nemo - Merlin', 'Shark Tale - Oscar', 'Shark Bait - Pisces', ],
         optionsImages: ['merlinDory.png', 'merlin.png', 'sharkTaleOscar.png', 'sharkBaitPi.png', ],
-        imageTitles: ['Finding Dory - Marlin', 'Finding Nemo - Marlin', 'Shark Tale - Oscar', 'Shark Bait - Pisces', ],
+        imageTitles: ['Finding Dory - Merlin', 'Finding Nemo - Merlin', 'Shark Tale - Oscar', 'Shark Bait - Pisces', ],
         answer: 1,
     },
     {
@@ -271,17 +270,17 @@ function setAvailableQuestions() {
 function getNewQuestion() {
     //set Question Number
 
-    questionNumber.innerHTML = 'Question ' + (questionCounter + 1) + ' of ' + questionLimit;
+    questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + questionLimit;
 
     //set Question
     //set a random question
     const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
     currentQuestion = questionIndex;
     writtenQuestions.innerHTML = currentQuestion.q;
-    pictureOne.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['0']} alt = ${currentQuestion.imageTitles['0']}>`;
-    pictureTwo.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['1']} alt = ${currentQuestion.imageTitles['1']}>`;
-    pictureThree.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['2']} alt = ${currentQuestion.imageTitles['2']}>`;
-    pictureFour.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['3']} alt = ${currentQuestion.imageTitles['3']}>`;
+    pictureOne.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['0']} alt = ${currentQuestion.imageTitles['0']}><span class="tooltiptext-image" id="tooltip-one">${currentQuestion.imageTitles['0']}</span>`;
+    pictureTwo.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['1']} alt = ${currentQuestion.imageTitles['1']}><span class="tooltiptext-image" id="tooltip-one">${currentQuestion.imageTitles['1']}</span>`;
+    pictureThree.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['2']} alt = ${currentQuestion.imageTitles['2']}><span class="tooltiptext-image" id="tooltip-one">${currentQuestion.imageTitles['2']}</span>`;
+    pictureFour.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['3']} alt = ${currentQuestion.imageTitles['3']}><span class="tooltiptext-image" id="tooltip-one">${currentQuestion.imageTitles['3']}</span>`;
     audioQuestions.innerHTML = `<audio src= ${currentQuestion.audio} id='audio' alt='an audio clip related to the written question'></audio>`;
 
     //get the position of questionIndex from the available question array
@@ -304,28 +303,22 @@ function getNewQuestion() {
         const index2 = availableOptions.indexOf(optonIndex);
         // remove the  'optonIndex' from the availableOptions Array , so that the option does not repeat
         availableOptions.splice(index2, 1);
-        const option = document.createElement('div');
+        const option = document.createElement("div");
         option.innerHTML = currentQuestion.options[optonIndex];
         option.id = optonIndex;
-        option.className = 'option';
+        option.className = "option";
         optionContainer.appendChild(option);
-        option.setAttribute('onclick', 'getResult(this)');
+        option.setAttribute("onclick", "getResult(this)");
     }
     //console.log(availableQuestions)
     // console.log(availableOptions)
     questionCounter++;
-    //console.log('correct' + correctAnswers);
+    //console.log("correct" + correctAnswers);
 }
 
 /**
  * @function setup first the available questions are set in the availableQuestions array and then the getNewQuestion function is called
  */
-
- startQuiz.addEventListener('keydown', function(event) {
-     if (event.key === 'Enter') {
-         setup();
-     }
- });
 
 
 startQuiz.addEventListener('click', setup);
@@ -348,7 +341,7 @@ audioQuestions.addEventListener('click', play);
  */
 
 function play() {
-    let audio = document.getElementById('audio');
+    let audio = document.getElementById("audio");
     audio.play();
 };
 
@@ -358,21 +351,21 @@ function getResult(element) {
     // get the answer by comparing the id of clicked option
     if (id === currentQuestion.answer) {
         // set the green color to the correct option
-        element.classList.add('correct');
+        element.classList.add("correct");
         // add the indicator to correct mark
-        updateAnswerIndicator('correct');
+        updateAnswerIndicator("correct");
         correctAnswers++;
     } else {
         // set the red color to the incorrect option
-        element.classList.add('wrong');
+        element.classList.add("wrong");
         // add the indicator to wrong mark
-        updateAnswerIndicator('wrong');
+        updateAnswerIndicator("wrong");
 
         // if the answer is incorrect then show the correct option by adding green color the correct option
         const optionLen = optionContainer.children.length;
         for (let i = 0; i < optionLen; i++) {
             if (parseInt(optionContainer.children[i].id) === currentQuestion.answer) {
-                optionContainer.children[i].classList.add('correct');
+                optionContainer.children[i].classList.add("correct");
             }
         }
 
@@ -385,7 +378,7 @@ function getResult(element) {
 function unclickableOptions() {
     const optionLen = optionContainer.children.length;
     for (let i = 0; i < optionLen; i++) {
-        optionContainer.children[i].classList.add('already-answered');
+        optionContainer.children[i].classList.add("already-answered");
     }
 }
 
@@ -393,7 +386,7 @@ function answersIndicator() {
     answersIndicatorContainer.innerHTML = '';
     const totalQuestion = questionLimit;
     for (let i = 0; i < totalQuestion; i++) {
-        const indicator = document.createElement('div');
+        const indicator = document.createElement("div");
         answersIndicatorContainer.appendChild(indicator);
     }
 }
@@ -402,12 +395,6 @@ function updateAnswerIndicator(markType) {
     answersIndicatorContainer.children[questionCounter - 1].classList.add(markType);
 }
 
-//add event listener to enter key to trigger next question
-submitButton.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        setup();
-    }
-});
 //add event listener to submit button to trigger next question
 submitButton.addEventListener('click', nextQuestion);
 
@@ -426,50 +413,50 @@ function nextQuestion() {
 
 function quizOver() {
     // hide quiz Box
-    quizBox.classList.add('hide');
+    quizBox.classList.add("hide");
     // show result Box
-    resultBox.classList.remove('hide');
+    resultBox.classList.remove("hide");
     // calculate and add the quiz results
     quizResult();
 }
 
 // get the quiz Result
 function quizResult() {
-    resultBox.querySelector('.total-question').innerHTML = questionLimit;
-    resultBox.querySelector('.total-correct').innerHTML = correctAnswers;
+    resultBox.querySelector(".total-question").innerHTML = questionLimit;
+    resultBox.querySelector(".total-correct").innerHTML = correctAnswers;
     if (localStorage.getItem('character') && (localStorage.getItem('characterImageArea'))) {
         document.getElementById('certificate-name').innerHTML = 'Awarded to our very own ' + localStorage.getItem('character');
     } else {
         document.getElementById('certificate-name').innerHTML = 'DisneyStar';
     }
-    resultTypeCalculation();   
+    resultTypeCalculation();
 }
 
 function resultTypeCalculation() {
     const percentage = (correctAnswers / questionLimit) * 100;
     if (percentage <= 100 && percentage >= 80) {
-        resultBox.querySelector('.result-type').innerHTML = 'Disney Star';
-        certificateBox.classList.add('top');
+        resultBox.querySelector(".result-type").innerHTML = "Disney Star";
+        certificateBox.classList.add("top");
         resultDescriptor.innerHTML = '<p>Mickey Mouse would be proud of you! You truly are a Disney genius.<br>Not only do you know your Disney characters, but you know The Avengers and Star Wars characters too.</p>';
     } else if (percentage <= 79 && percentage >= 60) {
-        resultBox.querySelector('.result-type').innerHTML = 'Disney Wizz';
-        certificateBox.classList.add('second');
+        resultBox.querySelector(".result-type").innerHTML = "Disney Wizz";
+        certificateBox.classList.add("second");
         resultDescriptor.innerHTML = '<p> Well done, you did great! You certainly are knowledgeable about all things Disney..<br>Why not take another try? I bet that you will ace it.</p>';
     } else if (percentage <= 59 && percentage >= 40) {
-        resultBox.querySelector('.result-type').innerHTML = 'Disney Average Joe';
-        certificateBox.classList.add('third');
+        resultBox.querySelector(".result-type").innerHTML = "Disney Average Joe";
+        certificateBox.classList.add("third");
         resultDescriptor.innerHTML = '<p>Not too bad! You are half way there to becoming a true Disney champion.<br>I am sure that you learnt a thing or two whilst completing the quiz too.</p>';
     } else if (percentage <= 39 && percentage >= 20) {
-        resultBox.querySelector('.result-type').innerHTML = 'Disney Novice';
-        certificateBox.classList.add('fourth');
+        resultBox.querySelector(".result-type").innerHTML = "Disney Novice";
+        certificateBox.classList.add("fourth");
         resultDescriptor.innerHTML = '<p>We all have to begin somewhere<br>I am glad to see that you do know certain fun facts about your favourite Disney characters <br> Brush up on your knowledge and try again..</p>';
     } else if (percentage <= 19 && percentage >= 0) {
-        resultBox.querySelector('.result-type').innerHTML = 'Disney Wannabe';
-        certificateBox.classList.add('last');
+        resultBox.querySelector(".result-type").innerHTML = "Disney Wannabe";
+        certificateBox.classList.add("last");
         resultDescriptor.innerHTML = '<p>Well done for trying but I am affraid that you have a long way to go.<br>This time it was a bit of a flop. Come back when you are ready to try again.</p>';
     } else {
-        resultBox.querySelector('.result-type').innerHTML = 'Disney Darling';
-        certificateBox.classList.add('hopeful');
+        resultBox.querySelector(".result-type").innerHTML = "Disney Darling";
+        certificateBox.classList.add("hopeful");
         resultDescriptor.innerHTML = '<p>Well done, you completed the quiz.</p>';
     }
 }
