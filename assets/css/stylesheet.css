@@ -459,11 +459,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   padding: 20px;
 }
 
-#certificate {
+.certificate {
   width: 400px;
   height: 252px;
   border: solid black 3px;
-  background-image: url("../images/site-images/congratulations-champion.jpg");
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
@@ -473,7 +472,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   align-items: center;
 }
 
-#certificate p {
+.certificate p {
   background-color: white;
   opacity: .8;
   font-weight: 900;
@@ -482,6 +481,31 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   text-align: center;
 
 }
+
+.certificate.top {
+  background-image: url('../images/site-images/congratulations-champion.jpg');
+}
+
+.certificate.second {
+  background-image: url('../images/site-images/well-done-flying-high.jpg');
+}
+
+.certificate.third {
+  background-image: url('../images/site-images/well-done-flying-high.jpg');
+}
+
+.certificate.fourth {
+  background-image: url('../images/site-images/congratulations-ok.jpg');
+}
+
+.certificate.last {
+  background-image: url('../images/site-images/what-a-flop.jpg');
+}
+
+.certificate.hopeful {
+  background-image: url('../images/site-images/congratulations-ok.jpg');
+}
+
 
 #next-step-figures-area {
   display: flex;

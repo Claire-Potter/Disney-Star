@@ -12,7 +12,7 @@ if (localStorage.getItem('character') && (localStorage.getItem('characterImageAr
     document.getElementById('character-logo').innerHTML = localStorage.getItem('characterImageArea');
 } else {
 
-    document.getElementById('character-name').innerHTML = 'DisneyStar';
+    document.getElementByClassId('character-name').innerHTML = 'DisneyStar';
     document.getElementById('character-logo').innerHTML = `<img src= 'assets/images/site-images/disney-icon.jpg' alt = 'DisneyStar' >`;
 }
 
@@ -33,10 +33,11 @@ const pictureQuestionsFile = 'assets/images/pictureQuestions/';
 const submitButton = document.getElementById('submit-question');
 const startQuiz = document.getElementById('start-quiz');
 const optionContainer = document.querySelector(".option-container");
-const homeBox = document.querySelector(".home-box");
-const quizBox = document.querySelector(".quiz-box");
-const resultBox = document.querySelector(".result-box");
-const questionLimit = 25; // if you want all questions "quiz.length"
+const homeBox = document.getElementById("ready-to-start");
+const quizBox = document.getElementById("quiz-box");
+const resultBox = document.getElementById("result-box");
+const certificateBox = document.querySelector(".certificate");
+const questionLimit = 4; // if you want all questions "quiz.length"
 
 let questionCounter = 0;
 let currentQuestion;
@@ -44,6 +45,7 @@ let availableQuestions = [];
 let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
+
 
 /**Questions and Answers array with objects to populate html with when function is called
  */
@@ -310,6 +312,7 @@ function getNewQuestion() {
     //console.log(availableQuestions)
     // console.log(availableOptions)
     questionCounter++;
+    //console.log("correct" + correctAnswers);
 }
 
 /**
@@ -319,8 +322,8 @@ function getNewQuestion() {
 startQuiz.addEventListener('click', setup);
 
 function setup() {
-    document.getElementById('ready-to-start').classList.add('hide');
-    document.getElementById('quiz').classList.remove('hide');
+    homeBox.classList.add('hide');
+    quizBox.classList.remove('hide');
     setAvailableQuestions();
     getNewQuestion();
     // to create answers indicator
@@ -341,34 +344,33 @@ function play() {
     audio.play();
 };
 
- // get the result of current attempt question
- function getResult(element){
+// get the result of current attempt question
+function getResult(element) {
     const id = parseInt(element.id);
     // get the answer by comparing the id of clicked option
-    if(id === currentQuestion.answer){
+    if (id === currentQuestion.answer) {
         // set the green color to the correct option
         element.classList.add("correct");
         // add the indicator to correct mark
         updateAnswerIndicator("correct");
         correctAnswers++;
-    }
-    else{
+    } else {
         // set the red color to the incorrect option
         element.classList.add("wrong");
         // add the indicator to wrong mark
         updateAnswerIndicator("wrong");
 
-       // if the answer is incorrect then show the correct option by adding green color the correct option
-       const optionLen = optionContainer.children.length;
-       for(let i=0; i<optionLen; i++){
-           if(parseInt(optionContainer.children[i].id) === currentQuestion.answer){
-             optionContainer.children[i].classList.add("correct");  		
-           }
-       }   
-      
+        // if the answer is incorrect then show the correct option by adding green color the correct option
+        const optionLen = optionContainer.children.length;
+        for (let i = 0; i < optionLen; i++) {
+            if (parseInt(optionContainer.children[i].id) === currentQuestion.answer) {
+                optionContainer.children[i].classList.add("correct");
+            }
+        }
+
     }
-  attempt++;
-  unclickableOptions();
+    attempt++;
+    unclickableOptions();
 }
 
 // make all the options unclickable once the user select a option (RESTRICT THE USER TO CHANGE THE OPTION AGAIN)
@@ -379,16 +381,17 @@ function unclickableOptions() {
     }
 }
 
-function answersIndicator(){
+function answersIndicator() {
     answersIndicatorContainer.innerHTML = '';
     const totalQuestion = questionLimit;
-    for(let i=0; i<totalQuestion; i++){
-          const indicator = document.createElement("div");
-      answersIndicatorContainer.appendChild(indicator);
+    for (let i = 0; i < totalQuestion; i++) {
+        const indicator = document.createElement("div");
+        answersIndicatorContainer.appendChild(indicator);
     }
 }
-function updateAnswerIndicator(markType){
-  answersIndicatorContainer.children[questionCounter-1].classList.add(markType);
+
+function updateAnswerIndicator(markType) {
+    answersIndicatorContainer.children[questionCounter - 1].classList.add(markType);
 }
 
 
@@ -407,5 +410,49 @@ function nextQuestion() {
         quizOver();
     } else {
         getNewQuestion();
+    }
+}
+
+function quizOver() {
+    // hide quiz Box
+    quizBox.classList.add("hide");
+    // show result Box
+    resultBox.classList.remove("hide");
+    // calculate and add the quiz results
+    quizResult();
+}
+
+// get the quiz Result
+function quizResult() {
+    resultBox.querySelector(".total-question").innerHTML = questionLimit;
+    resultBox.querySelector(".total-correct").innerHTML = correctAnswers;
+    if (localStorage.getItem('character') && (localStorage.getItem('characterImageArea'))) {
+        document.getElementById('certificate-name').innerHTML = 'Awarded to our very own ' + localStorage.getItem('character');
+    } else {
+        document.getElementById('certificate-name').innerHTML = 'DisneyStar';
+    }
+    resultTypeCalculation();   
+}
+
+function resultTypeCalculation() {
+    const percentage = (correctAnswers / questionLimit) * 100;
+    if (percentage <= 100 && percentage >= 80) {
+        resultBox.querySelector(".result-type").innerHTML = "Disney Star";
+        certificateBox.classList.add("top");
+    } else if (percentage <= 79 && percentage >= 60) {
+        resultBox.querySelector(".result-type").innerHTML = "Disney Wizz";
+        certificateBox.classList.add("second");
+    } else if (percentage <= 59 && percentage >= 40) {
+        resultBox.querySelector(".result-type").innerHTML = "Disney Average Joe";
+        certificateBox.classList.add("third");
+    } else if (percentage <= 39 && percentage >= 20) {
+        resultBox.querySelector(".result-type").innerHTML = "Disney Novice";
+        certificateBox.classList.add("fourth");
+    } else if (percentage <= 19 && percentage >= 0) {
+        resultBox.querySelector(".result-type").innerHTML = "Disney Wannabe";
+        certificateBox.classList.add("last");
+    } else {
+        resultBox.querySelector(".result-type").innerHTML = "Disney Hopeful ";
+        certificateBox.classList.add("hopeful");
     }
 }
