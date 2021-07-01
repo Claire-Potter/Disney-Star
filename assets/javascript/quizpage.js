@@ -5,9 +5,9 @@
  * Code for using local storage found on https://www.w3schools.com/html/html5_webstorage.asp and edited for purpose.
  */
 
-if (localStorage.getItem('character') && (localStorage.getItem('characterImageArea'))) {
+if (localStorage.getItem('character') && (localStorage.getItem('character-image-area'))) {
     document.getElementById('character-name').innerHTML = localStorage.getItem('character');
-    document.getElementById('character-logo').innerHTML = localStorage.getItem('characterImageArea');
+    document.getElementById('character-logo').innerHTML = localStorage.getItem('character-image-area');
 } else {
 
     document.getElementById('character-name').innerHTML = 'DisneyStar';
@@ -292,10 +292,10 @@ function getNewQuestion() {
     //populate the images code and audio code created by me.
     //Tooltip code from W3 school tutorial and adapted for site 
     //https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom
-    pictureOne.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['0']} alt = ${currentQuestion.imageTitles['0']}><span class='tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['0']}</span>`;
-    pictureTwo.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['1']} alt = ${currentQuestion.imageTitles['1']}><span class='tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['1']}</span>`;
-    pictureThree.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['2']} alt = ${currentQuestion.imageTitles['2']}><span class='tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['2']}</span>`;
-    pictureFour.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['3']} alt = ${currentQuestion.imageTitles['3']}><span class='tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['3']}</span>`;
+    pictureOne.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['0']} alt = ${currentQuestion.imageTitles['0']}><span class='tooltiptext tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['0']}</span>`;
+    pictureTwo.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['1']} alt = ${currentQuestion.imageTitles['1']}><span class='tooltiptext tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['1']}</span>`;
+    pictureThree.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['2']} alt = ${currentQuestion.imageTitles['2']}><span class='tooltiptext tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['2']}</span>`;
+    pictureFour.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['3']} alt = ${currentQuestion.imageTitles['3']}><span class='tooltiptext tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['3']}</span>`;
     audioQuestions.innerHTML = `<audio src= ${currentQuestion.audio} id='audio' alt='an audio clip related to the written question'></audio>`;
 
     //The below sections are created as per the WebShala tutorial.
@@ -461,7 +461,7 @@ function quizOver() {
 function quizResult() {
     resultBox.querySelector('.total-question').innerHTML = questionLimit;
     resultBox.querySelector('.total-correct').innerHTML = correctAnswers;
-    if (localStorage.getItem('character') && (localStorage.getItem('characterImageArea'))) {
+    if (localStorage.getItem('character')) {
         document.getElementById('certificate-name').innerHTML = 'Awarded to our very own ' + localStorage.getItem('character');
     } else {
         document.getElementById('certificate-name').innerHTML = 'DisneyStar';
