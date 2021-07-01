@@ -291,7 +291,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 #mickey-mouse-area {
   padding-top: 90px;
   width: 500px;
-  height: 500px;
+  height: 400px;
 }
 
 #mickey-mouse-image {
@@ -303,7 +303,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 /* Question Area */
 
-#questionNumber {
+#question-number {
   margin: 0 auto;
   text-align: center;
   vertical-align: middle;

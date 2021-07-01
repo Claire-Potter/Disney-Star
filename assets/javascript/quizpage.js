@@ -1,10 +1,8 @@
 // Generate Character Name
-
-/** Fetches character and character image chosen by the user and stored in local storage
- * Populates the Character Name and Character logo areas with this information.
+/** Fetches 'character' and 'character-image' data chosen by the user and stored in local storage.
+ * Adds the data to the character-name and character-logo areas.
  * Default name and image set incase user does not select a character or if there is an error storing or retrieving the data.
  * Code for using local storage found on https://www.w3schools.com/html/html5_webstorage.asp and edited for purpose.
- * Code to add as innerHTML found on https://stackoverflow.com/questions/4321380/how-to-get-the-inner-html-value and edited for purpose.
  */
 
 if (localStorage.getItem('character') && (localStorage.getItem('characterImageArea'))) {
@@ -17,10 +15,17 @@ if (localStorage.getItem('character') && (localStorage.getItem('characterImageAr
 }
 
 // Quiz Section //
+/** A series of tutorial videos starting from video two up until video five were utilised as a guideline to create this quiz.
+ * Here is the link to the second video https://www.youtube.com/watch?v=QU6z69P5BrU&t=0s. The links to the additional.
+ * videos are available within the about section underneath the above video.
+ * The videos are created by The WebShala Channel https://www.youtube.com/channel/UC94lpQZvaokkIqU-TvtsGXQ.
+ * As far as possible I have tried to indicate which sections of code are created as per the tutorial and which sections are adapted
+ * and which sections are created by me.
+ */
 
-// Create constants for html input within the quiz
-
-const questionNumbers = document.getElementById('questionNumber');
+// Create constants for html input within the quiz.
+// Created whilst following the WebShala tutorial, Ids and classNames as per my html.
+const questionNumbers = document.getElementById('question-number');
 const writtenQuestions = document.getElementById('written-question');
 const pictureOne = document.getElementById('picture-one');
 const pictureTwo = document.getElementById('picture-two');
@@ -32,15 +37,16 @@ const answersIndicatorContainer = document.getElementById('answers-indicator');
 const pictureQuestionsFile = 'assets/images/pictureQuestions/';
 const submitButton = document.getElementById('submit-question');
 const startQuiz = document.getElementById('start-quiz');
-const optionContainer = document.querySelector(".option-container");
-const homeBox = document.getElementById("ready-to-start");
-const quizBox = document.getElementById("quiz-box");
-const resultBox = document.getElementById("result-box");
-const certificateBox = document.querySelector(".certificate");
+const optionContainer = document.querySelector('.option-container');
+const homeBox = document.getElementById('ready-to-start');
+const quizBox = document.getElementById('quiz-box');
+const resultBox = document.getElementById('result-box');
+const certificateBox = document.querySelector('.certificate');
 const resultDescriptor = document.querySelector('.result-description');
 const restartQuiz = document.querySelector('#restart-quiz');
-const questionLimit = 25; // if you want all questions "quiz.length"
-
+// if you want all questions 'quiz.length';
+const questionLimit = 2; 
+// set the initial values;
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
@@ -49,7 +55,9 @@ let correctAnswers = 0;
 let attempt = 0;
 
 
-/**Questions and Answers array with objects to populate html with when function is called
+/**Questions and Answers array for the quiz with objects to populate html with.
+ * This was created by me. 
+ * https://www.sitepoint.com/simple-javascript-quiz/ was referenced for the structure of the array.
  */
 
 const quiz = [{
@@ -255,7 +263,8 @@ const quiz = [{
 ]
 
 /**  
- * @function setAvailableQuestions - push the questions into availableQuestions array
+ * @function setAvailableQuestions - push the questions into availableQuestions array.
+ * Created as per the WebShala tutorial.
  */
 function setAvailableQuestions() {
     const totalQuestion = quiz.length;
@@ -270,103 +279,98 @@ function setAvailableQuestions() {
 
 function getNewQuestion() {
     //set Question Number
-
-    questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + questionLimit;
+    //Created as per the WebShala tutorial.
+    questionNumbers.innerHTML = 'Question ' + (questionCounter + 1) + ' of ' + questionLimit;
 
     //set Question
     //set a random question
+    //Created as per the WebShala tutorial and adapted accordingly.
     const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
     currentQuestion = questionIndex;
+    //populate the question
     writtenQuestions.innerHTML = currentQuestion.q;
-    pictureOne.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['0']} alt = ${currentQuestion.imageTitles['0']}><span class="tooltiptext-image" id="tooltip-one">${currentQuestion.imageTitles['0']}</span>`;
-    pictureTwo.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['1']} alt = ${currentQuestion.imageTitles['1']}><span class="tooltiptext-image" id="tooltip-one">${currentQuestion.imageTitles['1']}</span>`;
-    pictureThree.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['2']} alt = ${currentQuestion.imageTitles['2']}><span class="tooltiptext-image" id="tooltip-one">${currentQuestion.imageTitles['2']}</span>`;
-    pictureFour.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['3']} alt = ${currentQuestion.imageTitles['3']}><span class="tooltiptext-image" id="tooltip-one">${currentQuestion.imageTitles['3']}</span>`;
+    //populate the images code and audio code created by me.
+    pictureOne.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['0']} alt = ${currentQuestion.imageTitles['0']}><span class='tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['0']}</span>`;
+    pictureTwo.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['1']} alt = ${currentQuestion.imageTitles['1']}><span class='tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['1']}</span>`;
+    pictureThree.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['2']} alt = ${currentQuestion.imageTitles['2']}><span class='tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['2']}</span>`;
+    pictureFour.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['3']} alt = ${currentQuestion.imageTitles['3']}><span class='tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['3']}</span>`;
     audioQuestions.innerHTML = `<audio src= ${currentQuestion.audio} id='audio' alt='an audio clip related to the written question'></audio>`;
 
-    //get the position of questionIndex from the available question array
+    //The below sections are created as per the WebShala tutorial.
+    //get the position of questionIndex from the available question array.
     const index1 = availableQuestions.indexOf(questionIndex);
-    //remove the questionIndex from the array so that the question does not reappear again
+    //remove the questionIndex from the array so that the question does not reappear again.
     availableQuestions.splice(index1, 1);
-    // set options
-    // get the length of options
+    // set options.
+    // get the length of options.
     const optionLen = currentQuestion.options.length;
-    // push options into availableOptions Array
+    // push options into availableOptions Array.
     for (let i = 0; i < optionLen; i++) {
         availableOptions.push(i)
     }
     optionContainer.innerHTML = '';
-    // create options in html
+    // create options in html.
     for (let i = 0; i < optionLen; i++) {
-        // random option
+        // random option.
         const optonIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
-        // get the position of 'optonIndex' from the availableOptions Array
+        // get the position of 'optonIndex' from the availableOptions Array.
         const index2 = availableOptions.indexOf(optonIndex);
-        // remove the  'optonIndex' from the availableOptions Array , so that the option does not repeat
+        // remove the  'optonIndex' from the availableOptions Array , so that the option does not repeat.
         availableOptions.splice(index2, 1);
-        const option = document.createElement("div");
+        const option = document.createElement('div');
         option.innerHTML = currentQuestion.options[optonIndex];
         option.id = optonIndex;
-        option.className = "option";
+        option.className = 'option';
         optionContainer.appendChild(option);
-        option.setAttribute("onclick", "getResult(this)");
+        option.setAttribute('onclick', 'getResult(this)');
     }
-    //console.log(availableQuestions)
-    // console.log(availableOptions)
+    //log the available questions to the console to monitor that the above code is working.
+    console.log(availableQuestions);
     questionCounter++;
-    //console.log("correct" + correctAnswers);
+    //log if the answer is correct or incorrect along with the correct answer to the console.
+    console.log('correct' + correctAnswers);
 }
 
-/**
- * @function setup first the available questions are set in the availableQuestions array and then the getNewQuestion function is called
- */
-
-
-startQuiz.addEventListener('click', setup);
-
-function setup() {
-    homeBox.classList.add('hide');
-    quizBox.classList.remove('hide');
-    setAvailableQuestions();
-    getNewQuestion();
-    // to create answers indicator
-    answersIndicator();
-
-};
-
-//add event listener to button to call function play() to trigger audio
+//add an event listener to click me button to call function play() to trigger audio.
+//  addEventListener code added by me.
 audioQuestions.addEventListener('click', play);
 
 /**
- * @function calls the play function to play the audio clip assigned to the current object in the array
+ * @function play to play the audio clip assigned to the current object in the array.
+ * solution to add audio found on https://stackoverflow.com/questions/9419263/how-to-play-audio.
  */
 
 function play() {
-    let audio = document.getElementById("audio");
+    let audio = document.getElementById('audio');
     audio.play();
 };
 
-// get the result of current attempt question
+/**
+ * @function calls the getResult function to play the audio clip assigned to the current object in the array.
+ * code created as per the WebShala tutorial.
+ */
+
+
 function getResult(element) {
     const id = parseInt(element.id);
-    // get the answer by comparing the id of clicked option
+    // get the answer by comparing the id of clicked option.
     if (id === currentQuestion.answer) {
-        // set the green color to the correct option
-        element.classList.add("correct");
-        // add the indicator to correct mark
-        updateAnswerIndicator("correct");
+        // set the green color to the correct option.
+        element.classList.add('correct');
+        // add the indicator to correct mark.
+        updateAnswerIndicator('correct');
         correctAnswers++;
     } else {
-        // set the red color to the incorrect option
-        element.classList.add("wrong");
-        // add the indicator to wrong mark
-        updateAnswerIndicator("wrong");
+        // set the red color to the incorrect option.
+        element.classList.add('wrong');
+        // add the indicator to wrong mark.
+        updateAnswerIndicator('wrong');
 
-        // if the answer is incorrect then show the correct option by adding green color the correct option
+        // if the answer is incorrect then show the correct option by adding green color the correct option.
         const optionLen = optionContainer.children.length;
         for (let i = 0; i < optionLen; i++) {
             if (parseInt(optionContainer.children[i].id) === currentQuestion.answer) {
-                optionContainer.children[i].classList.add("correct");
+                optionContainer.children[i].classList.add('correct');
             }
         }
 
@@ -375,33 +379,52 @@ function getResult(element) {
     unclickableOptions();
 }
 
-// make all the options unclickable once the user select a option (RESTRICT THE USER TO CHANGE THE OPTION AGAIN)
+
+/** 
+ * @function unclickableOptions makes all the options unclickable once the user selects an option.
+* created as per the WebShala tutorial.
+*/
+
 function unclickableOptions() {
     const optionLen = optionContainer.children.length;
     for (let i = 0; i < optionLen; i++) {
-        optionContainer.children[i].classList.add("already-answered");
+        optionContainer.children[i].classList.add('already-answered');
     }
 }
+
+/** 
+ * @function answersIndicator creates a div in the html to be able to add whether the answer is correct or wrong (upateAnswerIndocator). This is
+ * within the score area of the html to track answers.
+* created as per the WebShala tutorial.
+*/
 
 function answersIndicator() {
     answersIndicatorContainer.innerHTML = '';
     const totalQuestion = questionLimit;
     for (let i = 0; i < totalQuestion; i++) {
-        const indicator = document.createElement("div");
+        const indicator = document.createElement('div');
         answersIndicatorContainer.appendChild(indicator);
     }
 }
+
+/** 
+ * @function updateAnswerIndicator adds a correct answer indicator or incorrect answer indicator to the answersIndicatorContainer
+ * to display when the answer is clicked to track answers.
+* created as per the WebShala tutorial.
+*/
 
 function updateAnswerIndicator(markType) {
     answersIndicatorContainer.children[questionCounter - 1].classList.add(markType);
 }
 
-//add event listener to submit button to trigger next question
+//add  an event listener to submit button to trigger next question
+// addEventListener code added by me.
 submitButton.addEventListener('click', nextQuestion);
 
 /**
- * @function next Question calls the next logical question number and thenext random question to be displayed.
+ * @function nextQuestion calls the next logical question number and the next random question to be displayed.
  * It also ends the question if the final question has been reached and calls the results page.
+ * created as per the WebShala tutorial.
  */
 
 function nextQuestion() {
@@ -412,19 +435,30 @@ function nextQuestion() {
     }
 }
 
+/**
+ * @function quizOver ends the quiz when the last question is reached and calls the results box to display results
+ * of the quiz.
+ * created as per the WebShala tutorial.
+ */
+
 function quizOver() {
     // hide quiz Box
-    quizBox.classList.add("hide");
+    quizBox.classList.add('hide');
     // show result Box
-    resultBox.classList.remove("hide");
+    resultBox.classList.remove('hide');
     // calculate and add the quiz results
     quizResult();
 }
 
-// get the quiz Result
+/**
+ * @function quizResult calls add the innerHTML to the results page to display the quiz results.
+ * It also ends the question if the final question has been reached and calls the results page.
+ * created as per the WebShala tutorial and adapted for the site.
+ */
+
 function quizResult() {
-    resultBox.querySelector(".total-question").innerHTML = questionLimit;
-    resultBox.querySelector(".total-correct").innerHTML = correctAnswers;
+    resultBox.querySelector('.total-question').innerHTML = questionLimit;
+    resultBox.querySelector('.total-correct').innerHTML = correctAnswers;
     if (localStorage.getItem('character') && (localStorage.getItem('characterImageArea'))) {
         document.getElementById('certificate-name').innerHTML = 'Awarded to our very own ' + localStorage.getItem('character');
     } else {
@@ -433,81 +467,109 @@ function quizResult() {
     resultTypeCalculation();
 }
 
+/**
+ * @function resultTypeCalculation calculate the result based on the percentage of questions answered correctly and setup page display
+ * accordingly. Most of this code is adapated code written by me.
+ */
+
 function resultTypeCalculation() {
     const percentage = (correctAnswers / questionLimit) * 100;
     if (percentage <= 100 && percentage >= 80) {
-        resultBox.querySelector(".result-type").innerHTML = "Disney Star";
-        certificateBox.classList.add("top");
-        certificateBox.classList.remove("second");
-        certificateBox.classList.remove("third");
-        certificateBox.classList.remove("fourth");
-        certificateBox.classList.remove("last");
+        resultBox.querySelector('.result-type').innerHTML = 'Disney Star';
+        certificateBox.classList.add('top');
+        certificateBox.classList.remove('second');
+        certificateBox.classList.remove('third');
+        certificateBox.classList.remove('fourth');
+        certificateBox.classList.remove('last');
         resultDescriptor.innerHTML = '<p>Mickey Mouse would be proud of you! You truly are a Disney genius.<br>Not only do you know your Disney characters, but you know The Avengers and Star Wars characters too.</p>';
     } else if (percentage <= 79 && percentage >= 60) {
-        resultBox.querySelector(".result-type").innerHTML = "Disney Wizz";
-        certificateBox.classList.add("second");
-        certificateBox.classList.remove("top");
-        certificateBox.classList.remove("third");
-        certificateBox.classList.remove("fourth");
-        certificateBox.classList.remove("last");
+        resultBox.querySelector('.result-type').innerHTML = 'Disney Wizz';
+        certificateBox.classList.add('second');
+        certificateBox.classList.remove('top');
+        certificateBox.classList.remove('third');
+        certificateBox.classList.remove('fourth');
+        certificateBox.classList.remove('last');
         resultDescriptor.innerHTML = '<p> Well done, you did great! You certainly are knowledgeable about all things Disney..<br>Why not take another try? I bet that you will ace it.</p>';
     } else if (percentage <= 59 && percentage >= 40) {
-        resultBox.querySelector(".result-type").innerHTML = "Disney Average Joe";
-        certificateBox.classList.add("third");
-        certificateBox.classList.remove("top");
-        certificateBox.classList.remove("second");
-        certificateBox.classList.remove("fourth");
-        certificateBox.classList.remove("last");
+        resultBox.querySelector('.result-type').innerHTML = 'Disney Average Joe';
+        certificateBox.classList.add('third');
+        certificateBox.classList.remove('top');
+        certificateBox.classList.remove('second');
+        certificateBox.classList.remove('fourth');
+        certificateBox.classList.remove('last');
         resultDescriptor.innerHTML = '<p>Not too bad! You are half way there to becoming a true Disney champion.<br>I am sure that you learnt a thing or two whilst completing the quiz too.</p>';
     } else if (percentage <= 39 && percentage >= 20) {
-        resultBox.querySelector(".result-type").innerHTML = "Disney Novice";
-        certificateBox.classList.add("fourth");
-        certificateBox.classList.remove("top");
-        certificateBox.classList.remove("second");
-        certificateBox.classList.remove("third");
-        certificateBox.classList.remove("last");
+        resultBox.querySelector('.result-type').innerHTML = 'Disney Novice';
+        certificateBox.classList.add('fourth');
+        certificateBox.classList.remove('top');
+        certificateBox.classList.remove('second');
+        certificateBox.classList.remove('third');
+        certificateBox.classList.remove('last');
         resultDescriptor.innerHTML = '<p>We all have to begin somewhere<br>I am glad to see that you do know certain fun facts about your favourite Disney characters <br> Brush up on your knowledge and try again.</p>';
     } else if (percentage <= 19 && percentage >= 0) {
-        resultBox.querySelector(".result-type").innerHTML = "Disney Wannabe";
-        certificateBox.classList.add("last");
-        certificateBox.classList.remove("top");
-        certificateBox.classList.remove("second");
-        certificateBox.classList.remove("third");
-        certificateBox.classList.remove("fourth");
+        resultBox.querySelector('.result-type').innerHTML = 'Disney Wannabe';
+        certificateBox.classList.add('last');
+        certificateBox.classList.remove('top');
+        certificateBox.classList.remove('second');
+        certificateBox.classList.remove('third');
+        certificateBox.classList.remove('fourth');
         resultDescriptor.innerHTML = '<p>Well done for trying but I am affraid that you have a long way to go.<br>This time it was a bit of a flop. Come back when you are ready to try again.</p>';
     } else {
-        resultBox.querySelector(".result-type").innerHTML = " ";
-        certificateBox.classList.remove("top");
-        certificateBox.classList.remove("second");
-        certificateBox.classList.remove("third");
-        certificateBox.classList.remove("fourth");
-        certificateBox.classList.remove("last");
+        resultBox.querySelector('.result-type').innerHTML = '';
+        certificateBox.classList.remove('top');
+        certificateBox.classList.remove('second');
+        certificateBox.classList.remove('third');
+        certificateBox.classList.remove('fourth');
+        certificateBox.classList.remove('last');
         resultDescriptor.innerHTML =  '';
     }
 }
 
+//eventListener code added by me.
 restartQuiz.addEventListener('click', tryAgainQuiz);
 
+/**
+ * @function resetQuiz resets the initial quiz values.
+ * created as per WebShala tutorial.
+ */
 function resetQuiz() {
     questionCounter = 0;
     correctAnswers = 0;
     attempt = 0;
 }
 
+/**
+ * @function tryAgainQuiz resets the quiz page for the quiz to be taken again. Calls the functions to reset various quiz areas.
+ * created as per WebShala tutorial.
+ */
 function tryAgainQuiz() {
     // hide the resultBox
-    resultBox.classList.add("hide");
+    resultBox.classList.add('hide');
     // show the quizBox
-    quizBox.classList.remove("hide");
+    quizBox.classList.remove('hide');
     resetQuiz();
     setup();
     resultTypeCalculation();
 }
 
-function goToHome() {
-    // hide result Box
-    resultBox.classList.add("hide");
-    // show home box
-    homeBox.classList.remove("hide");
-    resetQuiz();
-}
+
+// Start of Quiz//
+// Add an event listener to the submit button to trigger the start of the quiz.
+//addEventListener code added by me.
+startQuiz.addEventListener('click', setup);
+
+/**
+ * @function setup first the available questions are set in the availableQuestions array and then the getNewQuestion function is called.
+ * The correct answers indicators are added. The html quiz page is setup to display the quiz.
+ * created as per WebShala tutorial.
+ */
+
+function setup() {
+    homeBox.classList.add('hide');
+    quizBox.classList.remove('hide');
+    setAvailableQuestions();
+    getNewQuestion();
+    // to create answers indicator
+    answersIndicator();
+
+};
