@@ -19,60 +19,111 @@
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <title>Disney-Star</title>
 </head>
-  <!--Header-->
-  <header id="header">
+<!--Header-->
+<header id="header">
     <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars" id="magic-wand">
     <h1 id="logo"> Disney Star</h1>
 </header>
 <!--Question Area-->
-<section>
+<section id="quiz-page">
     <div id="character-name-area">
         <div id="character-logo"></div>
         <div id="character-name"></div>
     </div>
-    <div id="question-number">
-        <h2>Question 01 </h2>​
+
+    <div class="general-setup" id="ready-to-start" class="">
+        <h2>Are your ready to start the ultimate Disney Quiz?</h2>
+        <br>
+        <div id="mickey-mouse-area"><img src='assets/images/site-images/mickey-quiz.png' alt="Mickey Mouse picture"
+                id="mickey-mouse-image"></div>
+        <p>Well then click Yes to start!</p>
+        <br>
+        <br>
+        <button id="start-quiz" class="submit-button" type="button">Yes!</button>
+    </div>
+</section>
+
+<!--Question Area-->
+<section id="quiz-box" class="hide">
+
+    </div>
+    <div id="question-number">​
     </div>
     <div id="question-area">
         <div id="written-question"></div>
         <div id="picture-question">
-            <div class="picture-image" id="picture-one"></div>
-            <div class="picture-image" id="picture-two"></div>
-            <div class="picture-image" id="picture-three"></div>
-            <div class="picture-image" id="picture-four"></div>
+            <!--Tooltip code from W3 school tutorial and adapted for site 
+                        https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom  -->
+
+            <div class="picture-image tooltip-image" id="picture-one"></div>
+            <div class="picture-image tooltip-image" id="picture-two"></div>
+            <div class="picture-image tooltip-image" id="picture-three"></div>
+            <div class="picture-image tooltip-image" id="picture-four"></div>
         </div>
-        <div id="audio-question">
-            <audio controls>
-                <source src="" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
+        <br>
+        <br>
+        <p>Click the below button to play the audio clip</p>
+        <br>
+        <br>
+        <input id="audio-question" class="submit-button" type="button" value="Audio"></input>
     </div>
     <!--Answer Area-->
-    <div id="answer-area">
-        <form>
-            <ol>
-                <li><label for="answer-choice-one" class="radio-answer-choice">
-                    </label><input type="radio" name="answer-choice" id="answer-choice-one" value=""
-                        class="radio-answer-choice" required></li>
-                <li><label for="answer-choice-two" class="radio-answer-choice">
-                    </label><input type="radio" name="answer-choice" id="answer-choice-two" value=""
-                        class="radio-answer-choice"></li>
-                <li><label for="answer-choice-three" class="radio-answer-choice">
-                    </label><input type="radio" name="answer-choice" id="answer-choice-three" value=""
-                        class="radio-answer-choice"></li>
-                <li><label for="answer-choice-four" class="radio-answer-choice">
-                    </label><input type="radio" name="answer-choice" id="answer-choice-four" value=""
-                        class="radio-answer-choice"></li>
-            </ol>
+    <div>
+        <div id="answerArea">
+            <div class="option-container"></div>
             <!--Submit button to submit answer.-->
             <br>
             <br>
-            <button type="submit" class="submit-button" data-type="submit-answer">Submit</button>
-        </form>
+            <input id="submit-question" class="submit-button" type="button" value="Next"></input>
+        </div>
     </div>
     <div id="score-area">
-        <div id="score-tracker"> / 25 </div>
+        <div id="answers-indicator" class=""></div>
+    </div>
+    </div>
+</section>
+<!--Results Area-->
+<section id="result-box" class="hide">
+    <div id="result-message">
+        <h2> You scored <span class="total-correct"></span> / <span class="total-question"></span> You are a <span
+                class="result-type"></span>! </h2>​
+    </div>
+    <div class="result-description">
+    </div>
+    <div class="certificate">
+        <p> <span id="certificate-name"></span> </p>
+    </div>
+    <br>
+    <br>
+    <!--Next Steps Area-->
+    <div class="general-setup">
+        <p>Unhappy with your score? Then why not take the quiz again? <br> Alternatively visit the Disney store to
+            check out
+            their awesome merchandise!</p>
+        <div id="next-step-figures-area">
+            <a id="restart-quiz" aria-label="link to restart the quiz">
+                <figure class="next-step-figures">
+                    <img src="assets/images/site-images/quiz-icon.jpg"
+                        alt="a quiz icon which shows a questionmark in a circle" class="next-step-images">
+                    <figcaption>Redo Quiz</figcaption>
+                </figure>
+            </a>
+            <a href="index.html" aria-label="link to home page">
+                <figure class="next-step-figures">
+                    <img src="assets/images/site-images/magic-wand-icon.jpg"
+                        alt="the Disney Star magic wand icon as per header" class="next-step-images">
+                    <figcaption>Disney Star Home</figcaption>
+                </figure>
+            </a>
+            <a href="https://www.shopdisney.co.uk/" target="_blank" aria-label="a link to the online Disney Store site"
+                rel="noreferrer">
+                <figure class="next-step-figures">
+                    <img src="assets/images/site-images/disney-icon.jpg" alt="a disney icon which shows a magic castle"
+                        class="next-step-images">
+                    <figcaption>Disney Store</figcaption>
+                </figure>
+            </a>
+        </div>
     </div>
 </section>
 <!--Footer-->
@@ -81,6 +132,7 @@
 </footer>
 <!--Link to Javascript script-->
 <script src="assets/javascript/quizpage.js"></script>
+
 </body>
 </body>
 
