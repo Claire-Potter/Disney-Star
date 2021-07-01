@@ -44,8 +44,7 @@ const resultBox = document.getElementById('result-box');
 const certificateBox = document.querySelector('.certificate');
 const resultDescriptor = document.querySelector('.result-description');
 const restartQuiz = document.querySelector('#restart-quiz');
-// if you want all questions 'quiz.length';
-const questionLimit = 2; 
+const questionLimit = 25; 
 // set the initial values;
 let questionCounter = 0;
 let currentQuestion;
@@ -459,8 +458,8 @@ function quizOver() {
  */
 
 function quizResult() {
-    resultBox.querySelector('.total-question').innerHTML = questionLimit;
-    resultBox.querySelector('.total-correct').innerHTML = correctAnswers;
+    resultBox.querySelector('.total-question').innerHTML =  questionLimit;
+    resultBox.querySelector('.total-correct').innerHTML = 'You scored ' + correctAnswers + ' /';
     if (localStorage.getItem('character')) {
         document.getElementById('certificate-name').innerHTML = 'Awarded to our very own ' + localStorage.getItem('character');
     } else {
@@ -477,7 +476,7 @@ function quizResult() {
 function resultTypeCalculation() {
     const percentage = (correctAnswers / questionLimit) * 100;
     if (percentage <= 100 && percentage >= 80) {
-        resultBox.querySelector('.result-type').innerHTML = 'Disney Star';
+        resultBox.querySelector('.result-type').innerHTML = 'You are a Disney Star';
         certificateBox.classList.add('top');
         certificateBox.classList.remove('second');
         certificateBox.classList.remove('third');
@@ -485,7 +484,7 @@ function resultTypeCalculation() {
         certificateBox.classList.remove('last');
         resultDescriptor.innerHTML = '<p>Mickey Mouse would be proud of you! You truly are a Disney genius.<br>Not only do you know your Disney characters, but you know The Avengers and Star Wars characters too.</p>';
     } else if (percentage <= 79 && percentage >= 60) {
-        resultBox.querySelector('.result-type').innerHTML = 'Disney Wizz';
+        resultBox.querySelector('.result-type').innerHTML = 'You are a Disney Wizz';
         certificateBox.classList.add('second');
         certificateBox.classList.remove('top');
         certificateBox.classList.remove('third');
@@ -493,7 +492,7 @@ function resultTypeCalculation() {
         certificateBox.classList.remove('last');
         resultDescriptor.innerHTML = '<p> Well done, you did great! You certainly are knowledgeable about all things Disney..<br>Why not take another try? I bet that you will ace it.</p>';
     } else if (percentage <= 59 && percentage >= 40) {
-        resultBox.querySelector('.result-type').innerHTML = 'Disney Average Joe';
+        resultBox.querySelector('.result-type').innerHTML = 'You are a Disney Average Joe';
         certificateBox.classList.add('third');
         certificateBox.classList.remove('top');
         certificateBox.classList.remove('second');
@@ -501,7 +500,7 @@ function resultTypeCalculation() {
         certificateBox.classList.remove('last');
         resultDescriptor.innerHTML = '<p>Not too bad! You are half way there to becoming a true Disney champion.<br>I am sure that you learnt a thing or two whilst completing the quiz too.</p>';
     } else if (percentage <= 39 && percentage >= 20) {
-        resultBox.querySelector('.result-type').innerHTML = 'Disney Novice';
+        resultBox.querySelector('.result-type').innerHTML = 'You are a Disney Novice';
         certificateBox.classList.add('fourth');
         certificateBox.classList.remove('top');
         certificateBox.classList.remove('second');
@@ -509,7 +508,7 @@ function resultTypeCalculation() {
         certificateBox.classList.remove('last');
         resultDescriptor.innerHTML = '<p>We all have to begin somewhere<br>I am glad to see that you do know certain fun facts about your favourite Disney characters <br> Brush up on your knowledge and try again.</p>';
     } else if (percentage <= 19 && percentage >= 0) {
-        resultBox.querySelector('.result-type').innerHTML = 'Disney Wannabe';
+        resultBox.querySelector('.result-type').innerHTML = 'You are a Disney Wannabe';
         certificateBox.classList.add('last');
         certificateBox.classList.remove('top');
         certificateBox.classList.remove('second');
