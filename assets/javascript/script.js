@@ -1,20 +1,19 @@
-// https://www.sitepoint.com/simple-javascript-quiz/ referenced and edited for const declarations, cons characters array structure and how to return characters to innner html
-
-
-// Create constants for button event listeners and the character area in the html
+// https://www.sitepoint.com/simple-javascript-quiz/ referenced and edited for const declarations
+// Create constants for button event listeners and the character area in the html.
 const generateButton = document.getElementById('generateCharacter');
 const nextButton = document.getElementById('nextButton');
 const prevButton = document.getElementById('prevButton');
 const confirmButton = document.getElementById('confirmButton');
-// Create constants for disneyCharacters images files, the area for the character value to return to and the area for the character image to return to
+// Create constants for disneyCharacters images files, the area for the character value to return to 
+//and the area for the character image to return to.
 const characterImages = 'assets/images/disneyCharacters/';
 const defaultCharacterFolder = 'assets/images/site-images/';
 const defaultCharacter = 'disney-icon.jpg';
 const characterArea = document.getElementById('character');
 const imageCharacter = document.getElementById('characterImageArea');
-
 let selectedCharacter = 0;
-/**Characters array with objects to populate html with when functions are called
+
+/**Characters array with objects to populate html with when functions are called.
  */
 
 const characters = [{
@@ -407,6 +406,7 @@ generateButton.addEventListener('click', generateCharacter);
  * @function generateCharacter - returns the character to the constants characterArea and to the imageCharacter Area. 
  * Uses a 'for' loop to iterate through the characters array. 
  * Populates the html layout for the character and the image by selecting the correct objects in the characters array.
+ * // https://www.sitepoint.com/simple-javascript-quiz/ referenced for how to return characters to inner html.
  */
 function generateCharacter() {
     for (let i = 0; i < characters.length; i++) {
@@ -450,13 +450,13 @@ function nextItem() {
 };
 
 //Event Listener added to confirm button to run the function getCharacter
-
 confirmButton.addEventListener('click', getCharacter);
 
 /** 
- * @function getCharacter - stores character and character image input values in localStorage
- * @function loadCharacter - fetches stored values -will populate the characterName and the characterLogo areas in the quiz section
- * Code for using local storage found on https://www.w3schools.com/html/html5_webstorage.asp and edited for purpose
+ * @function getCharacter - stores character and character image input values in localStorage.
+ * @function loadCharacter - fetches stored values -will populate the characterName and the characterLogo areas in the quiz section.
+ * Code for using local storage found on https://www.w3schools.com/html/html5_webstorage.asp and edited for site.
+ *  Code to add as innerHTML found on https://stackoverflow.com/questions/4321380/how-to-get-the-inner-html-value and edited for site.
  */
 
 function getCharacter() {
