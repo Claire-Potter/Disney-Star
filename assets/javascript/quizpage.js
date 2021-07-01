@@ -118,7 +118,7 @@ const quiz = [{
     {
         q: 'Emperor Kuzco turns into what animal in The Emperor’s New Groove?',
         audio: '/assets/audio/kuzcoEmperorsNewGroove.mp3',
-        options: ['Llama', 'Camel', 'Alpaca', 'Vicunas', ],
+        options: ['Llama', 'Camel', 'Alpaca', 'Vicuna', ],
         optionsImages: ['kuzco1.png', 'kuzco2.png', 'kuzco3.png', 'kuzco4.png', ],
         imageTitles: ['Emperor Kuzco', 'Animal Kuzco', 'Kuzco and friend', 'Animal Kuzco', ],
         answer: 0,
@@ -126,9 +126,9 @@ const quiz = [{
     {
         q: 'Which of these frisky felines is the beloved companion of Alice in Wonderland?',
         audio: '/assets/audio/aliceInWonderland.mp3',
-        options: ['Tibs', 'Dinah', 'Marie', 'Toulouse', ],
+        options: ['Tibbs', 'Dinah', 'Marie', 'Toulouse', ],
         optionsImages: ['tibbs.png', 'dinah.png', 'marie.png', 'toulouse.png', ],
-        imageTitles: ['Tibs', 'Dinah', 'Marie', 'Toulouse', ],
+        imageTitles: ['Tibbs', 'Dinah', 'Marie', 'Toulouse', ],
         answer: 1,
     },
     {
@@ -206,7 +206,7 @@ const quiz = [{
     {
         q: 'Name the character heard in the following sound clip:',
         audio: 'assets/audio/donaldDuck.mp3',
-        options: ['Donald Duck', 'Goofy', 'Mickey Mouse', 'Scrooge McDuck', ],
+        options: ['Donald Duck', 'Goofy', 'Mickey Mouse', 'Pete', ],
         optionsImages: ['donaldDuck.png', 'goofy.png', 'mickeyMouse.png', 'pete.png', ],
         imageTitles: ['Donald Duck', 'Goofy', 'Mickey Mouse', 'Pete', ],
         answer: 0,
@@ -214,9 +214,9 @@ const quiz = [{
     {
         q: 'Name the film and the character heard in the following sound clip:',
         audio: 'assets/audio/findingNemoMerlin.mp3',
-        options: ['Finding Dory - Merlin', 'Finding Nemo - Merlin', 'Shark Tale - Oscar', 'Shark Bait - Pisces', ],
+        options: ['Finding Dory - Marlin', 'Finding Nemo - Marlin', 'Shark Tale - Oscar', 'Shark Bait - Pisces', ],
         optionsImages: ['merlinDory.png', 'merlin.png', 'sharkTaleOscar.png', 'sharkBaitPi.png', ],
-        imageTitles: ['Finding Dory - Merlin', 'Finding Nemo - Merlin', 'Shark Tale - Oscar', 'Shark Bait - Pisces', ],
+        imageTitles: ['Finding Dory - Marlin', 'Finding Nemo - Marlin', 'Shark Tale - Oscar', 'Shark Bait - Pisces', ],
         answer: 1,
     },
     {
