@@ -24,7 +24,7 @@ if (localStorage.getItem('character') && (localStorage.getItem('characterImageAr
  */
 
 // Create constants for html input within the quiz.
-// Created whilst following the WebShala tutorial, Ids and classNames as per my html.
+// Created whilst following the WebShala tutorial, Ids per my html.
 const questionNumbers = document.getElementById('question-number');
 const writtenQuestions = document.getElementById('written-question');
 const pictureOne = document.getElementById('picture-one');
@@ -290,6 +290,8 @@ function getNewQuestion() {
     //populate the question
     writtenQuestions.innerHTML = currentQuestion.q;
     //populate the images code and audio code created by me.
+    //Tooltip code from W3 school tutorial and adapted for site 
+    //https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom
     pictureOne.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['0']} alt = ${currentQuestion.imageTitles['0']}><span class='tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['0']}</span>`;
     pictureTwo.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['1']} alt = ${currentQuestion.imageTitles['1']}><span class='tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['1']}</span>`;
     pictureThree.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['2']} alt = ${currentQuestion.imageTitles['2']}><span class='tooltiptext-image' id='tooltip-one'>${currentQuestion.imageTitles['2']}</span>`;
