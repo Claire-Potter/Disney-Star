@@ -38,6 +38,7 @@ const quizBox = document.getElementById("quiz-box");
 const resultBox = document.getElementById("result-box");
 const certificateBox = document.querySelector(".certificate");
 const resultDescriptor = document.querySelector('.result-description');
+const restartQuiz = document.querySelector('#restart-quiz');
 const questionLimit = 25; // if you want all questions "quiz.length"
 
 let questionCounter = 0;
@@ -437,26 +438,76 @@ function resultTypeCalculation() {
     if (percentage <= 100 && percentage >= 80) {
         resultBox.querySelector(".result-type").innerHTML = "Disney Star";
         certificateBox.classList.add("top");
+        certificateBox.classList.remove("second");
+        certificateBox.classList.remove("third");
+        certificateBox.classList.remove("fourth");
+        certificateBox.classList.remove("last");
         resultDescriptor.innerHTML = '<p>Mickey Mouse would be proud of you! You truly are a Disney genius.<br>Not only do you know your Disney characters, but you know The Avengers and Star Wars characters too.</p>';
     } else if (percentage <= 79 && percentage >= 60) {
         resultBox.querySelector(".result-type").innerHTML = "Disney Wizz";
         certificateBox.classList.add("second");
+        certificateBox.classList.remove("top");
+        certificateBox.classList.remove("third");
+        certificateBox.classList.remove("fourth");
+        certificateBox.classList.remove("last");
         resultDescriptor.innerHTML = '<p> Well done, you did great! You certainly are knowledgeable about all things Disney..<br>Why not take another try? I bet that you will ace it.</p>';
     } else if (percentage <= 59 && percentage >= 40) {
         resultBox.querySelector(".result-type").innerHTML = "Disney Average Joe";
         certificateBox.classList.add("third");
+        certificateBox.classList.remove("top");
+        certificateBox.classList.remove("second");
+        certificateBox.classList.remove("fourth");
+        certificateBox.classList.remove("last");
         resultDescriptor.innerHTML = '<p>Not too bad! You are half way there to becoming a true Disney champion.<br>I am sure that you learnt a thing or two whilst completing the quiz too.</p>';
     } else if (percentage <= 39 && percentage >= 20) {
         resultBox.querySelector(".result-type").innerHTML = "Disney Novice";
         certificateBox.classList.add("fourth");
-        resultDescriptor.innerHTML = '<p>We all have to begin somewhere<br>I am glad to see that you do know certain fun facts about your favourite Disney characters <br> Brush up on your knowledge and try again..</p>';
+        certificateBox.classList.remove("top");
+        certificateBox.classList.remove("second");
+        certificateBox.classList.remove("third");
+        certificateBox.classList.remove("last");
+        resultDescriptor.innerHTML = '<p>We all have to begin somewhere<br>I am glad to see that you do know certain fun facts about your favourite Disney characters <br> Brush up on your knowledge and try again.</p>';
     } else if (percentage <= 19 && percentage >= 0) {
         resultBox.querySelector(".result-type").innerHTML = "Disney Wannabe";
         certificateBox.classList.add("last");
+        certificateBox.classList.remove("top");
+        certificateBox.classList.remove("second");
+        certificateBox.classList.remove("third");
+        certificateBox.classList.remove("fourth");
         resultDescriptor.innerHTML = '<p>Well done for trying but I am affraid that you have a long way to go.<br>This time it was a bit of a flop. Come back when you are ready to try again.</p>';
     } else {
-        resultBox.querySelector(".result-type").innerHTML = "Disney Darling";
-        certificateBox.classList.add("hopeful");
-        resultDescriptor.innerHTML = '<p>Well done, you completed the quiz.</p>';
+        resultBox.querySelector(".result-type").innerHTML = " ";
+        certificateBox.classList.remove("top");
+        certificateBox.classList.remove("second");
+        certificateBox.classList.remove("third");
+        certificateBox.classList.remove("fourth");
+        certificateBox.classList.remove("last");
+        resultDescriptor.innerHTML =  '';
     }
+}
+
+restartQuiz.addEventListener('click', tryAgainQuiz);
+
+function resetQuiz() {
+    questionCounter = 0;
+    correctAnswers = 0;
+    attempt = 0;
+}
+
+function tryAgainQuiz() {
+    // hide the resultBox
+    resultBox.classList.add("hide");
+    // show the quizBox
+    quizBox.classList.remove("hide");
+    resetQuiz();
+    setup();
+    resultTypeCalculation();
+}
+
+function goToHome() {
+    // hide result Box
+    resultBox.classList.add("hide");
+    // show home box
+    homeBox.classList.remove("hide");
+    resetQuiz();
 }
