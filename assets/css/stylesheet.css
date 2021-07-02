@@ -571,6 +571,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     font-size: 100%;
   }
 
+  section {
+    padding-top: 0px;
+  }
+
 
   .result-description,
   #result-message,
@@ -610,6 +614,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   #character-image-area img {
     width: 440px;
     height: 440px;
+  }
+
+  #character-name-area {
+    position: unset;
+    margin: auto;
   }
 
   #picture-question {
@@ -668,6 +677,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   #character-image-area img {
     width: 180px;
     height: 180px;
+  }
+
+  #character-name-area {
+    margin: 20px;
+    position: absolute;
   }
 
   #picture-question {
@@ -775,8 +789,16 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     margin-left: -20px;
   }
 
+  .tooltip .tooltiptext::after {
+    content: unset;
+  }
+
   #right-text {
     margin-left: -50px;
+  }
+
+  .tooltip .tooltiptext-image {
+    margin-left: -30px;
   }
 
   #ready-to-start {
@@ -787,9 +809,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     padding-bottom: 30px;
   }
 
- 
+
   #character-name-area {
     position: unset;
+    margin: 100px;
   }
 
   #mickey-mouse-area {
@@ -829,8 +852,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     width: unset;
   }
 
-  #answers-indicator {
-    grid-template-columns: auto auto auto auto auto auto auto;
+
+  #answers-indicator div {
+    height: 20px;
+    width: 20px;
   }
 
   .certificate {
@@ -838,9 +863,14 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     height: 189px;
   }
 }
+
 /* Media Screen width 350px */
 
 @media screen and (max-width: 350px) {
+
+  html {
+    font-size: 70%;
+  }
 
   #picture-question {
     width: 250px;
@@ -857,5 +887,74 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     height: 125px;
   }
 
+  #answer-area {
+    width: 250px;
+  }
+
+
+}
+
+@media screen and (max-width: 290px) {
+
+  html {
+    font-size: 60%;
+  }
+
+  section {
+    max-width: 200px;
+  }
+
+  section p {
+    max-width: 200px;
+  }
+
+  #character-image-container {
+    width: 200px;
+
+  }
+
+  .tooltip .tooltiptext {
+    margin-left: -10px;
+  }
+
+
+  #right-text {
+    margin-left: -70px;
+  }
+
+  #ready-to-start {
+    max-width: 200px;
+  }
+
+  #mickey-mouse-image {
+    max-width: 200px;
+    height: 126px;
+  }
+
+  #picture-question {
+    width: 200px;
+    height: 200px;
+  }
+
+  .picture-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .picture-image img {
+    width: 100px;
+    height: 100px;
+  }
+
+
+  #answer-area {
+    width: 200px;
+  }
+
+
+  .certificate {
+    width: 200px;
+    height: 126px;
+  }
 
 }
