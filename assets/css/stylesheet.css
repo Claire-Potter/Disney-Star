@@ -18,7 +18,6 @@ body {
    font-family: Raleway, sans-serif;
    font-weight: 400;
    color: black;
-   width: 100%;
    min-height: 100vh;
    display: flex;
    flex-direction: column;
@@ -726,8 +725,17 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 /* Max width 515px */
 
 @media screen and (max-width: 515px) {
+   body {
+      display: unset;
+      flex-direction: unset;
+      align-items: unset;
+      justify-content: unset;
+   }
+
    section {
-      max-width: 300px;
+      width: unset;
+      max-width: 515px;
+      min-width: 300px;
       height: fit-content;
       margin: auto 0;
       display: flex;
@@ -737,7 +745,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       padding-bottom: 30px;
    }
    section p {
-      max-width: 300px;
+      width: 300px;
    }
    .tooltip .tooltiptext {
       width: 70px;
@@ -754,7 +762,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    }
    #ready-to-start {
       padding-top: 40px;
-      max-width: 300px;
+      width: 300px;
       height: fit-content;
       margin: auto 0;
       padding-bottom: 30px;
@@ -767,7 +775,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       padding-top: 40px;
    }
    #mickey-mouse-image {
-      max-width: 300px;
+      width: 300px;
       height: 189px;
       padding: 5px;
    }
@@ -831,10 +839,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       font-size: 60%;
    }
    section {
-      max-width: 200px;
+      width: 200px;
    }
    section p {
-      max-width: 200px;
+      width: 200px;
    }
    #character-image-container {
       width: 200px;
@@ -846,10 +854,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       margin-left: -70px;
    }
    #ready-to-start {
-      max-width: 200px;
+      width: 200px;
    }
    #mickey-mouse-image {
-      max-width: 200px;
+      width: 200px;
       height: 126px;
    }
    #picture-question {
