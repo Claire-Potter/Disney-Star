@@ -191,7 +191,7 @@ const quiz = [{
         q: 'This friendly canine is the father of not 1 but 101 puppies:',
         audio: 'assets/audio/pongo101Dalmatians.mp3',
         options: ['Colonel', 'Perdita', 'Clip', 'Pongo', ],
-        optionsImages: ['colonel.png', 'perdita.png', 'dodger.png', 'pongo.png', ],
+        optionsImages: ['colonel.png', 'perdita.png', 'dodger.png', 'pongo.png'],
         imageTitles: ['Colonel', 'Perdita', 'Clip', 'Pongo', ],
         answer: 3,
     },
