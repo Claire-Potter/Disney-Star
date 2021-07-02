@@ -602,34 +602,34 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 
   #character-image-area {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
 
   }
 
   #character-image-area img {
-    width: 540px;
-    height: 540px;
+    width: 440px;
+    height: 440px;
   }
 
   #picture-question {
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
   }
 
   .picture-image {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
   }
 
   .picture-image img {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
   }
 
   .certificate {
-    width: 1000px;
-    height: 630px;
+    width: 600px;
+    height: 377px;
   }
 }
 

@@ -17,13 +17,13 @@ let selectedCharacter = 0;
  */
 
 const characters = [{
-        character: 'Aladdin',
-        characterImageArea: 'aladdin.PNG',
+        character: 'Elena',
+        characterImageArea: 'elena.PNG',
 
     },
     {
-        character: 'Elena',
-        characterImageArea: 'elena.PNG',
+        character: 'Pluto',
+        characterImageArea: 'pluto.PNG',
 
     },
     {
@@ -282,8 +282,8 @@ const characters = [{
 
     },
     {
-        character: 'Pluto',
-        characterImageArea: 'pluto.PNG',
+        character: 'Aladdin',
+        characterImageArea: 'aladdin.png',
 
     },
     {
