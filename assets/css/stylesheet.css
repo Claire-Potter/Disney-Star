@@ -4,13 +4,13 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap");
 html {
-  scroll-behavior: smooth;
+   scroll-behavior: smooth;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  border: none;
+   margin: 0;
+   padding: 0;
+   border: none;
 }
 
 body {
@@ -26,21 +26,21 @@ body {
 }
 
 section {
-  margin: auto 0;
+   margin: auto 0;
 }
 
 h1,
 h2,
 h3 {
-  font-family: Satisfy, sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: 4px;
+   font-family: Satisfy, sans-serif;
+   font-weight: 700;
+   text-decoration: none;
+   letter-spacing: 4px;
 }
 
 a {
-  text-decoration: none;
-  color: black;
+   text-decoration: none;
+   color: black;
 }
 
 .general-setup {
@@ -80,7 +80,7 @@ a {
 }
 
 .hide {
-  display: none;
+   display: none;
 }
 
 /* Header */
@@ -174,6 +174,7 @@ a {
   align-items: center;
 }
 
+
 /* Home Page */
 
 .home-heading {
@@ -188,6 +189,7 @@ a {
   align-items: center;
   margin-bottom: 50px;
 }
+
 
 /* Character Generator Section */
 
@@ -228,9 +230,9 @@ a {
 }
 
 #character-image-area img {
-  width: 180px;
-  height: 180px;
-  border-radius: 15px;
+   width: 180px;
+   height: 180px;
+   border-radius: 15px;
 }
 
 .character-arrows {
@@ -239,44 +241,46 @@ a {
   color: #12194A;
 }
 
+
 /* Code from W3 schools tutorial on Tooltips
 https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted #12194A;
+   position: relative;
+   display: inline-block;
+   border-bottom: 1px dotted #12194A;
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 150px;
-  background-color: #12194A;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -75px;
+   visibility: hidden;
+   width: 150px;
+   background-color: #12194A;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   position: absolute;
+   z-index: 1;
+   bottom: 150%;
+   left: 50%;
+   margin-left: -75px;
 }
 
 .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #12194A transparent transparent transparent;
+   content: "";
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   margin-left: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: #12194A transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+   visibility: visible;
 }
+
 
 /* Submit Section */
 
@@ -290,6 +294,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 /* Quiz Page */
+
 
 /* Start Quiz Section */
 
@@ -318,13 +323,14 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   padding: 7px;
 }
 
+
 /* Question Area */
 
 #question-number {
-  padding: 20px;
-  font-family: Satisfy, sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
+   padding: 20px;
+   font-family: Satisfy, sans-serif;
+   font-weight: 700;
+   font-size: 1.5rem;
 }
 
 .timer-area {
@@ -408,21 +414,21 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 .picture-image {
-  display: inline-grid;
-  width: 200px;
-  height: 200px;
-  border: #12194A solid 3px;
-  border-radius: 5%;
+   display: inline-grid;
+   width: 200px;
+   height: 200px;
+   border: #12194A solid 3px;
+   border-radius: 5%;
 }
 
 .picture-image img {
-  width: 200px;
-  height: 200px;
-  border-radius: 5%;
+   width: 200px;
+   height: 200px;
+   border-radius: 5%;
 }
 
 .tooltip .tooltiptext-image {
-  bottom: 100%;
+   bottom: 100%;
 }
 
 #audio-text {
@@ -436,6 +442,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   overflow: hidden;
   padding: 20px;
 }
+
 
 /* The below code is created as per the WebShala Tutorial up to Results Page*/
 
@@ -523,22 +530,22 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 #answers-indicator {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: auto 0;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   margin: auto 0;
 }
 
 #answers-indicator div {
-  height: 40px;
-  width: 40px;
-  display: inline-block;
-  background-color: #cccccc;
-  border-radius: 50%;
-  margin-right: 3px;
-  margin-top: 15px;
+   height: 40px;
+   width: 40px;
+   display: inline-block;
+   background-color: #cccccc;
+   border-radius: 50%;
+   margin-right: 3px;
+   margin-top: 15px;
 }
 
 #answers-indicator div.correct {
@@ -556,6 +563,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   background-repeat: no-repeat;
   background-position: center;
 }
+
 
 /* Results Page */
 
@@ -621,19 +629,19 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 .next-step-figures {
-  margin: 20px;
+   margin: 20px;
 }
 
 .next-step-figures:hover {
-  color: #B12228;
-  font-weight: 800;
+   color: #B12228;
+   font-weight: 800;
 }
 
 .next-step-images {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: solid black 1px;
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   border: solid black 1px;
 }
 
 #restart-quiz {
@@ -641,6 +649,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 /* @Media queries */
+
 
 /* Max width 7000px */
 
@@ -703,6 +712,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   }
 }
 
+
 /* Max width 3500px */
 
 @media screen and (max-width: 3500px) {
@@ -751,6 +761,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   }
 }
 
+
 /* Max width 1200px */
 
 @media screen and (max-width: 1200px) {
@@ -769,6 +780,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     margin-bottom: 20px;
   }
 }
+
 
 /* Max width 800px */
 
@@ -867,6 +879,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     ;
   }
 }
+
 
 /* Max width 515px */
 
@@ -981,10 +994,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   }
 }
 
+
 /* Media Screen width 350px */
 
 @media screen and (max-width: 350px) {
-
   html {
     font-size: .9rem;
   }
