@@ -697,6 +697,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
   section {
     width: 500px;
+    padding-top: 20px;
   }
 
 
@@ -714,37 +715,147 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 /* Max width 800px */
 
-@media screen and  (max-width: 800px){
+@media screen and (max-width: 800px) {
 
-html {
-  font-size: 80%;
+  html {
+    font-size: 80%;
+  }
+
+  section {
+    padding-top: 30px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    letter-spacing: 2px;
+  }
+
+  .general-setup {
+    padding-top: 0px;
+  }
+
+  #character-name-area {
+    left: 0px;
+    top: 90px;
+
+  }
+
+  #question-number {
+    padding: 0px 20px 20px 20px;
+  }
+
+  #result-message {
+    padding-top: 0px;
+    ;
+  }
 }
 
-section {
-  padding-top: 30px;
-}
+/* Max width 515px */
 
-h1,
-h2,
-h3 {
-  letter-spacing: 2px;
-}
+@media screen and (max-width: 515px) {
 
-.general-setup{
-  padding-top: 0px;
-}
+  section {
+    max-width: 300px;
+    height: fit-content;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+  }
 
-#character-name-area {
-  left: 0px;
-  top: 90px;
+  section p {
+    max-width: 300px;
+  }
 
-}
+  .tooltip .tooltiptext {
+    width: 70px;
+    margin-left: -20px;
+  }
 
-#question-number {
-  padding: 0px 20px 20px 20px;
-}
+  #right-text {
+    margin-left: -50px;
+  }
 
-#result-message {
-  padding-top: 0px;;
+  #ready-to-start {
+    padding-top: 40px;
+    max-width: 300px;
+    height: fit-content;
+    margin: auto 0;
+    padding-bottom: 30px;
+  }
+
+ 
+  #character-name-area {
+    position: unset;
+  }
+
+  #mickey-mouse-area {
+    padding-top: 40px;
+  }
+
+  #mickey-mouse-image {
+    max-width: 300px;
+    height: 189px;
+    padding: 5px;
+  }
+
+  #quiz-box {
+    padding-top: 0px;
+  }
+
+  #picture-question {
+    width: 300px;
+    height: 300px;
+  }
+
+  .picture-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .picture-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #answer-area {
+    width: 300px;
+  }
+
+  .option-container {
+    width: unset;
+  }
+
+  #answers-indicator {
+    grid-template-columns: auto auto auto auto auto auto auto;
+  }
+
+  .certificate {
+    width: 300px;
+    height: 189px;
+  }
 }
+/* Media Screen width 350px */
+
+@media screen and (max-width: 350px) {
+
+  #picture-question {
+    width: 250px;
+    height: 250px;
+  }
+
+  .picture-image {
+    width: 125px;
+    height: 125px;
+  }
+
+  .picture-image img {
+    width: 125px;
+    height: 125px;
+  }
+
+
 }
