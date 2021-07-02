@@ -913,6 +913,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     content: unset;
   }
 
+  .tooltip .tooltiptext::after {
+    content: unset;
+  }
+
   #right-text {
     margin-left: -50px;
   }
