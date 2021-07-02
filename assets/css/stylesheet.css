@@ -4,6 +4,7 @@
 /* Text Import from Google Fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap');
+
 html {
    scroll-behavior: smooth;
 }
@@ -405,6 +406,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    0% {
       transform: translateX(-100%);
    }
+
    100% {
       transform: translateX(0%);
    }
@@ -566,9 +568,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    html {
       font-size: 100%;
    }
+
    section {
       padding-top: 0px;
    }
+
    .result-description,
    #result-message,
    #answer-area,
@@ -580,41 +584,51 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    .general-setup {
       width: 100%;
    }
+
    .giphy-embed {
       width: 500px;
       height: 334px;
    }
+
    #character-image-container {
       width: fit-content;
    }
+
    #character {
       width: fit-content;
       height: fit-content;
    }
+
    #character-image-area {
       width: 500px;
       height: 500px;
    }
+
    #character-image-area img {
       width: 440px;
       height: 440px;
    }
+
    #character-name-area {
       position: unset;
       margin: auto;
    }
+
    #picture-question {
       width: 600px;
       height: 600px;
    }
+
    .picture-image {
       width: 300px;
       height: 300px;
    }
+
    .picture-image img {
       width: 300px;
       height: 300px;
    }
+
    .certificate {
       width: 600px;
       height: 377px;
@@ -625,6 +639,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 /* Max width 3500px */
 
 @media screen and (max-width: 3500px) {
+
    .certificate,
    .result-description,
    #result-message,
@@ -635,38 +650,47 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    .general-setup {
       width: 500px;
    }
+
    .giphy-embed {
       width: 225px;
       height: 150px;
    }
+
    #character {
       width: 100px;
       height: 10px;
    }
+
    #character-image-area {
       width: 200px;
       height: 200px;
    }
+
    #character-image-area img {
       width: 180px;
       height: 180px;
    }
+
    #character-name-area {
       margin: 20px;
       position: absolute;
    }
+
    #picture-question {
       width: 400px;
       height: 400px;
    }
+
    .picture-image {
       width: 200px;
       height: 200px;
    }
+
    .picture-image img {
       width: 200px;
       height: 200px;
    }
+
    .certificate {
       height: 315px;
    }
@@ -680,9 +704,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       width: 500px;
       padding-top: 20px;
    }
+
    #score-area {
       height: fit-content;
    }
+
    #answers-indicator {
       display: grid;
       grid-template-columns: auto auto auto auto auto auto auto auto auto;
@@ -697,24 +723,56 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    html {
       font-size: 80%;
    }
+
    section {
       padding-top: 30px;
    }
+
    h1,
    h2,
    h3 {
       letter-spacing: 2px;
    }
+
    .general-setup {
       padding-top: 0px;
    }
+
+   .submit-button {
+      height: unset;
+   }
+
+   #header {
+      width: 100%;
+   }
+
+   #footer {
+      width: 100%;
+   }
+
+   .certificate,
+.result-description,
+#result-message,
+#answer-area,
+#question-area,
+#question-number,
+#mickey-mouse-image,
+#submit-section,
+#character-image-container,
+#character-generate,
+.general-setup {
+   width: 480px;
+}
+
    #character-name-area {
       left: 0px;
       top: 90px;
    }
+
    #question-number {
       padding: 0px 20px 20px 20px;
    }
+
    #result-message {
       padding-top: 0px;
       ;
@@ -725,17 +783,17 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 /* Max width 515px */
 
 @media screen and (max-width: 515px) {
-   body {
-      display: unset;
-      flex-direction: unset;
-      align-items: unset;
-      justify-content: unset;
+
+   #header {
+      width: 100%;
+   }
+
+   #footer {
+      width: 100%;
    }
 
    section {
-      width: unset;
-      max-width: 515px;
-      min-width: 300px;
+      width: 300px;
       height: fit-content;
       margin: auto 0;
       display: flex;
@@ -744,22 +802,39 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       align-items: center;
       padding-bottom: 30px;
    }
+
    section p {
       width: 300px;
    }
+
+   .result-description,
+   #result-message,
+   #question-area,
+   #question-number,
+   #submit-section,
+   #character-image-container,
+   #character-generate,
+   .general-setup {
+      width: 300px;
+   }
+
    .tooltip .tooltiptext {
       width: 70px;
       margin-left: -20px;
    }
+
    .tooltip .tooltiptext::after {
       content: unset;
    }
+
    #right-text {
       margin-left: -50px;
    }
+
    .tooltip .tooltiptext-image {
       margin-left: -30px;
    }
+
    #ready-to-start {
       padding-top: 40px;
       width: 300px;
@@ -767,43 +842,54 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       margin: auto 0;
       padding-bottom: 30px;
    }
+
    #character-name-area {
       position: unset;
       margin: 100px;
    }
+
    #mickey-mouse-area {
       padding-top: 40px;
    }
+
    #mickey-mouse-image {
       width: 300px;
       height: 189px;
       padding: 5px;
    }
+
    #quiz-box {
       padding-top: 0px;
    }
+
    #picture-question {
       width: 300px;
       height: 300px;
    }
+
    .picture-image {
       width: 150px;
       height: 150px;
    }
+
    .picture-image img {
       width: 150px;
       height: 150px;
    }
+
    #answer-area {
       width: 300px;
    }
+
    .option-container {
       width: unset;
    }
+
    #answers-indicator div {
       height: 20px;
       width: 20px;
    }
+
    .certificate {
       width: 300px;
       height: 189px;
@@ -817,18 +903,34 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    html {
       font-size: 70%;
    }
+
+   .result-description,
+   #result-message,
+   #question-area,
+   #question-number,
+   #submit-section,
+   #character-image-container,
+   #character-generate,
+   .general-setup {
+      width: 250px;
+   }
+
+
    #picture-question {
       width: 250px;
       height: 250px;
    }
+
    .picture-image {
       width: 125px;
       height: 125px;
    }
+
    .picture-image img {
       width: 125px;
       height: 125px;
    }
+
    #answer-area {
       width: 250px;
    }
@@ -838,45 +940,76 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    html {
       font-size: 60%;
    }
+
    section {
       width: 200px;
    }
+
    section p {
       width: 200px;
    }
+
+   .next-step-figures-area,
+   .result-description,
+   #result-message,
+   #question-area,
+   #question-number,
+   #submit-section,
+   #character-image-container,
+   #character-generate,
+   .general-setup {
+      width: 200px;
+   }
+
    #character-image-container {
       width: 200px;
    }
+
    .tooltip .tooltiptext {
       margin-left: -10px;
    }
+
    #right-text {
       margin-left: -70px;
    }
+
+  
+
    #ready-to-start {
       width: 200px;
    }
+
    #mickey-mouse-image {
       width: 200px;
       height: 126px;
    }
+
    #picture-question {
       width: 200px;
       height: 200px;
    }
+
    .picture-image {
       width: 100px;
       height: 100px;
    }
+
    .picture-image img {
       width: 100px;
       height: 100px;
    }
+
    #answer-area {
       width: 200px;
    }
+
    .certificate {
       width: 200px;
       height: 126px;
+   }
+
+   .next-step-images {
+      height: 40px;
+      width: 40px;
    }
 }
