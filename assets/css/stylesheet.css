@@ -690,3 +690,61 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   }
 
 }
+
+/* Max width 1200px */
+
+@media screen and (max-width: 1200px) {
+
+  section {
+    width: 500px;
+  }
+
+
+  #score-area {
+    height: fit-content;
+  }
+
+  #answers-indicator {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    margin-bottom: 20px;
+
+  }
+}
+
+/* Max width 800px */
+
+@media screen and  (max-width: 800px){
+
+html {
+  font-size: 80%;
+}
+
+section {
+  padding-top: 30px;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 2px;
+}
+
+.general-setup{
+  padding-top: 0px;
+}
+
+#character-name-area {
+  left: 0px;
+  top: 90px;
+
+}
+
+#question-number {
+  padding: 0px 20px 20px 20px;
+}
+
+#result-message {
+  padding-top: 0px;;
+}
+}
