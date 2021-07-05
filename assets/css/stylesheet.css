@@ -148,7 +148,13 @@ a {
    height: 296px;
    display: flex;
    justify-content: center;
-   align-items: center;}
+   align-items: center;
+}
+
+#down-arrow {
+   text-align: center;
+   margin-right: 25px;
+}
 
 
 /* Character Generator Section */
@@ -755,18 +761,29 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    }
 
    .certificate,
-.result-description,
-#result-message,
-#answer-area,
-#question-area,
-#question-number,
-#mickey-mouse-image,
-#submit-section,
-#character-image-container,
-#character-generate,
-.general-setup {
-   width: 480px;
-}
+   .result-description,
+   #result-message,
+   #answer-area,
+   #question-area,
+   #question-number,
+   #mickey-mouse-image,
+   #submit-section,
+   #character-image-container,
+   #character-generate,
+   .general-setup {
+      width: 480px;
+   }
+
+
+   #mickey-friends {
+      width: 480px;
+      height: 284px;
+   }
+
+   #down-arrow {
+      text-align: center;
+      margin-right: 25px;
+   }
 
    #character-name-area {
       left: 0px;
@@ -925,11 +942,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       width: 250px;
    }
 
-   
-  #mickey-friends {
-   width: 250px;
-   height: 147px;
-}
+
+   #mickey-friends {
+      width: 250px;
+      height: 147px;
+   }
 
 
 
@@ -996,7 +1013,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       margin-left: -70px;
    }
 
-  
+
 
    #ready-to-start {
       width: 200px;
