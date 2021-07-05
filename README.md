@@ -56,7 +56,7 @@ A fun Disney quiz, appropriate for the Disney expert or the Disney novice. Take 
 
 A Disney lover. Enjoys all things Disney, the movies, the music, the parks, the characters and the merch. Wants to test her Disney knowledge as well as have a fun time doing so.
 
-![An image of the details of the primary persona, name, personality, interests and tech preferences](https://raw.githubusercontent.com/Claire-Potter/Disney-Star/Claire-Potter-Read-Me/read-me-content/read-me-images/primary-persona.PNG)
+![An image of the details of the primary persona, name, personality, interests and tech preferences](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/primary-persona.PNG)
 
 ### User Stories
 
