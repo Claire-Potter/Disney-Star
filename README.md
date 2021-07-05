@@ -12,9 +12,9 @@ A fun Disney quiz, appropriate for the Disney expert or the Disney novice. Take 
 <!-- Start Document Outline -->
 
 * [UX Design](#ux-design)
-	* [Persona Overview](#persona-overview)
-		* [Primary Persona](#primary-persona)
-		* [User Stories](#user-stories)
+
+	* [Primary Persona](#primary-persona)
+	* [User Stories](#user-stories)
 	* [Strategy](#strategy)
 		* [High-level Business Goals](#high-level-business-goals)
 		* [Value](#value)
@@ -45,14 +45,14 @@ A fun Disney quiz, appropriate for the Disney expert or the Disney novice. Take 
 	* [Code](#code)
 	* [Content](#content)
 	* [Design Elements and Media](#design-elements-and-media)
-* [Acknowledgements](#acknowledgements)
+* [Acknowledgments](#acknowledgments)
 
 <!-- End Document Outline -->
 # UX Design
 
 ## Primary Persona
 
-A Disney lover. Enjoys all things Disney, the movies, the music, the parks, the characters and the merch. Wants to test her Disney knowledge as well as have a fun time doing so.
+A Disney lover. Enjoys all things Disney, the movies, the music, the parks, the characters and the merchandise. Wants to test her Disney knowledge as well as have a fun time doing so.
 
 ![An image of the details of the primary persona, name, personality, interests and tech preferences](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/primary-persona.PNG)
 
@@ -217,6 +217,7 @@ Development conventions and best practice have been applied as far as possible t
 ### Information Architecture
 
 ![Site Hierarchy ](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/skeleton.PNG)
+![Site Hierarchy Two ](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/skeleton2.PNG)
 
 ## Skeleton 
 
@@ -248,4 +249,261 @@ I prefer a clean and simple design rather than busy. I wanted to create a space 
 
 ![Disney Green ](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/disney-green.PNG)
 
-The green colour chosen to indicate correct answers was aligned again to the Disney theme and is called Disney green. A shadow is added to all buttons when clicked to provide the user of the sensation of pressing down on a button. 
+The green colour chosen to indicate correct answers was aligned again to the Disney theme and is called Disney green. A shadow is added to all buttons when clicked to provide the user of the sensation of pressing down on a button. Please review the below document discussing the design elements used throughout the site.
+
+<a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/disney-quiz-design.pdf" target="_blank">Disney Star design</a>
+
+### Design Differences
+
+1. The Generate button on the home screen was moved to display within the single column view as this was more visually appealing than displaying next to the character box. An arrow either side of the character box was added to scroll between characters.
+2. The original quiz was designed to display the questions as separate written, picture or audio questions. In designing the layout of the page, the three question types were included across all questions as visually it worked much better to bring life and character to the quiz.
+3. Originally the score tracker was just going to be formatted as 0/25. A pop up would then say whether the user got the question right or wrong. Instead the tracker was featured at the bottom of the quiz and included an indicator per question whether the user scored correctly or incorrectly. This was combined with the colour of the question option turning green for correct or red for wrong. If wrong the correct option would then display in green.
+4. The mobile version of the quiz pictures was going to display the four quiz pictures as a column, however with a single column display and sizing the images remaind in a grid as per the larger screen display.
+5. The results page, next steps section included an additional icon back to the home page alongside the redo quiz icon and the icon to access the Disney store.
+
+
+## Technologies
+
+The following languages were used to create the website:
+
+1. HTML
+2. CSS
+3. JavaScript
+
+Other technologies:
+
+1. Lucidchart - https://lucid.app/lucidchart
+ 	* To create the persona and wireframes.
+2. Gitpod
+	* Platform used to develop and test site.
+3. Github
+	* Platform used to host repository and deployed site.
+4. Google Fonts
+	* Used for typography
+5. Font Awesome
+	* Used for Icons
+6. Free Formatter
+	* Used to format html, css and javascript code.
+7. Markdown Monster
+	* Used to edit Markdown
+
+
+# Features
+
+The Disney Star site consists of the following Features:
+
+* [Features](#features)
+	* [Character Generator](#character-generator)
+	* [Quiz welcome](#quiz-welcome)
+	* [Quiz](#quiz)
+	    * [Random questions](#random-questions)
+	    * [Pictures and Audio](#pictures-and-audio)
+	    * [Question options](#question-options)
+	    * [Score tracking](#score-tracking)
+	 * [Results](#results)
+	 * [Next Steps](#next-steps)
+	    
+ 
+
+## Character Generator
+
+![Character Generator]("")
+xxxxxxx
+
+ - **xxxxxxo**
+
+<img src="" 
+     alt="" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+ - xxxx 
+
+- 
+   
+## Quiz Welcome
+
+![Quiz Welcome Page]()
+    
+xxxx
+
+
+## Quiz
+
+![Quiz image]()
+
+
+xxxxx
+ -   **Random Questions**
+![Random questions image]()
+
+- xxxxxx
+
+	
+ -   **Pictures and Audio**
+
+ ![Pictures and Audio image]()
+
+- xxxx
+
+ -   **Question Options**
+
+ ![Question Options]()
+
+ - xxxx
+ 
+  -   **Score Tracking**
+
+ ![Score Tracking]()
+
+ - xxxx
+
+	
+## Results
+
+ ![Results]()
+	
+xxxx
+
+
+ 
+ ## Next Steps
+
+![Next Steps]()
+
+ xxx
+
+
+  ### Features Left to Implement
+-   xxx
+	-xxx
+	- 
+
+# Testing
+
+### Features Testing
+
+Please access the Disney Star testing pack to view full testing of the site features.
+
+<a href="https://github.com/Claire-Potter/Disney-Star/tree/master/read-me-content/testing/test-scenarios">Disney Star testing pack</a>
+
+### Bugs and Issues
+
+The following issues were experienced during the course of development:
+
+1. xxxx
+    * xxxx
+   
+2. Txxx
+     * xxxx
+     
+ 3. xxx 
+    
+
+### User Stories Testing
+
+![User Stories Testing]()
+
+### Responsiveness and Compatibility
+
+1. The site has been testing using the following browsers - Safari, Chrome, Firefox, Edge and Opera. The site is compatible and accessible across all browsers.
+
+Please <a href="" target="_blank">click here</a> to view browser testing screenshots.
+
+2. Devices and Screen Sizes
+
+* The site was tested using the Responsively App as well as the Google Chrome device tool bar. The site has been setup to render effectively across multiple screen sizes and devices. I have tested using the following device displays:
+
+* Responsively App:
+
+    * 5K Display 5120 * 2880
+    * 4K Display 3840 * 2160
+    * MacBook Pro 16 inch 3072 * 1920
+    * MacBook Pro 15 inch 2880 * 1800
+    * MacBook Pro 13 inch 2560 * 1600
+    * Laptop with HiDPi Screen 1440 * 900
+    * Laptop 1400 * 1000
+    * MacBook Air 1440 * 900
+    * Laptop with MDPi Screen 1280 * 800
+    * Generic Laptop 1280 * 950
+    * iPad Pro 1024 * 1366
+    * Kindle Fire HDX 800 * 1280
+    * iPad 768 * 1024
+    * Microsoft Lumia 550 640 * 360
+    * Blackberry Playbook 600 * 1024
+    * Nokia N9 480 * 854
+    * iPhone 6/7/8 Plus 414 * 736
+    * iPhone 6/7/8 375 * 667
+    * Galaxy S 5 360 * 640
+    * iPhone 4 320 * 480
+    * JioPhone 2 240 * 320
+    * Responsive Mode - change the screen width to test various sizes
+
+* Google Chrome device tool bar:
+
+    * Galaxy Note 3
+    * Galaxy Note II
+    * Galaxy S III
+    * KindleFire HDX
+    * LG Optimus L70
+    * Laptop with HiDPI screen
+    * Laptop with MDPI screen
+    * Laptop with touch
+    * Microsoft Lumia 550
+    * Microsoft Lumia 950
+    * Moto G4
+    * Galaxy S5
+    * Pixel 2
+    * Pixel 2 XL
+    * iPhone 5/SE
+    * iPhone 6/7/8
+    * iPhone 6/7/8 Plus
+    * iPhone X
+    * iPad
+    * iPad Pro
+    * Surface Duo
+    * Galaxy Fold
+    * Responsive Mode
+
+
+### Code Validation
+
+1. W3C HTML Code Validator
+
+* The code for the following html pages was entered into the validator and all pages passed:
+    * index.html
+    * quiz.html
+
+2. W3C CSS Jigsaw Validator
+
+* The code for the stylesheet.css was entered into the validator and passed.
+
+* This excludes the link to google fonts as this is an external source
+
+1. JScript Code Validator
+
+* The code for the following javascript scripts pages was entered into the validator passed:
+    * script.js
+    * quizpage.js
+
+
+
+Please <a href="https://github.com/Claire-Potter/Disney-Star/tree/master/read-me-content/testing/validations" target="_blank">click here</a> to view the screenshots.
+
+### Testing Accessibility
+
+The Wave Evaluation Tool was used to test the Accessibility of the site. 
+
+
+Please <a href="https://github.com/Claire-Potter/Disney-Star/tree/master/read-me-content/testing/accessibility" target="_blank">click here </a>to view the Wave Evaluation screenshots.
+
+### Performance Testing
+
+[Click here](https://github.com/Claire-Potter/Disney-Star/tree/master/read-me-content/testing/performance) to access Google Lighthouse performance reports.
+
+### Deployment Testing
+
+The website was tested end to end after deployment to ensure that the functionality, content and style matches that of the development site. It was tested across multiple screen sizes and browsers. All post-deployment testing passed
