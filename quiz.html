@@ -28,7 +28,7 @@
       <div id="ready-to-start" class="">
          <h2>Are your ready to start the ultimate Disney Quiz?</h2>
          <br>
-         <div id="mickey-mouse-area"><img src='assets/images/site-images/mickey-quiz.png' alt="Mickey Mouse picture"
+         <div id="mickey-mouse-area"><img src='assets/images/site-images/mickey-quiz.png' alt="a picture of Mickey Mouse lying on his tummy"
             id="mickey-mouse-image"></div>
          <br>
          <br>
@@ -37,7 +37,7 @@
          <br>
          <br>
          <br>
-         <button id="start-quiz" class="submit-button" type="button">Yes!</button>
+         <button id="start-quiz" class="submit-button" type="button" aria-label="Yes button to be clicked to go to the quiz">Yes!</button>
       </div>
    </section>
    <!--Question Area-->
@@ -62,7 +62,7 @@
          <br>
          <p>Click the below button to play the sound clip:</p>
          <br>
-         <input id="audio-question" class="submit-button" type="button" value="Play">
+         <input id="audio-question" class="submit-button" type="button" value="Play" aria-label="button to be clicked to play the sound clip">
       </div>
       <!--Answer Area-->
       <div>
@@ -71,7 +71,7 @@
             <!--Submit button to submit answer.-->
             <br>
             <br>
-            <input id="submit-question" class="submit-button" type="button" value="Next">
+            <input id="submit-question" class="submit-button" type="button" value="Next" aria-label="button to be clicked to go to the next question">
          </div>
       </div>
       <div id="score-area">
@@ -81,11 +81,11 @@
    <!--Results Area-->
    <section id="result-box" class="hide">
       <div id="result-message">
-         <h2> <span class="total-correct"></span><span class="total-question"></span></h2>
+         <span class="total-correct"></span><span class="total-question"></span>
          <br>
          <br>
          <br>
-         <h2 class="result-type"></h2>
+         <div class="result-type"></div>
       </div>
       <br>
       <div class="result-description">

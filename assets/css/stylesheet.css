@@ -143,12 +143,16 @@ a {
 
 /* Home Page */
 
-.giphy-embed {
-   width: 225px;
-   height: 150px;
+#tinkerbell {
+   width: 162px;
+   height: 300px;
    border: 0px;
-   margin: auto 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 60px;
 }
+
 
 
 /* Character Generator Section */
@@ -585,9 +589,9 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       width: 100%;
    }
 
-   .giphy-embed {
-      width: 500px;
-      height: 334px;
+   #tinkerbell {
+      width: 200px;
+      height: 362px;
    }
 
    #character-image-container {
@@ -651,9 +655,9 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       width: 500px;
    }
 
-   .giphy-embed {
-      width: 225px;
-      height: 150px;
+   #tinkerbell {
+      width: 162px;
+      height: 300px;
    }
 
    #character {
@@ -703,6 +707,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    section {
       width: 500px;
       padding-top: 20px;
+   }
+
+   #tinkerbell {
+      width: 81px;
+      height: 150px;
+      margin-right: 40px;
    }
 
    #score-area {
@@ -817,6 +827,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    .general-setup {
       width: 300px;
    }
+
+
 
    .tooltip .tooltiptext {
       width: 70px;

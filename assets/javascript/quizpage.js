@@ -460,12 +460,12 @@
   */
  
  function quizResult() {
-    resultBox.querySelector('.total-question').innerHTML = questionLimit;
-    resultBox.querySelector('.total-correct').innerHTML = 'You scored ' + correctAnswers + ' /';
+    resultBox.querySelector('.total-question').innerHTML ='<h2>' + questionLimit + '</h2>';
+    resultBox.querySelector('.total-correct').innerHTML = '<h2>You scored</h2>' +  '<h2>' + correctAnswers + '</h2>' + '<h2> / </h2>';
     if (localStorage.getItem('character')) {
-       document.getElementById('certificate-name').innerHTML = 'Awarded to our very own ' + localStorage.getItem('character');
+       document.getElementById('certificate-name').innerHTML = '<h2>Awarded to our very own </h2>' + localStorage.getItem('character');
     } else {
-       document.getElementById('certificate-name').innerHTML = 'DisneyStar';
+       document.getElementById('certificate-name').innerHTML = '<h2>DisneyStar</h2>';
     }
     resultTypeCalculation();
  }
@@ -478,7 +478,7 @@
  function resultTypeCalculation() {
     const percentage = (correctAnswers / questionLimit) * 100;
     if (percentage <= 100 && percentage >= 80) {
-       resultBox.querySelector('.result-type').innerHTML = 'You are a Disney Star';
+       resultBox.querySelector('.result-type').innerHTML = '<h2>You are a Disney Star</h2>';
        certificateBox.classList.add('top');
        certificateBox.classList.remove('second');
        certificateBox.classList.remove('third');
@@ -486,7 +486,7 @@
        certificateBox.classList.remove('last');
        resultDescriptor.innerHTML = '<p>Mickey Mouse would be proud of you! You truly are a Disney genius.<br>Not only do you know your Disney characters, but you know The Avengers and Star Wars characters too.</p>';
     } else if (percentage <= 79 && percentage >= 60) {
-       resultBox.querySelector('.result-type').innerHTML = 'You are a Disney Wizz';
+       resultBox.querySelector('.result-type').innerHTML = '<h2>You are a Disney Wizz</h2>';
        certificateBox.classList.add('second');
        certificateBox.classList.remove('top');
        certificateBox.classList.remove('third');
@@ -494,7 +494,7 @@
        certificateBox.classList.remove('last');
        resultDescriptor.innerHTML = '<p> Well done, you did great! You certainly are knowledgeable about all things Disney..<br>Why not take another try? I bet that you will ace it.</p>';
     } else if (percentage <= 59 && percentage >= 40) {
-       resultBox.querySelector('.result-type').innerHTML = 'You are a Disney Average Joe';
+       resultBox.querySelector('.result-type').innerHTML = '<h2>You are a Disney Average Joe</h2>';
        certificateBox.classList.add('third');
        certificateBox.classList.remove('top');
        certificateBox.classList.remove('second');
@@ -502,7 +502,7 @@
        certificateBox.classList.remove('last');
        resultDescriptor.innerHTML = '<p>Not too bad! You are half way there to becoming a true Disney champion.<br>I am sure that you learnt a thing or two whilst completing the quiz too.</p>';
     } else if (percentage <= 39 && percentage >= 20) {
-       resultBox.querySelector('.result-type').innerHTML = 'You are a Disney Novice';
+       resultBox.querySelector('.result-type').innerHTML = '<h2>You are a Disney Novice</h2>';
        certificateBox.classList.add('fourth');
        certificateBox.classList.remove('top');
        certificateBox.classList.remove('second');
@@ -510,7 +510,7 @@
        certificateBox.classList.remove('last');
        resultDescriptor.innerHTML = '<p>We all have to begin somewhere<br>I am glad to see that you do know certain fun facts about your favourite Disney characters <br> Brush up on your knowledge and try again.</p>';
     } else if (percentage <= 19 && percentage >= 0) {
-       resultBox.querySelector('.result-type').innerHTML = 'You are a Disney Wannabe';
+       resultBox.querySelector('.result-type').innerHTML = '<h2>You are a Disney Wannabe</h2>';
        certificateBox.classList.add('last');
        certificateBox.classList.remove('top');
        certificateBox.classList.remove('second');
