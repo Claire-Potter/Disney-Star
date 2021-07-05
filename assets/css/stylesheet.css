@@ -143,16 +143,12 @@ a {
 
 /* Home Page */
 
-#tinkerbell {
-   width: 162px;
-   height: 300px;
-   border: 0px;
+#mickey-friends {
+   width: 500px;
+   height: 296px;
    display: flex;
    justify-content: center;
-   align-items: center;
-   margin-right: 60px;
-}
-
+   align-items: center;}
 
 
 /* Character Generator Section */
@@ -589,10 +585,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       width: 100%;
    }
 
-   #tinkerbell {
-      width: 200px;
-      height: 362px;
+   #mickey-friends {
+      width: 600px;
+      height: 355px;
    }
+
 
    #character-image-container {
       width: fit-content;
@@ -655,10 +652,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       width: 500px;
    }
 
-   #tinkerbell {
-      width: 162px;
-      height: 300px;
+   #mickey-friends {
+      width: 500px;
+      height: 296px;
    }
+
 
    #character {
       width: 100px;
@@ -709,11 +707,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       padding-top: 20px;
    }
 
-   #tinkerbell {
-      width: 81px;
-      height: 150px;
-      margin-right: 40px;
-   }
+
 
    #score-area {
       height: fit-content;
@@ -828,6 +822,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       width: 300px;
    }
 
+   #mickey-friends {
+      width: 300px;
+      height: 177px;
+   }
 
 
    .tooltip .tooltiptext {
@@ -927,6 +925,13 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       width: 250px;
    }
 
+   
+  #mickey-friends {
+   width: 250px;
+   height: 147px;
+}
+
+
 
    #picture-question {
       width: 250px;
@@ -971,6 +976,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    #character-generate,
    .general-setup {
       width: 200px;
+   }
+
+
+   #mickey-friends {
+      width: 200px;
+      height: 118px;
    }
 
    #character-image-container {
