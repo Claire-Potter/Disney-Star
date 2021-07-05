@@ -2,7 +2,7 @@
 
 A fun Disney quiz, appropriate for the Disney expert or the Disney novice. Take some time to test your Disney knowledge and learn something new in the process. If you are a Disney fan, taking this quiz is a must!
 
-![disney-star-mockup](https://raw.githubusercontent.com/Claire-Potter/Disney-Star/Claire-Potter-Read-Me/read-me-content/read-me-images/disney-star-mockup.png)
+![disney-star-mockup](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/disney-star-mockup.png)
 
 <a href="https:/" target="_blank">Click Here</a> to access the site.
 
