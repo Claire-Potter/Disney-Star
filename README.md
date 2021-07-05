@@ -20,8 +20,6 @@ A fun Disney quiz, appropriate for the Disney expert or the Disney novice. Take 
 		* [Value](#value)
 		* [Why is this site so special?](#why-is-this-site-so-special)
 		* [Trade-offs](#trade-offs)
-	* [Storyboard](#storyboard)
-	* [Journey Maps](#journey-maps)
 	* [Scope](#scope)
 	* [Structure](#structure)
 		* [Information Architecture](#information-architecture)
@@ -139,3 +137,115 @@ Once the quiz begins, familiar and well-loved characters are displayed throughou
  - Consistent layout, colours, visual aids and messaging. 
  - The use of Disney characters really engages with a user's inner child and sense of nostalgia.
  - The quiz provides a challenge to the user to be able to improve their knowledge. It also allows the user to take a walk down memory lane as they rememeber their favourite Disney movies.
+
+
+### Trade-offs
+
+Using the trade-off process to rank the importance and feasibility of the opportunities I have decided:
+
+1. To go ahead with 6/7 of the opportunities.
+2. For the ability to create your own character, I will instead create a selection of characters for the user to choose from.
+3. As this is a minimum viable product, only the initial Disney Quiz will be included. Adding additional Disney games would be a future opportunity.
+
+![Table depicting the Importance rating vs. the Feasibility rating per Opportunity](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/trade-offs-table.PNG)
+   
+
+## Scope
+For the primary user, to provide them with a fun and interactive quiz. A reliable website that can be utilised across multiple devices, receive user input and update accordingly. 
+
+For the secondary user, a simple site that is easy to manage daily and update when necessary.
+
+### Feature Trade Off
+
+ <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/feature-trade-off.pdf" target="_blank">Feature Trade Off Table</a>
+
+
+This site will be developed as a minimum viable product. Future releases could include additional functionality depending on the success of the first release. This could be the ability to add new games or quizzes to the site on an ongoing basis.
+
+### Release One
+
+#### Functional Requirements
+
+1. Responsive interface
+2. Navigation via site buttons
+3. Array of questions with assigned images, audio clip and answer options as well as correct answer
+4. Generate questions ramdomly
+5. Do not reask the same questions
+6. Ability to update questions
+7. Ability to set the number of questions asked
+8. Display correct images per question
+9. Assign correct audio clip per question and allow the user to play
+10. Display the question answer options in a random order
+11. If the answer is correct, mark the option box green. If the answer is incorrect, mark the option box red and display correct answer in green
+12. Only allow user to select one option
+13. Keep a score tracker with correct and wrong answers given to reflect in the end calculation
+14. Calculate results based on a percentage range and display content based on range achieved
+15. Allow user to choose their own character from character name and character images array
+16. Allow user to scroll back and fourth between the various characters available in the array
+17. Display character chosen across site pages
+18. Create buttons for the user to navigate with across the site. Use these buttons as event triggers
+19. Only display page sections when relevant, otherwise hide the section
+20. Generate next question when user clicks the event trigger Next
+21. Reset the quiz when the user chooses to redo the quiz
+22. When quiz begins setup the page and question appropriately
+23. When the quiz ends, setup the page and calculate the results to display
+24. Include a link back to the home page
+25. Include a link to the Disney Store to open in a new tab
+26. Footer fixed to bottom of the page
+27. Multi-page website
+28. Appropriatly styled elements
+
+#### Content Requirements
+
+1. Relevant quiz questions
+2. Appropriate images per question
+3. Appropriate images for the site
+4. Appropriate audio clips per question
+5. Customised results displayed based on how many questions were answered correctly
+6. Allow user to choose their own character from character images
+7. Allow user to redo the quiz, return to home or go to the Disney store
+
+#### Delivery Constraints
+
+1. Skill - Developer is learning HTML and CSS which affects her efficiency. This is the developer's first time working in javascript so this presents a learning curve
+2. Time - limited time to complete and deliver the site
+
+
+## Structure
+Development conventions and best practice have been applied as far as possible to ensure that user expectations are met. The breakdown of the structure is available further down in this document within the features section.
+
+### Information Architecture
+
+![Site Hierarchy ](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/skeleton.PNG)
+
+## Skeleton 
+
+### Desktop Wireframes
+
+1. <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/wireframes/home-screen.PNG" target="_blank">Home Page</a>
+2. <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/wireframes/quiz-text-based.PNG" target="_blank">Quiz text-based</a>
+3. <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/wireframes/quiz-audio-based.PNG" target="_blank">Quiz audio-based</a>
+4. <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/wireframes/quiz-picture-based.PNG" target="_blank">Quiz picture-based</a>
+5. <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/wireframes/quiz-completion.PNG">Quiz completion</a>
+
+
+### Mobile Wireframes
+
+
+1. <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/wireframes/mobile-home-screen.PNG" target="_blank">Home Page</a>
+2. <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/wireframes/quiz-text-based-mobile.PNG" target="_blank">Quiz text-based</a>
+3. <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/wireframes/quiz-audio-based-mobile.PNG">Quiz audio-based</a>
+4. <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/wireframes/quiz-picture-based-mobile.PNG">Quiz picture-based</a>
+5. <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/wireframes/quiz-completion-mobile.PNG">Quiz completion</a>
+
+## Surface
+
+As this is a Disney themed site it was essential that Disney specific colours were used. I found the following colour palette which I used for the site:
+
+![Disney colour palette used for site design](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/disney-palette.PNG)
+
+I prefer a clean and simple design rather than busy. I wanted to create a space in which the Disney images could really speak for themselves. All images were chosen specifically for the sections they were added to and those used with questions were aligned to the question content. Where possible they are all formatted to have a dark blue border with a border-radious of 5%. The width of the various page sections was aligned over both pages and adjusted per screen size. The font was set as default Satisfy for headings, as this has a very Disney look about it  and as Raleway for text as this was a suggested pairing, with Sans serif as a backup for both. It was important to create a fluid feeling across the site pages to provide continuity. The quiz page itself generates the various quiz questions in the same format. 
+
+![Disney Green ](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/disney-green.PNG)
+
+The green colour chosen to indicate correct answers was aligned again to the Disney theme and is called Disney green. A shadow is added to all buttons when clicked to provide the user of the sensation of pressing down on a button. 
