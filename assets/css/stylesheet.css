@@ -346,8 +346,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    font-weight: 900;
    background-color: #393e8f;
    color: #ffffff;
-   border-radius: 5%;
-   border: solid 2px #12194A;
    position: fixed;
    left: 40px;
    right: 0;
