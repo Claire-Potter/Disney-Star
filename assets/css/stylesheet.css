@@ -319,19 +319,19 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 /* Question Area */
 
+#question-number {
+   padding: 20px;
+   font-family: Satisfy, sans-serif;
+   font-weight: 700;
+   font-size: 1.5rem;
+}
+
 #timer-area {
    margin: 0 auto;
    display: flex;
    justify-content: center;
    align-items: center;
    position: relative;
-}
-
-#question-number {
-   padding: 20px;
-   font-family: Satisfy, sans-serif;
-   font-weight: 700;
-   font-size: 1.5rem;
 }
 
 #timer {
@@ -669,6 +669,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
       margin: auto;
    }
 
+   #timer {
+      left: 2500px;
+      bottom: 2200px;
+      top: unset;
+   }
+
    #picture-question {
       width: 600px;
       height: 600px;
@@ -690,6 +696,17 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    }
 }
 
+/* Max width 4500 */
+
+@media screen and (max-width: 4500px) {
+   
+   
+   #timer {
+      left: 100px;
+      bottom: unset;
+      top: 100px;
+   }
+}
 
 /* Max width 3500px */
 
@@ -730,6 +747,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    #character-name-area {
       margin: 20px;
       position: absolute;
+   }
+
+   #timer {
+      left: 40px;
+      bottom: unset;
+      top: 0px;
    }
 
    #picture-question {
@@ -935,6 +958,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
    #quiz-box {
       padding-top: 0px;
+   }
+
+   #timer {
+      left: 0px;
    }
 
    #picture-question {
