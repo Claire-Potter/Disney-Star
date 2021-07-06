@@ -319,12 +319,58 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 /* Question Area */
 
+#timer-area {
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
 #question-number {
    padding: 20px;
    font-family: Satisfy, sans-serif;
    font-weight: 700;
    font-size: 1.5rem;
 }
+
+#timer {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+   margin: 20px 5px 20px 5px;
+   width: fit-content;
+   height: 25px;
+   font-size: 1.2rem;
+   font-weight: 900;
+   background-color: #393e8f;
+   color: #ffffff;
+   border-radius: 5%;
+   border: solid 2px #12194A;
+   position: fixed;
+   left: 40px;
+   right: 0;
+   top: 0;
+   z-index: 2;
+}
+
+
+.in-time {
+   background-image: url(../images/site-images/in-time-right.PNG);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+}
+
+.wrong-time {
+   background-image: url(../images/site-images/wrong-time.PNG);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
 
 #question-area {
    height: fit-content;
@@ -392,7 +438,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    width: 400px;
 }
 
-.option-container .option.correct::before {
+.option-container .option.correct::before,
+.option-container .option.option.also-correct::before{
    content: "";
    position: absolute;
    left: 0;
@@ -418,7 +465,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
    }
 }
 
-.option-container .option.correct {
+.option-container .option.correct,
+.option-container .option.also-correct{
    color: #fff;
 }
 
