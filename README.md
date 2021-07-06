@@ -428,7 +428,7 @@ The quiz itself is made up of seven elements:
 3. The pictures for the question - each question contains four images related to the question. Where relevant the pictures are linked to the answer options. If the user hovers over the picture, a tool-tip text pop up will display the picture name.
 4. The play button will trigger the audio clip linked to the question to play. Again as far as possible, the clips are associated with the question being asked. Some written questions will ask directly as to who the character within the clip is.
 5. The various answer options will populate just below the play button. The user will need to click on the answer they think is correct.
-6. The next button will generate the next question.
+6. The next button will generate the next question. This button will show as disabled until the user has chosen an option. This will prevent the user from accessing the next question before answering the current question.
 7. The score tracker at the end of the screen is used to track correct and incorrect answers given.
 The quiz is populated when the get question function is called. A breakdown of some of the features has been completed below.
 
@@ -487,6 +487,19 @@ To prevent a question from being re-asked, it is removed from the questions arra
 
  - The options are fetched from the questions array and added to an available options array to be added to the html. The random calculation is then used to make sure the options are added in a random order. Once an option has been added, it is removed from the available options array through a splice to make sure it is not used again. Each option is then populated within the html page.
 
+**Disable Next Button**
+
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/disable-next.PNG" 
+     alt="question options" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+The next button (submit button) is disabled during the getNewQuestion function to ensure that the user cannot move on th the next question without answering.
+
+
 **Answer Results**
    
    <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/answer-correct.PNG" 
@@ -509,7 +522,7 @@ To prevent a question from being re-asked, it is removed from the questions arra
 
 If an answer is incorrect, the background-colour of the chosen option will change to red through an animation. At the same time, the correct answer will be marked in green.
 
-The user is prevented from choosing more than one option per question.
+The user is prevented from choosing more than one option per question by making the options unclickable once an answer is selected. At this point, the next button (submit button) is enabled as the user can move on to the next question now that they have answered.
 
 The get results function is responsible for performing the above actions and calling the unclickable options function:
 
