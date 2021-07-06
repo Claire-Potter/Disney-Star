@@ -294,93 +294,334 @@ The Disney Star site consists of the following Features:
 
 * [Features](#features)
 	* [Character Generator](#character-generator)
+	    * [Choosing a character](#choosing-a-character)
 	* [Quiz welcome](#quiz-welcome)
+	* [Character Logo](#character-logo)
 	* [Quiz](#quiz)
 	    * [Random questions](#random-questions)
-	    * [Pictures and Audio](#pictures-and-audio)
+	    * [Pictures and Audio](#picture-and-audio)
 	    * [Question options](#question-options)
+	    * [Answer Results](#answer-results)
 	    * [Score tracking](#score-tracking)
 	 * [Results](#results)
 	 * [Next Steps](#next-steps)
+	 * [Features Left to Implement](#features-left-to-implement)
 	    
- 
-
 ## Character Generator
 
-![Character Generator]("")
-xxxxxxx
-
- - **xxxxxxo**
-
-<img src="" 
-     alt="" 
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/character-generator.PNG" 
+     alt="character generator" 
      style="display:block; 
             float:none; 
             margin-left:auto; 
             margin-right:auto;
             "> 
 
- - xxxx 
 
-- 
+The purpose of the character generator is to allow the user to select their own character to complete the quiz as. This really makes them a part of the Disney theme and allows them to choose their favourite character.
+
+To begin the process the user will click on the generate button. This will call the generate character function. What this does is populate the character name and image area with the first character within the characters array.
+
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/generate-character.PNG" 
+     alt="generate character" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+
+ **Choosing a character**
+
+<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/next-character.PNG" 
+     alt="next character" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+ - The user will then have the option to click the next character icon. The user can scroll through all of the characters within the array until the last item. 
+ 
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/previous-character.PNG" 
+     alt="previous character" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+- The previous character icon will allow the user to scroll back through the array until the first character in the array. This allows the user to view all of the characters and be able to then return to previous options if they wish to select them.
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/submit.PNG" 
+     alt="submit" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+- Once the user is happy with their character they will click submit to continue on to the quiz. The submit button will follow the hyperlink to open the next page - quiz.html. It also acts as an event listener. It will save the selected character name and selected character logo to local storage.It will then fetch the saved data, ready to repopulate it when triggered to.
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/get-character.PNG" 
+     alt="get-character" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
    
 ## Quiz Welcome
 
-![Quiz Welcome Page]()
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/welcome-page.PNG" 
+     alt="quiz welcome page" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
     
-xxxx
+The welcome page is the first section from the quiz page to display. It includes a lovely image of Mickey Mouse and asks the user if they are ready to proceed creating a bit of anticipation. When the Yes button is clicked, the setup for the start of the quiz is triggered.
 
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/start-quiz.PNG" 
+     alt="start-quiz" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            ">
+            
+  The setup function works as follows:
+  
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/setup.PNG" 
+     alt="setup" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+            
+## Character Logo
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/character-logo.PNG" 
+     alt="character-logo" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+The first element on the quiz page is the character name and logo section. Through JavaScript the character name and image saved from the home page into local storage are called and set to populate the inner html of the character area on the quiz page. This ensures continuity and customisation of the user's experience.
 
 ## Quiz
 
-![Quiz image]()
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/quiz.PNG" 
+     alt="quiz-image" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
 
+The quiz itself is made up of seven elements:
+1. The quiz number -  the question counter is set to start at zero, as each question loads, it will be assigned a number from number 1 to 25, 25 will be the final question as this is the total number of questions available in the array.
+2. The written question - each question within the array contains a written question which will be populated here.
+3. The pictures for the question - each question contains four images related to the question. Where relevant the pictures are linked to the answer options. If the user hovers over the picture, a tool-tip text pop up will display the picture name.
+4. The play button will trigger the audio clip linked to the question to play. Again as far as possible, the clips are associated with the question being asked. Some written questions will ask directly as to who the character within the clip is.
+5. The various answer options will populate just below the play button. The user will need to click on the answer they think is correct.
+6. The next button will generate the next question.
+7. The score tracker at the end of the screen is used to track correct and incorrect answers given.
+The quiz is populated when the get question function is called. A breakdown of some of the features has been completed below.
 
-xxxxx
- -   **Random Questions**
-![Random questions image]()
+**Random Questions**
 
-- xxxxxx
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/random-questions.PNG" 
+     alt="randomise questions" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+- Utilising Math.random() the questions will be populated from the array in a random order. This means that if the user repeats the quiz, they will not have the same order of questions. If the array contained more questions than the number of questions asked, the user would then answer a different mixture of questions each time the quiz is taken.
+
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/remove-question.PNG" 
+     alt="remove-question" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+To prevent a question from being re-asked, it is removed from the questions array through a splice, once it has been asked within the quiz.
 
 	
- -   **Pictures and Audio**
+ **Pictures and Audio**
 
- ![Pictures and Audio image]()
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/array-option.PNG" 
+     alt="an array option" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
 
-- xxxx
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/picture-audio-population.PNG" 
+     alt="pictures and audio population" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
 
- -   **Question Options**
+- The pictures and audio options, as seen in the above quiz image, are taken from the associated question within the array and populated within the html page through JavaScript. A play function is then called when the user clicks the play button to play the audio clip.
 
- ![Question Options]()
+**Question Options**
 
- - xxxx
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/options.PNG" 
+     alt="question options" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+ - The options are fetched from the questions array and added to an available options array to be added to the html. The random calculation is then used to make sure the options are added in a random order. Once an option has been added, it is removed from the available options array through a splice to make sure it is not used again. Each option is then populated within the html page.
+
+**Answer Results**
+   
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/answer-correct.PNG" 
+     alt="correct answer" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
  
-  -   **Score Tracking**
+ If an answer is correct, the background-colour of the chosen option will change to green through an animation.
+ 
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/answer-incorrect.PNG" 
+     alt="incorrect-answer" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
 
- ![Score Tracking]()
+If an answer is incorrect, the background-colour of the chosen option will change to red through an animation. At the same time, the correct answer will be marked in green.
 
- - xxxx
+The user is prevented from choosing more than one option per question.
+
+The get results function is responsible for performing the above actions and calling the unclickable options function:
+
+  <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/get-results.PNG" 
+     alt="get results" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+            
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/unclickable-options.PNG" 
+     alt="unclickable options" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            ">
+            
+            
+ 
+**Score Tracking**
+
+  <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/score-tracker.PNG" 
+     alt="the score tracker" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+ - The score tracker keeps track of the result of every question. If the question is answered correctly, it will be marked as correct with a green background colour if answered incorrectly it will be marked as wrong with a red background colour.
+ 
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/answers-indicator.PNG" 
+     alt="answers indicator code" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
 
 	
 ## Results
 
- ![Results]()
+  <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/results.PNG" 
+     alt="results" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
 	
-xxxx
+The results page is the final page to display once the quiz is over. The results are calculated and the correct results options are displayed according to the percentage of correct answers achieved. The total score achieved out of the total number of questions asked will display first. This is followed by their results title. Example, if the user answered 80 to 100 percent of the questions correctly, they will be called a Disney Star. A small blurb about their achievement will then display. The certificate area contains a picture-background which is relevant to their score achieved. Their character name is then populated within the certificate, tying right back to the beginning when the user selected their character.
 
+The results are calculated as a percentage and the html is setup to display only the relevant text and pictures for the percentage range that the score falls within
 
+  <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/results-percentage.PNG" 
+     alt="results percentage" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+ 
+ This is then called through the quiz result function, to generate the rest of the html for the page with the results data.
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/quiz-result.PNG" 
+     alt="quiz results" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+ 
+ When the last question is asked, the quiz over function will end the quiz and setup for the result section to display in the html and trigger the quiz results function.
+ 
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/quiz-over.PNG" 
+     alt="quiz over" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
  
  ## Next Steps
 
-![Next Steps]()
+  <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/next-steps.PNG" 
+     alt="next steps" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
 
- xxx
+ The next steps section will invite the user to either re-do the quiz, this will take them back to the start of the quiz section and reset the quiz results, go back to Disney Star Home, this will take them to the Disney Star home page to re-select their character and begin again or to visit the Disney Store, this will open the Disney Store site as a new page for the user to explore further.
+ 
+ The quiz is reset as follows when the user selects to redo the quiz:
+ 
+    <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/restart-quiz.PNG" 
+     alt="restart quiz" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
 
 
-  ### Features Left to Implement
--   xxx
-	-xxx
-	- 
+  ## Features Left to Implement
+-   Depending on the success of the quiz, additional Disney themed games could be added to the site. These games would be coded in html, css and JavaScript. Some options could be:
+	- Disney themed word search
+	- Disney themed rock paper scissors
+	- Disney themed hangman 
+
 
 # Testing
 
