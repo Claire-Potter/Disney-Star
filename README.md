@@ -711,13 +711,17 @@ Please access the Disney Star testing pack to view full testing of the site feat
 
 The following issues were experienced during the course of development:
 
-1. xxxx
-    * xxxx
+1. Event listener to wait for the DOM content to be loaded
+    * I originally wanted to add an event listener per page to wait for all DOM content to be loaded before user can interact. However, as my event listeners were 'clicks' of buttons to trigger the character generation or the quiz, having the DOM content even listener additionally prevented the click from triggering the JavaScript code. I therefore removed the DOM content event listener.
    
-2. Txxx
-     * xxxx
+2. Generate Next character in the array.
+     * When I tried to use the next icon to generate the next character in the array within the Character Generate feature, it would not go past the second character. I had my formula wrong an was not looking at the entire characters.length. Once resolved and corrected I could scroll through all characters in the array up to and including the last character.
      
- 3. xxx 
+ 3. Saving the character name and character image to local storage and then fetching them to repopulate in a new element caused some issues.
+ 	* I could not get them to populate within the character name and logo elements on the same page when moving between page sections. It kept on populating with the previous character selected, then the default name and image or as undefined. I eventually created a separate html page and a separate JavaScript file for the quiz.page and I was able to successfully populate the name and logo with the saved character name and character image from local storage.
+ 
+ 4. As this was my first time creating a quiz using JavaScript I followed a YouTube tutorial on how to create a quiz. The reason I chose this particular tutorial was because it randomised the questions and it included a score tracker which were two features I wanted to include.
+	 *  I followed the video step by step and recreated the code within my JavaScript file. Many times the code would not work for me as it had done within the tutorial. I had to then take extra time to check the alignment to my own html elements, my own quiz array and other code I already had created within my JavaScript file. Carefully updating and linking in the code from the tutorial through each step was required to ensure that it worked. Even though the tutorial provided me with certain functions and guidance, I also added extra customisation to include additional features such as the timer, ensuring that the next button was disabled until the user had answered, my event listeners, customisation of inner html, adding additional if else scenarios to customise outcomes of the timer and the results and the function to play the audio. I had to keep testing to ensure that what I added didn't break anything in the code, which it did plenty. It was a major learning exercise to understand exactly what each function did and exactly how it did it to be able to customise it as I did and eliminate all errors along the way. Through disabling functions into small sections, using console.log to visualise what each section was doing, I was able to incorporate all of my changes
     
 
 ### User Stories Testing
