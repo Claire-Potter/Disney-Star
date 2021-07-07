@@ -3,7 +3,7 @@
 
 /* Text Import from Google Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -70,6 +70,7 @@ a {
   font-size: 1.2rem;
   font-family: Satisfy, sans-serif;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 
@@ -113,6 +114,11 @@ a {
   margin-left: 10px;
   color: white;
   
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
 }
 
 .magic-wand {
@@ -343,7 +349,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   margin: 20px 5px 20px 5px;
   width: fit-content;
   height: 25px;
@@ -353,8 +359,9 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   color: #ffffff;
   position: fixed;
   left: 40px;
-  top: 100px;
+  top: 93px;
   z-index: 2;
+  border-radius: 5%;
 }
 
 .in-time {
@@ -381,10 +388,9 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 .end-quiz {
   position: fixed;
-  right: 40px;
-  top: 110px;
+  left: 40px;
+  top: 200px;
   z-index: 2;
-  cursor: pointer;
   height: fit-content;
   
 }
@@ -604,20 +610,20 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 .certificate.top {
-  background-image: url('../images/site-images/congratulations-champion.jpg');
+  background-image: url("../images/site-images/congratulations-champion.jpg");
 }
 
 .certificate.second,
 .certificate.third {
-  background-image: url('../images/site-images/well-done-flying-high.jpg');
+  background-image: url("../images/site-images/well-done-flying-high.jpg");
 }
 
 .certificate.fourth {
-  background-image: url('../images/site-images/congratulations-ok.jpg');
+  background-image: url("../images/site-images/congratulations-ok.jpg");
 }
 
 .certificate.last {
-  background-image: url('../images/site-images/what-a-flop.jpg');
+  background-image: url("../images/site-images/what-a-flop.jpg");
 }
 
 .next-step-figures-area {
@@ -641,6 +647,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   width: 50px;
   border-radius: 50%;
   border: solid black 1px;
+}
+
+.restart-quiz {
+  cursor: pointer;
 }
 
 
@@ -824,6 +834,20 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     height: 284px;
   }
 
+  #timer {
+    left: 0px;
+    top: 170px;
+    font-size: .8rem;
+    padding: 5px;
+  }
+
+  .end-quiz {
+    top: 230px;
+    left: 0px;
+    font-size: .8rem;
+    padding: 5px;
+    width: fit-content;
+  }
 
   #question-number {
     padding: 0px 20px 20px 20px;
