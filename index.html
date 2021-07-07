@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!--Code Institute Template - meta included-->
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!--Meta Description-->
-      <meta name="description"
-         content="Disney Star is a fun quiz for all Disney fans to take to test their Disney knowledge">
-      <!--Keywords-->
-      <meta name="keywords"
-         content="disney, quiz, fun-quiz, disney-knowledge, disney-movies, avengers, star-wars, disney-fans">
-      <!--Link to FontAwesome-->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-      <!--Link to CSS stylesheet-->
-      <link rel="stylesheet" href="assets/css/stylesheet.css">
-      <title>Disney-Star</title>
-   </head>
-   <body>
-      <!--Header-->
-      <header id="header">
-         <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars" id="magic-wand">
-         <h1 id="logo"> Disney Star</h1>
-      </header>
-      <!--Description of quiz and next steps. Character generator to select which character to play as-->
-      <section>
-         <div class="general-setup">
-            <h2> The ultimate Disney Quiz!</h2>
-            <br>
-            <img id=mickey-friends src="assets/images/site-images/mickey-friends7.png" alt="mickey mouse with a group of his friends">
-            <br>
-            <br>
-            <p> Find out which character you are by clicking Generate
-               <br>
-               <br>
-               <i id = "down-arrow" class="fas fa-arrow-down"></i> 
-            </p>
-         </div>
-         <div id="character-generate">
-            <h2>Character:</h2>
-            <br>
-            <div id="character"></div>
-            <br>
-            <br>
-            <button type="button" id="generate-character" class="submit-button" aria-label="button to be clicked to generate a character">Generate</button>
-         </div>
-         <br>
-         <br>
-         <div id="character-image-container">
-            <!--Tooltip code from W3 school tutorial and adapted for site 
-               https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom  -->
-            <button type ="button" id="prev-button" class="character-arrows tooltip" aria-label="button to be clicked to view the previous character"><i class="fas fa-chevron-left"></i><span
-               class="tooltiptext">Previous Character</span></button>
-            <div id="character-image-area"></div>
-            <button type="button" id="next-button" class="character-arrows tooltip" aria-label="button to be clicked to view the next character"> <i class="fas fa-chevron-right"></i><span
-               class="tooltiptext" id="right-text">Next Character</span></button>
-         </div>
-         <br>
-         <!--Confirm button to confirm character Submit button to continue to the quiz.-->
-         <div id="submit-section">
-            <br>
-            <p> Once you are happy with your character, select Submit to continue to the quiz.</p>
-            <br>
-            <br>
-            <a class="submit-button" id="confirm-button"  href='./quiz.html' aria-label="button to be clicked to submit and access the quiz">Submit</a>
-         </div>
-         <br>
-         <br>
-      </section>
-      <!--Footer-->
-      <footer id="footer">
-         <p>Copyright@ClairePotter2021</p>
-      </footer>
-      <!--Link to Javascript script-->
-      <script src="assets/javascript/script.js"></script>
-   </body>
+  <head>
+    <!--Code Institute Template - meta included-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Meta Description-->
+    <meta name="description"
+      content="Disney Star is a fun quiz for all Disney fans to take to test their Disney knowledge">
+    <!--Keywords-->
+    <meta name="keywords"
+      content="disney, quiz, fun-quiz, disney-knowledge, disney-movies, avengers, star-wars, disney-fans">
+    <!--Link to FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!--Link to CSS stylesheet-->
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <title>Disney-Star</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header id="header">
+      <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars" id="magic-wand">
+      <h1 id="logo"> Disney Star</h1>
+    </header>
+    <!--Description of quiz and next steps. Character generator to select which character to play as-->
+    <section>
+      <div class="general-setup">
+        <h2> The ultimate Disney Quiz!</h2>
+        <br>
+        <img id=mickey-friends src="assets/images/site-images/mickey-friends7.png" alt="mickey mouse with a group of his friends">
+        <br>
+        <br>
+        <p> Find out which character you are by clicking Generate
+          <br>
+          <br>
+          <i id = "down-arrow" class="fas fa-arrow-down"></i> 
+        </p>
+      </div>
+      <div id="character-generate">
+        <h2>Character:</h2>
+        <br>
+        <div id="character"></div>
+        <br>
+        <br>
+        <button type="button" id="generate-character" class="submit-button" aria-label="button to be clicked to generate a character">Generate</button>
+      </div>
+      <br>
+      <br>
+      <div id="character-image-container">
+        <!--Tooltip code from W3 school tutorial and adapted for site 
+          https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom  -->
+        <button type ="button" id="prev-button" class="character-arrows tooltip" aria-label="button to be clicked to view the previous character"><i class="fas fa-chevron-left"></i><span
+          class="tooltiptext">Previous Character</span></button>
+        <div id="character-image-area"></div>
+        <button type="button" id="next-button" class="character-arrows tooltip" aria-label="button to be clicked to view the next character"> <i class="fas fa-chevron-right"></i><span
+          class="tooltiptext" id="right-text">Next Character</span></button>
+      </div>
+      <br>
+      <!--Confirm button to confirm character Submit button to continue to the quiz.-->
+      <div id="submit-section">
+        <br>
+        <p> Once you are happy with your character, select Submit to continue to the quiz.</p>
+        <br>
+        <br>
+        <a class="submit-button" id="confirm-button"  href='./quiz.html' aria-label="button to be clicked to submit and access the quiz">Submit</a>
+      </div>
+      <br>
+      <br>
+    </section>
+    <!--Footer-->
+    <footer id="footer">
+      <p>Copyright@ClairePotter2021</p>
+    </footer>
+    <!--Link to Javascript script-->
+    <script src="assets/javascript/script.js"></script>
+  </body>
 </html>

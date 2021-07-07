@@ -4,51 +4,50 @@
 /* Text Import from Google Fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap');
-
 html {
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
-   margin: 0;
-   padding: 0;
-   border: none;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 body {
-   font-family: Raleway, sans-serif;
-   font-weight: 400;
-   color: black;
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 section {
-   margin: auto 0;
+  margin: auto 0;
 }
 
 h1,
 h2,
 h3 {
-   font-family: Satisfy, sans-serif;
-   font-weight: 700;
-   text-decoration: none;
-   letter-spacing: 4px;
+  font-family: Satisfy, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 4px;
 }
 
 a {
-   text-decoration: none;
-   color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .general-setup {
-   height: fit-content;
-   overflow: hidden;
-   padding: 60px 10px 10px 10px;
+  height: fit-content;
+  overflow: hidden;
+  padding: 60px 10px 10px 10px;
 }
 
 .certificate,
@@ -63,140 +62,140 @@ a {
 #character-generate,
 #character,
 .general-setup {
-   width: 500px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   margin: auto 0;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
 }
 
 .submit-button {
-   width: 90px;
-   height: 50px;
-   border: solid black 1px;
-   padding: 10px 5px 10px 5px;
-   margin: 3px;
-   background-color: #f3cc64;
-   text-align: center;
-   font-size: 1.2rem;
-   font-family: Satisfy, sans-serif;
-   border-radius: 5px;
+  width: 90px;
+  height: 50px;
+  border: solid black 1px;
+  padding: 10px 5px 10px 5px;
+  margin: 3px;
+  background-color: #f3cc64;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: Satisfy, sans-serif;
+  border-radius: 5px;
 }
 
 
 /* Shadow code from W3 school tutorials */
 
 .submit-button:hover {
-   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hide {
-   display: none;
+  display: none;
 }
 
 
 /* Header */
 
 #header {
-   background-color: #393e8f;
-   border: none;
-   width: 100%;
-   height: 100px;
-   left: 0;
-   right: 0;
-   top: 0;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   font-size: 1.5rem;
+  background-color: #393e8f;
+  border: none;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
 }
 
 #logo {
-   margin-left: 10px;
-   color: white;
+  margin-left: 10px;
+  color: white;
 }
 
 #magic-wand {
-   width: 80px;
-   height: 95px;
+  width: 80px;
+  height: 95px;
 }
 
 
 /* Footer */
 
 #footer {
-   background-color: #12194A;
-   width: 100%;
-   height: 100px;
-   left: 0;
-   right: 0;
-   color: white;
-   font-size: 0.8rem;
-   margin-top: auto;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  background-color: #12194A;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  right: 0;
+  color: white;
+  font-size: 0.8rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 /* Home Page */
 
 #mickey-friends {
-   width: 500px;
-   height: 296px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  width: 500px;
+  height: 296px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #down-arrow {
-   text-align: center;
-   margin-right: 25px;
+  text-align: center;
+  margin-right: 25px;
 }
 
 
 /* Character Generator Section */
 
 #character-generate {
-   height: fit-content;
+  height: fit-content;
 }
 
 #character {
-   width: 100px;
-   height: 10px;
-   padding: 20px 20px 20px 20px;
-   border: solid #12194A 2px;
-   border-radius: 5px;
+  width: 100px;
+  height: 10px;
+  padding: 20px 20px 20px 20px;
+  border: solid #12194A 2px;
+  border-radius: 5px;
 }
 
 #character-image-container {
-   flex-direction: row;
+  flex-direction: row;
 }
 
 #character-image-area {
-   width: 200px;
-   height: 200px;
-   border: solid #12194A 2px;
-   padding: 5px;
-   margin: auto 0;
-   border-radius: 15px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  width: 200px;
+  height: 200px;
+  border: solid #12194A 2px;
+  padding: 5px;
+  margin: auto 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #character-image-area img {
-   width: 180px;
-   height: 180px;
-   border-radius: 15px;
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
 }
 
 .character-arrows {
-   margin: 20px;
-   text-align: center;
-   color: #12194A;
+  margin: 20px;
+  text-align: center;
+  color: #12194A;
 }
 
 
@@ -204,46 +203,46 @@ a {
 https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 .tooltip {
-   position: relative;
-   display: inline-block;
-   border-bottom: 1px dotted #12194A;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #12194A;
 }
 
 .tooltip .tooltiptext {
-   visibility: hidden;
-   width: 150px;
-   background-color: #12194A;
-   color: #fff;
-   text-align: center;
-   border-radius: 6px;
-   padding: 5px 0;
-   position: absolute;
-   z-index: 1;
-   bottom: 150%;
-   left: 50%;
-   margin-left: -75px;
+  visibility: hidden;
+  width: 150px;
+  background-color: #12194A;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
 }
 
 .tooltip .tooltiptext::after {
-   content: "";
-   position: absolute;
-   top: 100%;
-   left: 50%;
-   margin-left: -5px;
-   border-width: 5px;
-   border-style: solid;
-   border-color: #12194A transparent transparent transparent;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #12194A transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
-   visibility: visible;
+  visibility: visible;
 }
 
 
 /* Submit Section */
 
 #submit-section {
-   height: 130px;
+  height: 130px;
 }
 
 
@@ -253,361 +252,357 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 /* Character Name Area */
 
 #character-name-area {
-   display: flex;
-   justify-content: flex-start;
-   flex-direction: row;
-   align-items: center;
-   width: fit-content;
-   height: fit-content;
-   font-size: 1.2rem;
-   color: white;
-   font-weight: 700;
-   text-align: center;
-   background-color: #12194A;
-   border: solid 1px;
-   border-radius: 5px;
-   padding: 10px;
-   margin: 20px;
-   font-family: Satisfy, sans-serif;
-   position: absolute;
-   left: 20px;
-   top: 110px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  background-color: #12194A;
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+  font-family: Satisfy, sans-serif;
+  position: absolute;
+  left: 20px;
+  top: 110px;
 }
 
 #character-name-area:hover {
-   background-color: #f3cc64;
-   color: #12194A;
+  background-color: #f3cc64;
+  color: #12194A;
 }
 
 #character-logo {
-   height: 50px;
-   width: 50px;
-   border-radius: 50%;
-   background-color: white;
-   margin-right: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 20px;
 }
 
 #character-logo img {
-   height: 48px;
-   width: 48px;
-   border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
 }
 
 
 /* Start Quiz Section */
 
 #ready-to-start {
-   height: 800px;
-   width: 500px;
-   margin: auto 0;
-   text-align: center;
-   padding-top: 110px;
+  height: 800px;
+  width: 500px;
+  margin: auto 0;
+  text-align: center;
+  padding-top: 110px;
 }
 
 #mickey-mouse-area {
-   padding-top: 90px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #mickey-mouse-image {
-   height: 315px;
-   padding: 7px;
+  height: 315px;
+  padding: 7px;
 }
 
 
 /* Question Area */
 
 #question-number {
-   padding: 20px;
-   font-family: Satisfy, sans-serif;
-   font-weight: 700;
-   font-size: 1.5rem;
+  padding: 20px;
+  font-family: Satisfy, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 #timer-area {
-   margin: 0 auto;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 #timer {
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   padding: 10px;
-   margin: 20px 5px 20px 5px;
-   width: fit-content;
-   height: 25px;
-   font-size: 1.2rem;
-   font-weight: 900;
-   background-color: #393e8f;
-   color: #ffffff;
-   position: fixed;
-   left: 40px;
-   right: 0;
-   top: 0;
-   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 5px 20px 5px;
+  width: fit-content;
+  height: 25px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  background-color: #393e8f;
+  color: #ffffff;
+  position: fixed;
+  left: 40px;
+  right: 0;
+  top: 0;
+  z-index: 2;
 }
 
-
 .in-time {
-   background-image: url(../images/site-images/in-time-right.PNG);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-
+  background-image: url(../images/site-images/in-time-right.PNG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wrong-time {
-   background-image: url(../images/site-images/wrong-time.PNG);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+  background-image: url(../images/site-images/wrong-time.PNG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-
 #question-area {
-   height: fit-content;
+  height: fit-content;
 }
 
 #written-question {
-   height: 80px;
-   font-size: 1.2rem;
+  height: 80px;
+  font-size: 1.2rem;
 }
 
 #picture-question {
-   display: grid;
-   grid-template-columns: auto auto;
-   width: 400px;
-   height: 400px;
-   padding: 10px;
-   margin: auto 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  margin: auto 0;
 }
 
 .picture-image {
-   display: inline-grid;
-   width: 200px;
-   height: 200px;
-   border: #12194A solid 3px;
-   border-radius: 5%;
+  display: inline-grid;
+  width: 200px;
+  height: 200px;
+  border: #12194A solid 3px;
+  border-radius: 5%;
 }
 
 .picture-image img {
-   width: 200px;
-   height: 200px;
-   border-radius: 5%;
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
 }
 
 .tooltip .tooltiptext-image {
-   bottom: 100%;
+  bottom: 100%;
 }
 
 
 /* Answer Area */
 
 #answer-area {
-   height: fit-content;
-   overflow: hidden;
-   padding: 20px;
+  height: fit-content;
+  overflow: hidden;
+  padding: 20px;
 }
 
 
 /* The below code is created as per the WebShala Tutorial up to Results Page*/
 
 .option-container {
-   margin: auto 0;
-   width: 500px;
+  margin: auto 0;
+  width: 500px;
 }
 
 .option {
-   font-size: 1rem;
-   font-weight: 800;
-   background-color: #12194A;
-   color: #fff;
-   padding: 20px;
-   margin: 10px;
-   position: relative;
-   overflow: hidden;
-   z-index: 0;
-   width: 400px;
+  font-size: 1rem;
+  font-weight: 800;
+  background-color: #12194A;
+  color: #fff;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  width: 400px;
 }
 
 .option-container .option.correct::before,
-.option-container .option.option.also-correct::before{
-   content: "";
-   position: absolute;
-   left: 0;
-   top: 0;
-   height: 100%;
-   width: 100%;
-   background-color: #459d43;
-   z-index: -1;
-   animation: slideinLeft .5s ease forwards;
+.option-container .option.option.also-correct::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #459d43;
+  z-index: -1;
+  animation: slideinLeft .5s ease forwards;
 }
 
 .option-container .option.already-answered {
-   pointer-events: none;
+  pointer-events: none;
 }
 
 @keyframes slideinLeft {
-   0% {
-      transform: translateX(-100%);
-   }
-
-   100% {
-      transform: translateX(0%);
-   }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .option-container .option.correct,
-.option-container .option.also-correct{
-   color: #fff;
+.option-container .option.also-correct {
+  color: #fff;
 }
 
 .option-container .option.wrong::before {
-   content: "";
-   position: absolute;
-   left: 0;
-   top: 0;
-   height: 100%;
-   width: 100%;
-   background-color: #B12228;
-   z-index: -1;
-   animation: slideinLeft .5s ease forwards;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #B12228;
+  z-index: -1;
+  animation: slideinLeft .5s ease forwards;
 }
 
 .option-container .option.wrong {
-   color: #fff;
+  color: #fff;
 }
 
 
 /* Score Tracker */
 
 #score-area {
-   height: 200px;
-   width: 100%;
-   border-top: 1px solid #cccccc;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   margin: auto 0;
+  height: 200px;
+  width: 100%;
+  border-top: 1px solid #cccccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
 }
 
 #answers-indicator {
-   width: 100%;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   margin: auto 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
 }
 
 #answers-indicator div {
-   height: 40px;
-   width: 40px;
-   display: inline-block;
-   background-color: #cccccc;
-   border-radius: 50%;
-   margin-right: 3px;
-   margin-top: 15px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: #cccccc;
+  border-radius: 50%;
+  margin-right: 3px;
+  margin-top: 15px;
 }
 
 #answers-indicator div.correct {
-   background-color: #459d43;
-   background-image: url("../images/site-images/correct.png");
-   background-size: 50%;
-   background-repeat: no-repeat;
-   background-position: center;
+  background-color: #459d43;
+  background-image: url("../images/site-images/correct.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #answers-indicator div.wrong {
-   background-color: #B12228;
-   background-image: url("../images/site-images/wrong.png");
-   background-size: 50%;
-   background-repeat: no-repeat;
-   background-position: center;
+  background-color: #B12228;
+  background-image: url("../images/site-images/wrong.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 
 /* Results Page */
 
 #result-message {
-   padding: 20px 20px 5px 20px;
+  padding: 20px 20px 5px 20px;
 }
 
 .result-description {
-   height: 100px;
-   padding: 5px 20px 0px 20px;
+  height: 100px;
+  padding: 5px 20px 0px 20px;
 }
 
 .certificate {
-   height: 315px;
-   border: solid 3px;
-   border-radius: 5%;
-   background-color: #393e8f;
-   background-repeat: no-repeat;
-   background-size: cover;
-   padding: 0px 5px 10px 5px;
+  height: 315px;
+  border: solid 3px;
+  border-radius: 5%;
+  background-color: #393e8f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px 5px 10px 5px;
 }
 
 .certificate p {
-   background-color: #ffffff;
-   opacity: .8;
-   font-weight: 900;
-   padding: 5px 5px 0px 5px;
-   font-size: 1.2rem;
-   text-align: center;
-   border: solid 3px;
-   border-radius: 5%;
+  background-color: #ffffff;
+  opacity: .8;
+  font-weight: 900;
+  padding: 5px 5px 0px 5px;
+  font-size: 1.2rem;
+  text-align: center;
+  border: solid 3px;
+  border-radius: 5%;
 }
 
 .certificate.top {
-   background-image: url('../images/site-images/congratulations-champion.jpg');
+  background-image: url('../images/site-images/congratulations-champion.jpg');
 }
 
 .certificate.second,
 .certificate.third {
-   background-image: url('../images/site-images/well-done-flying-high.jpg');
+  background-image: url('../images/site-images/well-done-flying-high.jpg');
 }
 
 .certificate.fourth {
-   background-image: url('../images/site-images/congratulations-ok.jpg');
+  background-image: url('../images/site-images/congratulations-ok.jpg');
 }
 
 .certificate.last {
-   background-image: url('../images/site-images/what-a-flop.jpg');
+  background-image: url('../images/site-images/what-a-flop.jpg');
 }
 
 #next-step-figures-area {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .next-step-figures {
-   margin: 20px;
+  margin: 20px;
 }
 
 .next-step-figures:hover {
-   color: #B12228;
-   font-weight: 800;
+  color: #B12228;
+  font-weight: 800;
 }
 
 .next-step-images {
-   height: 50px;
-   width: 50px;
-   border-radius: 50%;
-   border: solid black 1px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: solid black 1px;
 }
 
 .next-step-images:hover {
-   border: solid #B12228 3px;
+  border: solid #B12228 3px;
 }
 
 
@@ -617,512 +612,417 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 /* Max width 7000px */
 
 @media screen and (max-width: 7000px) {
-   html {
-      font-size: 100%;
-   }
-
-   section {
-      padding-top: 0px;
-   }
-
-   .result-description,
-   #result-message,
-   #answer-area,
-   #question-area,
-   #question-number,
-   #mickey-mouse-image,
-   #submit-section,
-   #character-generate,
-   .general-setup {
-      width: 100%;
-   }
-
-   #mickey-friends {
-      width: 600px;
-      height: 355px;
-   }
-
-
-   #character-image-container {
-      width: fit-content;
-   }
-
-   #character {
-      width: fit-content;
-      height: fit-content;
-   }
-
-   #character-image-area {
-      width: 500px;
-      height: 500px;
-   }
-
-   #character-image-area img {
-      width: 440px;
-      height: 440px;
-   }
-
-   #character-name-area {
-      position: unset;
-      margin: auto;
-   }
-
-   #timer {
-      left: 2500px;
-      bottom: 2200px;
-      top: unset;
-   }
-
-   #picture-question {
-      width: 600px;
-      height: 600px;
-   }
-
-   .picture-image {
-      width: 300px;
-      height: 300px;
-   }
-
-   .picture-image img {
-      width: 300px;
-      height: 300px;
-   }
-
-   .certificate {
-      width: 600px;
-      height: 377px;
-   }
+  html {
+    font-size: 100%;
+  }
+  section {
+    padding-top: 0px;
+  }
+  .result-description,
+  #result-message,
+  #answer-area,
+  #question-area,
+  #question-number,
+  #mickey-mouse-image,
+  #submit-section,
+  #character-generate,
+  .general-setup {
+    width: 100%;
+  }
+  #mickey-friends {
+    width: 600px;
+    height: 355px;
+  }
+  #character-image-container {
+    width: fit-content;
+  }
+  #character {
+    width: fit-content;
+    height: fit-content;
+  }
+  #character-image-area {
+    width: 500px;
+    height: 500px;
+  }
+  #character-image-area img {
+    width: 440px;
+    height: 440px;
+  }
+  #character-name-area {
+    position: unset;
+    margin: auto;
+  }
+  #timer {
+    left: 100px;
+    top: 200px;
+  }
+  #picture-question {
+    width: 600px;
+    height: 600px;
+  }
+  .picture-image {
+    width: 300px;
+    height: 300px;
+  }
+  .picture-image img {
+    width: 300px;
+    height: 300px;
+  }
+  .certificate {
+    width: 600px;
+    height: 377px;
+  }
 }
+
 
 /* Max width 4500 */
 
 @media screen and (max-width: 4500px) {
-   
-   
-   #timer {
-      left: 100px;
-      bottom: unset;
-      top: 100px;
-   }
+  #timer {
+    left: 100px;
+    bottom: unset;
+    top: 100px;
+  }
 }
+
 
 /* Max width 3500px */
 
 @media screen and (max-width: 3500px) {
-
-   .certificate,
-   .result-description,
-   #result-message,
-   #mickey-mouse-image,
-   #submit-section,
-   #character-image-container,
-   #character-generate,
-   .general-setup {
-      width: 500px;
-   }
-
-   #mickey-friends {
-      width: 500px;
-      height: 296px;
-   }
-
-
-   #character {
-      width: 100px;
-      height: 10px;
-   }
-
-   #character-image-area {
-      width: 200px;
-      height: 200px;
-   }
-
-   #character-image-area img {
-      width: 180px;
-      height: 180px;
-   }
-
-   #character-name-area {
-      margin: 20px;
-      position: absolute;
-   }
-
-   #timer {
-      left: 40px;
-      bottom: unset;
-      top: 0px;
-   }
-
-   #picture-question {
-      width: 400px;
-      height: 400px;
-   }
-
-   .picture-image {
-      width: 200px;
-      height: 200px;
-   }
-
-   .picture-image img {
-      width: 200px;
-      height: 200px;
-   }
-
-   .certificate {
-      height: 315px;
-   }
+  .certificate,
+  .result-description,
+  #result-message,
+  #mickey-mouse-image,
+  #submit-section,
+  #character-image-container,
+  #character-generate,
+  .general-setup {
+    width: 500px;
+  }
+  #mickey-friends {
+    width: 500px;
+    height: 296px;
+  }
+  #character {
+    width: 100px;
+    height: 10px;
+  }
+  #character-image-area {
+    width: 200px;
+    height: 200px;
+  }
+  #character-image-area img {
+    width: 180px;
+    height: 180px;
+  }
+  #character-name-area {
+    margin: 20px;
+    position: absolute;
+  }
+  #timer {
+    left: 40px;
+    bottom: unset;
+    top: 0px;
+  }
+  #picture-question {
+    width: 400px;
+    height: 400px;
+  }
+  .picture-image {
+    width: 200px;
+    height: 200px;
+  }
+  .picture-image img {
+    width: 200px;
+    height: 200px;
+  }
+  .certificate {
+    height: 315px;
+  }
 }
 
 
 /* Max width 1200px */
 
 @media screen and (max-width: 1200px) {
-   section {
-      width: 500px;
-      padding-top: 20px;
-   }
-
-
-
-   #score-area {
-      height: fit-content;
-   }
-
-   #answers-indicator {
-      display: grid;
-      grid-template-columns: auto auto auto auto auto auto auto auto auto;
-      margin-bottom: 20px;
-   }
+  section {
+    width: 500px;
+    padding-top: 20px;
+  }
+  #score-area {
+    height: fit-content;
+  }
+  #answers-indicator {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    margin-bottom: 20px;
+  }
 }
 
 
 /* Max width 800px */
 
 @media screen and (max-width: 800px) {
-   html {
-      font-size: 80%;
-   }
-
-   section {
-      padding-top: 30px;
-   }
-
-   h1,
-   h2,
-   h3 {
-      letter-spacing: 2px;
-   }
-
-   .general-setup {
-      padding-top: 0px;
-   }
-
-   .submit-button {
-      height: unset;
-   }
-
-   #header {
-      width: 100%;
-   }
-
-   #footer {
-      width: 100%;
-   }
-
-   .certificate,
-   .result-description,
-   #result-message,
-   #answer-area,
-   #question-area,
-   #question-number,
-   #mickey-mouse-image,
-   #submit-section,
-   #character-image-container,
-   #character-generate,
-   .general-setup {
-      width: 480px;
-   }
-
-
-   #mickey-friends {
-      width: 480px;
-      height: 284px;
-   }
-
-   #down-arrow {
-      text-align: center;
-      margin-right: 25px;
-   }
-
-   #character-name-area {
-      left: 0px;
-      top: 90px;
-   }
-
-   #question-number {
-      padding: 0px 20px 20px 20px;
-   }
-
-   #result-message {
-      padding-top: 0px;
-      ;
-   }
+  html {
+    font-size: 80%;
+  }
+  section {
+    padding-top: 30px;
+  }
+  h1,
+  h2,
+  h3 {
+    letter-spacing: 2px;
+  }
+  .general-setup {
+    padding-top: 0px;
+  }
+  .submit-button {
+    height: unset;
+  }
+  #header {
+    width: 100%;
+  }
+  #footer {
+    width: 100%;
+  }
+  .certificate,
+  .result-description,
+  #result-message,
+  #answer-area,
+  #question-area,
+  #question-number,
+  #mickey-mouse-image,
+  #submit-section,
+  #character-image-container,
+  #character-generate,
+  .general-setup {
+    width: 480px;
+  }
+  #mickey-friends {
+    width: 480px;
+    height: 284px;
+  }
+  #down-arrow {
+    text-align: center;
+    margin-right: 25px;
+  }
+  #character-name-area {
+    left: 0px;
+    top: 90px;
+  }
+  #question-number {
+    padding: 0px 20px 20px 20px;
+  }
+  #result-message {
+    padding-top: 0px;
+    ;
+  }
 }
 
 
 /* Max width 515px */
 
 @media screen and (max-width: 515px) {
-
-   #header {
-      width: 100%;
-   }
-
-   #footer {
-      width: 100%;
-   }
-
-   section {
-      width: 300px;
-      height: fit-content;
-      margin: auto 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 30px;
-   }
-
-   section p {
-      width: 300px;
-   }
-
-   .result-description,
-   #result-message,
-   #question-area,
-   #question-number,
-   #submit-section,
-   #character-image-container,
-   #character-generate,
-   .general-setup {
-      width: 300px;
-   }
-
-   #mickey-friends {
-      width: 300px;
-      height: 177px;
-   }
-
-
-   .tooltip .tooltiptext {
-      width: 70px;
-      margin-left: -20px;
-   }
-
-   .tooltip .tooltiptext::after {
-      content: unset;
-   }
-
-   #right-text {
-      margin-left: -50px;
-   }
-
-   .tooltip .tooltiptext-image {
-      margin-left: -30px;
-   }
-
-   #ready-to-start {
-      padding-top: 40px;
-      width: 300px;
-      height: fit-content;
-      margin: auto 0;
-      padding-bottom: 30px;
-   }
-
-   #character-name-area {
-      position: unset;
-      margin: 100px;
-   }
-
-   #mickey-mouse-area {
-      padding-top: 40px;
-   }
-
-   #mickey-mouse-image {
-      width: 300px;
-      height: 189px;
-      padding: 5px;
-   }
-
-   #quiz-box {
-      padding-top: 0px;
-   }
-
-   #timer {
-      left: 0px;
-   }
-
-   #picture-question {
-      width: 300px;
-      height: 300px;
-   }
-
-   .picture-image {
-      width: 150px;
-      height: 150px;
-   }
-
-   .picture-image img {
-      width: 150px;
-      height: 150px;
-   }
-
-   #answer-area {
-      width: 300px;
-   }
-
-   .option-container {
-      width: unset;
-   }
-
-   #answers-indicator div {
-      height: 20px;
-      width: 20px;
-   }
-
-   .certificate {
-      width: 300px;
-      height: 189px;
-   }
+  #header {
+    width: 100%;
+  }
+  #footer {
+    width: 100%;
+  }
+  section {
+    width: 300px;
+    height: fit-content;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  section p {
+    width: 300px;
+  }
+  .result-description,
+  #result-message,
+  #question-area,
+  #question-number,
+  #submit-section,
+  #character-image-container,
+  #character-generate,
+  .general-setup {
+    width: 300px;
+  }
+  #mickey-friends {
+    width: 300px;
+    height: 177px;
+  }
+  .tooltip .tooltiptext {
+    width: 70px;
+    margin-left: -20px;
+  }
+  .tooltip .tooltiptext::after {
+    content: unset;
+  }
+  #right-text {
+    margin-left: -50px;
+  }
+  .tooltip .tooltiptext-image {
+    margin-left: -30px;
+  }
+  #ready-to-start {
+    padding-top: 40px;
+    width: 300px;
+    height: fit-content;
+    margin: auto 0;
+    padding-bottom: 30px;
+  }
+  #character-name-area {
+    position: unset;
+    margin: 100px;
+  }
+  #mickey-mouse-area {
+    padding-top: 40px;
+  }
+  #mickey-mouse-image {
+    width: 300px;
+    height: 189px;
+    padding: 5px;
+  }
+  #quiz-box {
+    padding-top: 0px;
+  }
+  #timer {
+    left: 0px;
+  }
+  #picture-question {
+    width: 300px;
+    height: 300px;
+  }
+  .picture-image {
+    width: 150px;
+    height: 150px;
+  }
+  .picture-image img {
+    width: 150px;
+    height: 150px;
+  }
+  #answer-area {
+    width: 300px;
+  }
+  .option-container {
+    width: unset;
+  }
+  #answers-indicator div {
+    height: 20px;
+    width: 20px;
+  }
+  .certificate {
+    width: 300px;
+    height: 189px;
+  }
 }
 
 
 /* Media Screen width 350px */
 
 @media screen and (max-width: 350px) {
-   html {
-      font-size: 70%;
-   }
-
-   .result-description,
-   #result-message,
-   #question-area,
-   #question-number,
-   #submit-section,
-   #character-image-container,
-   #character-generate,
-   .general-setup {
-      width: 250px;
-   }
-
-
-   #mickey-friends {
-      width: 250px;
-      height: 147px;
-   }
-
-
-
-   #picture-question {
-      width: 250px;
-      height: 250px;
-   }
-
-   .picture-image {
-      width: 125px;
-      height: 125px;
-   }
-
-   .picture-image img {
-      width: 125px;
-      height: 125px;
-   }
-
-   #answer-area {
-      width: 250px;
-   }
+  html {
+    font-size: 70%;
+  }
+  .result-description,
+  #result-message,
+  #question-area,
+  #question-number,
+  #submit-section,
+  #character-image-container,
+  #character-generate,
+  .general-setup {
+    width: 250px;
+  }
+  #mickey-friends {
+    width: 250px;
+    height: 147px;
+  }
+  #picture-question {
+    width: 250px;
+    height: 250px;
+  }
+  .picture-image {
+    width: 125px;
+    height: 125px;
+  }
+  .picture-image img {
+    width: 125px;
+    height: 125px;
+  }
+  #answer-area {
+    width: 250px;
+  }
 }
 
 @media screen and (max-width: 290px) {
-   html {
-      font-size: 60%;
-   }
-
-   section {
-      width: 200px;
-   }
-
-   section p {
-      width: 200px;
-   }
-
-   .next-step-figures-area,
-   .result-description,
-   #result-message,
-   #question-area,
-   #question-number,
-   #submit-section,
-   #character-image-container,
-   #character-generate,
-   .general-setup {
-      width: 200px;
-   }
-
-
-   #mickey-friends {
-      width: 200px;
-      height: 118px;
-   }
-
-   #character-image-container {
-      width: 200px;
-   }
-
-   .tooltip .tooltiptext {
-      margin-left: -10px;
-   }
-
-   #right-text {
-      margin-left: -70px;
-   }
-
-
-
-   #ready-to-start {
-      width: 200px;
-   }
-
-   #mickey-mouse-image {
-      width: 200px;
-      height: 126px;
-   }
-
-   #picture-question {
-      width: 200px;
-      height: 200px;
-   }
-
-   .picture-image {
-      width: 100px;
-      height: 100px;
-   }
-
-   .picture-image img {
-      width: 100px;
-      height: 100px;
-   }
-
-   #answer-area {
-      width: 200px;
-   }
-
-   .certificate {
-      width: 200px;
-      height: 126px;
-   }
-
-   .next-step-images {
-      height: 40px;
-      width: 40px;
-   }
+  html {
+    font-size: 60%;
+  }
+  section {
+    width: 200px;
+  }
+  section p {
+    width: 200px;
+  }
+  .next-step-figures-area,
+  .result-description,
+  #result-message,
+  #question-area,
+  #question-number,
+  #submit-section,
+  #character-image-container,
+  #character-generate,
+  .general-setup {
+    width: 200px;
+  }
+  #mickey-friends {
+    width: 200px;
+    height: 118px;
+  }
+  #character-image-container {
+    width: 200px;
+  }
+  .tooltip .tooltiptext {
+    margin-left: -10px;
+  }
+  #right-text {
+    margin-left: -70px;
+  }
+  #ready-to-start {
+    width: 200px;
+  }
+  #mickey-mouse-image {
+    width: 200px;
+    height: 126px;
+  }
+  #picture-question {
+    width: 200px;
+    height: 200px;
+  }
+  .picture-image {
+    width: 100px;
+    height: 100px;
+  }
+  .picture-image img {
+    width: 100px;
+    height: 100px;
+  }
+  #answer-area {
+    width: 200px;
+  }
+  .certificate {
+    width: 200px;
+    height: 126px;
+  }
+  .next-step-images {
+    height: 40px;
+    width: 40px;
+  }
 }
