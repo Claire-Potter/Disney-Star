@@ -27,17 +27,10 @@
   <section id="quiz-page">
     <div id="ready-to-start" class="">
       <h2>Are you ready for the ultimate Disney quiz?</h2>
-      <br>
       <div id="mickey-mouse-area"><img src='assets/images/site-images/mickey-quiz.png'
-        alt="a picture of Mickey Mouse lying on his tummy" id="mickey-mouse-image"></div>
-      <br>
-      <br>
+        alt="a picture of Mickey Mouse lying on his tummy" class="mickey-mouse-image general-display"></div>
       <p>You will have 45 seconds to answer each question, make sure you do before the time runs out.</p>
-      <br>
-      <br>
       <p>Click Yes to start</p>
-      <br>
-      <br>
       <button id="start-quiz" class="submit-button" type="button"
         aria-label="Yes button to be clicked to go to the quiz">Yes!</button>
     </div>
@@ -49,9 +42,9 @@
       <div id="character-name"></div>
     </div>
     <div id="timer-area"> <span id="timer" class=""></span></div>
-    <div id="question-number">​
+    <div id="question-number" class="general-display">​
     </div>
-    <div id="question-area">
+    <div class="question-area general-display">
       <div id="written-question"></div>
       <div id="picture-question">
         <!--Tooltip code from W3 school tutorial and adapted for site 
@@ -61,20 +54,15 @@
         <div class="picture-image tooltip" id="picture-three"></div>
         <div class="picture-image tooltip" id="picture-four"></div>
       </div>
-      <br>
-      <br>
       <p>Click the below button to play the sound clip:</p>
-      <br>
       <input id="audio-question" class="submit-button" type="button" value="Play"
         aria-label="button to be clicked to play the sound clip">
     </div>
     <!--Answer Area-->
     <div>
-      <div id="answer-area">
+      <div class="answer-area general-display">
         <div class="option-container"></div>
         <!--Submit button to submit answer.-->
-        <br>
-        <br>
         <input id="submit-question" class="submit-button" type="button" value="Next"
           aria-label="button to be clicked to go to the next question">
       </div>
@@ -85,29 +73,17 @@
   </section>
   <!--Results Area-->
   <section id="result-box" class="hide">
-    <div id="result-message">
-      <span class="total-correct"></span><span class="total-question"></span>
-      <br>
-      <br>
-      <br>
+    <div class="result-message general-display">
+     <div class = "totals-area"><span class="total-correct"></span><span class="total-question"></span></div>
       <div class="result-type"></div>
     </div>
-    <br>
-    <div class="result-description">
+    <div class="result-description general-display">
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="certificate">
+    <div class="certificate general-display">
       <p> <span id="certificate-name"></span> </p>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
     <!--Next Steps Area-->
-    <div class="general-setup">
+    <div class="general-setup general-display">
       <p>Unhappy with your score? Then why not take the quiz again? <br> Alternatively visit the Disney store to
         check out
         their awesome merchandise!

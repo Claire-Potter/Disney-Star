@@ -26,29 +26,18 @@
     </header>
     <!--Description of quiz and next steps. Character generator to select which character to play as-->
     <section>
-      <div class="general-setup">
-        <h2> The ultimate Disney Quiz!</h2>
-        <br>
+      <div class="general-setup general-display">
+        <h2 class="home-heading"> The ultimate Disney Quiz!</h2>
         <img id=mickey-friends src="assets/images/site-images/mickey-friends7.png" alt="mickey mouse with a group of his friends">
-        <br>
-        <br>
-        <p> Find out which character you are by clicking Generate
-          <br>
-          <br>
-          <i id = "down-arrow" class="fas fa-arrow-down"></i> 
-        </p>
+ 
       </div>
-      <div id="character-generate">
+      <div class="character-generate general-display">
         <h2>Character:</h2>
-        <br>
-        <div id="character"></div>
-        <br>
-        <br>
+        <p> Find out which character you are by clicking Generate</p>
         <button type="button" id="generate-character" class="submit-button" aria-label="button to be clicked to generate a character">Generate</button>
+        <div id="character" class="general-display"></div>
       </div>
-      <br>
-      <br>
-      <div id="character-image-container">
+      <div class="character-image-container general-display">
         <!--Tooltip code from W3 school tutorial and adapted for site 
           https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom  -->
         <button type ="button" id="prev-button" class="character-arrows tooltip" aria-label="button to be clicked to view the previous character"><i class="fas fa-chevron-left"></i><span
@@ -57,17 +46,11 @@
         <button type="button" id="next-button" class="character-arrows tooltip" aria-label="button to be clicked to view the next character"> <i class="fas fa-chevron-right"></i><span
           class="tooltiptext" id="right-text">Next Character</span></button>
       </div>
-      <br>
       <!--Confirm button to confirm character Submit button to continue to the quiz.-->
-      <div id="submit-section">
-        <br>
+      <div class="submit-section general-display">
         <p> Once you are happy with your character, select Submit to continue to the quiz.</p>
-        <br>
-        <br>
         <a class="submit-button" id="confirm-button"  href='./quiz.html' aria-label="button to be clicked to submit and access the quiz">Submit</a>
       </div>
-      <br>
-      <br>
     </section>
     <!--Footer-->
     <footer id="footer">
