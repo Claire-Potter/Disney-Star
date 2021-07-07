@@ -176,10 +176,6 @@ const characters = [{
     characterImageArea: 'captainAmerica.PNG',
   },
   {
-    character: 'Winnie the Pooh',
-    characterImageArea: 'winnieThePooh.PNG',
-  },
-  {
     character: 'Chip',
     characterImageArea: 'chip.PNG',
   },
@@ -348,7 +344,7 @@ prevButton.addEventListener('click', prevItem);
  */
 
 function prevItem() {
-  if (selectedCharacter == characters[0]) {
+  if (selectedCharacter == 0) {
 
   } else {
     generateCharacter(characters[selectedCharacter--]);
