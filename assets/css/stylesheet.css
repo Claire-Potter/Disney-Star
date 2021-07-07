@@ -96,19 +96,62 @@ a {
   top: 0;
   display: flex;
   flex-direction: row;
+  align-items: center;
+ 
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  margin: 0 auto;
 }
 
 #logo {
   margin-left: 10px;
   color: white;
+  
 }
 
-#magic-wand {
+.magic-wand {
   width: 80px;
   height: 95px;
+}
+
+/* Character Name Area  only appears in te header on te quiz page as the html imput for this is saved in local storage from the selection that the user makes on the index page*/
+
+.character-name-area {
+  display: flex;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  font-weight: 700;
+  background-color: #12194A;
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 5px;
+  font-family: Satisfy, sans-serif;
+}
+
+#character-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 20px;
+}
+
+#character-logo img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
 }
 
 
@@ -250,46 +293,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 
 /* Quiz Page */
-
-
-/* Character Name Area */
-
-#character-name-area {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  align-items: center;
-  width: fit-content;
-  height: fit-content;
-  font-size: 1.2rem;
-  color: white;
-  font-weight: 700;
-  text-align: center;
-  background-color: #12194A;
-  border: solid 1px;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 20px;
-  font-family: Satisfy, sans-serif;
-  position: absolute;
-  left: 20px;
-  top: 110px;
-}
-
-#character-logo {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: white;
-  margin-right: 20px;
-}
-
-#character-logo img {
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-}
-
 
 /* Start Quiz Section */
 
@@ -580,8 +583,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   padding: 5px 5px 0px 5px;
   font-size: 1.2rem;
   text-align: center;
-  border: solid 3px;
-  border-radius: 5%;
 }
 
 .certificate.top {
@@ -632,7 +633,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 @media screen and (max-width: 7000px) {
   html {
-    font-size: 100%;
+    font-size: 1.2rem;
   }
   section {
     padding-top: 0px;
@@ -660,10 +661,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     width: 440px;
     height: 440px;
   }
-  #character-name-area {
-    position: unset;
-    margin: auto;
-  }
+
   #timer {
     left: 100px;
     top: 200px;
@@ -721,10 +719,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     width: 180px;
     height: 180px;
   }
-  #character-name-area {
-    margin: 20px;
-    position: absolute;
-  }
+
   #timer {
     left: 40px;
     bottom: unset;
@@ -769,7 +764,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 @media screen and (max-width: 800px) {
   html {
-    font-size: 80%;
+    font-size: 1rem;
   }
   section {
     padding-top: 30px;
@@ -785,9 +780,41 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .submit-button {
     height: unset;
   }
-  #header {
-    width: 100%;
-  }
+
+/* Header */
+
+#header {
+  width: 100%;
+  height: 180px;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+
+.logo-area {
+  font-size: 1rem;
+}
+
+
+/* Character Name Area  only appears in te header on te quiz page as the html imput for this is saved in local storage from the selection that the user makes on the index page*/
+
+.character-name-area {
+  position: unset;
+  margin: 0 auto;
+  
+}
+
+#character-logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+#character-logo img {
+  height: 38px;
+  width: 38px;
+}
+
   #footer {
     width: 100%;
   }
@@ -800,10 +827,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     height: 284px;
   }
 
-  #character-name-area {
-    left: 0px;
-    top: 90px;
-  }
+
   #question-number {
     padding: 0px 20px 20px 20px;
   }
@@ -863,10 +887,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     margin: auto 0;
     padding-bottom: 30px;
   }
-  #character-name-area {
-    position: unset;
-    margin: 100px;
-  }
+
   #mickey-mouse-area {
     padding-top: 40px;
   }
@@ -914,7 +935,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 @media screen and (max-width: 350px) {
   html {
-    font-size: 70%;
+    font-size: .9rem;
   }
 
   .general-display {
@@ -943,7 +964,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 @media screen and (max-width: 290px) {
   html {
-    font-size: 60%;
+    font-size: .8rem;
   }
 
   section p {

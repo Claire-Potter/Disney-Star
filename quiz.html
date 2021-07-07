@@ -1,124 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!--Code Institute Template - meta included-->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Meta Description-->
-    <meta name="description"
-      content="Disney Star is a fun quiz for all Disney fans to take to test their Disney knowledge">
-    <!--Keywords-->
-    <meta name="keywords"
-      content="disney, quiz, fun-quiz, disney-knowledge, disney-movies, avengers, star-wars, disney-fans">
-    <!--Link to FontAwesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!--Link to CSS stylesheet-->
-    <link rel="stylesheet" href="assets/css/stylesheet.css">
-    <title>Disney-Star</title>
-  </head>
-  <!--Header-->
-  <header id="header">
-    <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars" id="magic-wand">
+
+<head>
+  <!--Code Institute Template - meta included-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Meta Description-->
+  <meta name="description"
+    content="Disney Star is a fun quiz for all Disney fans to take to test their Disney knowledge">
+  <!--Keywords-->
+  <meta name="keywords"
+    content="disney, quiz, fun-quiz, disney-knowledge, disney-movies, avengers, star-wars, disney-fans">
+  <!--Link to FontAwesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!--Link to CSS stylesheet-->
+  <link rel="stylesheet" href="assets/css/stylesheet.css">
+  <title>Disney-Star</title>
+</head>
+<!--Header-->
+<header id="header">
+  <div class = "logo-area">
+    <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars" class="magic-wand">
     <h1 id="logo"> Disney Star</h1>
-  </header>
-  <!--Question Area-->
-  <section id="quiz-page">
-    <div id="ready-to-start" class="">
-      <h2>Are you ready for the ultimate Disney quiz?</h2>
-      <div id="mickey-mouse-area"><img src='assets/images/site-images/mickey-quiz.png'
+    <img src="assets/images/site-images/magicWandBlueRight.jpg" alt="A magical fairy wand with stars" class="magic-wand">
+  </div>
+  <div class="character-name-area">
+    <div id="character-logo"></div>
+    <div id="character-name"></div>
+  </div>
+</header>
+<!--Question Area-->
+<section id="quiz-page">
+  <div id="ready-to-start" class="">
+    <h2>Are you ready for the ultimate Disney quiz?</h2>
+    <div id="mickey-mouse-area"><img src='assets/images/site-images/mickey-quiz.png'
         alt="a picture of Mickey Mouse lying on his tummy" class="mickey-mouse-image general-display"></div>
-      <p>You will have 45 seconds to answer each question, make sure you do before the time runs out.</p>
-      <p>Click Yes to start</p>
-      <button id="start-quiz" class="submit-button" type="button"
-        aria-label="Yes button to be clicked to go to the quiz">Yes!</button>
-    </div>
-  </section>
-  <!--Question Area-->
-  <section id="quiz-box" class="hide">
-    <div id="character-name-area">
-      <div id="character-logo"></div>
-      <div id="character-name"></div>
-    </div>
-    <div id="timer-area"> <span id="timer" class=""></span></div>
-    <div id="question-number" class="general-display">​
-    </div>
-    <div class="question-area general-display">
-      <div id="written-question"></div>
-      <div id="picture-question">
-        <!--Tooltip code from W3 school tutorial and adapted for site 
+    <p>You will have 45 seconds to answer each question, make sure you do before the time runs out.</p>
+    <p>Click Yes to start</p>
+    <button id="start-quiz" class="submit-button" type="button"
+      aria-label="Yes button to be clicked to go to the quiz">Yes!</button>
+  </div>
+</section>
+<!--Question Area-->
+<section id="quiz-box" class="hide">
+  <div id="timer-area"> <span id="timer" class=""></span></div>
+  <div id="question-number" class="general-display">​
+  </div>
+  <div class="question-area general-display">
+    <div id="written-question"></div>
+    <div id="picture-question">
+      <!--Tooltip code from W3 school tutorial and adapted for site 
           https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom  -->
-        <div class="picture-image tooltip" id="picture-one"></div>
-        <div class="picture-image tooltip" id="picture-two"></div>
-        <div class="picture-image tooltip" id="picture-three"></div>
-        <div class="picture-image tooltip" id="picture-four"></div>
-      </div>
-      <p>Click the below button to play the sound clip:</p>
-      <input id="audio-question" class="submit-button" type="button" value="Play"
-        aria-label="button to be clicked to play the sound clip">
+      <div class="picture-image tooltip" id="picture-one"></div>
+      <div class="picture-image tooltip" id="picture-two"></div>
+      <div class="picture-image tooltip" id="picture-three"></div>
+      <div class="picture-image tooltip" id="picture-four"></div>
     </div>
-    <!--Answer Area-->
-    <div>
-      <div class="answer-area general-display">
-        <div class="option-container"></div>
-        <!--Submit button to submit answer.-->
-        <input id="submit-question" class="submit-button" type="button" value="Next"
-          aria-label="button to be clicked to go to the next question">
-      </div>
+    <p>Click the below button to play the sound clip:</p>
+    <input id="audio-question" class="submit-button" type="button" value="Play"
+      aria-label="button to be clicked to play the sound clip">
+  </div>
+  <!--Answer Area-->
+  <div>
+    <div class="answer-area general-display">
+      <div class="option-container"></div>
+      <!--Submit button to submit answer.-->
+      <input id="submit-question" class="submit-button" type="button" value="Next"
+        aria-label="button to be clicked to go to the next question">
     </div>
-    <div id="score-area">
-      <div id="answers-indicator" class=""></div>
+  </div>
+  <div id="score-area">
+    <div id="answers-indicator" class=""></div>
+  </div>
+</section>
+<!--Results Area-->
+<section id="result-box" class="hide">
+  <div class="result-message general-display">
+    <div class="totals-area"><span class="total-correct"></span><span class="total-question"></span></div>
+    <div class="result-type"></div>
+  </div>
+  <div class="result-description general-display">
+  </div>
+  <div class="certificate general-display">
+    <p> <span id="certificate-name"></span> </p>
+  </div>
+  <!--Next Steps Area-->
+  <div class="general-setup general-display">
+    <p>Unhappy with your score? Then why not take the quiz again? <br> Alternatively visit the Disney store to
+      check out
+      their awesome merchandise!
+    </p>
+    <div id="next-step-figures-area">
+      <a id="restart-quiz" aria-label="link to restart the quiz">
+        <figure class="next-step-figures">
+          <img src="assets/images/site-images/quiz-icon.jpg" alt="a quiz icon which shows a questionmark in a circle"
+            class="next-step-images">
+          <figcaption>Redo Quiz</figcaption>
+        </figure>
+      </a>
+      <a href="index.html" aria-label="link to home page" id="home-page">
+        <figure class="next-step-figures">
+          <img src="assets/images/site-images/magic-wand-icon.jpg" alt="the Disney Star magic wand icon as per header"
+            class="next-step-images">
+          <figcaption>Disney Star Home</figcaption>
+        </figure>
+      </a>
+      <a href="https://www.shopdisney.co.uk/" target="_blank" aria-label="a link to the online Disney Store site"
+        rel="noreferrer">
+        <figure class="next-step-figures">
+          <img src="assets/images/site-images/disney-icon.jpg" alt="a disney icon which shows a magic castle"
+            class="next-step-images">
+          <figcaption>Disney Store</figcaption>
+        </figure>
+      </a>
     </div>
-  </section>
-  <!--Results Area-->
-  <section id="result-box" class="hide">
-    <div class="result-message general-display">
-     <div class = "totals-area"><span class="total-correct"></span><span class="total-question"></span></div>
-      <div class="result-type"></div>
-    </div>
-    <div class="result-description general-display">
-    </div>
-    <div class="certificate general-display">
-      <p> <span id="certificate-name"></span> </p>
-    </div>
-    <!--Next Steps Area-->
-    <div class="general-setup general-display">
-      <p>Unhappy with your score? Then why not take the quiz again? <br> Alternatively visit the Disney store to
-        check out
-        their awesome merchandise!
-      </p>
-      <div id="next-step-figures-area">
-        <a id="restart-quiz" aria-label="link to restart the quiz">
-          <figure class="next-step-figures">
-            <img src="assets/images/site-images/quiz-icon.jpg"
-              alt="a quiz icon which shows a questionmark in a circle" class="next-step-images">
-            <figcaption>Redo Quiz</figcaption>
-          </figure>
-        </a>
-        <a href="index.html" aria-label="link to home page" id="home-page">
-          <figure class="next-step-figures">
-            <img src="assets/images/site-images/magic-wand-icon.jpg"
-              alt="the Disney Star magic wand icon as per header" class="next-step-images">
-            <figcaption>Disney Star Home</figcaption>
-          </figure>
-        </a>
-        <a href="https://www.shopdisney.co.uk/" target="_blank" aria-label="a link to the online Disney Store site"
-          rel="noreferrer">
-          <figure class="next-step-figures">
-            <img src="assets/images/site-images/disney-icon.jpg" alt="a disney icon which shows a magic castle"
-              class="next-step-images">
-            <figcaption>Disney Store</figcaption>
-          </figure>
-        </a>
-      </div>
-    </div>
-  </section>
-  <!--Footer-->
-  <footer id="footer">
-    <p>Copyright@ClairePotter2021</p>
-  </footer>
-  <!--Link to Javascript script-->
-  <script src="assets/javascript/quizpage.js"></script>
-  </body>
+  </div>
+</section>
+<!--Footer-->
+<footer id="footer">
+  <p>Copyright@ClairePotter2021</p>
+</footer>
+<!--Link to Javascript script-->
+<script src="assets/javascript/quizpage.js"></script>
+</body>
+
 </html>
