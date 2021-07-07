@@ -67,9 +67,10 @@ A Disney lover. Enjoys all things Disney, the movies, the music, the parks, the 
 5. Any feedback and recommendations would be useful.
 6. The questions and answers should be correct - nothing worse than seeing errors in a quiz.
 7. Include a score tracker to accuratley track and calculate end score.
-8. Fun award for knowledge given at the end of the quiz makes it worth her time.
-9. Relevant and vibrant images are a must.
-10. Audio tracks to play clearly when prompted.
+8. Having a limited time to answr questions would make it more interesting.
+9. Fun award for knowledge given at the end of the quiz makes it worth her time.
+10. Relevant and vibrant images are a must.
+11. Audio tracks to play clearly when prompted.
 
 - Secondary User: Quiz Owner
 
@@ -81,9 +82,8 @@ when required.
 5. Ability to update images when required.
 6. Needs to easily understand at a high level which code does what so comments throughout are important.
 7. Aims to keep the user engaged, so a way for the user to redo the quiz is a must, questions should generate randomly to make it a bit harder and more exciting.
-8. A simple userguide for the site would be helpful.
-9. This would be the minimum viable product for the site owner so the ability to add on and grow from here would be great.
-10. A link back to the Disney store to open on a new page, to direct the user to view Disney products, as the site is using the Disney name.
+8. This would be the minimum viable product for the site owner so the ability to add on and grow from here would be great.
+9. A link back to the Disney store to open on a new page, to direct the user to view Disney products, as the site is using the Disney name.
 
 
 ## Strategy
@@ -92,7 +92,7 @@ I have taken some time to answer the following high-level strategic questions:
 
  1. Is the content culturally appropriate? 
 
-	The content needs to be aimed at an English speaking person. Someone who is social media savvy and used to completing online quizzes or playing online games. It is aimed at young adults who enjoy the Disney theme, it can be played by children, however ith adult assistance as some questions are a bit too difficult for kids.
+	The content needs to be aimed at an English speaking person. Someone who is social media savvy and used to completing online quizzes or playing online games. It is aimed at young adults who enjoy the Disney theme, it can be played by children, however with adult assistance as some questions are a bit too difficult for kids.
 
  2. Is the content relevant? 
  
@@ -103,7 +103,7 @@ I have taken some time to answer the following high-level strategic questions:
  - Appropriate images are shown per question.
  - Images for certificates are themed according to the user's result.
  - All questions are based on Disney and included Disney movies, Disney characters, Disney theme parks, the Avengers and Star Wars.
- - Only where appropriate a small amount of images of non-Disney characters are used to compare films. The correct answer is the Disney film.
+ - Only where appropriate a small amount of images of non-Disney characters are used to compare a Disney film to other films. The correct answer is the Disney film.
  - All audio clips are of Disney characters and are matched as closely as possible to the questions asked. Some questions are not regarding the audio clip, so the clip does not affect the ability to answer.
 
  3. Can we track and catalogue the content in an intuitive way? 
@@ -171,29 +171,32 @@ This site will be developed as a minimum viable product. Future releases could i
 3. Array of questions with assigned images, audio clip and answer options as well as correct answer
 4. Generate questions ramdomly
 5. Do not reask the same questions
-6. Ability to update questions
-7. Ability to set the number of questions asked
-8. Display correct images per question
-9. Assign correct audio clip per question and allow the user to play
-10. Display the question answer options in a random order
-11. If the answer is correct, mark the option box green. If the answer is incorrect, mark the option box red and display correct answer in green
-12. Only allow user to select one option
-13. Keep a score tracker with correct and wrong answers given to reflect in the end calculation
-14. Calculate results based on a percentage range and display content based on range achieved
-15. Allow user to choose their own character from character name and character images array
-16. Allow user to scroll back and fourth between the various characters available in the array
-17. Display character chosen across site pages
-18. Create buttons for the user to navigate with across the site. Use these buttons as event triggers
-19. Only display page sections when relevant, otherwise hide the section
-20. Generate next question when user clicks the event trigger Next
-21. Reset the quiz when the user chooses to redo the quiz
-22. When quiz begins setup the page and question appropriately
-23. When the quiz ends, setup the page and calculate the results to display
-24. Include a link back to the home page
-25. Include a link to the Disney Store to open in a new tab
-26. Footer fixed to bottom of the page
-27. Multi-page website
-28. Appropriatly styled elements
+6. Time limit per question
+7. Compulsory answer per question
+8. Ability to update questions
+9. Ability to set the number of questions asked
+10. Display correct images per question
+11. Assign correct audio clip per question and allow the user to play
+12. Display the question answer options in a random order
+13. If the answer is correct, mark the option box green. If the answer is incorrect, mark the option box red and display correct answer in green
+14. Only allow user to select one option
+15. Keep a score tracker with correct and wrong answers given to reflect in the end calculation
+16. Calculate results based on a percentage range and display content based on range achieved
+17. Allow user to choose their own character from character name and character images array
+18. Allow user to scroll back and fourth between the various characters available in the array
+19. Display character chosen across site pages
+20. Create buttons for the user to navigate with across the site. Use these buttons as event triggers
+21. Only display page sections when relevant, otherwise hide the section
+22. Generate next question when user clicks the event trigger Next
+23. Reset the quiz when the user chooses to redo the quiz
+24. When quiz begins setup the page and question appropriately
+25. When the quiz ends, setup the page and calculate the results to display
+26. Include a link back to the home page
+27. Include a link to the Disney Store to open in a new tab
+28. Footer fixed to bottom of the page
+29. Multi-page website
+30. Appropriatly styled elements
+31. Auto-scroll to the top of the page when the screen changes and between questions
 
 #### Content Requirements
 
@@ -245,7 +248,7 @@ As this is a Disney themed site it was essential that Disney specific colours we
 
 ![Disney colour palette used for site design](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/disney-palette.PNG)
 
-I prefer a clean and simple design rather than busy. I wanted to create a space in which the Disney images could really speak for themselves. All images were chosen specifically for the sections they were added to and those used with questions were aligned to the question content. Where possible they are all formatted to have a dark blue border with a border-radious of 5%. The width of the various page sections was aligned over both pages and adjusted per screen size. The font was set as default Satisfy for headings, as this has a very Disney look about it  and as Raleway for text as this was a suggested pairing, with Sans serif as a backup for both. It was important to create a fluid feeling across the site pages to provide continuity. The quiz page itself generates the various quiz questions in the same format. 
+I prefer a clean and simple design rather than busy. I wanted to create a space in which the Disney images could really speak for themselves. All images were chosen specifically for the sections they were added to and those used with questions were aligned to the question content. Where possible they are all formatted to have a dark blue border with a border-radius of 5%. The width of the various page sections was aligned over both pages and adjusted per screen size. The font was set as default Satisfy for headings, as this has a very Disney look about it  and as Raleway for text as this was a suggested pairing, with Sans serif as a backup for both. It was important to create a fluid feeling across the site pages to provide continuity. The quiz page itself generates the various quiz questions in the same format. 
 
 ![Disney Green ](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/disney-green.PNG)
 
@@ -258,8 +261,9 @@ The green colour chosen to indicate correct answers was aligned again to the Dis
 1. The Generate button on the home screen was moved to display within the single column view as this was more visually appealing than displaying next to the character box. An arrow either side of the character box was added to scroll between characters.
 2. The original quiz was designed to display the questions as separate written, picture or audio questions. In designing the layout of the page, the three question types were included across all questions as visually it worked much better to bring life and character to the quiz.
 3. Originally the score tracker was just going to be formatted as 0/25. A pop up would then say whether the user got the question right or wrong. Instead the tracker was featured at the bottom of the quiz and included an indicator per question whether the user scored correctly or incorrectly. This was combined with the colour of the question option turning green for correct or red for wrong. If wrong the correct option would then display in green.
-4. The mobile version of the quiz pictures was going to display the four quiz pictures as a column, however with a single column display and sizing the images remaind in a grid as per the larger screen display.
-5. The results page, next steps section included an additional icon back to the home page alongside the redo quiz icon and the icon to access the Disney store.
+4. A timer was added to the quiz which was not included in the original design.
+5. The mobile version of the quiz pictures was going to display the four quiz pictures as a column, however with a single column display and sizing the images remaind in a grid as per the larger screen display.
+6. The results page, next steps section included an additional icon back to the home page alongside the redo quiz icon and the icon to access the Disney store.
 
 
 ## Technologies
@@ -286,6 +290,8 @@ Other technologies:
 	* Used to format html, css and javascript code.
 7. Markdown Monster
 	* Used to edit Markdown
+8. Google Chrome DevTools
+	* To continuously test and check code
 
 
 # Features
@@ -301,6 +307,8 @@ The Disney Star site consists of the following Features:
 	    * [Random questions](#random-questions)
 	    * [Pictures and Audio](#picture-and-audio)
 	    * [Question options](#question-options)
+	    * [Timer](#timer)
+	    * [Disable Next Button](#disable-next-button)
 	    * [Answer Results](#answer-results)
 	    * [Score tracking](#score-tracking)
 	 * [Results](#results)
@@ -422,14 +430,15 @@ The first element on the quiz page is the character name and logo section. Throu
             margin-right:auto;
             "> 
 
-The quiz itself is made up of seven elements:
+The quiz itself is made up of eight elements:
 1. The quiz number -  the question counter is set to start at zero, as each question loads, it will be assigned a number from number 1 to 25, 25 will be the final question as this is the total number of questions available in the array.
-2. The written question - each question within the array contains a written question which will be populated here.
-3. The pictures for the question - each question contains four images related to the question. Where relevant the pictures are linked to the answer options. If the user hovers over the picture, a tool-tip text pop up will display the picture name.
-4. The play button will trigger the audio clip linked to the question to play. Again as far as possible, the clips are associated with the question being asked. Some written questions will ask directly as to who the character within the clip is.
-5. The various answer options will populate just below the play button. The user will need to click on the answer they think is correct.
-6. The next button will generate the next question. This button will show as disabled until the user has chosen an option. This will prevent the user from accessing the next question before answering the current question.
-7. The score tracker at the end of the screen is used to track correct and incorrect answers given.
+2. The timer - 45 seconds is provide per question for the user to capture their answer. Scenarios have been customised according to wether the user answers correctly in time, incorrectly in time or runs out of time.
+3. The written question - each question within the array contains a written question which will be populated here.
+4. The pictures for the question - each question contains four images related to the question. Where relevant the pictures are linked to the answer options. If the user hovers over the picture, a tool-tip text pop up will display the picture name.
+5. The play button will trigger the audio clip linked to the question to play. Again as far as possible, the clips are associated with the question being asked. Some written questions will ask directly as to who the character within the clip is.
+6. The various answer options will populate just below the play button. The user will need to click on the answer they think is correct.
+7. The next button will generate the next question. This button will show as disabled until the user has chosen an option. This will prevent the user from accessing the next question before answering the current question.
+8. The score tracker at the end of the screen is used to track correct and incorrect answers given.
 The quiz is populated when the get question function is called. A breakdown of some of the features has been completed below.
 
 **Random Questions**
@@ -486,6 +495,58 @@ To prevent a question from being re-asked, it is removed from the questions arra
             "> 
 
  - The options are fetched from the questions array and added to an available options array to be added to the html. The random calculation is then used to make sure the options are added in a random order. Once an option has been added, it is removed from the available options array through a splice to make sure it is not used again. Each option is then populated within the html page.
+
+**Timer**
+
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/fixed-timer.PNG" 
+     alt="question options" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+ - A timer has been added to the quiz. This provides the user with 45 seconds to answer each question, making the quiz a bit more exciting. The timer has been fixed so that it moves with the user as they scroll through the quiz.
+ - If the user answers the quiz question correctly and in time, the timer message will display as the below image and the user can move on to the next question:
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/correct-beat-timer.PNG" 
+     alt="question options" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+	    
+- If the user answers the quiz question incorrectly but in time, the timer message will display as the below image and the user can move on to the next question:
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/incorrect-beat-timer.PNG" 
+     alt="question options" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+	    
+- If the user runs out of time before answering, an alert will display and the quiz will be over. The user will be re-directed to the results page:
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/alert-time-out.PNG" 
+     alt="question options" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+- The code used to setup the timer and run it is as follows:
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/timer.PNG" 
+     alt="question options" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
 
 **Disable Next Button**
 
@@ -630,6 +691,8 @@ The results are calculated as a percentage and the html is setup to display only
 
 
   ## Features Left to Implement
+-   Various options could be chosen for the quiz, for example, many more questions could be added, so that whenever the quiz runs, a new selection of questions are asked.
+-   Each time the user redoes the quiz, they could be given less time to answer each question, thereby increasing the challenge.
 -   Depending on the success of the quiz, additional Disney themed games could be added to the site. These games would be coded in html, css and JavaScript. Some options could be:
 	- Disney themed word search
 	- Disney themed rock paper scissors
