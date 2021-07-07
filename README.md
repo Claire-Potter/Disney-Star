@@ -1057,4 +1057,148 @@ Please <a href="https://github.com/Claire-Potter/Disney-Star/tree/master/read-me
 
 ### Deployment Testing
 
-The website was tested end to end after deployment to ensure that the functionality, content and style matches that of the development site. It was tested across multiple screen sizes and browsers. All post-deployment testing passed
+The website was tested end to end after deployment to ensure that the functionality, content and style matches that of the development site. It was tested across multiple screen sizes and browsers. All post-deployment testing passed.
+
+# Deployment
+
+## Development Interface
+
+This website was developed on Gitpod using the Code Institute student template with changes frequently committed to git then pushed onto GitHub from the Gitpod terminal.
+
+The deployed version of the website is the master.
+
+## Maintaining Code
+
+To maintain the code the following actions are taken:
+
+1. Log into GitHub
+2. Go to the repositories tab at the top of the screen
+3. Click on the repository named Disney-Star
+
+![repositories](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/repositories.PNG)
+
+4. Once in the repository select the green icon GitPod to open the code on GitPod
+
+![open-code-gitpod](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/open-code-gitpod.PNG)
+
+5. Gitpod will load
+6. The Disney Star Master will open
+7. The Disney Star folders and files will be visible on the left hand side
+
+![disney-star-files](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/disney-star-files.PNG)
+
+8.The HTML files will be at top level and are called:
+
+* index.html - this is the home page which has the generate character feature
+* quiz.html - this is the page for the quiz feature and the results
+	
+9. The assets folder contains the following sub-folders:
+
+* css
+  * contains the stylesheet.css file
+* images 
+  * contains all images used on the site
+* javascript
+  * contains the javascript files script.js and quizepage.js
+		
+10. Open the file in which the code needs to be maintained or changed
+
+11. Make the required changes
+
+![changes](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/changes.PNG)
+
+12. Select Cntrl S to save changes (the white dot against the tab in which the code was changed will now disappear)
+
+13. In the terminal type in "python3 -m http.server" and select enter
+
+![python3](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/python3.PNG)
+
+14. Select to open the browser
+
+![open-browser](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/open-browser.png)
+
+15. The preview of the site will load to check and test changes
+
+![view-changes](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/view-changes.PNG)
+
+16. To save the changes back to github the following process needs to be followed:
+
+* open a new terminal by selecting the menu icon, going to Terminal and selectiong New Terminal
+
+![menu](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/menu.PNG)
+
+* Add the code to gitpod by typing in "git add ." in the new terminal and press enter
+
+![git-add](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/git-add.PNG)
+
+* Commit the code to gitpod by typing in "git commit -m "Add a short message here" and press enter
+
+![git-commit](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/git-commit.PNG)
+
+* Push the code back down to github by typing in "git push" select enter
+
+![git-push](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/git-push.PNG)
+
+* From the github side, refresh the repository page and the commit will reflect
+
+![change-github](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/change-github.png)
+
+* Open the item to view the commit changes
+
+![commit](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/commit.PNG)
+
+			
+## Page Deployment
+
+The website was deployed on GitHub using the following steps:
+
+1. Log into GitHub
+2. Go to the repositories tab at the top of the screen
+3. Click on the repository named Disney Star
+
+![repositories](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/repositories.PNG)
+
+4. Once in the repository, click on the settings tab on right hand side of the top menu
+
+![settings](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/settings.PNG)
+
+5. Click on the pages tab located in the left hand side menu
+
+![pages](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/pages.PNG)
+
+6. Under source, select master as the input
+
+![master](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/master.PNG)
+
+7. In the next input, select /root if not already selected by default
+
+![root](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/root.PNG)
+
+8. Click save and the url should be displayed above the source section
+
+9. Now that the link is displayed, the website is deployed and can be accessed in the browser by clicking on the url
+
+## How to Fork the Repository
+
+1. To be able to fork the repository, you will need your own github and gitpod accounts with linked permissions
+
+![updated-permissions](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/updated-permissions.png)
+
+2. From your github home page in the search bar search for Claire-Potter
+3. Under Users select the user Claire-Potter
+
+![user-claire-potter](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/user-claire-potter.png)
+4. On the repository page choose to open the Disney Star repository
+
+![disney-star-repository](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/repositories.PNG)
+
+5. At the top of the page on the right-hand side select to Fork the repository
+
+![fork-own-copy](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/fork-own-copy.PNG)
+
+6. Your own version of the repository will create
+
+![own-version](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/deployment/own-version.PNG)
+
+7. Select the green GitPod icon to open the work space on GitPod
+8. Follow the steps in the Maintaining Code section above to make and save changes to your own repository
