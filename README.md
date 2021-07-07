@@ -67,7 +67,7 @@ A Disney lover. Enjoys all things Disney, the movies, the music, the parks, the 
 5. Any feedback and recommendations would be useful.
 6. The questions and answers should be correct - nothing worse than seeing errors in a quiz.
 7. Include a score tracker to accuratley track and calculate end score.
-8. Having a limited time to answr questions would make it more interesting.
+8. Having a limited time to answer questions would make it more interesting.
 9. Fun award for knowledge given at the end of the quiz makes it worth her time.
 10. Relevant and vibrant images are a must.
 11. Audio tracks to play clearly when prompted.
@@ -722,7 +722,237 @@ The following issues were experienced during the course of development:
 
 ### User Stories Testing
 
-![User Stories Testing]()
+- Primary User
+
+1. Loves Disney Characters and has her favourites, would like to choose a Disney character to plays as.
+
+Outcome: Passed
+The Character Generator feature enables the user to achieve this. 
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/choose-character.PNG" 
+     alt="choose-character" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+2. The quiz will need to cover a range of genres within Disney to engage her.
+
+Outcome: Passed
+The Disney quiz includes questions on Disney characters, modern and classic Disney, Pixar, Star Wars, The Avengers, Disney Theme Parks, Disney Images and Audio clips. 
+
+
+3. A mixed media quiz to keep her interested - a mixture of written, images and audio.
+
+Outcome: Passed
+The Disney quiz includes a written question, pictures and audio
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/mixed-media.PNG" 
+     alt="mixed media quiz" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+	    
+4. The quiz should provide accurate answers when prompted to ensure she can learn more about Disney while taking it.
+
+Outcome: Passed
+If answered incorrectly, the correct answer will display.
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/answers.PNG" 
+     alt="correct answer shown" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+	    
+5. Any feedback and recommendations would be useful.
+
+Outcome: Passed
+The results feature provides feedback on how the user did, what they should do to improve (if necessary) and provides them with next steps.
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/results.PNG" 
+     alt="results" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+6. The questions and answers should be correct - nothing worse than seeing errors in a quiz.
+
+Outcome: Passed
+All answers have been double checked. All images and audio clips match the question being asked. Image captions and answer options have been checked and aligned. JavaScript code has been tested and passed to ensure that the correct options display per question and the correct answer is marked as right.
+
+7. Include a score tracker to accurately track and calculate end score.
+
+Outcome: Passed
+The score is accurately tracked per question and the end results are calculated correctly.
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/score-tracker.PNG" 
+     alt="the score tracker" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+
+8. Having a limited time to answer questions would make it more interesting.
+
+Outcome: Passed
+A timer has been added to the quiz to make sure that the user only has 45 seconds per question to answer.
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/fixed-timer.PNG" 
+     alt="the timer" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+9. Fun Award for knowledge given at the end of the quiz makes it worth her time.
+
+Outcome: Passed
+
+The results include a fun title, descriptor and certificate made out to the chosen Disney character. This is presented to the user at the end of the quiz.
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/results-display.PNG" 
+     alt="results presented to the user" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+	    
+10. Relevant and vibrant images are a must.
+
+Outcome: Passed
+
+All images used on the site are Disney themed or related to the question. They have been specifically chosen to reflect the Disney characters and have been sized appropriately to ensure the quality is good.
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/mickey-friends7.png" 
+     alt="mickey mouse and friends image example" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+11. Audio tracks to play clearly when prompted.
+
+Outcome: Passed
+
+The audio clips only play when user prompts. The audio quality is clear and understandable.
+
+- Secondary User: Quiz Owner
+
+1. Simple website layout.
+
+Outcome: Passed
+The website design is clean and simple whilst en-capturing the Disney spirit. Navigation is clear to follow as appropriate buttons are presented to take the user to the next step at all points.
+
+2. Aligned to Disney look and feel.
+
+Outcome: Passed
+The colour palette utilised, the font and all images have been aligned to the Disney theme.
+
+3. Ability to add new questions in a simple way
+when required.
+
+Outcome: Passed
+Questions can be added to the question array as follows:
+*   Access the quizpage.js file found in assets/javascript
+* The array has been created as a const named quiz and is located near the beginning of the script.
+* Each object within the array has been created with the written question, the audio file title the answer options, the image file title, the image titles and the answer.
+* To add a new question, make sure the associated images and audio are uploaded to the assets/images/picture questions and the assets/audio files.
+* Copy and paste the last quiz object again at the end of the array and replace the content with the new question content.
+* Update total questions number to the new length of questions
+* Save changes and the JavaScript code will include the new question as part of the questions array.
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/questions-array.PNG" 
+     alt="the quiz array" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+
+4. Ability to set the amount of questions asked.
+
+Outcome: Passed
+The number of questions asked can be easily increased or decreased by updating the const quizlimit number within the quizpage.js file:
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/question-numbers.PNG" 
+     alt="number of questions asked" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+
+5. Ability to update images when required.
+
+Outcome: Passed
+The images can be updated within the assets/images/ - various image folders per site section. Keep the same file name to replace an image and it will be automatically replaced within the site. New images can be uploaded here and referenced in the relevant area they are being added to.
+
+6. Needs to easily understand at a high level which code does what so comments throughout are important.
+
+Outcome: Passed
+Relevant comments have been added across the site files to provide context to the code.
+
+7. Aims to keep the user engaged, so a way for the user to redo the quiz is a must, questions should generate randomly to make it a bit harder and more exciting.
+
+Outcome: Passed
+All questions and options generate randomly through the JavaScript code. Once the quiz has ended the user is presented with the option to redo the quiz. The quiz is then reset for the user to take again.
+
+ <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/random-questions.PNG" 
+     alt="code to make questions random" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+            
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/redo-quiz.PNG" 
+     alt="the redo quiz link" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+            
+   <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/restart-quiz.PNG" 
+     alt="the code to restart the quiz" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+8. This would be the minimum viable product for the site owner so the ability to add on and grow from here would be great.
+
+Outcome: Passed
+Various growth opportunities are available to the site owner as presented in the features yet to be implemented section.
+
+9. A link back to the Disney store to open on a new page, to direct the user to view Disney products, as the site is using the Disney name.
+
+Outcome: Passed
+This has been included within the next steps section.
+
+<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/user-story-testing/next-steps.PNG" 
+     alt="the link to the Disney store within the next steps section" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
 
 ### Responsiveness and Compatibility
 
