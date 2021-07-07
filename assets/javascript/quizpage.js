@@ -473,7 +473,12 @@
          // will be called.
        } else if (sec == -1) {
          clearInterval(time);
-         alert('Oh dear, you did not beat the timer!');
+         Swal.fire({
+          title: 'Time is Up!',
+          text: 'Oh dear, you did not beat the timer!',
+          icon: 'error',
+          confirmButtonText: 'Ok'
+        })
          quizOver();
        } else {}
      }
