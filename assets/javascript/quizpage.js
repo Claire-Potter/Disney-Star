@@ -43,7 +43,7 @@
  const resultBox = document.getElementById('result-box');
  const certificateBox = document.querySelector('.certificate');
  const resultDescriptor = document.querySelector('.result-description');
- const restartQuiz = document.querySelector('#restart-quiz');
+ const restartQuiz = document.querySelector('.restart-quiz');
  const questionLimit = 25;
  // set the initial values;
  let questionCounter = 0;
@@ -480,6 +480,7 @@
      scroll(0, 0);
    }
  }
+
  
  /**
   * @function quizOver ends the quiz when the last question is reached and calls the results box to display results
@@ -488,7 +489,7 @@
   */
  
  function quizOver() {
-   // hide quiz Box
+   // hide quiz Box and End Quiz button
    quizBox.classList.add('hide');
    // show result Box
    resultBox.classList.remove('hide');
@@ -499,6 +500,9 @@
    document.getElementById('timer').classList.remove('in-time');
    scroll(0, 0);
  }
+
+
+ 
  
  /**
   * @function quizResult calls add the innerHTML to the results page to display the quiz results.

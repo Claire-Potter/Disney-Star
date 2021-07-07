@@ -20,11 +20,12 @@
   <title>Disney-Star</title>
 </head>
 <!--Header-->
-<header id="header">
-  <div class = "logo-area">
+<header class="header">
+  <div class="logo-area">
     <img src="assets/images/site-images/magic-wand-blue.jpg" alt="A magical fairy wand with stars" class="magic-wand">
-    <h1 id="logo"> Disney Star</h1>
-    <img src="assets/images/site-images/magicWandBlueRight.jpg" alt="A magical fairy wand with stars" class="magic-wand">
+    <h1 class="logo"> Disney Star</h1>
+    <img src="assets/images/site-images/magicWandBlueRight.jpg" alt="A magical fairy wand with stars"
+      class="magic-wand">
   </div>
   <div class="character-name-area">
     <div id="character-logo"></div>
@@ -32,12 +33,14 @@
   </div>
 </header>
 <!--Question Area-->
-<section id="quiz-page">
+<section>
   <div id="ready-to-start" class="">
     <h2>Are you ready for the ultimate Disney quiz?</h2>
-    <div id="mickey-mouse-area"><img src='assets/images/site-images/mickey-quiz.png'
+    <div class="mickey-mouse-area"><img src='assets/images/site-images/mickey-quiz.png'
         alt="a picture of Mickey Mouse lying on his tummy" class="mickey-mouse-image general-display"></div>
-    <p>You will have 45 seconds to answer each question, make sure you do before the time runs out.</p>
+    <p>You will have 45 seconds to answer each question, make sure you do so before the time runs out.</p>
+    <p>Make sure you have your sound switched on to play the audio clips.</p>
+    <p>Click the 'End Quiz' button at anytime to end the quiz and return to the home page.</p>
     <p>Click Yes to start</p>
     <button id="start-quiz" class="submit-button" type="button"
       aria-label="Yes button to be clicked to go to the quiz">Yes!</button>
@@ -45,12 +48,12 @@
 </section>
 <!--Question Area-->
 <section id="quiz-box" class="hide">
-  <div id="timer-area"> <span id="timer" class=""></span></div>
+  <div class="timer-area"> <span id="timer" class=""></span></div>
   <div id="question-number" class="general-display">​
   </div>
   <div class="question-area general-display">
     <div id="written-question"></div>
-    <div id="picture-question">
+    <div class="picture-question">
       <!--Tooltip code from W3 school tutorial and adapted for site 
           https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom  -->
       <div class="picture-image tooltip" id="picture-one"></div>
@@ -71,9 +74,11 @@
         aria-label="button to be clicked to go to the next question">
     </div>
   </div>
-  <div id="score-area">
+  <div class="score-area">
     <div id="answers-indicator" class=""></div>
   </div>
+    <!--End Quiz Button-->
+    <div class="end-quiz-area"> <a class="end-quiz submit-button" a href="index.html" aria-label="link to home page">End Quiz</a></div>
 </section>
 <!--Results Area-->
 <section id="result-box" class="hide">
@@ -92,8 +97,8 @@
       check out
       their awesome merchandise!
     </p>
-    <div id="next-step-figures-area">
-      <a id="restart-quiz" aria-label="link to restart the quiz">
+    <div class="next-step-figures-area">
+      <a class="restart-quiz" aria-label="link to restart the quiz">
         <figure class="next-step-figures">
           <img src="assets/images/site-images/quiz-icon.jpg" alt="a quiz icon which shows a questionmark in a circle"
             class="next-step-images">
@@ -119,7 +124,7 @@
   </div>
 </section>
 <!--Footer-->
-<footer id="footer">
+<footer class="footer">
   <p>Copyright@ClairePotter2021</p>
 </footer>
 <!--Link to Javascript script-->

@@ -86,7 +86,7 @@ a {
 
 /* Header */
 
-#header {
+.header {
   background-color: #393e8f;
   border: none;
   width: 100%;
@@ -109,7 +109,7 @@ a {
   margin: 0 auto;
 }
 
-#logo {
+.logo {
   margin-left: 10px;
   color: white;
   
@@ -157,7 +157,7 @@ a {
 
 /* Footer */
 
-#footer {
+.footer {
   background-color: #12194A;
   width: 100%;
   height: 100px;
@@ -178,7 +178,7 @@ a {
   margin-bottom: 50px;
 }
 
-#mickey-friends {
+.mickey-friends {
   width: 500px;
   height: 296px;
   display: flex;
@@ -297,7 +297,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 /* Start Quiz Section */
 
 #ready-to-start {
-  height: 800px;
+  height: 1000px;
   width: 500px;
   margin: auto 0;
   text-align: center;
@@ -308,7 +308,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   margin-bottom: 25px;
 }
 
-#mickey-mouse-area {
+.mickey-mouse-area {
   padding-top: 90px;
   display: flex;
   justify-content: center;
@@ -331,7 +331,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   font-size: 1.5rem;
 }
 
-#timer-area {
+.timer-area {
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -353,8 +353,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   color: #ffffff;
   position: fixed;
   left: 40px;
-  right: 0;
-  top: 0;
+  top: 100px;
   z-index: 2;
 }
 
@@ -372,6 +371,24 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   background-size: cover;
 }
 
+.end-quiz-area {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+}
+
+.end-quiz {
+  position: fixed;
+  right: 40px;
+  top: 110px;
+  z-index: 2;
+  cursor: pointer;
+  height: fit-content;
+  
+}
+
 .question-area {
   height: fit-content;
 }
@@ -386,7 +403,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   font-size: 1.2rem;
 }
 
-#picture-question {
+.picture-question {
   display: grid;
   grid-template-columns: auto auto;
   width: 400px;
@@ -441,6 +458,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   overflow: hidden;
   z-index: 0;
   width: 400px;
+  cursor: pointer;
 }
 
 .option-container .option.correct::before,
@@ -498,7 +516,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 /* Score Tracker */
 
-#score-area {
+.score-area {
   height: 200px;
   width: 100%;
   border-top: 1px solid #cccccc;
@@ -602,7 +620,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   background-image: url('../images/site-images/what-a-flop.jpg');
 }
 
-#next-step-figures-area {
+.next-step-figures-area {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -642,7 +660,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .general-display {
     width: 100%;
   }
-  #mickey-friends {
+  .mickey-friends {
     width: 600px;
     height: 355px;
   }
@@ -662,11 +680,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     height: 440px;
   }
 
-  #timer {
-    left: 100px;
-    top: 200px;
-  }
-  #picture-question {
+  .picture-question {
     width: 600px;
     height: 600px;
   }
@@ -684,18 +698,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   }
 }
 
-
-/* Max width 4500 */
-
-@media screen and (max-width: 4500px) {
-  #timer {
-    left: 100px;
-    bottom: unset;
-    top: 100px;
-  }
-}
-
-
 /* Max width 3500px */
 
 @media screen and (max-width: 3500px) {
@@ -703,7 +705,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .general-display {
     width: 500px;
   }
-  #mickey-friends {
+  .mickey-friends {
     width: 500px;
     height: 296px;
   }
@@ -720,12 +722,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     height: 180px;
   }
 
-  #timer {
-    left: 40px;
-    bottom: unset;
-    top: 0px;
-  }
-  #picture-question {
+  .picture-question {
     width: 400px;
     height: 400px;
   }
@@ -749,7 +746,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   section {
     padding-top: 20px;
   }
-  #score-area {
+  .score-area {
     height: fit-content;
   }
   #answers-indicator {
@@ -783,7 +780,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 /* Header */
 
-#header {
+.header {
   width: 100%;
   height: 180px;
   align-items: center;
@@ -815,14 +812,14 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   width: 38px;
 }
 
-  #footer {
+  .footer {
     width: 100%;
   }
  
   .general-display {
     width: 480px;
   }
-  #mickey-friends {
+  .mickey-friends {
     width: 480px;
     height: 284px;
   }
@@ -841,10 +838,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 /* Max width 515px */
 
 @media screen and (max-width: 515px) {
-  #header {
+  .header {
     width: 100%;
   }
-  #footer {
+  .footer {
     width: 100%;
   }
   section {
@@ -863,7 +860,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .general-display {
     width: 300px;
   }
-  #mickey-friends {
+  .mickey-friends {
     width: 300px;
     height: 177px;
   }
@@ -874,7 +871,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .tooltip .tooltiptext::after {
     content: unset;
   }
-  #right-text {
+  .right-text {
     margin-left: -50px;
   }
   .tooltip .tooltiptext-image {
@@ -888,7 +885,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     padding-bottom: 30px;
   }
 
-  #mickey-mouse-area {
+  .mickey-mouse-area {
     padding-top: 40px;
   }
   .mickey-mouse-image {
@@ -899,10 +896,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   #quiz-box {
     padding-top: 0px;
   }
-  #timer {
-    left: 0px;
-  }
-  #picture-question {
+
+  .picture-question {
     width: 300px;
     height: 300px;
   }
@@ -941,11 +936,11 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .general-display {
     width: 250px;
   }
-  #mickey-friends {
+  .mickey-friends {
     width: 250px;
     height: 147px;
   }
-  #picture-question {
+  .picture-question {
     width: 250px;
     height: 250px;
   }
@@ -970,12 +965,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   section p {
     width: 200px;
   }
-  .next-step-figures-area,
+
   
   .general-display {
     width: 200px;
   }
-  #mickey-friends {
+  .mickey-friends {
     width: 200px;
     height: 118px;
   }
@@ -995,7 +990,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     width: 200px;
     height: 126px;
   }
-  #picture-question {
+  .picture-question {
     width: 200px;
     height: 200px;
   }
