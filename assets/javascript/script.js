@@ -337,9 +337,7 @@ generateButton.addEventListener('click', generateCharacter);
  */
 
 // https://www.sitepoint.com/simple-javascript-quiz/ referenced for how to return
- // characters to inner html.
-
-
+// characters to inner html.
 
 function generateCharacter(_selectedCharacter) {
   let characterName = characters[selectedCharacter];
@@ -348,7 +346,6 @@ function generateCharacter(_selectedCharacter) {
   ${characterImages}${characterName.characterImageArea} 
   alt = ${characterName.character} >`;
 }
-
 
 //Event Listener added to previous button to return to previous character image.
 // It calls the function prevItem.
@@ -363,8 +360,7 @@ prevButton.addEventListener('click', prevItem);
  */
 
 function prevItem() {
-  if (selectedCharacter == 0) {
-  } else {
+  if (selectedCharacter == 0) {} else {
     generateCharacter(selectedCharacter--);
   }
 }
@@ -380,17 +376,15 @@ nextButton.addEventListener('click', nextItem);
  * then don't action anything else call the generateCharacter function
  * and populate with the character after selectedCharacter.
  */
+
 function nextItem() {
-  if (selectedCharacter == characters.length - 1) {
-  } else {
+  if (selectedCharacter == characters.length - 1) {} else {
     generateCharacter(selectedCharacter++);
   }
 }
 
-
 //Event Listener added to confirm button to run the function getCharacter
 confirmButton.addEventListener('click', getCharacter);
-
 
 // Code for using local storage found on 
 //https://www.w3schools.com/html/html5_webstorage.asp 
@@ -408,14 +402,11 @@ confirmButton.addEventListener('click', getCharacter);
  */
 
 function getCharacter() {
-
   let chosenCharacter = document.getElementById('character').innerHTML;
   let chosenImage = document.getElementById('character-image-area').innerHTML;
-
   localStorage.setItem('character', chosenCharacter);
   localStorage.setItem('character-image-area', chosenImage);
   loadCharacter();
-
 }
 
 /**
@@ -428,9 +419,8 @@ function getCharacter() {
  */
 
 function loadCharacter() {
-  let chosenCharacter = localStorage.getItem('character'); 
+  let chosenCharacter = localStorage.getItem('character');
   characterArea.value = chosenCharacter;
-
   let chosenImage = localStorage.getItem('character-image-area');
   imageCharacter.value = chosenImage;
 }

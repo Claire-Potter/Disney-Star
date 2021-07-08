@@ -1,10 +1,8 @@
 /* Default styling */
 
-
 /* Text Import from Google Fonts */
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap");
-
 html {
   scroll-behavior: smooth;
 }
@@ -51,7 +49,7 @@ a {
   padding: 60px 10px 10px 10px;
 }
 
-.general-display{
+.general-display {
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -74,7 +72,6 @@ a {
   cursor: pointer;
 }
 
-
 /* Shadow code from W3 school tutorials */
 
 .submit-button:hover {
@@ -84,7 +81,6 @@ a {
 .hide {
   display: none;
 }
-
 
 /* Header */
 
@@ -99,7 +95,6 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
- 
 }
 
 .logo-area {
@@ -114,7 +109,6 @@ a {
 .logo {
   margin-left: 10px;
   color: white;
-  
 }
 
 .logo a {
@@ -161,7 +155,6 @@ a {
   border-radius: 50%;
 }
 
-
 /* Footer */
 
 .footer {
@@ -178,7 +171,6 @@ a {
   align-items: center;
 }
 
-
 /* Home Page */
 
 .home-heading {
@@ -193,8 +185,6 @@ a {
   align-items: center;
   margin-bottom: 50px;
 }
-
-
 
 /* Character Generator Section */
 
@@ -214,7 +204,6 @@ a {
   background-color: #12194A;
   color: #ffffff;
   margin: 25px;
-  
 }
 
 .character-image-container {
@@ -244,7 +233,6 @@ a {
   text-align: center;
   color: #12194A;
 }
-
 
 /* Code from W3 schools tutorial on Tooltips
 https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
@@ -285,7 +273,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   visibility: visible;
 }
 
-
 /* Submit Section */
 
 .submit-section {
@@ -296,8 +283,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 .submit-section p {
   margin: 25px;
 }
-
-
 
 /* Quiz Page */
 
@@ -327,7 +312,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   height: 315px;
   padding: 7px;
 }
-
 
 /* Question Area */
 
@@ -384,7 +368,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; 
+  position: relative;
 }
 
 .end-quiz {
@@ -393,7 +377,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   top: 200px;
   z-index: 2;
   height: fit-content;
-  
 }
 
 .question-area {
@@ -403,7 +386,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 .question-area p {
   margin: 25px;
 }
-
 
 #written-question {
   height: 80px;
@@ -418,7 +400,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   padding: 10px;
   margin: auto 0;
 }
-
 
 .picture-image {
   display: inline-grid;
@@ -438,7 +419,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   bottom: 100%;
 }
 
-
 /* Answer Area */
 
 .answer-area {
@@ -446,7 +426,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   overflow: hidden;
   padding: 20px;
 }
-
 
 /* The below code is created as per the WebShala Tutorial up to Results Page*/
 
@@ -515,11 +494,9 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   color: #fff;
 }
 
-
 #submit-question {
   margin: 25px;
 }
-
 
 /* Score Tracker */
 
@@ -569,7 +546,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   background-repeat: no-repeat;
   background-position: center;
 }
-
 
 /* Results Page */
 
@@ -655,38 +631,43 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   cursor: pointer;
 }
 
-
 /* @Media queries */
-
 
 /* Max width 7000px */
 
 @media screen and (max-width: 7000px) {
+
   html {
     font-size: 1.2rem;
   }
+
   section {
     padding-top: 0px;
   }
-  
+
   .general-display {
     width: 100%;
   }
+
   .mickey-friends {
     width: 600px;
     height: 355px;
   }
+
   .character-image-container {
     width: fit-content;
   }
+
   #character {
     width: fit-content;
     height: fit-content;
   }
+
   #character-image-area {
     width: 500px;
     height: 500px;
   }
+
   #character-image-area img {
     width: 440px;
     height: 440px;
@@ -696,14 +677,17 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     width: 600px;
     height: 600px;
   }
+
   .picture-image {
     width: 300px;
     height: 300px;
   }
+
   .picture-image img {
     width: 300px;
     height: 300px;
   }
+
   #certificate {
     width: 600px;
     height: 377px;
@@ -717,18 +701,22 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .general-display {
     width: 500px;
   }
+
   .mickey-friends {
     width: 500px;
     height: 296px;
   }
+
   #character {
     width: 100px;
     height: 10px;
   }
+
   #character-image-area {
     width: 200px;
     height: 200px;
   }
+
   #character-image-area img {
     width: 180px;
     height: 180px;
@@ -738,29 +726,34 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     width: 400px;
     height: 400px;
   }
+
   .picture-image {
     width: 200px;
     height: 200px;
   }
+
   .picture-image img {
     width: 200px;
     height: 200px;
   }
+
   #certificate {
     height: 315px;
   }
 }
 
-
 /* Max width 1200px */
 
 @media screen and (max-width: 1200px) {
+
   section {
     padding-top: 20px;
   }
+
   .score-area {
     height: fit-content;
   }
+
   #answers-indicator {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto;
@@ -768,69 +761,73 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   }
 }
 
-
 /* Max width 800px */
 
 @media screen and (max-width: 800px) {
+
   html {
     font-size: 1rem;
   }
+
   section {
     padding-top: 30px;
   }
+
   h1,
   h2,
   h3 {
     letter-spacing: 2px;
   }
+
   .general-setup {
     padding-top: 0px;
   }
+
   .submit-button {
     height: unset;
   }
 
-/* Header */
+  /* Header */
 
-.header {
-  width: 100%;
-  height: 180px;
-  align-items: center;
-  flex-direction: column;
- 
-}
+  .header {
+    width: 100%;
+    height: 180px;
+    align-items: center;
+    flex-direction: column;
+  }
 
-.logo-area {
-  font-size: 1rem;
-}
+  .logo-area {
+    font-size: 1rem;
+  }
 
+  /* Character Name Area  only appears in the header on te quiz page as the html
+   imput for this is saved in local storage from the selection that the user
+    makes on the index page*/
 
-/* Character Name Area  only appears in te header on te quiz page as the html imput for this is saved in local storage from the selection that the user makes on the index page*/
+  .character-name-area {
+    position: unset;
+    margin: 0 auto;
+  }
 
-.character-name-area {
-  position: unset;
-  margin: 0 auto;
-  
-}
+  #character-logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+  }
 
-#character-logo {
-  height: 40px;
-  width: 40px;
-  margin-right: 10px;
-}
-
-#character-logo img {
-  height: 38px;
-  width: 38px;
-}
+  #character-logo img {
+    height: 38px;
+    width: 38px;
+  }
 
   .footer {
     width: 100%;
   }
- 
+
   .general-display {
     width: 480px;
   }
+
   .mickey-friends {
     width: 480px;
     height: 284px;
@@ -854,22 +851,25 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   #question-number {
     padding: 0px 20px 20px 20px;
   }
+
   .result-message {
     padding-top: 0px;
     ;
   }
 }
 
-
 /* Max width 515px */
 
 @media screen and (max-width: 515px) {
+
   .header {
     width: 100%;
   }
+
   .footer {
     width: 100%;
   }
+
   section {
     height: fit-content;
     margin: auto 0;
@@ -879,30 +879,37 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     align-items: center;
     padding-bottom: 30px;
   }
+
   section p {
     width: 300px;
   }
-  
+
   .general-display {
     width: 300px;
   }
+
   .mickey-friends {
     width: 300px;
     height: 177px;
   }
+
   .tooltip .tooltiptext {
     width: 70px;
     margin-left: -20px;
   }
+
   .tooltip .tooltiptext::after {
     content: unset;
   }
+
   #right-text {
     margin-left: -50px;
   }
+
   .tooltip .tooltiptext-image {
     margin-left: -30px;
   }
+
   #ready-to-start {
     padding-top: 40px;
     width: 300px;
@@ -914,11 +921,13 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .mickey-mouse-area {
     padding-top: 40px;
   }
+
   .mickey-mouse-image {
     width: 300px;
     height: 189px;
     padding: 5px;
   }
+
   #quiz-box {
     padding-top: 0px;
   }
@@ -927,34 +936,40 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     width: 300px;
     height: 300px;
   }
+
   .picture-image {
     width: 150px;
     height: 150px;
   }
+
   .picture-image img {
     width: 150px;
     height: 150px;
   }
+
   .answer-area {
     width: 300px;
   }
+
   #option-container {
     width: unset;
   }
+
   #answers-indicator div {
     height: 20px;
     width: 20px;
   }
+
   #certificate {
     width: 300px;
     height: 189px;
   }
 }
 
-
 /* Media Screen width 350px */
 
 @media screen and (max-width: 350px) {
+
   html {
     font-size: .9rem;
   }
@@ -962,28 +977,36 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .general-display {
     width: 250px;
   }
+
   .mickey-friends {
     width: 250px;
     height: 147px;
   }
+
   .picture-question {
     width: 250px;
     height: 250px;
   }
+
   .picture-image {
     width: 125px;
     height: 125px;
   }
+
   .picture-image img {
     width: 125px;
     height: 125px;
   }
+
   .answer-area {
     width: 250px;
   }
 }
 
+/* Media Screen width 350px */
+
 @media screen and (max-width: 290px) {
+
   html {
     font-size: .8rem;
   }
@@ -992,49 +1015,60 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     width: 200px;
   }
 
-  
   .general-display {
     width: 200px;
   }
+
   .mickey-friends {
     width: 200px;
     height: 118px;
   }
+
   .character-image-container {
     width: 200px;
   }
+
   .tooltip .tooltiptext {
     margin-left: -10px;
   }
+
   #right-text {
     margin-left: -70px;
   }
+
   #ready-to-start {
     width: 200px;
   }
+
   .mickey-mouse-image {
     width: 200px;
     height: 126px;
   }
+
   .picture-question {
     width: 200px;
     height: 200px;
   }
+
   .picture-image {
     width: 100px;
     height: 100px;
   }
+
   .picture-image img {
     width: 100px;
     height: 100px;
   }
+
   .answer-area {
     width: 200px;
   }
+
   #certificate {
     width: 200px;
     height: 126px;
   }
+  
   .next-step-images {
     height: 40px;
     width: 40px;
