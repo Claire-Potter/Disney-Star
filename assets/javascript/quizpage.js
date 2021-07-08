@@ -51,7 +51,7 @@ if (localStorage.getItem('character') && (localStorage.getItem('character-image-
 
   characterName.innerHTML = 'DisneyStar';
   characterLogo.innerHTML = `<img src= 
-   'assets/images/site-images/disney-icon.jpg' 
+   'assets/images/siteImages/disneyIcon.jpg' 
    alt = 'DisneyStar' >`;
 }
 

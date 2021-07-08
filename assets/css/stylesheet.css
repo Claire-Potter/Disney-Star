@@ -350,14 +350,14 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 .in-time {
-  background-image: url(../images/site-images/in-time-right.PNG);
+  background-image: url("/assets/images/siteImages/inTimeRight.PNG");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .wrong-time {
-  background-image: url(../images/site-images/wrong-time.PNG);
+  background-image: url("/assets/images/siteImages/wrongTime.PNG");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -533,7 +533,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 #answers-indicator div.correct {
   background-color: #459d43;
-  background-image: url("../images/site-images/correct.png");
+  background-image: url("../images/siteImages/correct.png");
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
@@ -541,7 +541,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 #answers-indicator div.wrong {
   background-color: #B12228;
-  background-image: url("../images/site-images/wrong.png");
+  background-image: url("../images/siteImages/wrong.png");
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
@@ -588,20 +588,20 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 #certificate.top {
-  background-image: url("../images/site-images/congratulations-champion.jpg");
+  background-image: url("../images/siteImages/congratulationsChampion.jpg");
 }
 
 #certificate.second,
 #certificate.third {
-  background-image: url("../images/site-images/well-done-flying-high.jpg");
+  background-image: url("../images/siteImages/wellDoneFlyingHigh.jpg");
 }
 
 #certificate.fourth {
-  background-image: url("../images/site-images/congratulations-ok.jpg");
+  background-image: url("../images/siteImages/congratulationsOk.jpg");
 }
 
 #certificate.last {
-  background-image: url("../images/site-images/what-a-flop.jpg");
+  background-image: url("../images/siteImages/whatAFlop.jpg");
 }
 
 .next-step-figures-area {
