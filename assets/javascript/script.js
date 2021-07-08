@@ -1,18 +1,26 @@
 /* jshint esversion: 6 */
-// https://www.sitepoint.com/simple-javascript-quiz/ referenced and edited for const declarations
-// Create constants for button event listeners and the character area in the html.
+// https://www.sitepoint.com/simple-javascript-quiz/ referenced and edited for
+// const declarations
+// Create constants for button event listeners and the character area 
+//in the html.
 const generateButton = document.getElementById('generate-character');
 const nextButton = document.getElementById('next-button');
 const prevButton = document.getElementById('prev-button');
 const confirmButton = document.getElementById('confirm-button');
-// Create constants for disneyCharacters images files, the area for the character value to return to 
-//and the area for the character image to return to.
+// Create constants for disneyCharacters images files, the area for the
+//character value to return to and the area for the character image to
+// return to.
 const characterImages = 'assets/images/disneyCharacters/';
 const characterArea = document.getElementById('character');
 const imageCharacter = document.getElementById('character-image-area');
 let selectedCharacter = 0;
 
-/**Characters array with objects to populate html with when functions are called.
+/**Characters array to populate html with when functions are 
+ * called.
+ * @global Object
+ * @param {Array.<Object>} characters - an array for all character objects
+ * @param {string} character - the character name
+ * @param {string} characterImageArea - the character image
  */
 
 const characters = [{
@@ -317,63 +325,86 @@ const characters = [{
   },
 ];
 
-//Event Listener added to Generate button that first generates the character for the user, it will call the generateCharacter function
+//Event Listener added to Generate button that first generates the character
+// for the user, it will call the generateCharacter function
 generateButton.addEventListener('click', generateCharacter);
 
 /**
- * @function generateCharacter - returns the character to the constants characterArea and to the imageCharacter Area. 
- * @parameter _newCharacter is equal to the characters object from the characters array. The object is made up of the character name and the character image.
- * Populates the html layout for the character and the image by selecting the correct objects in the characters array.
- * // https://www.sitepoint.com/simple-javascript-quiz/ referenced for how to return characters to inner html.
+ * @function generateCharacter - returns the object of the characters array
+ * and populates the innerhtml
+ * @param {Array.<Object>} characters array, 
+ *  @param {number}  _selectedCharacter number (the index of a characters object) 
  */
+
+// https://www.sitepoint.com/simple-javascript-quiz/ referenced for how to return
+ // characters to inner html.
+
+
 
 function generateCharacter(_selectedCharacter) {
   let characterName = characters[selectedCharacter];
   characterArea.innerHTML = `<h3> ${characterName.character} </h3>`;
-  imageCharacter.innerHTML = `<img src= ${characterImages}${characterName.characterImageArea} alt = ${characterName.character} >`;
+  imageCharacter.innerHTML = `<img src= 
+  ${characterImages}${characterName.characterImageArea} 
+  alt = ${characterName.character} >`;
 }
 
 
-//Event Listener added to previous button to return to previous character image. It calls the function prevItem.
+//Event Listener added to previous button to return to previous character image.
+// It calls the function prevItem.
 prevButton.addEventListener('click', prevItem);
 
 /**
- * @function prevItem - utilises an if/else statement. If the current selectedCharacter is the first object in the array, then don't action anything else   
- * call the generateCharacter function and populate with the character before selectedCharacter.
- * Continue through the generateCharacter iteration of objects.
+ * @function prevItem - renders the previous character in the array. 
+ * @param {number} selectedCharacter the index of a characters object.
+ * If the current selectedCharacter is the first object in the array,
+ *  then don't action anything else call the generateCharacter function
+ *  and populate with the character before selectedCharacter.
  */
 
 function prevItem() {
   if (selectedCharacter == 0) {
-
   } else {
-    generateCharacter(characters[selectedCharacter--]);
+    generateCharacter(selectedCharacter--);
   }
 }
-//Event Listener added to next button to go to next character image. It calls the function nextItem.
+
+//Event Listener added to next button to go to next character image.
+// It calls the function nextItem.
 nextButton.addEventListener('click', nextItem);
 
 /**
- * @function nextItem - utilises an if/else statement. If the current selectedCharacter is the last object in the array, then don't action anything else   
- * call the generateCharacter function and populate with the character after selectedCharacter.
- * Continue through the generateCharacter iteration of objects.
+ * @function nextItem - renders the next character in the array.
+ * @param {number} selectedCharacter the index of a characters object.
+ * If the current selectedCharacter is the last object in the array,
+ * then don't action anything else call the generateCharacter function
+ * and populate with the character after selectedCharacter.
  */
 function nextItem() {
   if (selectedCharacter == characters.length - 1) {
-
   } else {
-    generateCharacter(characters[selectedCharacter++]);
+    generateCharacter(selectedCharacter++);
   }
 }
+
 
 //Event Listener added to confirm button to run the function getCharacter
 confirmButton.addEventListener('click', getCharacter);
 
+
+// Code for using local storage found on 
+//https://www.w3schools.com/html/html5_webstorage.asp 
+//and edited for site. Code to add as innerHTML found on 
+//https://stackoverflow.com/questions/4321380/how-to-get-the-inner-html-value 
+//and edited for site.
+
 /** 
- * @function getCharacter - stores character and character image input values in localStorage.
- * @function loadCharacter - fetches stored values -will populate the characterName and the characterLogo areas in the quiz section.
- * Code for using local storage found on https://www.w3schools.com/html/html5_webstorage.asp and edited for site.
- *  Code to add as innerHTML found on https://stackoverflow.com/questions/4321380/how-to-get-the-inner-html-value and edited for site.
+ * @function getCharacter - stores character and character image input values
+ * in localStorage.
+ * @param {string} chosenCharacter - the innerhtml of the character element
+ * saved to local storage.
+ * @param {string} chosenImage - the innerhtml of the character-image-area
+ * saved to local storage.
  */
 
 function getCharacter() {
@@ -386,6 +417,15 @@ function getCharacter() {
   loadCharacter();
 
 }
+
+/**
+ * @function loadCharacter - fetches stored values -will populate the 
+ * characterName and the characterLogo areas in the quiz section.
+ * @param {string} chosenCharacter - the innerhtml of the character element
+ * fetched from local storage.
+ * @param {string} chosenImage - the innerhtml of the character-image-area
+ * fetched from local storage.
+ */
 
 function loadCharacter() {
   let chosenCharacter = localStorage.getItem('character');

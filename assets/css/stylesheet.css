@@ -64,7 +64,7 @@ a {
   height: 50px;
   border: solid black 1px;
   padding: 10px 5px 10px 5px;
-  margin: 3px;
+  margin: 3px 3px 20px 3px;
   background-color: #f3cc64;
   text-align: center;
   font-size: 1.2rem;
@@ -531,6 +531,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   justify-content: center;
   align-items: center;
   margin: auto 0;
+  padding-bottom: 30px;
 }
 
 #answers-indicator {
