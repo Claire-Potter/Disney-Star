@@ -19,9 +19,9 @@
  const quizBox = document.getElementById('quiz-box');
  const resultBox = document.getElementById('result-box');
  const certificateBox = document.getElementById('certificate');
+ const certificateName = document.getElementById('certificate-name');
  const resultDescriptor = document.getElementById('result-description');
  const restartQuiz = document.getElementById('restart-quiz');
- const timer = document.getElementById('timer');
  const questionLimit = 5;
  // set the initial values;
  let questionCounter = 0;
@@ -32,14 +32,17 @@
  let attempt = 0;
  
 
-// Generate Character Name
-/** Fetches 'character' and 'character-image' data chosen by the user and 
- * stored in local storage. Adds the data to the character-name and 
- * character-logo areas. Default name and image set incase user does not select
- * a character or if there is an error storing or retrieving the data.
- * Code for using local storage found on 
- * https://www.w3schools.com/html/html5_webstorage.asp and edited for purpose.
- */
+
+ //Generate Character Name - fetches stored values to populate the 
+ //characterName and the characterLogo areas.
+ //characterName - the html element in which the fetched
+ //character from local storage will be added.
+ //characterLogo - the html element in which the fetched
+ //character image from local storage will be added.
+ 
+
+ //Code for using local storage found on 
+ //https://www.w3schools.com/html/html5_webstorage.asp and edited for purpose.
 
  if (localStorage.getItem('character') && (localStorage.getItem
   ('character-image-area'))) {
@@ -56,23 +59,32 @@
  }
  
  // Quiz Section //
- /** A series of tutorial videos starting from video two up until video five 
-  * were utilised as a guideline to create this quiz.Here is the link to the 
-  * second video https://www.youtube.com/watch?v=QU6z69P5BrU&t=0s. The links 
-  * to the additional videos are available within the about section underneath
-  * the above video.The videos are created by The WebShala Channel 
-  * https://www.youtube.com/channel/UC94lpQZvaokkIqU-TvtsGXQ.
-  * As far as possible I have tried to indicate which sections of code are 
-  * created as per the tutorial and which sections are adapted and which 
-  * sections are created by me.
-  */
+
+  // A series of tutorial videos starting from video two up until video five 
+  //were utilised as a guideline to create this quiz.Here is the link to the 
+  //second video https://www.youtube.com/watch?v=QU6z69P5BrU&t=0s. The links 
+  //to the additional videos are available within the about section underneath
+  //the above video.The videos are created by The WebShala Channel 
+  //https://www.youtube.com/channel/UC94lpQZvaokkIqU-TvtsGXQ.
+  //As far as possible I have tried to indicate which sections of code are 
+  //created as per the tutorial and which sections are adapted and which 
+  //sections are created by me.
+  
  
+ /**Questions and Answers array to populate html with when functions are 
+ * called.
+ * @global Object
+ * @param {Array.<Object>} quiz - an array for all quiz objects
+ * @param {string} q - the written question
+ * @param {string} audio - the audio file to be played
+ * @param options[] - the answer options
+ * @param optionsImages[] - the images to be shown
+ * @param imageTitles[] - the alt for the images
+ * @param {number} answer - the index of the correct answer
+ */
  
- 
- /**Questions and Answers array for the quiz with objects to populate html with.
-  * This was created by me. https://www.sitepoint.com/simple-javascript-quiz/ 
-  * was referenced for the structure of the array.
-  */
+  //This was created by me. https://www.sitepoint.com/simple-javascript-quiz/ 
+  //referenced for the structure of the array.
  
  const quiz = [{
      q: 'What year did Disneyland open?​',
@@ -339,8 +351,12 @@
  /**  
   * @function setAvailableQuestions - push the questions into 
   * availableQuestions array.
-  * Created as per the WebShala tutorial.
+  * @param {Array.<Object>} availableQuestions - array in which questions which
+  * have not been asked are added to and removed from once asked.
   */
+
+  //Created as per the WebShala tutorial.
+
  function setAvailableQuestions() {
    const totalQuestion = quiz.length;
    for (let i = 0; i < totalQuestion; i++) {
@@ -380,7 +396,8 @@
      alt = ${currentQuestion.imageTitles['1']}
    ><span class='tooltiptext tooltiptext-image' id='tooltip-one'>
    ${currentQuestion.imageTitles['1']}</span>`;
-   pictureThree.innerHTML = `<img src= ${pictureQuestionsFile}${currentQuestion.optionsImages['2']}
+   pictureThree.innerHTML = `<img src= 
+   ${pictureQuestionsFile}${currentQuestion.optionsImages['2']}
     alt = ${currentQuestion.imageTitles['2']}
    ><span class='tooltiptext tooltiptext-image' id='tooltip-one'>
    ${currentQuestion.imageTitles['2']}</span>`;
@@ -444,6 +461,16 @@
     *  and gets the answer correct, answers in time but gets the answer wrong,
     *  or does not answer in time.
     */
+
+   // constants used by the myTimer function.
+   // I did try to create a constant for document.querySelector
+   // ('.option.correct.already-answered'), however the code would not run.
+
+    const timer = document.getElementById('timer');
+    const imageZero = document.getElementById('0');
+    const imageOne = document.getElementById('1');
+    const imageTwo = document.getElementById('2');
+    const imageThree = document.getElementById('3');
  
    function myTimer() {
      timer.innerHTML = sec + ' sec left';
@@ -451,11 +478,12 @@
        // if the user answers correctly and in time, the message will 
        //display that they beat the timer. The style of the timer dive will be
        // updated accordingly.
-       if (document.getElementById('0') == document.querySelector
-       ('.option.correct.already-answered') || document.getElementById('1')
-        == document.querySelector('.option.correct.already-answered') || 
-        document.getElementById('2') == document.querySelector
-        ('.option.correct.already-answered') || document.getElementById('3')
+       if (imageZero == document.querySelector
+       ('.option.correct.already-answered') || 
+       imageOne == document.querySelector
+       ('.option.correct.already-answered') || 
+        imageTwo == document.querySelector
+        ('.option.correct.already-answered') || imageThree
          == document.querySelector('.option.correct.already-answered')) {
          clearInterval(time);
          timer.innerHTML = 'You beat the timer!';
@@ -463,11 +491,11 @@
          // if the user answers incorrectly but in time, the message will 
          //display that they answered in time but they got it wrong. The style
          // of the timer dive will be updated accordingly.
-       } else if (document.getElementById('0') == document.querySelector
-       ('.option.wrong.already-answered') || document.getElementById('1') ==
+       } else if (imageZero == document.querySelector
+       ('.option.wrong.already-answered') || imageOne ==
         document.querySelector('.option.wrong.already-answered') ||
-         document.getElementById('2') == document.querySelector
-         ('.option.wrong.already-answered') || document.getElementById('3')
+         imageTwo == document.querySelector
+         ('.option.wrong.already-answered') || imageThree
          == document.querySelector('.option.wrong.already-answered')) {
          clearInterval(time);
          timer.innerHTML =
@@ -655,10 +683,10 @@
    resultBox.querySelector('.total-correct').innerHTML = '<h2>You scored</h2>'
     + '<h2>' + correctAnswers + '</h2>' + '<h2> / </h2>';
    if (localStorage.getItem('character')) {
-     document.getElementById('certificate-name').innerHTML = 
+     certificateName.innerHTML = 
      '<h2>Awarded to our very own </h2>' + localStorage.getItem('character');
    } else {
-     document.getElementById('certificate-name').innerHTML = 
+     certificateName.innerHTML = 
      '<h2>DisneyStar</h2>';
    }
    resultTypeCalculation();
