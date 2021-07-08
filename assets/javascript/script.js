@@ -428,9 +428,9 @@ function getCharacter() {
  */
 
 function loadCharacter() {
-  let chosenCharacter = localStorage.getItem('character');
-  document.getElementById('character').value = chosenCharacter;
+  let chosenCharacter = localStorage.getItem('character'); 
+  characterArea.value = chosenCharacter;
 
   let chosenImage = localStorage.getItem('character-image-area');
-  document.getElementById('character-image-area').value = chosenImage;
+  imageCharacter.value = chosenImage;
 }

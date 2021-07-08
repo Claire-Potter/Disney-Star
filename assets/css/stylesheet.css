@@ -4,6 +4,7 @@
 /* Text Import from Google Fonts */
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap");
+
 html {
   scroll-behavior: smooth;
 }
@@ -449,7 +450,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 /* The below code is created as per the WebShala Tutorial up to Results Page*/
 
-.option-container {
+#option-container {
   margin: auto 0;
 }
 
@@ -467,8 +468,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   cursor: pointer;
 }
 
-.option-container .option.correct::before,
-.option-container .option.option.also-correct::before {
+#option-container .option.correct::before,
+#option-container .option.option.also-correct::before {
   content: "";
   position: absolute;
   left: 0;
@@ -480,7 +481,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   animation: slideinLeft .5s ease forwards;
 }
 
-.option-container .option.already-answered {
+#option-container .option.already-answered {
   pointer-events: none;
 }
 
@@ -493,12 +494,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   }
 }
 
-.option-container .option.correct,
-.option-container .option.also-correct {
+#option-container .option.correct,
+#option-container .option.also-correct {
   color: #fff;
 }
 
-.option-container .option.wrong::before {
+#option-container .option.wrong::before {
   content: "";
   position: absolute;
   left: 0;
@@ -510,7 +511,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   animation: slideinLeft .5s ease forwards;
 }
 
-.option-container .option.wrong {
+#option-container .option.wrong {
   color: #fff;
 }
 
@@ -584,13 +585,13 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   margin-bottom: 25px;
 }
 
-.result-description {
+#result-description {
   height: 100px;
   padding: 5px 20px 0px 20px;
   margin-bottom: 50px;
 }
 
-.certificate {
+#certificate {
   height: 315px;
   border: solid 3px;
   border-radius: 5%;
@@ -601,7 +602,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   margin-bottom: 50px;
 }
 
-.certificate p {
+#certificate p {
   background-color: #ffffff;
   opacity: .8;
   font-weight: 900;
@@ -610,20 +611,20 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   text-align: center;
 }
 
-.certificate.top {
+#certificate.top {
   background-image: url("../images/site-images/congratulations-champion.jpg");
 }
 
-.certificate.second,
-.certificate.third {
+#certificate.second,
+#certificate.third {
   background-image: url("../images/site-images/well-done-flying-high.jpg");
 }
 
-.certificate.fourth {
+#certificate.fourth {
   background-image: url("../images/site-images/congratulations-ok.jpg");
 }
 
-.certificate.last {
+#certificate.last {
   background-image: url("../images/site-images/what-a-flop.jpg");
 }
 
@@ -650,7 +651,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   border: solid black 1px;
 }
 
-.restart-quiz {
+#restart-quiz {
   cursor: pointer;
 }
 
@@ -703,7 +704,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     width: 300px;
     height: 300px;
   }
-  .certificate {
+  #certificate {
     width: 600px;
     height: 377px;
   }
@@ -745,7 +746,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     width: 200px;
     height: 200px;
   }
-  .certificate {
+  #certificate {
     height: 315px;
   }
 }
@@ -896,7 +897,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .tooltip .tooltiptext::after {
     content: unset;
   }
-  .right-text {
+  #right-text {
     margin-left: -50px;
   }
   .tooltip .tooltiptext-image {
@@ -937,14 +938,14 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .answer-area {
     width: 300px;
   }
-  .option-container {
+  #option-container {
     width: unset;
   }
   #answers-indicator div {
     height: 20px;
     width: 20px;
   }
-  .certificate {
+  #certificate {
     width: 300px;
     height: 189px;
   }
@@ -1030,7 +1031,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .answer-area {
     width: 200px;
   }
-  .certificate {
+  #certificate {
     width: 200px;
     height: 126px;
   }

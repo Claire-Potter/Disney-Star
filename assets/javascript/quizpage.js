@@ -1,4 +1,37 @@
 /* jshint esversion: 6 */
+// Create constants for html input.
+ // Created whilst following the WebShala tutorial, Ids per my html.
+ const characterName = document.getElementById('character-name');
+ const characterLogo = document.getElementById('character-logo');
+ const questionNumbers = document.getElementById('question-number');
+ const writtenQuestions = document.getElementById('written-question');
+ const pictureOne = document.getElementById('picture-one');
+ const pictureTwo = document.getElementById('picture-two');
+ const pictureThree = document.getElementById('picture-three');
+ const pictureFour = document.getElementById('picture-four');
+ const audioQuestions = document.getElementById('audio-question');
+ const answersIndicatorContainer = document.getElementById('answers-indicator');
+ const pictureQuestionsFile = 'assets/images/pictureQuestions/';
+ const submitButton = document.getElementById('submit-question');
+ const startQuiz = document.getElementById('start-quiz');
+ const optionContainer = document.getElementById('option-container');
+ const homeBox = document.getElementById('ready-to-start');
+ const quizBox = document.getElementById('quiz-box');
+ const resultBox = document.getElementById('result-box');
+ const certificateBox = document.getElementById('certificate');
+ const resultDescriptor = document.getElementById('result-description');
+ const restartQuiz = document.getElementById('restart-quiz');
+ const timer = document.getElementById('timer');
+ const questionLimit = 5;
+ // set the initial values;
+ let questionCounter = 0;
+ let currentQuestion;
+ let availableQuestions = [];
+ let availableOptions = [];
+ let correctAnswers = 0;
+ let attempt = 0;
+ 
+
 // Generate Character Name
 /** Fetches 'character' and 'character-image' data chosen by the user and 
  * stored in local storage. Adds the data to the character-name and 
@@ -10,14 +43,14 @@
 
  if (localStorage.getItem('character') && (localStorage.getItem
   ('character-image-area'))) {
-   document.getElementById('character-name').innerHTML = localStorage.getItem
+  characterName.innerHTML = localStorage.getItem
    ('character');
-   document.getElementById('character-logo').innerHTML = localStorage.getItem
+  characterLogo.innerHTML = localStorage.getItem
    ('character-image-area');
  } else {
  
-   document.getElementById('character-name').innerHTML = 'DisneyStar';
-   document.getElementById('character-logo').innerHTML = `<img src= 
+   characterName.innerHTML = 'DisneyStar';
+   characterLogo.innerHTML = `<img src= 
    'assets/images/site-images/disney-icon.jpg' 
    alt = 'DisneyStar' >`;
  }
@@ -34,34 +67,6 @@
   * sections are created by me.
   */
  
- // Create constants for html input within the quiz.
- // Created whilst following the WebShala tutorial, Ids per my html.
- const questionNumbers = document.getElementById('question-number');
- const writtenQuestions = document.getElementById('written-question');
- const pictureOne = document.getElementById('picture-one');
- const pictureTwo = document.getElementById('picture-two');
- const pictureThree = document.getElementById('picture-three');
- const pictureFour = document.getElementById('picture-four');
- const audioQuestions = document.getElementById('audio-question');
- const answersIndicatorContainer = document.getElementById('answers-indicator');
- const pictureQuestionsFile = 'assets/images/pictureQuestions/';
- const submitButton = document.getElementById('submit-question');
- const startQuiz = document.getElementById('start-quiz');
- const optionContainer = document.querySelector('.option-container');
- const homeBox = document.getElementById('ready-to-start');
- const quizBox = document.getElementById('quiz-box');
- const resultBox = document.getElementById('result-box');
- const certificateBox = document.querySelector('.certificate');
- const resultDescriptor = document.querySelector('.result-description');
- const restartQuiz = document.querySelector('.restart-quiz');
- const questionLimit = 25;
- // set the initial values;
- let questionCounter = 0;
- let currentQuestion;
- let availableQuestions = [];
- let availableOptions = [];
- let correctAnswers = 0;
- let attempt = 0;
  
  
  /**Questions and Answers array for the quiz with objects to populate html with.
@@ -426,7 +431,7 @@
   
    //set the seconds to 30 seconds and set the timer interval
  
-   let sec = 45;
+   let sec = 15;
    let time = setInterval(myTimer, 1000);
  
    /** 
@@ -441,7 +446,7 @@
     */
  
    function myTimer() {
-     document.getElementById('timer').innerHTML = sec + ' sec left';
+     timer.innerHTML = sec + ' sec left';
      sec--; {
        // if the user answers correctly and in time, the message will 
        //display that they beat the timer. The style of the timer dive will be
@@ -453,8 +458,8 @@
         ('.option.correct.already-answered') || document.getElementById('3')
          == document.querySelector('.option.correct.already-answered')) {
          clearInterval(time);
-         document.getElementById('timer').innerHTML = 'You beat the timer!';
-         document.getElementById('timer').classList.add('in-time');
+         timer.innerHTML = 'You beat the timer!';
+         timer.classList.add('in-time');
          // if the user answers incorrectly but in time, the message will 
          //display that they answered in time but they got it wrong. The style
          // of the timer dive will be updated accordingly.
@@ -465,9 +470,9 @@
          ('.option.wrong.already-answered') || document.getElementById('3')
          == document.querySelector('.option.wrong.already-answered')) {
          clearInterval(time);
-         document.getElementById('timer').innerHTML =
+         timer.innerHTML =
           'You answered in time, but you got it wrong';
-         document.getElementById('timer').classList.add('wrong-time');
+         timer.classList.add('wrong-time');
          // if the user does not answer in time, an alert message will display
          // that they did not answer in time and the quizOver function
          // will be called.
@@ -607,8 +612,8 @@
      getNewQuestion();
      // remove the timer styling so that default style displays for the 
      //next question
-     document.getElementById('timer').classList.remove('wrong-time');
-     document.getElementById('timer').classList.remove('in-time');
+     timer.classList.remove('wrong-time');
+     timer.classList.remove('in-time');
      scroll(0, 0);
    }
  }
@@ -629,8 +634,8 @@
    quizResult();
    // remove the timer styling so that default style displays for the next
    // question
-   document.getElementById('timer').classList.remove('wrong-time');
-   document.getElementById('timer').classList.remove('in-time');
+   timer.classList.remove('wrong-time');
+   timer.classList.remove('in-time');
    scroll(0, 0);
  }
 
@@ -747,8 +752,8 @@
    attempt = 0;
    // remove the timer styling so that default style displays for the 
    //next question
-   document.getElementById('timer').classList.remove('wrong-time');
-   document.getElementById('timer').classList.remove('in-time');
+   timer.classList.remove('wrong-time');
+   timer.classList.remove('in-time');
  }
  
  /**
