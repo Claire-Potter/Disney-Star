@@ -23,7 +23,7 @@ const certificateName = document.getElementById('certificate-name');
 const resultDescriptor = document.getElementById('result-description');
 const restartQuiz = document.getElementById('restart-quiz');
 const timer = document.getElementById('timer');
-const questionLimit = 5;
+const questionLimit = 25;
 // set the initial values;
 let questionCounter = 0;
 let currentQuestion;
@@ -493,7 +493,7 @@ function getNewQuestion() {
 
   //set the seconds to 45 seconds and set the timer interval
 
-  let sec = 15;
+  let sec = 45;
   let time = setInterval(myTimer, 1000);
 
   //Timer Function
@@ -551,7 +551,7 @@ function getNewQuestion() {
       } else if (sec == -1) {
         clearInterval(time);
         //SweetAlert used to format the alert
-        let Swal;
+
         Swal.fire({
           title: 'Time is Up!',
           text: 'Oh dear, you did not beat the timer!',

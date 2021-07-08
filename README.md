@@ -258,12 +258,16 @@ The green colour chosen to indicate correct answers was aligned again to the Dis
 
 ### Design Differences
 
-1. The Generate button on the home screen was moved to display within the single column view as this was more visually appealing than displaying next to the character box. An arrow either side of the character box was added to scroll between characters.
-2. The original quiz was designed to display the questions as separate written, picture or audio questions. In designing the layout of the page, the three question types were included across all questions as visually it worked much better to bring life and character to the quiz.
-3. Originally the score tracker was just going to be formatted as 0/25. A pop up would then say whether the user got the question right or wrong. Instead the tracker was featured at the bottom of the quiz and included an indicator per question whether the user scored correctly or incorrectly. This was combined with the colour of the question option turning green for correct or red for wrong. If wrong the correct option would then display in green.
-4. A timer was added to the quiz which was not included in the original design.
-5. The mobile version of the quiz pictures was going to display the four quiz pictures as a column, however with a single column display and sizing the images remaind in a grid as per the larger screen display.
-6. The results page, next steps section included an additional icon back to the home page alongside the redo quiz icon and the icon to access the Disney store.
+1. The Disney Logo was changed to include a wand image on either side.
+The Generate button on the home screen was moved to display within the single column view as this was more visually appealing than displaying next to the character box. An arrow either side of the character box was added to scroll between characters.
+2. The character name area background-colour was changed to our Disney dark blue to prevent it from looking like an input area.
+3. The character name and logo was moved to be included in the header on the right hand side and centred for mobile.
+4. The original quiz was designed to display the questions as separate written, picture or audio questions. In designing the layout of the page, the three question types were included across all questions as visually it worked much better to bring life and character to the quiz.
+5. Originally the score tracker was just going to be formatted as 0/25. A pop up would then say whether the user got the question right or wrong. Instead the tracker was featured at the bottom of the quiz and included an indicator per question whether the user scored correctly or incorrectly. This was combined with the colour of the question option turning green for correct or red for wrong. If wrong the correct option would then display in green.
+6. A timer was added to the quiz which was not included in the original design.
+7. An End quiz button was added to allow the user to end the quiz at any stage.
+8. The mobile version of the quiz pictures was going to display the four quiz pictures as a column, however with a single column display and sizing the images remaind in a grid as per the larger screen display.
+9. The results page, next steps section included an additional icon back to the home page alongside the redo quiz icon and the icon to access the Disney store.
 
 
 ## Technologies
@@ -292,6 +296,8 @@ Other technologies:
 	* Used to edit Markdown
 8. Google Chrome DevTools
 	* To continuously test and check code
+9. SweetAlert2
+       * Used to style the timer alert.
 
 
 # Features
@@ -430,16 +436,18 @@ The first element on the quiz page is the character name and logo section. Throu
             margin-right:auto;
             "> 
 
-The quiz itself is made up of eight elements:
+The quiz itself is made up of ten features:
 1. The quiz number -  the question counter is set to start at zero, as each question loads, it will be assigned a number from number 1 to 25, 25 will be the final question as this is the total number of questions available in the array.
 2. The timer - 45 seconds is provide per question for the user to capture their answer. Scenarios have been customised according to wether the user answers correctly in time, incorrectly in time or runs out of time.
-3. The written question - each question within the array contains a written question which will be populated here.
-4. The pictures for the question - each question contains four images related to the question. Where relevant the pictures are linked to the answer options. If the user hovers over the picture, a tool-tip text pop up will display the picture name.
-5. The play button will trigger the audio clip linked to the question to play. Again as far as possible, the clips are associated with the question being asked. Some written questions will ask directly as to who the character within the clip is.
-6. The various answer options will populate just below the play button. The user will need to click on the answer they think is correct.
-7. The next button will generate the next question. This button will show as disabled until the user has chosen an option. This will prevent the user from accessing the next question before answering the current question.
-8. The score tracker at the end of the screen is used to track correct and incorrect answers given.
+3. An End Quiz button is included to enable the user to end the quiz if they want to. This will return them to the quiz welcome page.
+4. The written question - each question within the array contains a written question which will be populated here.
+5. The pictures for the question - each question contains four images related to the question. Where relevant the pictures are linked to the answer options. If the user hovers over the picture, a tool-tip text pop up will display the picture name.
+6. The play button will trigger the audio clip linked to the question to play. Again as far as possible, the clips are associated with the question being asked. Some written questions will ask directly as to who the character within the clip is.
+7. The various answer options will populate just below the play button. The user will need to click on the answer they think is correct.
+8. The next button will generate the next question. This button will show as disabled until the user has chosen an option. This will prevent the user from accessing the next question before answering the current question.
+9. The score tracker at the end of the screen is used to track correct and incorrect answers given.
 The quiz is populated when the get question function is called. A breakdown of some of the features has been completed below.
+10. When the next question loads, it will automatically scroll to the top of the screen to see the top of the question. This is particularly useful on smaller mobile screens.
 
 **Random Questions**
 
@@ -547,6 +555,7 @@ To prevent a question from being re-asked, it is removed from the questions arra
             margin-right:auto;
             "> 
 
+- An End Quiz button displays directly underneath the timer and allows the user to end the quiz at any time.
 
 **Disable Next Button**
 
@@ -681,7 +690,7 @@ The results are calculated as a percentage and the html is setup to display only
  
  The quiz is reset as follows when the user selects to redo the quiz:
  
-    <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/restart-quiz.PNG" 
+<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/features/restart-quiz.PNG" 
      alt="restart quiz" 
      style="display:block; 
             float:none; 
@@ -960,7 +969,7 @@ This has been included within the next steps section.
 
 ### Responsiveness and Compatibility
 
-1. The site has been testing using the following browsers - Safari, Chrome, Firefox, Edge and Opera. The site is compatible and accessible across all browsers.
+1. The site has been tested using the following browsers - Safari, Chrome, Firefox, Edge and Opera. The site is compatible and accessible across all browsers.
 
 Please <a href="" target="_blank">click here</a> to view browser testing screenshots.
 
@@ -1026,7 +1035,7 @@ Please <a href="" target="_blank">click here</a> to view browser testing screens
 
 * The code for the following html pages was entered into the validator and all pages passed:
     * index.html
-    * quiz.html
+    * quiz.html (two warnings were received regarding missing headings - however these are added to the sections through javascript.)
 
 2. W3C CSS Jigsaw Validator
 
@@ -1038,7 +1047,7 @@ Please <a href="" target="_blank">click here</a> to view browser testing screens
 
 * The code for the following javascript scripts pages was entered into the validator passed:
     * script.js
-    * quizpage.js
+    * quizpage.js (a not that getResult variable was not used however it is called when the javascript adds it to the html. It also warns about the Sweet Alert alert not being declared but this has been added as per the SweetAlert2 guide. )
 
 
 
