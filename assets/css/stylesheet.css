@@ -75,7 +75,8 @@ a {
 /* Shadow code from W3 school tutorials */
 
 .submit-button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px
+   0 rgba(0, 0, 0, 0.19);
 }
 
 .hide {
@@ -121,7 +122,9 @@ a {
   height: 95px;
 }
 
-/* Character Name Area  only appears in te header on te quiz page as the html imput for this is saved in local storage from the selection that the user makes on the index page*/
+/* Character Name Area  only appears in the header on the quiz page as the html
+ imput for this is saved in local storage from the selection that the user makes
+  on the index page*/
 
 .character-name-area {
   display: flex;
@@ -132,13 +135,13 @@ a {
   width: fit-content;
   height: fit-content;
   color: white;
-  font-weight: 700;
   background-color: #12194A;
   border: solid 1px;
   border-radius: 5px;
   padding: 10px;
   margin-right: 5px;
   font-family: Satisfy, sans-serif;
+  text-align: center;
 }
 
 #character-logo {
@@ -204,6 +207,8 @@ a {
   background-color: #12194A;
   color: #ffffff;
   margin: 25px;
+  font-family: Satisfy, sans-serif;
+  font-size: 1.3rem;
 }
 
 .character-image-container {
@@ -390,6 +395,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 #written-question {
   height: 80px;
   font-size: 1.2rem;
+  padding-bottom: 65px;
 }
 
 .picture-question {
@@ -435,7 +441,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 .option {
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 500;
   background-color: #12194A;
   color: #fff;
   padding: 20px;
@@ -578,10 +584,9 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   margin-bottom: 50px;
 }
 
-#certificate p {
+#certificate h2 {
   background-color: #ffffff;
-  opacity: .8;
-  font-weight: 900;
+  opacity: .9;
   padding: 5px 5px 0px 5px;
   font-size: 1.2rem;
   text-align: center;
@@ -807,6 +812,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .character-name-area {
     position: unset;
     margin: 0 auto;
+    width: fit-content;
   }
 
   #character-logo {
@@ -896,6 +902,7 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   .tooltip .tooltiptext {
     width: 70px;
     margin-left: -20px;
+    font-size: 0.8rem;
   }
 
   .tooltip .tooltiptext::after {

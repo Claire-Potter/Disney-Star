@@ -17,10 +17,9 @@ let selectedCharacter = 0;
 
 /**Characters array to populate html with when functions are 
  * called.
- * @global Object
- * @param {Array.<Object>} characters - an array for all character objects
- * @param {string} character - the character name
- * @param {string} characterImageArea - the character image
+ * @name characters - an array for all character objects.
+ * @description character - the character name.
+ * characterImageArea - the character image.
  */
 
 const characters = [{
@@ -331,20 +330,17 @@ generateButton.addEventListener('click', generateCharacter);
 
 /**
  * @function generateCharacter - returns the object of the characters array
- * and populates the innerhtml
- * @param {Array.<Object>} characters array, 
- *  @param {number}  _selectedCharacter number (the index of a characters object) 
+ * and populates the innerhtml.
+ *  https://www.sitepoint.com/simple-javascript-quiz/ referenced for how 
+ * to return characters to inner html.
  */
 
-// https://www.sitepoint.com/simple-javascript-quiz/ referenced for how to return
-// characters to inner html.
-
-function generateCharacter(_selectedCharacter) {
+function generateCharacter() {
   let characterName = characters[selectedCharacter];
-  characterArea.innerHTML = `<h3> ${characterName.character} </h3>`;
+  characterArea.innerHTML = `${characterName.character}`;
   imageCharacter.innerHTML = `<img src= 
   ${characterImages}${characterName.characterImageArea} 
-  alt = ${characterName.character} >`;
+  alt = '' >`;
 }
 
 //Event Listener added to previous button to return to previous character image.
@@ -353,15 +349,15 @@ prevButton.addEventListener('click', prevItem);
 
 /**
  * @function prevItem - renders the previous character in the array. 
- * @param {number} selectedCharacter the index of a characters object.
- * If the current selectedCharacter is the first object in the array,
- *  then don't action anything else call the generateCharacter function
- *  and populate with the character before selectedCharacter.
+ * @description If the current selectedCharacter is the first object in the array,
+ * then don't action anything else call the generateCharacter function
+ * and populate with the character before selectedCharacter.
  */
 
 function prevItem() {
   if (selectedCharacter == 0) {} else {
-    generateCharacter(selectedCharacter--);
+    selectedCharacter--
+    generateCharacter();
   }
 }
 
@@ -371,15 +367,16 @@ nextButton.addEventListener('click', nextItem);
 
 /**
  * @function nextItem - renders the next character in the array.
- * @param {number} selectedCharacter the index of a characters object.
- * If the current selectedCharacter is the last object in the array,
- * then don't action anything else call the generateCharacter function
- * and populate with the character after selectedCharacter.
+ * @description If the current selectedCharacter is the last object
+ * in the array, then don't action anything else call the
+ * generateCharacter function and populate with the character 
+ * after selectedCharacter.
  */
 
 function nextItem() {
   if (selectedCharacter == characters.length - 1) {} else {
-    generateCharacter(selectedCharacter++);
+    selectedCharacter++
+    generateCharacter();
   }
 }
 
@@ -395,10 +392,11 @@ confirmButton.addEventListener('click', getCharacter);
 /** 
  * @function getCharacter - stores character and character image input values
  * in localStorage.
- * @param {string} chosenCharacter - the innerhtml of the character element
- * saved to local storage.
- * @param {string} chosenImage - the innerhtml of the character-image-area
- * saved to local storage.
+ * Code for using local storage found on 
+ * https://www.w3schools.com/html/html5_webstorage.asp 
+ * and edited for site. Code to add as innerHTML found on 
+ * https://stackoverflow.com/questions/4321380/how-to-get-the-inner-html-value 
+ * and edited for site.
  */
 
 function getCharacter() {
@@ -412,10 +410,6 @@ function getCharacter() {
 /**
  * @function loadCharacter - fetches stored values -will populate the 
  * characterName and the characterLogo areas in the quiz section.
- * @param {string} chosenCharacter - the innerhtml of the character element
- * fetched from local storage.
- * @param {string} chosenImage - the innerhtml of the character-image-area
- * fetched from local storage.
  */
 
 function loadCharacter() {

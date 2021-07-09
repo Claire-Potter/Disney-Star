@@ -32,17 +32,17 @@ let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
 
-
-//Generate Character Name - fetches stored values to populate the 
-//characterName and the characterLogo areas.
-//characterName - the html element in which the fetched
-//character from local storage will be added.
-//characterLogo - the html element in which the fetched
-//character image from local storage will be added.
-
-
-//Code for using local storage found on 
-//https://www.w3schools.com/html/html5_webstorage.asp and edited for purpose.
+/**
+* @name Generate Character Name 
+* @description - fetches stored values to populate the 
+* characterName and the characterLogo areas.
+* characterName - the html element in which the fetched.
+* character from local storage will be added.
+* characterLogo - the html element in which the fetched.
+* character image from local storage will be added.
+* Code for using local storage found on 
+* https://www.w3schools.com/html/html5_webstorage.asp and edited for purpose.
+*/
 
 if (localStorage.getItem('character') && (localStorage.getItem('character-image-area'))){
   characterName.innerHTML = localStorage.getItem('character');
@@ -70,18 +70,17 @@ if (localStorage.getItem('character') && (localStorage.getItem('character-image-
 
 /**Questions and Answers array to populate html with when functions are 
  * called.
- * @global Object
- * @param {Array.<Object>} quiz - an array for all quiz objects
- * @param {string} q - the written question
- * @param {string} audio - the audio file to be played
- * @param options[] - the answer options
- * @param optionsImages[] - the images to be shown
- * @param imageTitles[] - the alt for the images
- * @param {number} answer - the index of the correct answer
+ * @description quiz - an array for all quiz objects
+ * q - the written question;
+ * audio - the audio file to be played;
+ * options[] - the answer options;
+ * optionsImages[] - the images to be shown;
+ * imageTitles[] - the alt for the images;
+ * answer - the index of the correct answer;
+ * This array was created by me. 
+ * https://www.sitepoint.com/simple-javascript-quiz/ 
+referenced for the structure of the array.
  */
-
-//This was created by me. https://www.sitepoint.com/simple-javascript-quiz/ 
-//referenced for the structure of the array.
 
 const quiz = [{
     q: 'What year did Disneyland open?​',
@@ -91,8 +90,8 @@ const quiz = [{
       'disneyLand4.jpg',
     ],
     imageTitles: ['The opening day at Disneyland',
-      'Mickey and Minnie Mouse with two children', 'Walt Disney at Disneyland',
-      'A Disneyland Parade',
+      'Mickey and Minnie Mouse with two children', 'Walt Disney',
+      'A Parade',
     ],
     answer: 3,
   },
@@ -101,8 +100,8 @@ const quiz = [{
       ' Hollywood Walk of Fame?​',
     audio: '/assets/audio/waltDisneyAsMickeyMouse.mp3',
     options: ['Snow White', 'Mickey Mouse', 'Donald Duck', 'Cinderella', ],
-    optionsImages: ['snowWhite.png', 'mickeyMouse.png', 'donaldDuck.png',
-      'cinderellaPoor.png',
+    optionsImages: ['princess.png', 'mM.png', 'dD.png',
+      'poorPrincess.png',
     ],
     imageTitles: ['Snow White', 'Mickey Mouse', 'Donald Duck', 'Cinderella', ],
     answer: 1,
@@ -112,11 +111,11 @@ const quiz = [{
       ' have in Frozen?​​',
     audio: 'assets/audio/frozenPrinceHans.mp3',
     options: ['12', '7', '15', '5', ],
-    optionsImages: ['hansAnna.png', 'hansElsa.png', 'hansKristoff.png',
+    optionsImages: ['hanswithAnna.png', 'hansElsa.png', 'hansKristoff.png',
       'hansAnnaPunch.png',
     ],
-    imageTitles: ['Hans with Anna', 'Hans with Elsa', 'Hans with Kristoff',
-      'Anna punches Hans',
+    imageTitles: ['Hans with Anna', 'Alongside Elsa', 'Next to Kristoff',
+      'Getting punched',
     ],
     answer: 0,
   },
@@ -126,8 +125,8 @@ const quiz = [{
     options: ['Ralph', 'Donald Duck', 'Oswald the Lucky Rabbit',
       'Mickey Mouse',
     ],
-    optionsImages: ['ralph.png', 'donaldDuck.png', 'oswaldTheLuckyRabbit.png',
-      'mickeyMouse.png',
+    optionsImages: ['ralph.png', 'dD.png', 'oswaldTheLuckyRabbit.png',
+      'mM.png',
     ],
     imageTitles: ['Ralph', 'Donald Duck', 'Oswald the Lucky Rabbit',
       'Mickey Mouse',
@@ -141,8 +140,8 @@ const quiz = [{
     optionsImages: ['hercules1.png', 'hercules2.png', 'hercules3.png',
       'hercules4.png',
     ],
-    imageTitles: ['A short goat man', 'A short goat man eating grapes',
-      'Hercules, Pegasus and the goat man', 'Hercules shooting the goat man',
+    imageTitles: ['A short goat man', 'Eating grapes',
+      'Hercules and Pegasus with the character', 'Getting shot from a bow',
     ],
     answer: 1,
   },
@@ -153,8 +152,8 @@ const quiz = [{
     optionsImages: ['daughterFriends.png', 'arielDaughter.png',
       'ericDaughter.png', 'arielAndHerDaughter.png',
     ],
-    imageTitles: ['Girl with a penguin and a walrus', 'Ariel and Eric Daughter',
-      'Eric and Daughter', 'Ariel and her daughter'
+    imageTitles: ['Sitting with a penguin and a walrus', 'the daughter',
+      'Eric holding her', 'with Ariel'
     ],
     answer: 3,
   },
@@ -168,8 +167,8 @@ const quiz = [{
       'castleShanghai3.jpg', 'castleShanghai4.jpg',
     ],
     imageTitles: ['The castle at Disneyland Shanghai',
-      'The castle at Disneyland Shanghai', 'The castle at Disneyland Shanghai',
-      'The castle at Disneyland Shanghai',
+      '', '',
+      '',
     ],
     answer: 2,
   },
@@ -192,8 +191,8 @@ const quiz = [{
     audio: '/assets/audio/kuzcoEmperorsNewGroove.mp3',
     options: ['Llama', 'Camel', 'Alpaca', 'Vicuna', ],
     optionsImages: ['kuzco1.png', 'kuzco2.png', 'kuzco3.png', 'kuzco4.png', ],
-    imageTitles: ['Emperor Kuzco', 'Animal Kuzco', 'Kuzco and friend',
-      'Animal Kuzco',
+    imageTitles: ['Emperor', 'Animal', 'Kuzco and friend',
+      '',
     ],
     answer: 0,
   },
@@ -230,7 +229,7 @@ const quiz = [{
     optionsImages: ['captainAmerica.png', 'captainMarvel.png', 'blackWidow.png',
       'thor.png',
     ],
-    imageTitles: ['Captain America', 'Captain Marvel', 'Black Widow', 'Thor', ],
+    imageTitles: ['Captain America', 'Marvel', 'Black Widow', 'Thor', ],
     answer: 2,
   },
   {
@@ -268,8 +267,8 @@ const quiz = [{
     q: 'Which of these lovely ladies is not an official Disney Princess?',
     audio: 'assets/audio/aliceFromAliceInWonderland.mp3',
     options: ['Merida', 'Alice', 'Cinderella', 'Elsa', ],
-    optionsImages: ['merida.png', 'aliceInWonderland.png', 'cinderella.png',
-      'elsa.png',
+    optionsImages: ['brave.png', 'wonderland.png', 'glassSlipper.png',
+      'frozen.png',
     ],
     imageTitles: ['Merida', 'Alice', 'Cinderella', 'Elsa', ],
     answer: 1,
@@ -285,11 +284,11 @@ const quiz = [{
   {
     q: 'Name the film and the character heard in the following sound clip:',
     audio: 'assets/audio/aBugsLifeFlick.mp3',
-    options: ['Monsters, Inc - Sulley', "A Bug's Life - Flik",
+    options: ['Monsters, Inc - Sulley', 'A Bug\'s Life - Flik',
       'Good Dinosaur - Arlo', 'Onward - Ian',
     ],
     optionsImages: ['sulley.png', 'flik.png', 'arlo.png', 'ian.png', ],
-    imageTitles: ['Monsters, Inc - Sulley', "A Bug's Life - Flik",
+    imageTitles: ['Monsters, Inc - Sulley', 'A Bug\'s Life - Flik',
       'Good Dinosaur - Arlo', 'Onward - Ian',
     ],
     answer: 1,
@@ -325,7 +324,7 @@ const quiz = [{
     optionsImages: ['merlinDory.png', 'merlin.png',
       'sharkTaleOscar.png', 'sharkBaitPi.png',
     ],
-    imageTitles: ['Finding Dory - Marlin', 'Finding Nemo - Marlin',
+    imageTitles: ['Finding Dory', 'Nemo',
       'Shark Tale - Oscar', 'Shark Bait - Pisces',
     ],
     answer: 1,
@@ -346,13 +345,13 @@ const quiz = [{
     q: 'Name the character heard in the following sound clip:',
     audio: 'assets/audio/ironManTonyStark.mp3',
     options: ['Hawkeye aka Clint Barton', 'The Hulk aka Bruce Banner',
-      'Black Panther aka King TChalla', 'Iron Man aka Tony Stark',
+      'Black Panther aka King T\'Challa', 'Iron Man aka Tony Stark',
     ],
     optionsImages: ['hawkeye.png', 'hulk.png', 'blackPanther.png',
       'ironMan.png',
     ],
-    imageTitles: ['Hawkeye aka Clint Barton', 'The Hulk aka Bruce Banner',
-      'Black Panther aka King TChalla', 'Iron Man aka Tony Stark',
+    imageTitles: ['Hawkeye - Clint Barton', 'The Hulk - Bruce Banner',
+      'Black Panther - King T\'Challa', 'Iron Man aka Tony Stark',
     ],
     answer: 3,
   },
@@ -377,10 +376,10 @@ const quiz = [{
     optionsImages: ['anakin.png', 'darthVader.png', 'anakin2.png',
       'darthVader2.png',
     ],
-    imageTitles: ['Star Wars: Attack of the Clones - Anakin Skywalker',
-      'Star Wars: The Empire Strikes Back - Darth Vader',
-      'Star Wars: Revenge of the Sith - Anakin Skywalker',
-      'Star Wars: A New Hope - Darth Vader',
+    imageTitles: ['Attack of the Clones',
+      'The Empire Strikes Back',
+      'Revenge of the Sith',
+      'A New Hope',
     ],
     answer: 1,
   },
@@ -388,8 +387,7 @@ const quiz = [{
 
 /**  
  * @function setAvailableQuestions - push the questions into 
- * availableQuestions array.
- * @param {Array.<Object>} availableQuestions - array in which questions which
+ * availableQuestions array in which questions which
  * have not been asked are added to and removed from once asked.
  */
 
@@ -404,13 +402,13 @@ function setAvailableQuestions() {
 
 /**
  * @function getNewQuestion will set the question number, the question
- *  and the answer options
- * @param questionIndex - randomised question from the availableQuestions
+ *  and the answer options.
+ * @description questionIndex - randomised question from the availableQuestions
  * array after populating the html with the relevant array objects, it is
  * removed from the array.
- * @param {Array.<Object>} availableOptions - array in which options for the 
+ * @description availableOptions - array in which options for the 
  * question are added to and removed from once asked.
- * @param optonIndex - randomised option from the 
+ * @description optonIndex - randomised option from the 
  * array after populating the html, it is removed from the array.
  */
 
@@ -451,7 +449,8 @@ function getNewQuestion() {
    alt = ${currentQuestion.imageTitles['3']}
    ><span class='tooltiptext tooltiptext-image' id='tooltip-one'>
    ${currentQuestion.imageTitles['3']}</span>`;
-  audioQuestions.innerHTML = `<audio src= ${currentQuestion.audio}
+  audioQuestions.innerHTML = `<
+  audio src= ${currentQuestion.audio}
     id='audio' alt='an audio clip related to the written question'></audio>`;
 
   //The below sections are created as per the WebShala tutorial.
@@ -478,16 +477,28 @@ function getNewQuestion() {
     // remove the  'optonIndex' from the availableOptions Array ,
     // so that the option does not repeat.
     availableOptions.splice(index2, 1);
-    const option = document.createElement('div');
+    const option = document.createElement('button');
     option.innerHTML = currentQuestion.options[optonIndex];
     option.id = optonIndex;
     option.className = 'option';
     optionContainer.appendChild(option);
     option.setAttribute('onclick', 'getResult(this)');
+    option.setAttribute('keypress', 'enterKey(event)');
+
+    option.addEventListener('keydown', enterKey);
+    
+    function enterKey(event){
+      if (event.key === 'Enter') {
+        getResult();
+      }
+    }
+  
     //disable the submitButton so that the user cannot move passed the
     // question until answered. Code added by me.
     submitButton.disabled = true;
   }
+
+
 
   questionCounter++;
 
@@ -506,8 +517,6 @@ function getNewQuestion() {
   // or does not answer in time.
 
   // constants used by the myTimer function.
-  // I did try to create a constant for document.querySelector
-  // ('.option.correct.already-answered'), however the code would not run.
 
   const timer = document.getElementById('timer');
   const imageZero = document.getElementById('0');
@@ -570,13 +579,12 @@ function getNewQuestion() {
 audioQuestions.addEventListener('click', play);
 
 /**
- * @function play to play the audio clip assigned to the current object in the
+ * @function to play the audio clip assigned to the current object in the
  * array. 
- * @param {string} audio - the audio file to be played
- */
-
-// Solution to add audio found on 
+ * Audio - the audio file to be played.
+ * Solution to add audio found on 
 // https://stackoverflow.com/questions/9419263/how-to-play-audio.
+ */
 
 function play() {
   let audio = document.getElementById('audio');
@@ -588,11 +596,9 @@ function play() {
  *  clicked option. It then sets the colour to green of the correct option and
  *  add the correct mark image. If incorrect it sets the
  colour to red and the indicator image as wrong. It will then show the correct
-  option by adding a green colour to it.
+  option by adding a green colour to it. Code created as per the WebShala tutorial.
  * 
  */
-
-//Code created as per the WebShala tutorial.
 
 function getResult(element) {
   const id = parseInt(element.id);
@@ -624,10 +630,8 @@ function getResult(element) {
 
 /** 
  * @function unclickableOptions makes all the options unclickable once the 
- * user selects an option. 
+ * user selects an option. Created as per the WebShala tutorial and adapted by me.
  */
-
-//Created as per the WebShala tutorial and adapted by me.
 
 function unclickableOptions() {
   const optionLen = optionContainer.children.length;
@@ -642,10 +646,9 @@ function unclickableOptions() {
 /** 
  * @function answersIndicator creates a div in the html to be able to add
  *  whether the answer is correct or wrong (upateAnswerIndicator). This is
- * within the score area of the html to track answers.
+ * within the score area of the html to track answers. 
+ * Created as per the WebShala tutorial.
  */
-
-//created as per the WebShala tutorial.
 
 function answersIndicator() {
   answersIndicatorContainer.innerHTML = '';
@@ -660,9 +663,8 @@ function answersIndicator() {
  * @function updateAnswerIndicator adds a correct answer indicator or 
  * incorrect answer indicator to the answersIndicatorContainer
  * to display when the answer is clicked to track answers.
+ * Created as per the WebShala tutorial.
  */
-
-//created as per the WebShala tutorial.
 
 function updateAnswerIndicator(markType) {
   answersIndicatorContainer.children[questionCounter - 1].
@@ -678,9 +680,8 @@ submitButton.addEventListener('click', nextQuestion);
  *  the next random question to be displayed.
  * It also ends the question if the final question has been reached 
  * and calls the results page.
+ * Created as per the WebShala tutorial and adjusted by me.
  */
-
-// created as per the WebShala tutorial and adjusted by me.
 
 function nextQuestion() {
   if (questionCounter === questionLimit) {
@@ -721,9 +722,8 @@ function quizOver() {
  * @function quizResult add the innerHTML to the results page to 
  * display the quiz results.It also ends the question if the final question
  *  has been reached and calls the results page.
+ * Created as per the WebShala tutorial and adapted for the site.
  */
-
-//created as per the WebShala tutorial and adapted for the site.
 
 function quizResult() {
   resultBox.querySelector('.total-question').innerHTML = '<h2>' +
@@ -731,11 +731,10 @@ function quizResult() {
   resultBox.querySelector('.total-correct').innerHTML = '<h2>You scored</h2>' +
     '<h2>' + correctAnswers + '</h2>' + '<h2> / </h2>';
   if (localStorage.getItem('character')) {
-    certificateName.innerHTML =
-      '<h2>Awarded to our very own </h2>' + localStorage.getItem('character');
+    certificateName.innerHTML = localStorage.getItem('character');
   } else {
     certificateName.innerHTML =
-      '<h2>DisneyStar</h2>';
+      'DisneyStar';
   }
   resultTypeCalculation();
 }
@@ -744,11 +743,10 @@ function quizResult() {
  * @function resultTypeCalculation calculate the result based on the 
  * percentage of questions answered correctly and setup page display
  * accordingly.
- * @param {number} percentage - percentage number calculated and used
- * to determine results outcome
+ * @description percentage - percentage number calculated and used
+ * to determine results outcome.
+ * Most of this code is adapated code written by me.
  */
-
-// Most of this code is adapated code written by me.
 
 function resultTypeCalculation() {
   const percentage = (correctAnswers / questionLimit) * 100;
@@ -824,9 +822,8 @@ restartQuiz.addEventListener('click', tryAgainQuiz);
 
 /**
  * @function resetQuiz resets the initial quiz values.
+ * Created as per WebShala tutorial and adapted by me.
  */
-
-//created as per WebShala tutorial and adapted by me.
 
 function resetQuiz() {
   questionCounter = 0;
@@ -841,9 +838,8 @@ function resetQuiz() {
 /**
  * @function tryAgainQuiz resets the quiz page for the quiz to be taken again.
  * Calls the functions to reset various quiz areas.
+ * Created as per WebShala tutorial and adapted by me.
  */
-
-//Created as per WebShala tutorial and adapted by me.
 
 function tryAgainQuiz() {
   // hide the resultBox
@@ -868,9 +864,8 @@ startQuiz.addEventListener('click', setup);
  * availableQuestions array and then the getNewQuestion function is called.
  * The correct answers indicators are added. The html quiz page is setup 
  * to display the quiz.
+ * Created as per WebShala tutorial and adapted by me.
  */
-
-//created as per WebShala tutorial and adapted by me.
 
 function setup() {
   homeBox.classList.add('hide');
