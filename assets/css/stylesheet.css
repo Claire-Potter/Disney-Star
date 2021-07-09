@@ -425,6 +425,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   bottom: 100%;
 }
 
+#audio-text {
+  color:#12194A;
+}
+
 /* Answer Area */
 
 .answer-area {

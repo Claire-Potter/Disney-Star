@@ -10,6 +10,7 @@ const pictureTwo = document.getElementById('picture-two');
 const pictureThree = document.getElementById('picture-three');
 const pictureFour = document.getElementById('picture-four');
 const audioQuestions = document.getElementById('audio-question');
+const audioQuote = document.getElementById('audio-text');
 const answersIndicatorContainer = document.getElementById('answers-indicator');
 const pictureQuestionsFile = 'assets/images/pictureQuestions/';
 const submitButton = document.getElementById('submit-question');
@@ -33,18 +34,18 @@ let correctAnswers = 0;
 let attempt = 0;
 
 /**
-* @name Generate Character Name 
-* @description - fetches stored values to populate the 
-* characterName and the characterLogo areas.
-* characterName - the html element in which the fetched.
-* character from local storage will be added.
-* characterLogo - the html element in which the fetched.
-* character image from local storage will be added.
-* Code for using local storage found on 
-* https://www.w3schools.com/html/html5_webstorage.asp and edited for purpose.
-*/
+ * @name Generate Character Name 
+ * @description - fetches stored values to populate the 
+ * characterName and the characterLogo areas.
+ * characterName - the html element in which the fetched.
+ * character from local storage will be added.
+ * characterLogo - the html element in which the fetched.
+ * character image from local storage will be added.
+ * Code for using local storage found on 
+ * https://www.w3schools.com/html/html5_webstorage.asp and edited for purpose.
+ */
 
-if (localStorage.getItem('character') && (localStorage.getItem('character-image-area'))){
+if (localStorage.getItem('character') && (localStorage.getItem('character-image-area'))) {
   characterName.innerHTML = localStorage.getItem('character');
   characterLogo.innerHTML = localStorage.getItem('character-image-area');
 } else {
@@ -93,6 +94,8 @@ const quiz = [{
       'Mickey and Minnie Mouse with two children', 'Walt Disney',
       'A Parade',
     ],
+    audioText: 'Well, here we are. Boy, what a dream place! Ah, smell that' +
+      ' air. Mm-mm, look at those trees.',
     answer: 3,
   },
   {
@@ -104,6 +107,8 @@ const quiz = [{
       'poorPrincess.png',
     ],
     imageTitles: ['Snow White', 'Mickey Mouse', 'Donald Duck', 'Cinderella', ],
+    audioText: 'Well, I\'m, uh, Mickey Mouse. You know? Mickey Mouse? I hope' +
+      ' you\'ve heard of me. I hope.',
     answer: 1,
   },
   {
@@ -117,6 +122,8 @@ const quiz = [{
     imageTitles: ['Hans with Anna', 'Alongside Elsa', 'Next to Kristoff',
       'Getting punched',
     ],
+    audioText: 'As thirteenth in line in my own kingdom, I didn\'t stand' +
+      ' a chance. I knew I would have to marry into the throne somewhere.',
     answer: 0,
   },
   {
@@ -131,6 +138,7 @@ const quiz = [{
     imageTitles: ['Ralph', 'Donald Duck', 'Oswald the Lucky Rabbit',
       'Mickey Mouse',
     ],
+    audioText: 'Uh-oh! I can\'t believe it!',
     answer: 2,
   },
   {
@@ -143,6 +151,7 @@ const quiz = [{
     imageTitles: ['A short goat man', 'Eating grapes',
       'Hercules and Pegasus with the character', 'Getting shot from a bow',
     ],
+    audioText: 'I want to become a hero, a true hero.',
     answer: 1,
   },
   {
@@ -155,11 +164,13 @@ const quiz = [{
     imageTitles: ['Sitting with a penguin and a walrus', 'the daughter',
       'Eric holding her', 'with Ariel'
     ],
+    audioText: 'I don\'t see how a world that makes such wonderful' +
+      ' things could be bad.',
     answer: 3,
   },
   {
     q: 'What is the name of the castle in Shanghai Disneyland Park?​',
-    audio: '/assets/audio/mushuFromMulan.mp3',
+    audio: '/assets/audio/mulan.mp3',
     options: ['Cinderella Dream Castle', 'Atlantis',
       'The Enchanted Storybook Castle', 'Shanghai Palace of Mystery',
     ],
@@ -167,9 +178,10 @@ const quiz = [{
       'castleShanghai3.jpg', 'castleShanghai4.jpg',
     ],
     imageTitles: ['The castle at Disneyland Shanghai',
-      '', '',
-      '',
+      '', '', '',
     ],
+    audioText: 'You shouldn\'t have to go. There are plenty of young' +
+      ' men to fight for China.',
     answer: 2,
   },
   {
@@ -184,6 +196,7 @@ const quiz = [{
     imageTitles: ['Cinderella', 'Snow White', 'Belle, Beauty and the Beast',
       'Aurora, Sleeping Beauty',
     ],
+    audioText: 'I know you. I walked with you once upon a dream.',
     answer: 3,
   },
   {
@@ -194,6 +207,8 @@ const quiz = [{
     imageTitles: ['Emperor', 'Animal', 'Kuzco and friend',
       '',
     ],
+    audioText: 'Boom, bam, baby! Let\'s get to the grub.' +
+      ' I am one hungry king of the world.',
     answer: 0,
   },
   {
@@ -203,6 +218,7 @@ const quiz = [{
     options: ['Tibbs', 'Dinah', 'Marie', 'Toulouse', ],
     optionsImages: ['tibbs.png', 'dinah.png', 'marie.png', 'toulouse.png', ],
     imageTitles: ['Tibbs', 'Dinah', 'Marie', 'Toulouse', ],
+    audioText: 'No, no, no. I\'m through with rabbits.',
     answer: 1,
   },
   {
@@ -219,6 +235,8 @@ const quiz = [{
     imageTitles: ['Cinderella and Prince Charming', 'Belle and Beast',
       'Princess Anna and Prince Hans', 'Aladdin and Princess Jasmine',
     ],
+    audioText: 'I mean, it\'s crazy. -What? -We finish each other\'s...' +
+      ' -Sandwiches.',
     answer: 2,
   },
   {
@@ -230,6 +248,8 @@ const quiz = [{
       'thor.png',
     ],
     imageTitles: ['Captain America', 'Marvel', 'Black Widow', 'Thor', ],
+    audioText: 'Gentlemen, you might want to step inside in a minute.' +
+      ' It\'s going to get a little hard to breathe.',
     answer: 2,
   },
   {
@@ -241,6 +261,8 @@ const quiz = [{
       'madHatter.png',
     ],
     imageTitles: ['Baymax', 'Lightning McQueen', 'Genie', 'Mad Hatter', ],
+    audioText: 'The ever impressive, the long contained, the often imitated,' +
+      ' but never duplicated... Genie of the Lamp!',
     answer: 2,
   },
   {
@@ -250,6 +272,8 @@ const quiz = [{
     options: ['Dumbo', 'Thumper', 'Chip', 'Bambi', ],
     optionsImages: ['dumboFlying.png', 'thumper.png', 'chip.png', 'bambi.png', ],
     imageTitles: ['Dumbo', 'Thumper', 'Chip', 'Bambi', ],
+    audioText: 'Poor little guy. There he goes, without a friend in the world.' +
+      ' Nobody to turn to.',
     answer: 0,
   },
   {
@@ -261,6 +285,7 @@ const quiz = [{
       'chickenLittle.jpg',
     ],
     imageTitles: ['Dormouse', 'Hulk', 'Flik', 'Chicken Little', ],
+    audioText: 'The sky is falling! The sky is falling!',
     answer: 3,
   },
   {
@@ -271,6 +296,8 @@ const quiz = [{
       'frozen.png',
     ],
     imageTitles: ['Merida', 'Alice', 'Cinderella', 'Elsa', ],
+    audioText: 'In this world, perhaps. But in my world the books would be' +
+      ' nothing but pictures.',
     answer: 1,
   },
   {
@@ -279,6 +306,8 @@ const quiz = [{
     options: ['Colonel', 'Perdita', 'Clip', 'Pongo', ],
     optionsImages: ['colonel.png', 'perdita.png', 'dodger.png', 'pongo.png'],
     imageTitles: ['Colonel', 'Perdita', 'Clip', 'Pongo', ],
+    audioText: 'I wish we could walk on the snow. -No, son, we can\'t leave' +
+      ' tracks.',
     answer: 3,
   },
   {
@@ -291,6 +320,8 @@ const quiz = [{
     imageTitles: ['Monsters, Inc - Sulley', 'A Bug\'s Life - Flik',
       'Good Dinosaur - Arlo', 'Onward - Ian',
     ],
+    audioText: 'Hello, princess! My, aren\'t you looking lovely this morning' +
+      ' Not, of course, that you would need a telescope to see that.',
     answer: 1,
   },
   {
@@ -303,16 +334,18 @@ const quiz = [{
     imageTitles: ['Sleeping Beauty - Aurora', 'Brave - Merida',
       'The Princess and the Frog - Tiana', 'Beauty and the Beast - Belle',
     ],
+    audioText: 'I didn\'t mean any harm.',
     answer: 3,
   },
   {
     q: 'Name the character heard in the following sound clip:',
     audio: 'assets/audio/donaldDuck.mp3',
     options: ['Donald Duck', 'Goofy', 'Mickey Mouse', 'Pete', ],
-    optionsImages: ['donaldDuck.png', 'goofy.png', 'mickeyMouse.png',
+    optionsImages: ['dD.png', 'goofy.png', 'mM.png',
       'pete.png',
     ],
     imageTitles: ['Donald Duck', 'Goofy', 'Mickey Mouse', 'Pete', ],
+    audioText: 'And a very merry Christmas to you!',
     answer: 0,
   },
   {
@@ -327,6 +360,8 @@ const quiz = [{
     imageTitles: ['Finding Dory', 'Nemo',
       'Shark Tale - Oscar', 'Shark Bait - Pisces',
     ],
+    audioText: 'I have to get out. I have to find my son.' +
+      ' I have to tell him how old sea turtles are!',
     answer: 1,
   },
   {
@@ -339,6 +374,7 @@ const quiz = [{
     imageTitles: ['Tangled - Rapunzel', 'The Little Mermaid - Ariel',
       'Beauty and the Beast - Belle', 'Frozen- Elsa',
     ],
+    audioText: 'A kingdom of isolation and it looks like I\'m the queen.',
     answer: 3,
   },
   {
@@ -353,6 +389,9 @@ const quiz = [{
     imageTitles: ['Hawkeye - Clint Barton', 'The Hulk - Bruce Banner',
       'Black Panther - King T\'Challa', 'Iron Man aka Tony Stark',
     ],
+    audioText: 'They say the best weapon is one you never have to' +
+      ' fire. I respectfully disagree. I prefer the weapon you only' +
+      ' have to fire once.',
     answer: 3,
   },
   {
@@ -363,6 +402,8 @@ const quiz = [{
       'motherCarey.png',
     ],
     imageTitles: ['Mary Poppins', 'Nanny McPhee', 'Maria', 'Mother Carey', ],
+    audioText: 'Practically perfect people never permit sentiment to muddle' +
+      ' their thinking.',
     answer: 0,
   },
   {
@@ -376,11 +417,10 @@ const quiz = [{
     optionsImages: ['anakin.png', 'darthVader.png', 'anakin2.png',
       'darthVader2.png',
     ],
-    imageTitles: ['Attack of the Clones',
-      'The Empire Strikes Back',
-      'Revenge of the Sith',
-      'A New Hope',
+    imageTitles: ['Attack of the Clones', 'The Empire Strikes Back',
+      'Revenge of the Sith', 'A New Hope',
     ],
+    audioText: 'No. I am your father.',
     answer: 1,
   },
 ];
@@ -449,9 +489,9 @@ function getNewQuestion() {
    alt = ${currentQuestion.imageTitles['3']}
    ><span class='tooltiptext tooltiptext-image' id='tooltip-one'>
    ${currentQuestion.imageTitles['3']}</span>`;
-  audioQuestions.innerHTML = `<
-  audio src= ${currentQuestion.audio}
-    id='audio' alt='an audio clip related to the written question'></audio>`;
+  audioQuestions.innerHTML =`<audio src= ${currentQuestion.audio}
+    id='audio' alt='${currentQuestion.audioText}'></audio>`;
+  audioQuote.innerHTML = `<h2>'${currentQuestion.audioText}'</h2>`;
 
   //The below sections are created as per the WebShala tutorial.
   //get the position of questionIndex from the available question array.
@@ -486,13 +526,13 @@ function getNewQuestion() {
     option.setAttribute('keypress', 'enterKey(event)');
 
     option.addEventListener('keydown', enterKey);
-    
-    function enterKey(event){
+
+    function enterKey(event) {
       if (event.key === 'Enter') {
         getResult();
       }
     }
-  
+
     //disable the submitButton so that the user cannot move passed the
     // question until answered. Code added by me.
     submitButton.disabled = true;

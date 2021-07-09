@@ -1056,6 +1056,56 @@ Please <a href="https://github.com/Claire-Potter/Disney-Star/tree/master/read-me
 ### Testing Accessibility
 
 The Wave Evaluation Tool was used to test the Accessibility of the site. 
+I had to make some changes to make sure I could pass the accessibility testing as best as possible.
+
+Across the pages I received a warning regarding missing headings:
+
+<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/skippedheading.PNG" 
+     alt="the link to the Disney store within the next steps section" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+I went through the errors and made sure that the correct header level was added, or that the heading like styling was removed.
+
+I received multiple warnings about redundant alt text. As far as possible I went through and removed redundant text. This posed a challenge within the quiz, as the quiz images have the same title as the quiz options. In most cases this is the character name. I have to have it repeating because the user needs to be able to see which character is shown in the picture as well as be able to read the various options. I managed to cut the warnings down from about 11 to 5.
+
+<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/redundant-alt-text.PNG" 
+     alt="the link to the Disney store within the next steps section" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/example-redundant-text.PNG" 
+     alt="the link to the Disney store within the next steps section" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/remove-redundant-text.PNG" 
+     alt="the link to the Disney store within the next steps section" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
+The final warning was received was with regards to the audio clip. A transcript of the audio clip is required. As I do not have transcripts I have instead included the quote from the sound clip on the page so that it can also be seen and read. The accessibility warning is still there, but a visual solution is at least now available.
+
+<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/include-soundclip-quote.PNG" 
+     alt="the link to the Disney store within the next steps section" 
+     style="display:block; 
+            float:none; 
+            margin-left:auto; 
+            margin-right:auto;
+            "> 
+
 
 
 Please <a href="https://github.com/Claire-Potter/Disney-Star/tree/master/read-me-content/testing/accessibility" target="_blank">click here </a>to view the Wave Evaluation screenshots.
@@ -1319,7 +1369,7 @@ Answer: Oswald the Lucky Rabbit.​
     - https://www.shopdisney.co.uk/characters
 
 All of the images within the disneyCharacters folder
-   *   https://github.com/Claire-Potter/Disney-Star/tree/master/assets/images/disneyCharacters
+   * https://github.com/Claire-Potter/Disney-Star/tree/master/assets/images/disneyCharacters
 
 13. The mockup image in the ReadMe was created using the following site:
 	* http://techsini.com/multi-mockup/index.php
@@ -1329,7 +1379,7 @@ All of the images within the disneyCharacters folder
     * fun-young-woman.jpg
 
 14. All of the audio clips used are from 
-    - https://movie-sounds.org/disney-movie-sound-clips/quotes-with-sound-clips-from-frozen/a-kingdom-of-isolation-and-it-looks-like-i-m-the-queen
+    - https://movie-sounds.org/disney-movie-sound-clips/
 
 
 # Acknowledgements
