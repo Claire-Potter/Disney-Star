@@ -267,7 +267,8 @@ The Generate button on the home screen was moved to display within the single co
 6. A timer was added to the quiz which was not included in the original design.
 7. An End quiz button was added to allow the user to end the quiz at any stage.
 8. The mobile version of the quiz pictures was going to display the four quiz pictures as a column, however with a single column display and sizing the images remaind in a grid as per the larger screen display.
-9. The results page, next steps section included an additional icon back to the home page alongside the redo quiz icon and the icon to access the Disney store.
+9. The audio clip section now includes a written version of the quote. Added to improve the site accessibility.
+10. The results page, next steps section included an additional icon back to the home page alongside the redo quiz icon and the icon to access the Disney store.
 
 
 ## Technologies
@@ -1060,8 +1061,8 @@ I had to make some changes to make sure I could pass the accessibility testing a
 
 Across the pages I received a warning regarding missing headings:
 
-<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/skippedheading.PNG" 
-     alt="the link to the Disney store within the next steps section" 
+<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/skipped-heading.PNG" 
+     alt="skipped heading example" 
      style="display:block; 
             float:none; 
             margin-left:auto; 
@@ -1073,7 +1074,7 @@ I went through the errors and made sure that the correct header level was added,
 I received multiple warnings about redundant alt text. As far as possible I went through and removed redundant text. This posed a challenge within the quiz, as the quiz images have the same title as the quiz options. In most cases this is the character name. I have to have it repeating because the user needs to be able to see which character is shown in the picture as well as be able to read the various options. I managed to cut the warnings down from about 11 to 5.
 
 <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/redundant-alt-text.PNG" 
-     alt="the link to the Disney store within the next steps section" 
+     alt="redundant text" 
      style="display:block; 
             float:none; 
             margin-left:auto; 
@@ -1081,7 +1082,7 @@ I received multiple warnings about redundant alt text. As far as possible I went
             "> 
 
 <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/example-redundant-text.PNG" 
-     alt="the link to the Disney store within the next steps section" 
+     alt="redundant text" 
      style="display:block; 
             float:none; 
             margin-left:auto; 
@@ -1089,7 +1090,7 @@ I received multiple warnings about redundant alt text. As far as possible I went
             "> 
 
 <img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/remove-redundant-text.PNG" 
-     alt="the link to the Disney store within the next steps section" 
+     alt="redundant text" 
      style="display:block; 
             float:none; 
             margin-left:auto; 
@@ -1098,8 +1099,8 @@ I received multiple warnings about redundant alt text. As far as possible I went
 
 The final warning was received was with regards to the audio clip. A transcript of the audio clip is required. As I do not have transcripts I have instead included the quote from the sound clip on the page so that it can also be seen and read. The accessibility warning is still there, but a visual solution is at least now available.
 
-<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/include-soundclip-quote.PNG" 
-     alt="the link to the Disney store within the next steps section" 
+<img src="https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/testing/accessibility/example-changes/include-sound-clip-quote.PNG" 
+     alt="audio clip quote example" 
      style="display:block; 
             float:none; 
             margin-left:auto; 
