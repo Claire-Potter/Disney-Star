@@ -971,7 +971,7 @@ This has been included within the next steps section.
 
 1. The site has been tested using the following browsers - Safari, Chrome, Firefox, Edge and Opera. The site is compatible and accessible across all browsers.
 
-Please <a href="" target="_blank">click here</a> to view browser testing screenshots.
+Please <a href="https://github.com/Claire-Potter/Disney-Star/tree/master/assets/read-me-content/testing/browser-testing" target="_blank">click here</a> to view browser testing screenshots.
 
 2. Devices and Screen Sizes
 
@@ -1211,3 +1211,132 @@ The website was deployed on GitHub using the following steps:
 
 7. Select the green GitPod icon to open the work space on GitPod
 8. Follow the steps in the Maintaining Code section above to make and save changes to your own repository
+
+
+# References
+
+## Code
+
+### General Queries
+
+The following were used for any general queries or guidance required:
+
+1. Code Institute LMS
+2. W3Schools - https://www.w3schools.com/
+3. Stack Overflow - https://stackoverflow.com/
+4. JSDoc - https://devhints.io/jsdoc
+
+### Code Adaptations
+
+1. Code for using local storage found on 
+https://www.w3schools.com/html/html5_webstorage.asp and edited for purpose. 
+2. A series of tutorial videos starting from video two up until video five were utilised as a guideline to create this quiz.Here is the link to the second video is https://www.youtube.com/watch?v=QU6z69P5BrU&t=0s. The links to the additional videos are available within the about section underneath the above video.The videos are created by The WebShala Channel https://www.youtube.com/channel/UC94lpQZvaokkIqU-TvtsGXQ.As far as possible I have tried to indicate which sections of code are created as per the tutorial and which sections are adapted through comments within the code.
+3. The Tooltip code is from W3 school tutorial and adapted for site https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom
+4. I got the code for the timer from 
+  https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz and this has been adapted for the site. 
+5. The styling for the alert is from SweetAlert2 - https://sweetalert2.github.io/#download
+6. Shadow code from W3 school tutorials - buttons shadows - https://www.w3schools.com/css/css3_buttons.asp
+7. Solution to add audio found on 
+// https://stackoverflow.com/questions/9419263/how-to-play-audio.
+8. https://www.sitepoint.com/simple-javascript-quiz/ referenced and edited for const declarations and for how to return characters to inner html
+
+
+## Content
+
+The Disney brand has been utilised for this site. This site was built for educational purposes only and I do not intend to profit financially in any way through the utilisation of the Disney brand. I have provided a link back to the Disney UK store within the site.
+
+All of the site written content was written by me apart from the following questions which were taken from this site - https://parade.com/1041219/alexandra-hurtado/disney-trivia/
+
+* Question: What year did Disneyland open?​
+Answer: 1955.​
+
+* Question: Who trained Hercules to be a hero?​
+Answer: Philoctetes/Phil.​
+
+* Question: How many brothers does Prince Hans of the Southern Isles have in Frozen?​
+Answer: 12.
+
+* Question: Who was the first cartoon character to get a star on the Hollywood Walk of Fame?​
+Answer: Mickey Mouse.
+
+* Question: What is the name of Ariel and Prince Eric’s daughter?​
+Answer: Princess Melody.​
+
+* Question: Which Disney Princess sings “Once Upon a Dream”?​
+Answer: Aurora (Sleeping Beauty).​
+
+* Question: What is the name of the castle in Shanghai Disneyland Park?​
+Answer: The Enchanted Storybook Castle.​
+
+* Question: What was the name of Walt Disney’s first cartoon character?​
+Answer: Oswald the Lucky Rabbit.​
+
+## Design Elements and Media
+
+1. The colour scheme utilised is from the following website:
+	* https://www.schemecolor.com/classic-disney.php#download
+
+2. The typography utilised is from Google Fonts:
+	* Google Fonts - https://fonts.google.com/specimen/Satisfy?query=satisfy#pairings
+	
+3. The Icons utilised are from Font Awesome:
+	* Font Awesome - https://fontawesome.com/
+
+4. The following Images are from Shutterstock - https://www.shutterstock.com
+	* magicWandBlue.jpg
+	* congratulationsChampion.jpg
+	* congratulationsOk.jpg
+	* disneyIcon.jpg
+	* quizIcon.jpg
+	* wellDoneFlyingHigh.jpg
+	* whatAFlop.jpg
+	
+5. The following Images are from Disney Clips - https://www.disneyclips.com/
+	* MickeyFriends.png
+	* mickeyQuiz.png
+	* All of the images within the pictureQuestions folder unless otherwise noted 
+	- https://github.com/Claire-Potter/Disney-Star/tree/master/assets/images/pictureQuestions
+
+6. The Disneyland on opening day photos are from 
+    - https://www.theatlantic.com/photo/2019/07/opening-day-disneyland-photos-1955/594655/
+
+7. Oswald the Lucky Rabbit is from 
+    - https://thedisinsider.com/2019/07/06/oswald-the-lucky-rabbit-series/
+
+8. The Enchanted Storybook images are from 
+    - https://disney.fandom.com/wiki/Enchanted_Storybook_Castle?file=Enchanted-storybook-castle-clocktower-side-shanghai-disneyland_1.jpg
+
+9. The Nanny McPhee image is from 
+    - https://www.republicworld.com/entertainment-news/hollywood-news/nanny-mcphee-returns-cast-actors-and-characters-they-play-in-film.html​
+	
+10. The shark bait image is from 
+    - https://www.rottentomatoes.com/m/1179443-1179443-reef
+
+11. The shark tale image is from 
+    - https://cwf97.wordpress.com/2017/07/20/underrated-masterpieces-shark-tale/
+
+12. The following images are from the Disney Store UK
+    - https://www.shopdisney.co.uk/characters
+
+All of the images within the disneyCharacters folder
+   *   https://github.com/Claire-Potter/Disney-Star/tree/master/assets/images/disneyCharacters
+
+13. The mockup image in the ReadMe was created using the following site:
+	* http://techsini.com/multi-mockup/index.php
+	
+14. The persona image of the girl in the ReadMe is from UnSplash
+
+    * fun-young-woman.jpg
+
+14. All of the audio clips used are from 
+    - https://movie-sounds.org/disney-movie-sound-clips/quotes-with-sound-clips-from-frozen/a-kingdom-of-isolation-and-it-looks-like-i-m-the-queen
+
+
+# Acknowledgements
+
+A huge thank you to my mentor Brian Macharia. The guidance and advice that you have provided has been invaluable. I could have never completed this project without you.
+
+Thank you to Code Institute for providing such well-thought out and put together course material and for the constant guidance and advice provided through Slack.
+
+Finally, to my wonderful husband and children, thank you for your understanding and support through this process.
+
