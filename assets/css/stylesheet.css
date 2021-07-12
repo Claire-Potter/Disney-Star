@@ -361,20 +361,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   border-radius: 5%;
 }
 
-.in-time {
-  background-image: url("/assets/images/siteImages/inTimeRight.PNG");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.wrong-time {
-  background-image: url("/assets/images/siteImages/wrongTime.PNG");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .end-quiz-area {
   margin: 0 auto;
   display: flex;

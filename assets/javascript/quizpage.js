@@ -85,7 +85,7 @@ referenced for the structure of the array.
 
 const quiz = [{
     q: 'What year did Disneyland open?​',
-    audio: '/assets/audio/whatADreamPlace.mp3',
+    audio: '/assets/audio/minnieMouseDisney.mp3',
     options: ['1951', '1957', '1953', '1955', ],
     optionsImages: ['disneyLand1.jpg', 'disneyLand2.jpg', 'disneyLand3.jpg',
       'disneyLand4.jpg',
@@ -94,21 +94,19 @@ const quiz = [{
       'Mickey and Minnie Mouse with two children', 'Walt Disney',
       'A Parade',
     ],
-    audioText: 'Well, here we are. Boy, what a dream place! Ah, smell that' +
-      ' air. Mm-mm, look at those trees.',
+    audioText: 'Close your eyes. Don\'t peek. I\'ve got a surprise.',
     answer: 3,
   },
   {
     q: 'Who was the first cartoon character to get a star on the' +
       ' Hollywood Walk of Fame?​',
-    audio: '/assets/audio/waltDisneyAsMickeyMouse.mp3',
+    audio: '/assets/audio/mickeyMouse.mp3',
     options: ['Snow White', 'Mickey Mouse', 'Donald Duck', 'Cinderella', ],
     optionsImages: ['princess.png', 'mM.png', 'dD.png',
       'poorPrincess.png',
     ],
     imageTitles: ['Snow White', 'Mickey Mouse', 'Donald Duck', 'Cinderella', ],
-    audioText: 'Well, I\'m, uh, Mickey Mouse. You know? Mickey Mouse? I hope' +
-      ' you\'ve heard of me. I hope.',
+    audioText: 'Oh, boy! A customer! -A customer! -A customer?',
     answer: 1,
   },
   {
@@ -143,7 +141,7 @@ const quiz = [{
   },
   {
     q: 'Who trained Hercules to be a hero?',
-    audio: '/assets/audio/herculesIWantToBecomeAHero.mp3',
+    audio: '/assets/audio/hercules.mp3',
     options: ['Pygmalion', 'Philoctetes', 'Prometheus', 'Parentheses', ],
     optionsImages: ['hercules1.png', 'hercules2.png', 'hercules3.png',
       'hercules4.png',
@@ -151,12 +149,12 @@ const quiz = [{
     imageTitles: ['A short goat man', 'Eating grapes',
       'Hercules and Pegasus with the character', 'Getting shot from a bow',
     ],
-    audioText: 'I want to become a hero, a true hero.',
+    audioText: 'Come on, kid! Concentrate! Use your head!',
     answer: 1,
   },
   {
     q: 'What is the name of Ariel and Prince Eric’s daughter?​',
-    audio: '/assets/audio/arielTheLittleMermaid.mp3',
+    audio: '/assets/audio/arielChild.mp3',
     options: ['Marina', 'Alanna', 'Oceana', 'Melody', ],
     optionsImages: ['daughterFriends.png', 'arielDaughter.png',
       'ericDaughter.png', 'arielAndHerDaughter.png',
@@ -164,13 +162,12 @@ const quiz = [{
     imageTitles: ['Sitting with a penguin and a walrus', 'the daughter',
       'Eric holding her', 'with Ariel'
     ],
-    audioText: 'I don\'t see how a world that makes such wonderful' +
-      ' things could be bad.',
+    audioText: 'I\'m 16 years old. I\'m not a child any more.',
     answer: 3,
   },
   {
     q: 'What is the name of the castle in Shanghai Disneyland Park?​',
-    audio: '/assets/audio/mulan.mp3',
+    audio: '/assets/audio/mushuMulan.mp3',
     options: ['Cinderella Dream Castle', 'Atlantis',
       'The Enchanted Storybook Castle', 'Shanghai Palace of Mystery',
     ],
@@ -180,13 +177,12 @@ const quiz = [{
     imageTitles: ['The castle at Disneyland Shanghai',
       '', '', '',
     ],
-    audioText: 'You shouldn\'t have to go. There are plenty of young' +
-      ' men to fight for China.',
+    audioText: 'My little baby off to destroy people. -Mushu from Mulan',
     answer: 2,
   },
   {
     q: 'Which Disney Princess sings “Once Upon a Dream”?​​',
-    audio: '/assets/audio/onceUponADreamAurora.mp3',
+    audio: '/assets/audio/onceUponADream.mp3',
     options: ['Cinderella', 'Snow White', 'Belle, Beauty and the Beast',
       'Aurora, Sleeping Beauty',
     ],
@@ -196,36 +192,35 @@ const quiz = [{
     imageTitles: ['Cinderella', 'Snow White', 'Belle, Beauty and the Beast',
       'Aurora, Sleeping Beauty',
     ],
-    audioText: 'I know you. I walked with you once upon a dream.',
+    audioText: 'Once upon a dream.',
     answer: 3,
   },
   {
     q: 'Emperor Kuzco turns into what animal in The Emperor’s New Groove?',
-    audio: '/assets/audio/kuzcoEmperorsNewGroove.mp3',
+    audio: '/assets/audio/kuzcoEmperor.mp3',
     options: ['Llama', 'Camel', 'Alpaca', 'Vicuna', ],
     optionsImages: ['kuzco1.png', 'kuzco2.png', 'kuzco3.png', 'kuzco4.png', ],
     imageTitles: ['Emperor', 'Animal', 'Kuzco and friend',
       '',
     ],
-    audioText: 'Boom, bam, baby! Let\'s get to the grub.' +
-      ' I am one hungry king of the world.',
+    audioText: 'I don\'t make deals with peasants.',
     answer: 0,
   },
   {
     q: 'Which of these frisky felines is the beloved companion of' +
       ' Alice in Wonderland?',
-    audio: '/assets/audio/aliceInWonderland.mp3',
+    audio: '/assets/audio/aliceNotFunny.mp3',
     options: ['Tibbs', 'Dinah', 'Marie', 'Toulouse', ],
     optionsImages: ['tibbs.png', 'dinah.png', 'marie.png', 'toulouse.png', ],
     imageTitles: ['Tibbs', 'Dinah', 'Marie', 'Toulouse', ],
-    audioText: 'No, no, no. I\'m through with rabbits.',
+    audioText: 'I don\'t think it\'s so funny..',
     answer: 1,
   },
   {
     q: 'Disney has recently made many live action versions of our favourite' +
       ' Disney Movies. Which of these couples do not feature in a live' +
       ' action film?',
-    audio: '/assets/audio/annaAndHansFrozen.mp3',
+    audio: '/assets/audio/annaAndHans.mp3',
     options: ['Cinderella and Prince Charming', 'Belle and Beast',
       'Princess Anna and Prince Hans', 'Aladdin and Princess Jasmine',
     ],
@@ -235,21 +230,19 @@ const quiz = [{
     imageTitles: ['Cinderella and Prince Charming', 'Belle and Beast',
       'Princess Anna and Prince Hans', 'Aladdin and Princess Jasmine',
     ],
-    audioText: 'I mean, it\'s crazy. -What? -We finish each other\'s...' +
-      ' -Sandwiches.',
+    audioText: 'Okay, can I just say something crazy? -I love crazy.',
     answer: 2,
   },
   {
     q: 'This super hero is set to feature in a new full length feature coming' +
       ' out July 2021, select the correct hero:',
-    audio: '/assets/audio/blackWidowTheAvengers.mp3',
+    audio: '/assets/audio/blackWidow.mp3',
     options: ['Captain America', 'Captain Marvel', 'Black Widow', 'Thor', ],
     optionsImages: ['captainAmerica.png', 'captainMarvel.png', 'blackWidow.png',
       'thor.png',
     ],
     imageTitles: ['Captain America', 'Marvel', 'Black Widow', 'Thor', ],
-    audioText: 'Gentlemen, you might want to step inside in a minute.' +
-      ' It\'s going to get a little hard to breathe.',
+    audioText: 'You\'re gonna love it, Doc. We got all the toys.',
     answer: 2,
   },
   {
@@ -574,18 +567,15 @@ function getNewQuestion() {
     timer.innerHTML = sec + ' sec left';
     sec--; {
       // if the user answers correctly and in time, the message will 
-      //display that they beat the timer. The style of the timer dive will be
-      // updated accordingly.
+      //display that they beat the timer.
       if (imageZero == document.querySelector('.option.correct.already-answered') ||
         imageOne == document.querySelector('.option.correct.already-answered') ||
         imageTwo == document.querySelector('.option.correct.already-answered') || imageThree ==
         document.querySelector('.option.correct.already-answered')) {
         clearInterval(time);
         timer.innerHTML = 'You beat the timer!';
-        timer.classList.add('in-time');
         // if the user answers incorrectly but in time, the message will 
-        //display that they answered in time but they got it wrong. The style
-        // of the timer dive will be updated accordingly.
+        //display that they answered in time but they got it wrong.
       } else if (imageZero == document.querySelector('.option.wrong.already-answered') || imageOne ==
         document.querySelector('.option.wrong.already-answered') ||
         imageTwo == document.querySelector('.option.wrong.already-answered') || imageThree ==
@@ -593,7 +583,6 @@ function getNewQuestion() {
         clearInterval(time);
         timer.innerHTML =
           'You answered in time, but you got it wrong';
-        timer.classList.add('wrong-time');
         // if the user does not answer in time, an alert message will display
         // that they did not answer in time and the quizOver function
         // will be called.
