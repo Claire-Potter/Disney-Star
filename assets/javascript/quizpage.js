@@ -85,7 +85,7 @@ referenced for the structure of the array.
 
 const quiz = [{
     q: 'What year did Disneyland open?​',
-    audio: '/assets/audio/minnieMouseDisney.mp3',
+    audio: 'assets/audio/whatADreamPlace.mp3',
     options: ['1951', '1957', '1953', '1955', ],
     optionsImages: ['disneyLand1.jpg', 'disneyLand2.jpg', 'disneyLand3.jpg',
       'disneyLand4.jpg',
@@ -94,19 +94,21 @@ const quiz = [{
       'Mickey and Minnie Mouse with two children', 'Walt Disney',
       'A Parade',
     ],
-    audioText: 'Close your eyes. Don\'t peek. I\'ve got a surprise.',
+    audioText: 'Well, here we are. Boy, what a dream place! Ah, smell that' +
+      ' air. Mm-mm, look at those trees.',
     answer: 3,
   },
   {
     q: 'Who was the first cartoon character to get a star on the' +
       ' Hollywood Walk of Fame?​',
-    audio: '/assets/audio/mickeyMouse.mp3',
+    audio: 'assets/audio/waltDisneyAsMickeyMouse.mp3',
     options: ['Snow White', 'Mickey Mouse', 'Donald Duck', 'Cinderella', ],
     optionsImages: ['princess.png', 'mM.png', 'dD.png',
       'poorPrincess.png',
     ],
     imageTitles: ['Snow White', 'Mickey Mouse', 'Donald Duck', 'Cinderella', ],
-    audioText: 'Oh, boy! A customer! -A customer! -A customer?',
+    audioText: 'Well, I\'m, uh, Mickey Mouse. You know? Mickey Mouse? I hope' +
+      ' you\'ve heard of me. I hope.',
     answer: 1,
   },
   {
@@ -141,7 +143,7 @@ const quiz = [{
   },
   {
     q: 'Who trained Hercules to be a hero?',
-    audio: '/assets/audio/hercules.mp3',
+    audio: 'assets/audio/herculesIWantToBecomeAHero.mp3',
     options: ['Pygmalion', 'Philoctetes', 'Prometheus', 'Parentheses', ],
     optionsImages: ['hercules1.png', 'hercules2.png', 'hercules3.png',
       'hercules4.png',
@@ -149,12 +151,12 @@ const quiz = [{
     imageTitles: ['A short goat man', 'Eating grapes',
       'Hercules and Pegasus with the character', 'Getting shot from a bow',
     ],
-    audioText: 'Come on, kid! Concentrate! Use your head!',
+    audioText: 'I want to become a hero, a true hero.',
     answer: 1,
   },
   {
     q: 'What is the name of Ariel and Prince Eric’s daughter?​',
-    audio: '/assets/audio/arielChild.mp3',
+    audio: 'assets/audio/arielTheLittleMermaid.mp3',
     options: ['Marina', 'Alanna', 'Oceana', 'Melody', ],
     optionsImages: ['daughterFriends.png', 'arielDaughter.png',
       'ericDaughter.png', 'arielAndHerDaughter.png',
@@ -162,12 +164,13 @@ const quiz = [{
     imageTitles: ['Sitting with a penguin and a walrus', 'the daughter',
       'Eric holding her', 'with Ariel'
     ],
-    audioText: 'I\'m 16 years old. I\'m not a child any more.',
+    audioText: 'I don\'t see how a world that makes such wonderful' +
+      ' things could be bad.',
     answer: 3,
   },
   {
     q: 'What is the name of the castle in Shanghai Disneyland Park?​',
-    audio: '/assets/audio/mushuMulan.mp3',
+    audio: 'assets/audio/mulan.mp3',
     options: ['Cinderella Dream Castle', 'Atlantis',
       'The Enchanted Storybook Castle', 'Shanghai Palace of Mystery',
     ],
@@ -177,12 +180,13 @@ const quiz = [{
     imageTitles: ['The castle at Disneyland Shanghai',
       '', '', '',
     ],
-    audioText: 'My little baby off to destroy people. -Mushu from Mulan',
+    audioText: 'You shouldn\'t have to go. There are plenty of young' +
+      ' men to fight for China.',
     answer: 2,
   },
   {
     q: 'Which Disney Princess sings “Once Upon a Dream”?​​',
-    audio: '/assets/audio/onceUponADream.mp3',
+    audio: 'assets/audio/onceUponADreamAurora.mp3',
     options: ['Cinderella', 'Snow White', 'Belle, Beauty and the Beast',
       'Aurora, Sleeping Beauty',
     ],
@@ -192,35 +196,36 @@ const quiz = [{
     imageTitles: ['Cinderella', 'Snow White', 'Belle, Beauty and the Beast',
       'Aurora, Sleeping Beauty',
     ],
-    audioText: 'Once upon a dream.',
+    audioText: 'I know you. I walked with you once upon a dream.',
     answer: 3,
   },
   {
     q: 'Emperor Kuzco turns into what animal in The Emperor’s New Groove?',
-    audio: '/assets/audio/kuzcoEmperor.mp3',
+    audio: 'assets/audio/kuzcoEmperorsNewGroove.mp3',
     options: ['Llama', 'Camel', 'Alpaca', 'Vicuna', ],
     optionsImages: ['kuzco1.png', 'kuzco2.png', 'kuzco3.png', 'kuzco4.png', ],
     imageTitles: ['Emperor', 'Animal', 'Kuzco and friend',
       '',
     ],
-    audioText: 'I don\'t make deals with peasants.',
+    audioText: 'Boom, bam, baby! Let\'s get to the grub.' +
+      ' I am one hungry king of the world.',
     answer: 0,
   },
   {
     q: 'Which of these frisky felines is the beloved companion of' +
       ' Alice in Wonderland?',
-    audio: '/assets/audio/aliceNotFunny.mp3',
+    audio: 'assets/audio/aliceInWonderland.mp3',
     options: ['Tibbs', 'Dinah', 'Marie', 'Toulouse', ],
     optionsImages: ['tibbs.png', 'dinah.png', 'marie.png', 'toulouse.png', ],
     imageTitles: ['Tibbs', 'Dinah', 'Marie', 'Toulouse', ],
-    audioText: 'I don\'t think it\'s so funny..',
+    audioText: 'No, no, no. I\'m through with rabbits.',
     answer: 1,
   },
   {
     q: 'Disney has recently made many live action versions of our favourite' +
       ' Disney Movies. Which of these couples do not feature in a live' +
       ' action film?',
-    audio: '/assets/audio/annaAndHans.mp3',
+    audio: 'assets/audio/annaAndHansFrozen.mp3',
     options: ['Cinderella and Prince Charming', 'Belle and Beast',
       'Princess Anna and Prince Hans', 'Aladdin and Princess Jasmine',
     ],
@@ -230,19 +235,21 @@ const quiz = [{
     imageTitles: ['Cinderella and Prince Charming', 'Belle and Beast',
       'Princess Anna and Prince Hans', 'Aladdin and Princess Jasmine',
     ],
-    audioText: 'Okay, can I just say something crazy? -I love crazy.',
+    audioText: 'I mean, it\'s crazy. -What? -We finish each other\'s...' +
+      ' -Sandwiches.',
     answer: 2,
   },
   {
     q: 'This super hero is set to feature in a new full length feature coming' +
       ' out July 2021, select the correct hero:',
-    audio: '/assets/audio/blackWidow.mp3',
+    audio: 'assets/audio/blackWidowTheAvengers.mp3',
     options: ['Captain America', 'Captain Marvel', 'Black Widow', 'Thor', ],
     optionsImages: ['captainAmerica.png', 'captainMarvel.png', 'blackWidow.png',
       'thor.png',
     ],
     imageTitles: ['Captain America', 'Marvel', 'Black Widow', 'Thor', ],
-    audioText: 'You\'re gonna love it, Doc. We got all the toys.',
+    audioText: 'Gentlemen, you might want to step inside in a minute.' +
+      ' It\'s going to get a little hard to breathe.',
     answer: 2,
   },
   {
@@ -574,6 +581,7 @@ function getNewQuestion() {
         document.querySelector('.option.correct.already-answered')) {
         clearInterval(time);
         timer.innerHTML = 'You beat the timer!';
+
         // if the user answers incorrectly but in time, the message will 
         //display that they answered in time but they got it wrong.
       } else if (imageZero == document.querySelector('.option.wrong.already-answered') || imageOne ==
