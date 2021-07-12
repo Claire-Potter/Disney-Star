@@ -4,13 +4,13 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap");
 html {
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
-   margin: 0;
-   padding: 0;
-   border: none;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 body {
@@ -26,21 +26,21 @@ body {
 }
 
 section {
-   margin: auto 0;
+  margin: auto 0;
 }
 
 h1,
 h2,
 h3 {
-   font-family: Satisfy, sans-serif;
-   font-weight: 700;
-   text-decoration: none;
-   letter-spacing: 4px;
+  font-family: Satisfy, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 4px;
 }
 
 a {
-   text-decoration: none;
-   color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .general-setup {
@@ -75,12 +75,11 @@ a {
 /* Shadow code from W3 school tutorials */
 
 .submit-button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px
-   0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hide {
-   display: none;
+  display: none;
 }
 
 /* Header */
@@ -174,7 +173,6 @@ a {
   align-items: center;
 }
 
-
 /* Home Page */
 
 .home-heading {
@@ -189,8 +187,6 @@ a {
   align-items: center;
   margin-bottom: 50px;
 }
-
-
 
 /* Character Generator Section */
 
@@ -231,9 +227,9 @@ a {
 }
 
 #character-image-area img {
-   width: 180px;
-   height: 180px;
-   border-radius: 15px;
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
 }
 
 .character-arrows {
@@ -242,46 +238,44 @@ a {
   color: #12194A;
 }
 
-
 /* Code from W3 schools tutorial on Tooltips
 https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 .tooltip {
-   position: relative;
-   display: inline-block;
-   border-bottom: 1px dotted #12194A;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #12194A;
 }
 
 .tooltip .tooltiptext {
-   visibility: hidden;
-   width: 150px;
-   background-color: #12194A;
-   color: #fff;
-   text-align: center;
-   border-radius: 6px;
-   padding: 5px 0;
-   position: absolute;
-   z-index: 1;
-   bottom: 150%;
-   left: 50%;
-   margin-left: -75px;
+  visibility: hidden;
+  width: 150px;
+  background-color: #12194A;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
 }
 
 .tooltip .tooltiptext::after {
-   content: "";
-   position: absolute;
-   top: 100%;
-   left: 50%;
-   margin-left: -5px;
-   border-width: 5px;
-   border-style: solid;
-   border-color: #12194A transparent transparent transparent;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #12194A transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
-   visibility: visible;
+  visibility: visible;
 }
-
 
 /* Submit Section */
 
@@ -295,7 +289,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 /* Quiz Page */
-
 
 /* Start Quiz Section */
 
@@ -324,14 +317,13 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   padding: 7px;
 }
 
-
 /* Question Area */
 
 #question-number {
-   padding: 20px;
-   font-family: Satisfy, sans-serif;
-   font-weight: 700;
-   font-size: 1.5rem;
+  padding: 20px;
+  font-family: Satisfy, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .timer-area {
@@ -401,25 +393,25 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 .picture-image {
-   display: inline-grid;
-   width: 200px;
-   height: 200px;
-   border: #12194A solid 3px;
-   border-radius: 5%;
+  display: inline-grid;
+  width: 200px;
+  height: 200px;
+  border: #12194A solid 3px;
+  border-radius: 5%;
 }
 
 .picture-image img {
-   width: 200px;
-   height: 200px;
-   border-radius: 5%;
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
 }
 
 .tooltip .tooltiptext-image {
-   bottom: 100%;
+  bottom: 100%;
 }
 
 #audio-text {
-  color:#12194A;
+  color: #12194A;
 }
 
 /* Answer Area */
@@ -429,7 +421,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   overflow: hidden;
   padding: 20px;
 }
-
 
 /* The below code is created as per the WebShala Tutorial up to Results Page*/
 
@@ -517,22 +508,22 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 #answers-indicator {
-   width: 100%;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   margin: auto 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
 }
 
 #answers-indicator div {
-   height: 40px;
-   width: 40px;
-   display: inline-block;
-   background-color: #cccccc;
-   border-radius: 50%;
-   margin-right: 3px;
-   margin-top: 15px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: #cccccc;
+  border-radius: 50%;
+  margin-right: 3px;
+  margin-top: 15px;
 }
 
 #answers-indicator div.correct {
@@ -550,7 +541,6 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   background-repeat: no-repeat;
   background-position: center;
 }
-
 
 /* Results Page */
 
@@ -616,19 +606,19 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 }
 
 .next-step-figures {
-   margin: 20px;
+  margin: 20px;
 }
 
 .next-step-figures:hover {
-   color: #B12228;
-   font-weight: 800;
+  color: #B12228;
+  font-weight: 800;
 }
 
 .next-step-images {
-   height: 50px;
-   width: 50px;
-   border-radius: 50%;
-   border: solid black 1px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: solid black 1px;
 }
 
 #restart-quiz {
@@ -637,130 +627,103 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 
 /* @Media queries */
 
-
 /* Max width 7000px */
 
 @media screen and (max-width: 7000px) {
-
   html {
     font-size: 1.2rem;
   }
-
   section {
     padding-top: 0px;
   }
-
   .general-display {
     width: 100%;
   }
-
   .mickey-friends {
     width: 600px;
     height: 355px;
   }
-
   .character-image-container {
     width: fit-content;
   }
-
   #character {
     width: fit-content;
     height: fit-content;
   }
-
   #character-image-area {
     width: 500px;
     height: 500px;
   }
-
   #character-image-area img {
     width: 440px;
     height: 440px;
   }
-
   .picture-question {
     width: 600px;
     height: 600px;
   }
-
   .picture-image {
     width: 300px;
     height: 300px;
   }
-
   .picture-image img {
     width: 300px;
     height: 300px;
   }
-
   #certificate {
     width: 600px;
     height: 377px;
   }
 }
 
-
 /* Max width 3500px */
 
 @media screen and (max-width: 3500px) {
-
   .general-display {
     width: 500px;
   }
-
   .mickey-friends {
     width: 500px;
     height: 296px;
   }
-
   #character {
     width: 100px;
     height: 10px;
   }
-
   #character-image-area {
     width: 200px;
     height: 200px;
   }
-
   #character-image-area img {
     width: 180px;
     height: 180px;
   }
-
   .picture-question {
     width: 400px;
     height: 400px;
   }
-
   .picture-image {
     width: 200px;
     height: 200px;
   }
-
   .picture-image img {
     width: 200px;
     height: 200px;
   }
-
   #certificate {
     height: 315px;
   }
 }
 
-
 /* Max width 1200px */
 
 @media screen and (max-width: 1200px) {
-
   section {
     padding-top: 20px;
   }
-
   .score-area {
     height: fit-content;
   }
-
   #answers-indicator {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto;
@@ -768,87 +731,69 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   }
 }
 
-
 /* Max width 800px */
 
 @media screen and (max-width: 800px) {
-
   html {
     font-size: 0.9rem;
   }
-
   section {
     padding-top: 30px;
   }
-
   h1,
   h2,
   h3 {
     letter-spacing: 2px;
   }
-
   .general-setup {
     padding-top: 0px;
   }
-
   .submit-button {
     height: unset;
   }
-
   /* Header */
-
   .header {
     width: 100%;
     height: 180px;
     align-items: center;
     flex-direction: column;
   }
-
   .logo-area {
     font-size: 1rem;
   }
-
   /* Character Name Area  only appears in the header on te quiz page as the html
    imput for this is saved in local storage from the selection that the user
     makes on the index page*/
-
   .character-name-area {
     position: unset;
     margin: 0 auto;
     width: fit-content;
   }
-
   #character-logo {
     height: 40px;
     width: 40px;
     margin-right: 10px;
   }
-
   #character-logo img {
     height: 38px;
     width: 38px;
   }
-
   .footer {
     width: 100%;
   }
-
   .general-display {
     width: 480px;
   }
-
   .mickey-friends {
     width: 480px;
     height: 284px;
   }
-
   #timer {
     left: 0px;
     top: 170px;
     font-size: .8rem;
     padding: 5px;
   }
-
   .end-quiz {
     top: 230px;
     left: 0px;
@@ -856,11 +801,9 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     padding: 5px;
     width: fit-content;
   }
-
   #question-number {
     padding: 0px 20px 20px 20px;
   }
-
   .result-message {
     padding-top: 0px;
     ;
@@ -871,15 +814,12 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
 /* Max width 515px */
 
 @media screen and (max-width: 515px) {
-
   .header {
     width: 100%;
   }
-
   .footer {
     width: 100%;
   }
-
   section {
     height: fit-content;
     margin: auto 0;
@@ -889,42 +829,33 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     align-items: center;
     padding-bottom: 30px;
   }
-
   section p {
     width: 300px;
   }
-
   .general-display {
     width: 300px;
   }
-
   .mickey-friends {
     width: 300px;
     height: 177px;
   }
-
   .tooltip .tooltiptext {
     width: 70px;
     margin-left: -20px;
     font-size: 0.8rem;
   }
-
   .tooltip .tooltiptext::after {
     content: unset;
   }
-
   .tooltip .tooltiptext::after {
     content: unset;
   }
-
   #right-text {
     margin-left: -50px;
   }
-
   .tooltip .tooltiptext-image {
     margin-left: -30px;
   }
-
   #ready-to-start {
     padding-top: 40px;
     width: 300px;
@@ -932,49 +863,39 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
     margin: auto 0;
     padding-bottom: 30px;
   }
-
   .mickey-mouse-area {
     padding-top: 40px;
   }
-
   .mickey-mouse-image {
     width: 300px;
     height: 189px;
     padding: 5px;
   }
-
   #quiz-box {
     padding-top: 0px;
   }
-
   .picture-question {
     width: 300px;
     height: 300px;
   }
-
   .picture-image {
     width: 150px;
     height: 150px;
   }
-
   .picture-image img {
     width: 150px;
     height: 150px;
   }
-
   .answer-area {
     width: 300px;
   }
-
   #option-container {
     width: unset;
   }
-
   #answers-indicator div {
     height: 20px;
     width: 20px;
   }
-
   #certificate {
     width: 300px;
     height: 189px;
@@ -988,102 +909,82 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom */
   html {
     font-size: .9rem;
   }
-
   .general-display {
     width: 250px;
   }
-
   .mickey-friends {
     width: 250px;
     height: 147px;
   }
-
   .picture-question {
     width: 250px;
     height: 250px;
   }
-
   .picture-image {
     width: 125px;
     height: 125px;
   }
-
   .picture-image img {
     width: 125px;
     height: 125px;
   }
-
   .answer-area {
     width: 250px;
   }
 }
 
+
 /* Media Screen width 350px */
 
 @media screen and (max-width: 290px) {
-
   html {
     font-size: .8rem;
   }
-
   section p {
     width: 200px;
   }
-
   .general-display {
     width: 200px;
   }
-
   .mickey-friends {
     width: 200px;
     height: 118px;
   }
-
   .character-image-container {
     width: 200px;
   }
-
   .tooltip .tooltiptext {
     margin-left: -10px;
   }
-
   #right-text {
     margin-left: -70px;
   }
-
   #ready-to-start {
     width: 200px;
   }
-
   .mickey-mouse-image {
     width: 200px;
     height: 126px;
   }
-
   .picture-question {
     width: 200px;
     height: 200px;
   }
-
   .picture-image {
     width: 100px;
     height: 100px;
   }
-
   .picture-image img {
     width: 100px;
     height: 100px;
   }
-
   .answer-area {
     width: 200px;
   }
-
   #certificate {
     width: 200px;
     height: 126px;
   }
-  
   .next-step-images {
     height: 40px;
     width: 40px;
