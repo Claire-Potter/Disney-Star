@@ -972,7 +972,7 @@ This has been included within the next steps section.
 
 1. The site has been tested using the following browsers - Safari, Chrome, Firefox, Edge and Opera. The site is compatible and accessible across all browsers.
 
-Please <a href="https://github.com/Claire-Potter/Disney-Star/tree/master/assets/read-me-content/testing/browser-testing" target="_blank">click here</a> to view browser testing screenshots.
+Please <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/assets/read-me-content/testing/browser-testing" target="_blank">click here</a> to view browser testing screenshots.
 
 2. Devices and Screen Sizes
 
