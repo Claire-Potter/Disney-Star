@@ -4,7 +4,7 @@ A fun Disney quiz, appropriate for the Disney expert or the Disney novice. Take 
 
 ![disney-star-mockup](https://github.com/Claire-Potter/Disney-Star/blob/master/read-me-content/read-me-images/disney-star-mockup.png)
 
-<a href="https:/" target="_blank">Click Here</a> to access the site.
+<a href="https://claire-potter.github.io/Disney-Star/" target="_blank">Click Here</a> to access the site.
 
 
 ## Table of Contents
