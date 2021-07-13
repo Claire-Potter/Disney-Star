@@ -66,7 +66,7 @@ A Disney lover. Enjoys all things Disney, the movies, the music, the parks, the 
 4. The quiz should provide accurate answers when prompted to ensure she can learn more about Disney while taking it.
 5. Any feedback and recommendations would be useful.
 6. The questions and answers should be correct - nothing worse than seeing errors in a quiz.
-7. Include a score tracker to accuratley track and calculate end score.
+7. Include a score tracker to track and calculate end score.
 8. Having a limited time to answer questions would make it more interesting.
 9. Fun award for knowledge given at the end of the quiz makes it worth her time.
 10. Relevant and vibrant images are a must.
@@ -136,7 +136,7 @@ Once the quiz begins, familiar and well-loved characters are displayed throughou
  - The flow from one section to another through easy to find site buttons, consistantly styled. 
  - Consistent layout, colours, visual aids and messaging. 
  - The use of Disney characters really engages with a user's inner child and sense of nostalgia.
- - The quiz provides a challenge to the user to be able to improve their knowledge. It also allows the user to take a walk down memory lane as they rememeber their favourite Disney movies.
+ - The quiz provides a challenge to the user to be able to improve their knowledge. It also allows the user to take a walk down memory lane as they remember their favourite Disney movies.
 
 
 ### Trade-offs
@@ -266,7 +266,7 @@ The Generate button on the home screen was moved to display within the single co
 5. Originally the score tracker was just going to be formatted as 0/25. A pop up would then say whether the user got the question right or wrong. Instead the tracker was featured at the bottom of the quiz and included an indicator per question whether the user scored correctly or incorrectly. This was combined with the colour of the question option turning green for correct or red for wrong. If wrong the correct option would then display in green.
 6. A timer was added to the quiz which was not included in the original design.
 7. An End quiz button was added to allow the user to end the quiz at any stage.
-8. The mobile version of the quiz pictures was going to display the four quiz pictures as a column, however with a single column display and sizing the images remaind in a grid as per the larger screen display.
+8. The mobile version of the quiz pictures was going to display the four quiz pictures as a column, however with a single column display and sizing the images remained in a grid as per the larger screen display.
 9. The audio clip section now includes a written version of the quote. Added to improve the site accessibility.
 10. The results page, next steps section included an additional icon back to the home page alongside the redo quiz icon and the icon to access the Disney store.
 
@@ -1050,7 +1050,7 @@ Please <a href="https://github.com/Claire-Potter/Disney-Star/blob/master/assets/
 
 * The code for the following javascript scripts pages was entered into the validator passed:
     * script.js
-    * quizpage.js (a not that getResult variable was not used however it is called when the javascript adds it to the html. It also warns about the Sweet Alert alert not being declared but this has been added as per the SweetAlert2 guide. )
+    * quizpage.js (It warns about the Sweet Alert alert not being declared but this has been added as per the SweetAlert2 guide. )
 
 
 
@@ -1385,7 +1385,7 @@ All of the images within the disneyCharacters folder
     - https://movie-sounds.org/disney-movie-sound-clips/
 
 
-# Acknowledgements
+# Acknowledgments
 
 A huge thank you to my mentor Brian Macharia. The guidance and advice that you have provided has been invaluable. I could have never completed this project without you.
 

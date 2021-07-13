@@ -52,7 +52,6 @@ if (localStorage.getItem('character') && (localStorage.getItem('character-image-
 }
 else
 {
-
   characterName.innerHTML = 'DisneyStar';
   characterLogo.innerHTML = `<img src= 
    'assets/images/siteImages/disneyIcon.jpg' 
@@ -70,7 +69,9 @@ else
 //As far as possible I have tried to indicate which sections of code are 
 //created as per the tutorial and which sections are adapted and which 
 //sections are created by me.
-
+// The image files have been named using camelCase as majority of images
+//are referenced from within javascript. Other images have also been 
+//named utilising camelCase for consistency.
 
 /**Questions and Answers array to populate html with when functions are 
  * called.
@@ -463,7 +464,6 @@ function getNewQuestion()
   //Created as per the WebShala tutorial.
   questionNumbers.innerHTML = 'Question ' + (questionCounter + 1) +
     ' of ' + questionLimit;
-
   //set Question
   //set a random question
   //Created as per the WebShala tutorial and adapted accordingly.
@@ -498,7 +498,6 @@ function getNewQuestion()
   audioQuestions.innerHTML = `<audio src= ${currentQuestion.audio}
     id='audio' alt='${currentQuestion.audioText}'></audio>`;
   audioQuote.innerHTML = `<h2>'${currentQuestion.audioText}'</h2>`;
-
   //The below sections are created as per the WebShala tutorial.
   //get the position of questionIndex from the available question array.
   const index1 = availableQuestions.indexOf(questionIndex);
@@ -514,6 +513,15 @@ function getNewQuestion()
     availableOptions.push(i);
   }
   optionContainer.innerHTML = '';
+/** 
+   * @function enterKey - used to add the ability for an answer 
+   option to be selected through the enter key instead of click. 
+   */
+  function enterKey(event)
+  {
+  if (event.key === 'Enter')
+  getResult();
+  }
   // create options in html.
   for (let i = 0; i < optionLen; i++)
   {
@@ -532,53 +540,32 @@ function getNewQuestion()
     optionContainer.appendChild(option);
     option.setAttribute('onclick', 'getResult(this)');
     option.setAttribute('keypress', 'enterKey(event)');
-
     option.addEventListener('keydown', enterKey);
-
-    function enterKey(event)
-    {
-      if (event.key === 'Enter')
-      {
-        getResult();
-      }
-    }
-
     //disable the submitButton so that the user cannot move passed the
     // question until answered. Code added by me.
     submitButton.disabled = true;
   }
-
-
   questionCounter++;
-
   //set the seconds to 45 seconds and set the timer interval
-
   let sec = 45;
   let time = setInterval(myTimer, 1000);
-
   //Timer Function
-
   //I got the code for the timer from 
   // https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
   // and this has been adapted for the site by me. The if else scenarios
   // have been added by me and indicate what to do if the user answers in time
   // and gets the answer correct, answers in time but gets the answer wrong,
   // or does not answer in time.
-
   // constants used by the myTimer function.
-
   const timer = document.getElementById('timer');
   const imageZero = document.getElementById('0');
   const imageOne = document.getElementById('1');
   const imageTwo = document.getElementById('2');
   const imageThree = document.getElementById('3');
-
   /** 
    * @function myTimer - sets a 45 second count per question.
    *  This will update the timer div with the countdown. 
-   * 
    */
-
   function myTimer()
   {
     timer.innerHTML = sec + ' sec left';
@@ -593,7 +580,6 @@ function getNewQuestion()
       {
         clearInterval(time);
         timer.innerHTML = 'You beat the timer!';
-
         // if the user answers incorrectly but in time, the message will 
         //display that they answered in time but they got it wrong.
       }
@@ -613,7 +599,6 @@ function getNewQuestion()
       {
         clearInterval(time);
         //SweetAlert used to format the alert
-
         Swal.fire(
         {
           title: 'Time is Up!',
@@ -631,7 +616,7 @@ function getNewQuestion()
 
 //add an event listener to click me button to call function play() to trigger
 // audio.
-//  addEventListener code added by me.
+// addEventListener code added by me.
 audioQuestions.addEventListener('click', play);
 
 /**
@@ -972,6 +957,6 @@ function setup()
 }
 
 //Add an event listener for when the user selects to return to the home page
-// to trigger to scroll to te top of the screen. Code added by me.
+// to trigger to scroll to the top of the screen. Code added by me.
 
 document.getElementById('home-page').addEventListener('click', scroll(0, 0));
